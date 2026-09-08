@@ -12,7 +12,6 @@ The current ORIGIN project team consists of:
 
 - **Christos Mpirmpos**
 - **Evelina Tsiagkaveli**
-- **Evangelos Prodromou**
 
 The team is coached by **Anastasia Giannakou**, Director of the 4th General Lyceum of Ioannina – Akademia.
 
