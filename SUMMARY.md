@@ -135,6 +135,10 @@
   * [Contributing](open-source/contributing.md)
   * [Licensing](open-source/licensing.md)
 
+## Get Certified
+
+* [Get Certified](get-certified.md)
+
 ## Partners & Sponsors
 
 * [Partners & Sponsors](partners-sponsors/README.md)
