@@ -144,11 +144,5 @@
 
 ## Resources
 
-* [Resources](resources/README.md)
-  * [Downloads](resources/downloads.md)
-  * [Datasheets](resources/datasheets.md)
-  * [Schematics](resources/schematics.md)
-  * [CAD](resources/cad.md)
-  * [Publications](resources/publications.md)
-  * [Glossary](resources/glossary.md)
-  * [Contact](resources/contact.md)
+* [Glossary](resources/glossary.md)
+* [Contact](resources/contact.md)
