@@ -1,16 +1,16 @@
 name: ORIGIN documentation prose pass
 
 on:
-  push:
-    paths:
-      - 'tools/prose_pass.py'
-      - '.github/workflows/origin-prose-pass.yml'
+  issues:
+    types: [opened]
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   prose-pass:
+    if: github.event.issue.title == 'Run ORIGIN prose pass'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,10 +30,15 @@ jobs:
         run: |
           if git diff --quiet; then
             echo 'No documentation changes required.'
-            exit 0
+          else
+            git config user.name 'Team Galene Docs Bot'
+            git config user.email 'actions@users.noreply.github.com'
+            git add -u
+            git commit -m 'Refine documentation prose and presentation [skip ci]'
+            git push
           fi
-          git config user.name 'Team Galene Docs Bot'
-          git config user.email 'actions@users.noreply.github.com'
-          git add -u
-          git commit -m 'Refine documentation prose and presentation [skip ci]'
-          git push
+
+      - name: Close trigger issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ github.event.issue.number }}" --comment "Documentation prose pass completed."
