@@ -7,5 +7,3 @@ ORIGIN is a modular engineering platform for the monitoring, protection, and lon
 The purpose of this knowledge base is not simply to present ORIGIN's features. It is intended to preserve the engineering reasoning behind them, distinguish verified implementation from planned capability, and provide a traceable reference for development, validation, manufacturing, deployment, and future revision.
 
 Use the navigation to move from the project overview into the individual technical subsystems. Readers who want to demonstrate a comprehensive understanding of the platform can also complete the **ORIGIN Expert Certification** through the dedicated [Get Certified](get-certified.md) chapter.
-
-> **Documentation principle:** version-specific technical pages and recorded validation evidence take precedence over high-level descriptions whenever a design, specification, or capability changes.
