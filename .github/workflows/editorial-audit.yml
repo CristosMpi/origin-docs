@@ -20,7 +20,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Apply final editorial polish
-        run: python tools/final_polish.py
+        run: |
+          python tools/final_polish.py
+          python tools/final_polish2.py
       - name: Audit documentation prose
         run: python tools/editorial_audit.py
       - name: Commit final polish
@@ -31,10 +33,10 @@ jobs:
             git config user.name 'Team Galene Docs Bot'
             git config user.email 'actions@users.noreply.github.com'
             git add -u
-            git commit -m 'Polish documentation prose and technical presentation [skip ci]'
+            git commit -m 'Finalize professional documentation prose [skip ci]'
             git push
           fi
       - name: Close trigger issue
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue close "${{ github.event.issue.number }}" --comment "Final editorial polish completed."
+        run: gh issue close "${{ github.event.issue.number }}" --comment "Final structural corrections completed."
