@@ -6,7 +6,7 @@ The architecture is intentionally modular. A sensor driver should not need to kn
 
 ## Architectural goals
 
-The software architecture is designed around the following goals **modularity** — replace or revise components without rewriting the entire stack; **traceability** — preserve where an observation came from and how it was interpreted; **resilience** — continue safe local operation during partial failures; **testability** — make subsystems independently testable; **configuration-driven behavior** — avoid unnecessary source edits per deployment; **diagnostics** — expose health and failure states explicitly; and **security** — reduce unnecessary trust and avoid embedding secrets in public code or docs.
+The software architecture is designed around the following goals: **modularity** — replace or revise components without rewriting the entire stack; **traceability** — preserve where an observation came from and how it was interpreted; **resilience** — continue safe local operation during partial failures; **testability** — make subsystems independently testable; **configuration-driven behavior** — avoid unnecessary source edits per deployment; **diagnostics** — expose health and failure states explicitly; and **security** — reduce unnecessary trust and avoid embedding secrets in public code or docs.
 
 ## Layer model
 
@@ -180,7 +180,7 @@ Explicit states make logs, tests, and recovery behavior easier to understand.
 
 One subsystem failure should not automatically bring down unrelated functions.
 
-Examples include a radar failure should not prevent environmental sensors from being sampled, remote connectivity loss should not erase local health state, a malformed remote message should not crash the acquisition loop, and optional modules should fail gracefully if absent.
+Failure isolation is deliberate: a radar failure should not prevent environmental sensors from being sampled, remote connectivity loss should not erase local health state, a malformed remote message should not crash the acquisition loop, and absent optional modules should fail gracefully.
 
 ## Logging
 

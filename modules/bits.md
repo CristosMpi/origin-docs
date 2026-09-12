@@ -117,7 +117,7 @@ The BIT concept can support several categories over time.
 
 Adds a new observation source.
 
-Examples include could include environmental, proximity, or site-specific sensing, but only confirmed modules should be listed as supported hardware.
+Potential examples include environmental, proximity, or site-specific sensing, but only confirmed modules should be listed as supported hardware.
 
 ### Interface BIT
 

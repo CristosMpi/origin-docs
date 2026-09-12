@@ -134,7 +134,7 @@ config.example.*
 sample-config.*
 ```
 
-Examples include should contain placeholders only.
+Examples should contain placeholders only.
 
 Do not commit API tokens; Wi-Fi passwords; private keys; SIM PINs or credentials; production endpoints that should remain private; and deployment access credentials.
 
@@ -182,7 +182,7 @@ final final
 
 For external or substantial contributions, use a pull request.
 
-A useful pull request description should answer What changed?; Why was it changed?; Which ORIGIN revision/subsystem is affected?; How was it tested?; Does it alter a public technical claim?; Does it introduce a compatibility change?; and Are documentation updates included?.
+A useful pull request description should answer: What changed? Why was it changed? Which ORIGIN revision/subsystem is affected? How was it tested? Does it alter a public technical claim? Does it introduce a compatibility change? Are documentation updates included?
 
 ## Reproducibility rule
 

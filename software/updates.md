@@ -110,7 +110,7 @@ A recovery procedure should define how to:
 
 If multiple release channels are used, they should be clearly separated.
 
-For example **development** — rapid iteration, verbose diagnostics, **testing/validation** — candidate release under controlled testing, and **stable/deployment** — release approved for field use.
+For example, **development** — rapid iteration, verbose diagnostics, **testing/validation** — candidate release under controlled testing, and **stable/deployment** — release approved for field use.
 
 A field unit should not automatically track an unstable development branch.
 

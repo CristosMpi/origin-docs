@@ -6,7 +6,7 @@ The project welcomes contributions in documentation, electronics, firmware, AI, 
 
 ## Before contributing
 
-Before opening a change, determine which kind of contribution you are making documentation correction; technical clarification; bug fix; new feature; hardware revision; mechanical revision; test/validation improvement; deployment finding; maintenance improvement; security improvement; and proposal or research idea.
+Before opening a change, determine which kind of contribution you are making: documentation correction; technical clarification; bug fix; new feature; hardware revision; mechanical revision; test/validation improvement; deployment finding; maintenance improvement; security improvement; and proposal or research idea.
 
 Different changes require different evidence.
 
@@ -131,7 +131,7 @@ Push the branch and open a pull request when external contribution workflows are
 
 ## Pull request checklist
 
-Before requesting review, confirm The change solves a clearly stated problem; Current, planned, and conceptual behavior are distinguished; Technical values come from a source or measurement; Affected revisions are identified where needed; Related documentation is updated; Internal links still work; No secrets or private information are included; Known limitations are preserved or updated with evidence; Required tests have been performed or clearly marked as pending; Compatibility impact is stated; and The licensing status of contributed material is clear.
+Before requesting review, confirm the following: the change solves a clearly stated problem; Current, planned, and conceptual behavior are distinguished; Technical values come from a source or measurement; Affected revisions are identified where needed; Related documentation is updated; Internal links still work; No secrets or private information are included; Known limitations are preserved or updated with evidence; Required tests have been performed or clearly marked as pending; Compatibility impact is stated; and The licensing status of contributed material is clear.
 
 ## Review criteria
 

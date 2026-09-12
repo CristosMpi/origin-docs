@@ -158,7 +158,7 @@ Those claims require released hardware and documented evidence.
 
 ## Evidence
 
-Recommended evidence pre/post photographs; internal inspection photos; temperature logs; humidity records; exposure duration; water-entry map; post-test functional logs; and material observations.
+Recommended evidence includes pre/post photographs; internal inspection photos; temperature logs; humidity records; exposure duration; water-entry map; post-test functional logs; and material observations.
 
 ## Related documentation
 

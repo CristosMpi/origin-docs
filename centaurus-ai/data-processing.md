@@ -42,7 +42,7 @@ Messages missing required fields should not be guessed into completeness.
 
 The data-processing layer should preserve where every observation originated.
 
-Source identity allows operators and developers to answer which ORIGIN unit generated this data?, which physical sensor produced it?, was that source healthy at the time?, and what firmware version produced the record?.
+Source identity allows operators and developers to determine which ORIGIN unit and physical sensor produced a record, whether that source was healthy at the time, and which firmware version generated it.
 
 This is necessary for debugging and auditability.
 

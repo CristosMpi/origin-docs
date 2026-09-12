@@ -30,7 +30,7 @@ A system may contain combinations such as ORIGIN 2026 enclosure revision A; Rose
 
 The exact identifiers above are examples of the versioning structure, not current assigned release numbers unless separately recorded in source control.
 
-The purpose is to make it possible to answer questions such as Which hardware revision was tested?; Which firmware was running when a field event occurred?; Which enclosure geometry was installed?; Which calibration values were active?; Which module revision was attached?; and Which test evidence applies to this configuration?.
+The purpose is to make it possible to answer questions such as: Which hardware revision was tested? Which firmware was running when a field event occurred? Which enclosure geometry was installed? Which calibration values were active? Which module revision was attached? Which test evidence applies to this configuration?
 
 ## Recommended version format
 
@@ -94,7 +94,7 @@ Retained for historical reference or compatibility, but not recommended for new 
 
 Editable source files and exported manufacturing or distribution files must remain traceable to one another.
 
-For example a KiCad PCB source should map to a specific Gerber/drill export, a CAD assembly should map to the STEP/STL files used for manufacturing, a firmware source revision should map to a binary build, and a test procedure revision should map to the result record that used it.
+For example, a KiCad PCB source should map to a specific Gerber/drill export, a CAD assembly should map to the STEP/STL files used for manufacturing, a firmware source revision should map to a binary build, and a test procedure revision should map to the result record that used it.
 
 An export with an unclear source revision should not be treated as a complete release artifact.
 

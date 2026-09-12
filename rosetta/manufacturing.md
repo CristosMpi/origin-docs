@@ -79,7 +79,7 @@ Do not rely only on the filename `Edge_Cuts.gbr`; visually confirm the rendered 
 
 ## Pre-order checklist
 
-Before uploading to a board house schematic revision frozen; PCB revision frozen; DRC reviewed; footprints manually checked; Edge.Cuts visually verified; Gerbers regenerated from the frozen PCB; plated drill file included; non-plated drill file included where applicable; board dimensions verified; manufacturer Gerber preview inspected; copper polarity/layer mapping correct; silkscreen orientation and polarity marks checked; surface finish selected; BOM matches schematic; placement file matches PCB revision; and release archive renamed with an explicit revision.
+Before uploading to a board house, confirm the following: schematic revision frozen; PCB revision frozen; DRC reviewed; footprints manually checked; Edge.Cuts visually verified; Gerbers regenerated from the frozen PCB; plated drill file included; non-plated drill file included where applicable; board dimensions verified; manufacturer Gerber preview inspected; copper polarity/layer mapping correct; silkscreen orientation and polarity marks checked; surface finish selected; BOM matches schematic; placement file matches PCB revision; and release archive renamed with an explicit revision.
 
 ## Versioning
 

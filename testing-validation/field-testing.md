@@ -6,7 +6,7 @@ Bench tests are essential, but they cannot reproduce every effect of installatio
 
 ## Objectives
 
-Field testing should answer questions such as Does the complete ORIGIN unit remain mechanically stable after installation?; Do sensors cover the intended zones from the installed position?; Are false detections acceptable and explainable?; Does the power system support the intended operating cycle?; Does communication remain reliable enough for the deployment?; Are failures visible to operators?; Can the unit be serviced without disturbing the site?; and Does the system recover correctly after power or network interruption?.
+Field testing should answer practical questions such as: Does the complete ORIGIN unit remain mechanically stable after installation? Do the sensors cover the intended zones from the installed position? Are false detections acceptable and explainable? Does the power system support the intended operating cycle? Is communication reliable enough for the deployment? Are failures visible to operators? Can the unit be serviced without disturbing the site? Does the system recover correctly after a power or network interruption?
 
 ## Field-test stages
 
@@ -22,7 +22,7 @@ This stage is useful for initial radar coverage mapping; solar/power observation
 
 Use geometry that resembles the final heritage environment.
 
-For example walls and corridors; stone surfaces; restricted approach paths; similar mounting height; and similar visitor movement.
+For example, walls and corridors; stone surfaces; restricted approach paths; similar mounting height; and similar visitor movement.
 
 ### 3. Pilot deployment
 
@@ -34,7 +34,7 @@ At this stage, changes to thresholds and geometry should be documented rather th
 
 Before transporting the unit, perform and record a baseline functional test.
 
-Recommended checks successful boot; sensor health; storage/logging; communication; known configuration; battery/power state; and mechanical inspection.
+Recommended checks include successful boot, sensor health, storage and logging, communications, the known configuration, battery or power state, and a mechanical inspection.
 
 This helps distinguish transport damage from site-specific problems.
 
@@ -105,7 +105,7 @@ Do not simply delete these events. Categorize them so the team can improve place
 
 Where tests intentionally create known events, record whether ORIGIN detects them.
 
-Examples include person enters intended zone; person remains still; person exits; unit is moved or disturbed where tamper sensing is implemented; and selected sensor is disconnected.
+Known test events can include a person entering the intended zone, remaining still, and exiting; movement or disturbance of the unit where tamper sensing is implemented; and disconnection of a selected sensor.
 
 Known test events should be timestamped so they can be compared with logs.
 

@@ -38,7 +38,7 @@ A system that repeatedly resets or only works from temporary workshop power shou
 
 Run representative tests for every required sensing function.
 
-For presence detection trigger each radar from its intended area; verify correct sensor identity; verify expected event timing; test at least one known non-target area; and verify a disconnected or failed sensor is reported as a fault rather than “no presence.”.
+For presence detection trigger each radar from its intended area; verify correct sensor identity; verify expected event timing; test at least one known non-target area; and verify a disconnected or failed sensor is reported as a fault rather than “no presence.”
 
 For environmental sensing verify all channels update, confirm readings remain plausible, confirm timestamps and sensor IDs are preserved, and verify any configured alert logic with a safe simulated condition where practical.
 
@@ -94,7 +94,7 @@ After restart, verify configuration is retained; unit identity is unchanged; sen
 
 Where safe, simulate selected failures to prove that ORIGIN exposes faults rather than hiding them.
 
-Examples include disconnect one sensor; disable communications; temporarily remove network access; introduce an intentionally invalid configuration in a controlled test environment; and simulate a module becoming unavailable.
+Controlled fault tests can include disconnecting one sensor, disabling communications, temporarily removing network access, introducing an intentionally invalid configuration in a safe test environment, and simulating an unavailable module.
 
 Do not perform fault tests that could damage hardware or affect the protected site.
 

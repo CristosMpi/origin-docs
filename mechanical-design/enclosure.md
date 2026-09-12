@@ -186,7 +186,7 @@ The exact sequence should be updated when the final CAD revision is released.
 
 ## Release criteria
 
-An enclosure revision should not be called production-ready until at least the following are confirmed all internal components fit; fasteners are accessible; sensor orientation is repeatable; all required connectors can be reached; cable routing is controlled; the shell can be opened and reassembled; the solar structure is mechanically stable; the module interface remains accessible after mounting; environmental weak points are documented; the complete assembly fits manufacturing limits; and a physical prototype has been tested.
+An enclosure revision should not be called production-ready until at least the following are confirmed: all internal components fit; fasteners are accessible; sensor orientation is repeatable; all required connectors can be reached; cable routing is controlled; the shell can be opened and reassembled; the solar structure is mechanically stable; the module interface remains accessible after mounting; environmental weak points are documented; the complete assembly fits manufacturing limits; and a physical prototype has been tested.
 
 ## Related documentation
 

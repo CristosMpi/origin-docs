@@ -82,7 +82,7 @@ The final serialized schema will be documented from the implementation.
 
 Some observations are useful only when interpreted in context.
 
-For example a radar changes from clear to occupied, a value crosses a configured threshold, a sensor stops reporting, and communication returns after an outage.
+For example, a radar changes from clear to occupied, a value crosses a configured threshold, a sensor stops reporting, and communication returns after an outage.
 
 The local software can convert these state changes into structured events while preserving the underlying observation.
 
@@ -101,7 +101,7 @@ Keeping these categories separate improves explainability.
 
 ## Provenance
 
-Every meaningful record should answer Which ORIGIN unit produced this?; Which sensor/subsystem produced it?; When was it observed?; Which software/configuration version interpreted it?; Was it valid, degraded, or estimated?; and Was it measured directly or derived later?.
+Every meaningful record should answer: Which ORIGIN unit produced this? Which sensor/subsystem produced it? When was it observed? Which software/configuration version interpreted it? Was it valid, degraded, or estimated? Was it measured directly or derived later?
 
 This is especially important for testing and cultural-heritage deployments where data may be reviewed after an incident.
 

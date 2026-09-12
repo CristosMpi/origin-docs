@@ -101,7 +101,7 @@ Internally, storing timestamps in a consistent machine-readable form is preferab
 
 ## Reliability
 
-A connection can fail in many ways network unavailable; access point unreachable; radio peripheral fault; authentication failure; server unavailable; timeout; malformed response; partial upload; and DNS or routing failure.
+A connection can fail in many ways: network unavailable; access point unreachable; radio peripheral fault; authentication failure; server unavailable; timeout; malformed response; partial upload; and DNS or routing failure.
 
 The firmware should avoid treating every case as identical where diagnostics can distinguish them.
 

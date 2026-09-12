@@ -46,7 +46,7 @@ The system is designed around upgradeable modules and evolving electronics. New 
 
 ### Documentation as part of the project
 
-This documentation is intended to become the technical source of truth for ORIGIN. They cover not only what the system is, but how it is designed, tested, deployed, maintained, and improved.
+This documentation is intended to become the technical source of truth for ORIGIN. It covers not only what the system is, but also how it is designed, tested, deployed, maintained, and improved.
 
 ## From prototype to deployment
 
@@ -54,7 +54,7 @@ ORIGIN has been developed through Team Galene's robotics and engineering work, w
 
 A major part of this approach is validating the project outside a competition environment. ORIGIN's deployment work includes a pilot connected with the **Archaeological Museum of Durrës in Albania**, which is documented separately in the [Deployments](../deployments/README.md) section.
 
-## How to read these docs
+## How to use this documentation
 
 If you are new to ORIGIN, continue through this Overview section in order:
 

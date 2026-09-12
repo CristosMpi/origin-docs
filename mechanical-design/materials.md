@@ -54,7 +54,7 @@ Team Galene has received support from filament manufacturers including eSUN. Spo
 
 Different enclosure parts can use different materials.
 
-For example main shell: environmental and dimensional priorities; solar supports: stiffness and fatigue priorities; sensor bezel: dimensional accuracy and weather exposure; internal electronics tray: dimensional stability and heat resistance; decorative skin: appearance and low mass; and module latch: toughness and repeated-cycle performance.
+For example, main shell: environmental and dimensional priorities; solar supports: stiffness and fatigue priorities; sensor bezel: dimensional accuracy and weather exposure; internal electronics tray: dimensional stability and heat resistance; decorative skin: appearance and low mass; and module latch: toughness and repeated-cycle performance.
 
 This avoids overengineering low-load parts or underengineering structural ones.
 

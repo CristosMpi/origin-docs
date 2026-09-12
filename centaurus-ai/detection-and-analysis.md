@@ -92,7 +92,7 @@ Multiple sensors can disagree.
 
 Centaurus should preserve that disagreement rather than forcing an artificial consensus.
 
-For example one radar reports presence while others do not, one environmental sensor shows a sudden jump while neighbouring sensors remain stable, and a sensor reports a strong signal while its health state is degraded.
+For example, one radar reports presence while others do not, one environmental sensor shows a sudden jump while neighbouring sensors remain stable, and a sensor reports a strong signal while its health state is degraded.
 
 Such cases can be classified as ambiguous or low-confidence rather than silently discarded.
 
@@ -150,7 +150,7 @@ Centaurus should not be described as guaranteeing detection of every relevant ev
 
 Every important Centaurus result should include enough context for later review.
 
-An operator should be able to ask what triggered this event?; which sensors contributed?; what was their health state?; what analysis version was used?; what evidence disagreed?; and why was this severity assigned?.
+An operator should be able to ask: What triggered this event? Which sensors contributed? What was their health state? What analysis version was used? What evidence disagreed? Why was this severity assigned?
 
 Explainability does not require exposing internal model mathematics to every operator, but it does require preserving the evidence chain.
 

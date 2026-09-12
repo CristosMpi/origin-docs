@@ -81,7 +81,7 @@ Baseline collection should not be confused with formal conservation limits, whic
 
 Environmental sensors should be placed where they measure the condition of interest rather than simply wherever space is available inside the enclosure.
 
-Placement questions include should the sensor measure internal enclosure conditions or the external site?; is airflow required?; will direct sunlight bias the reading?; can rain or condensation reach the sensing element?; is the sensor too close to heat-producing electronics?; does a protective membrane change response time?; and can the sensor be cleaned or replaced?.
+Placement review should answer questions such as: Should the sensor measure internal enclosure conditions or the external site? is airflow required? will direct sunlight bias the reading? can rain or condensation reach the sensing element? is the sensor too close to heat-producing electronics? does a protective membrane change response time? can the sensor be cleaned or replaced?
 
 These questions create a direct link between environmental sensing and enclosure design.
 

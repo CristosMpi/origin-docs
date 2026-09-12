@@ -30,7 +30,7 @@ The pilot is intended to investigate several areas.
 
 Determine whether ORIGIN can be physically installed without creating unacceptable interference with the site.
 
-Questions include Can the unit be mounted reversibly?; Can the sensors be oriented correctly without invasive modifications?; Is service access practical?; Can cable routing be made safe and discreet?; and Does the enclosure interfere visually with the environment?.
+Questions include: Can the unit be mounted reversibly? Can the sensors be oriented correctly without invasive modifications? Is service access practical? Can cable routing be made safe and discreet? Does the enclosure interfere visually with the environment?
 
 ### 2. Sensor behavior
 

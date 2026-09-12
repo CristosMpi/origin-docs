@@ -4,7 +4,7 @@ Decision logic is the layer that converts Centaurus analysis results into operat
 
 ## Why a separate decision layer matters
 
-Analysis can produce many intermediate signals anomaly scores; threshold crossings; model predictions; sensor disagreement; confidence estimates; and temporal trends.
+Analysis can produce many intermediate signals, including anomaly scores, threshold crossings, model predictions, sensor disagreement, confidence estimates, and temporal trends.
 
 These are not all directly actionable.
 
@@ -174,7 +174,7 @@ Human actions should be recorded for audit and can later support evaluation of f
 
 When Centaurus cannot evaluate an event reliably, it should default to visible uncertainty rather than silently claiming normal operation.
 
-Examples include missing required evidence → mark analysis incomplete, invalid configuration → disable affected rule and expose error, unhealthy sensor → reduce confidence or suppress unsupported conclusion, and model unavailable → enter degraded mode.
+Failure handling should be explicit. Missing required evidence should mark an analysis incomplete; invalid configuration should disable the affected rule and expose an error; an unhealthy sensor should reduce confidence or suppress unsupported conclusions; and an unavailable model should place Centaurus in a degraded state.
 
 ## Auditability
 

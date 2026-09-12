@@ -44,7 +44,7 @@ Where compatibility cannot be preserved, the change should be documented as a br
 
 Development status is not determined by how complete a design looks. A result becomes part of the supported system only when evidence exists for the claim being made.
 
-Examples include a CAD enclosure render is not evidence of environmental resistance; a sensor datasheet is not evidence of ORIGIN system-level detection range; a successful boot is not evidence of long-term firmware reliability; an AI output that appears reasonable is not evidence of accuracy; and an assembled PCB is not proof that the complete manufacturing package is release-ready.
+An attractive CAD render is not evidence of environmental resistance. A sensor datasheet does not establish ORIGIN-level detection range, a successful boot does not establish long-term firmware reliability, a plausible AI output does not establish accuracy, and an assembled PCB does not prove that its manufacturing package is release-ready.
 
 This principle is reflected throughout [Testing & Validation](../testing-validation/README.md).
 

@@ -82,7 +82,7 @@ A good cable path should avoid sharp bends; avoid screw paths; remain clear of t
 
 A repeatable mount benefits from simple datums.
 
-For example one rear reference plane controls depth, one side feature controls rotation, screw holes retain the board, and the exterior face defines the sensing direction.
+For example, one rear reference plane controls depth, one side feature controls rotation, screw holes retain the board, and the exterior face defines the sensing direction.
 
 This is more reliable than locating the sensor only by two screws with oversized clearance holes.
 

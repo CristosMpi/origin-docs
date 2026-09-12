@@ -360,7 +360,7 @@ A technically competent external reader should be able to understand what ORIGIN
 
 ## Longer-term exploration
 
-The following areas are valid research directions but are not presented as committed current functionality alternative edge-compute platforms, including Raspberry Pi-class systems; automatic deployment configuration and tooling; improved remote diagnostics; expanded sensor families; additional module classes; fleet-level comparison across multiple heritage sites; stronger automated validation pipelines; and richer visualization and decision-support tools.
+The following areas are valid research directions, but they are not presented as committed current functionality: alternative edge-compute platforms, including Raspberry Pi-class systems; automatic deployment configuration and tooling; improved remote diagnostics; expanded sensor families; additional module classes; fleet-level comparison across multiple heritage sites; stronger automated validation pipelines; and richer visualization and decision-support tools.
 
 ## Roadmap review
 

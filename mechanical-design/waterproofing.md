@@ -12,7 +12,7 @@ Exact protection requirements depend on the deployment environment and should be
 
 ## Main ingress paths
 
-The current enclosure architecture has several likely weak points radar openings; service-panel seams; solar cable entry; module interfaces; fastener penetrations; lower mounting joints; mating surfaces between printed parts; and any ventilation or pressure-equalisation feature.
+The current enclosure architecture has several likely weak points: radar openings; service-panel seams; solar cable entry; module interfaces; fastener penetrations; lower mounting joints; mating surfaces between printed parts; and any ventilation or pressure-equalisation feature.
 
 These areas should receive more design attention than uninterrupted shell walls.
 

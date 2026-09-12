@@ -88,7 +88,7 @@ This matters for power consumption as well. A sensor that does not need constant
 
 Sampling rate should be selected according to what the measurement is meant to detect.
 
-For example slowly changing environmental conditions may not need high-frequency sampling, presence or movement events may require much faster response, diagnostic measurements may be sampled periodically or when a fault occurs, and test modes may temporarily use higher rates than normal deployment.
+For example, slowly changing environmental conditions may not need high-frequency sampling, presence or movement events may require much faster response, diagnostic measurements may be sampled periodically or when a fault occurs, and test modes may temporarily use higher rates than normal deployment.
 
 ORIGIN should therefore use configuration-based sampling rather than one fixed rate for every sensor.
 

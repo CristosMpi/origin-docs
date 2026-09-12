@@ -22,7 +22,7 @@ Data processing / communications
 Centaurus AI and operator-facing systems
 ```
 
-The Core therefore has several responsibilities at the same time collect data from connected sensors; detect events relevant to site monitoring; provide local processing and device control; manage power and energy availability; communicate status and observations; support modular attachments and future expansion; protect the electronics in a field-ready enclosure; and expose enough diagnostic information for maintenance and testing.
+The Core therefore has several responsibilities at the same time: collect data from connected sensors; detect events relevant to site monitoring; provide local processing and device control; manage power and energy availability; communicate status and observations; support modular attachments and future expansion; protect the electronics in a field-ready enclosure; and expose enough diagnostic information for maintenance and testing.
 
 The design intentionally separates these responsibilities into subsystems so that one part of ORIGIN can evolve without forcing a complete redesign of every other part.
 

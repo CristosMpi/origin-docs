@@ -142,7 +142,7 @@ This does not require every module to contain complex electronics. Even passive 
 
 Modules can change the environmental exposure of the Core.
 
-For example a new opening may reduce sealing; an elevated mount may increase wind loading; a water-oriented base may introduce splash or immersion risks; a drone configuration introduces vibration and acceleration; and an external sensor may create a cable ingress path.
+For example, a new opening may reduce sealing; an elevated mount may increase wind loading; a water-oriented base may introduce splash or immersion risks; a drone configuration introduces vibration and acceleration; and an external sensor may create a cable ingress path.
 
 For that reason, a module's validation is not complete when the module itself works. The **combined Core + module configuration** must also be tested.
 

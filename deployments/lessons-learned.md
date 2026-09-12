@@ -49,7 +49,7 @@ If installation repeatedly encounters surprises, the assessment procedure should
 
 The field environment will show whether the enclosure and mounting system are practical outside the lab.
 
-Key questions include Is the unit easy to install without invasive work?; Is it stable over time?; Can staff service it without removing unrelated parts?; Are sensor openings easy to inspect and clean?; Does the solar support remain rigid?; and Are BIT interfaces still reachable after installation?.
+Key questions include: Is the unit easy to install without invasive work? Is it stable over time? Can staff service it without removing unrelated parts? Are sensor openings easy to inspect and clean? Does the solar support remain rigid? Are BIT interfaces still reachable after installation?
 
 ### Sensor placement
 

@@ -28,7 +28,7 @@ Sensor performance is a primary mechanical constraint.
 
 The current ORIGIN design integrates three DFRobot C4001 24 GHz mmWave sensors. Their orientation should be defined by the enclosure geometry, not improvised during assembly.
 
-This means CAD must answer questions such as What direction does each radar face?; What material lies in front of it?; Is the opening large enough for the intended field of view?; Can nearby fasteners or ribs influence the sensing region?; Can the PCB be replaced without changing its angle?; and Can each radar be identified consistently in software and test documentation?.
+This means CAD must answer questions such as What direction does each radar face? What material lies in front of it? Is the opening large enough for the intended field of view? Can nearby fasteners or ribs influence the sensing region? Can the PCB be replaced without changing its angle? Can each radar be identified consistently in software and test documentation?
 
 The sensor mounting system therefore becomes part of the calibration and validation process.
 

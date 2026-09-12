@@ -47,7 +47,7 @@ Team Galene should choose exact licenses only after confirming ownership and pro
 
 Documentation can be licensed separately from code and hardware.
 
-A future documentation license should answer Can others redistribute the documentation?; Can they modify and translate it?; Is attribution required?; Must derivative documentation use the same license?; and Can it be used commercially?.
+A future documentation license should answer: Can others redistribute the documentation? Can they modify and translate it? Is attribution required? Must derivative documentation use the same license? Can it be used commercially?
 
 Creative Commons licenses are commonly used for documentation and educational content, but the exact variant must be deliberately selected.
 
@@ -137,7 +137,7 @@ The exact layout can differ; clarity is what matters.
 
 ## Release checklist for licensing
 
-Before calling a subsystem formally open-source/open-hardware, confirm The copyright owner(s) are identified; Team Galene has authority to license the material; An explicit license has been selected; The license text is included; Third-party dependencies are documented; Restricted/confidential material has been removed; Required attribution is present; Branding/trademark rights are not accidentally granted; Source files needed for meaningful modification are included; and The documentation states which license applies to which material.
+Before calling a subsystem formally open-source/open-hardware, confirm the following: the copyright owner(s) are identified; Team Galene has authority to license the material; An explicit license has been selected; The license text is included; Third-party dependencies are documented; Restricted/confidential material has been removed; Required attribution is present; Branding/trademark rights are not accidentally granted; Source files needed for meaningful modification are included; and The documentation states which license applies to which material.
 
 ## What users may rely on today
 

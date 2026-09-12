@@ -113,7 +113,7 @@ Sometimes a test shows that a suspected problem is not significant.
 
 That result should also be recorded.
 
-For example a specific enclosure face does not measurably degrade radar behavior, a mounting method remains stable after repeated service cycles, and a particular event rule does not increase false positives under the tested conditions.
+For example, a specific enclosure face does not measurably degrade radar behavior, a mounting method remains stable after repeated service cycles, and a particular event rule does not increase false positives under the tested conditions.
 
 Recording these results prevents the same question from being investigated repeatedly without context.
 

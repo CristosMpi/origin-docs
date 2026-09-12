@@ -174,7 +174,7 @@ This becomes essential when comparing behavior before and after an update.
 
 Centaurus should fail in ways that remain visible.
 
-Examples include invalid input should be rejected rather than guessed; unavailable models should trigger degraded mode; broken external connectivity should not delete local evidence; unsupported schema versions should produce explicit compatibility errors; and analysis failures should not be converted into normal events.
+Failure isolation should remain explicit. Invalid input should be rejected rather than guessed, unavailable models should trigger a degraded state, broken external connectivity should not delete local evidence, unsupported schema versions should produce clear compatibility errors, and analysis failures should never be represented as normal events.
 
 ## Observability
 

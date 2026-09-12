@@ -6,7 +6,7 @@ Setup should be controlled and reversible. A device that merely boots is not yet
 
 ## Setup objectives
 
-By the end of setup, the deployment team should be able to answer Which ORIGIN unit is this?; Which hardware and firmware revisions are installed?; Which sensors and modules are expected?; Which configuration is active?; Is time synchronized?; Is local logging functioning?; Is the communications path operational or intentionally offline?; and Can the device report its own health?.
+By the end of setup, the deployment team should be able to answer Which ORIGIN unit is this? Which hardware and firmware revisions are installed? Which sensors and modules are expected? Which configuration is active? Is time synchronized? Is local logging functioning? Is the communications path operational or intentionally offline? Can the device report its own health?
 
 ## Initial boot
 

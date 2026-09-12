@@ -66,7 +66,7 @@ Site-specific calibration or configuration may be necessary.
 
 Centaurus may not know information that a human operator knows.
 
-For example scheduled maintenance; an authorized visitor after hours; construction activity; a temporary exhibition change; and a sensor intentionally disconnected for service.
+For example, scheduled maintenance; an authorized visitor after hours; construction activity; a temporary exhibition change; and a sensor intentionally disconnected for service.
 
 Operator context can therefore be essential to correct interpretation.
 
