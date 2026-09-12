@@ -28,7 +28,7 @@ Each stage should leave enough documentation for another person to understand wh
 
 Before transport, the deployment team should confirm that the unit has already passed bench-level checks.
 
-At minimum the correct hardware revision is identified; the current firmware version is known; Rosetta powers correctly; the expected sensors are detected; local logging works; configuration can be read back; known issues are documented; mounting hardware is complete; required tools and fasteners are packed; the deployment configuration has been prepared; and a rollback plan exists if commissioning fails.
+At minimum, confirm that the correct hardware revision is identified; the current firmware version is known; Rosetta powers correctly; the expected sensors are detected; local logging works; configuration can be read back; known issues are documented; mounting hardware is complete; required tools and fasteners are packed; the deployment configuration has been prepared; and a rollback plan exists if commissioning fails.
 
 Field installation should not be used as a substitute for basic workshop validation.
 

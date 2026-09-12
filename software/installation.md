@@ -94,7 +94,7 @@ If a deployment requires credentials, they should be provisioned through the app
 
 Before declaring installation complete, perform a short functional check.
 
-A minimum checklist is firmware version recorded; hardware revision recorded; device identity confirmed; configuration loaded successfully; expected sensors healthy; missing sensors reported correctly; local logging/diagnostics available; communication tested if required; restart tested; and no unexplained reset loop.
+A minimum checklist should confirm: firmware version recorded; hardware revision recorded; device identity confirmed; configuration loaded successfully; expected sensors healthy; missing sensors reported correctly; local logging/diagnostics available; communication tested if required; restart tested; and no unexplained reset loop.
 
 ## Recovery installation
 

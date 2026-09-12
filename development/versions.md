@@ -52,13 +52,13 @@ The exact scheme should remain stable once public releases begin.
 
 ## Breaking changes
 
-A change should be treated as potentially breaking when it changes any of the following PCB connector type or pin assignment; voltage or power expectations; mounting-hole geometry; enclosure clearances; sensor orientation or field of view; cable routing; module mechanical interface; data schema; configuration schema; communications protocol; firmware compatibility with hardware; calibration interpretation; and update or recovery process.
+A change should be treated as potentially breaking when it changes any of the following: PCB connector type or pin assignment; voltage or power expectations; mounting-hole geometry; enclosure clearances; sensor orientation or field of view; cable routing; module mechanical interface; data schema; configuration schema; communications protocol; firmware compatibility with hardware; calibration interpretation; and update or recovery process.
 
 Breaking changes should be explicitly documented in the changelog.
 
 ## Configuration identity
 
-A deployed unit should be associated with a configuration record containing, where applicable ORIGIN project baseline; Rosetta hardware revision; enclosure/CAD revision; firmware version or commit; module list and revisions; sensor configuration; calibration version; configuration schema version; Centaurus logic/model version; deployment identifier; commissioning date; and relevant maintenance or replacement history.
+A deployed unit should be associated with a configuration record containing, where applicable: ORIGIN project baseline; Rosetta hardware revision; enclosure/CAD revision; firmware version or commit; module list and revisions; sensor configuration; calibration version; configuration schema version; Centaurus logic/model version; deployment identifier; commissioning date; and relevant maintenance or replacement history.
 
 This allows field observations to be traced back to the exact system that generated them.
 

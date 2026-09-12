@@ -222,7 +222,7 @@ Run a representative device continuously to detect memory leaks, task stalls, qu
 
 ## What still needs authoritative source material
 
-The following will be added when the firmware repository is available language/framework; toolchain; exact build commands; source-tree structure; task names; libraries/dependencies; pin definitions; actual message schemas; and release version history.
+The following will be added when the firmware repository is available: language/framework; toolchain; exact build commands; source-tree structure; task names; libraries/dependencies; pin definitions; actual message schemas; and release version history.
 
 ## Related pages
 

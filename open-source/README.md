@@ -86,7 +86,7 @@ The ORIGIN documentation repository should maintain stable chapter structure; cl
 
 ## Contribution philosophy
 
-Contributions should improve one or more of the following correctness; reproducibility; safety; maintainability; clarity; test coverage; deployment quality; accessibility; and heritage-site suitability.
+Contributions should improve one or more of the following: correctness; reproducibility; safety; maintainability; clarity; test coverage; deployment quality; accessibility; and heritage-site suitability.
 
 Changes that make the project look more complete while reducing technical accuracy should not be accepted.
 

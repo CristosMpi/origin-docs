@@ -10,7 +10,7 @@ A deployment can be viewed as five layers.
 
 ### 1. Site layer
 
-The physical heritage environment protected objects or areas; walls and structures; visitor routes; staff access routes; environmental exposure; power availability; radio environment; and mounting restrictions.
+The physical heritage environment includes protected objects or areas; walls and structures; visitor routes; staff access routes; environmental exposure; power availability; radio environment; and mounting restrictions.
 
 ### 2. Device layer
 
@@ -84,7 +84,7 @@ A missing device should produce a degraded deployment state, not silently disapp
 
 Rather than treating a site as one undifferentiated area, ORIGIN can associate units and sensors with logical zones.
 
-Examples include might include:
+Example zones might include:
 
 ```text
 ZONE_ENTRANCE

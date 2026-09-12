@@ -40,7 +40,7 @@ This page is used for public sponsor recognition connected with Team Galene.
 
 ### Technical and documentation inquiries
 
-For questions about ORIGIN Core; Rosetta hardware; software architecture; Centaurus AI; sensors; mechanical design; testing and validation; installation or maintenance; and errors or ambiguities in ORIGIN Docs.
+Use the technical contact route for questions about ORIGIN Core, Rosetta hardware, software architecture, Centaurus AI, sensors, mechanical design, testing and validation, installation or maintenance, and errors or ambiguities in ORIGIN Docs.
 
 Refer first to the relevant technical chapter and include the exact page, subsystem, and revision in your message where possible.
 
@@ -108,6 +108,6 @@ Ioannina, Greece
 
 ## Before contacting us
 
-For the fastest route to the relevant information, check these sections first [Overview](../overview/README.md) — what ORIGIN is and why it exists; [ORIGIN Core](../origin-core/README.md) — field-unit architecture; [Rosetta](../rosetta/README.md) — electronics; [Software](../software/README.md) — embedded and system software; [Centaurus AI](../centaurus-ai/README.md) — analysis and decision support; [Modules](../modules/README.md) — BITs, Aqua Base, Drone Mount, and expansion; [Testing & Validation](../testing-validation/README.md) — evidence and test procedures; [Deployments](../deployments/README.md) — pilot and field deployment status; [Development](../development/README.md) — roadmap, versions, and known issues; and [Glossary](glossary.md) — terminology used throughout the documentation.
+For the fastest route to the relevant information, check these sections first: [Overview](../overview/README.md) — what ORIGIN is and why it exists; [ORIGIN Core](../origin-core/README.md) — field-unit architecture; [Rosetta](../rosetta/README.md) — electronics; [Software](../software/README.md) — embedded and system software; [Centaurus AI](../centaurus-ai/README.md) — analysis and decision support; [Modules](../modules/README.md) — BITs, Aqua Base, Drone Mount, and expansion; [Testing & Validation](../testing-validation/README.md) — evidence and test procedures; [Deployments](../deployments/README.md) — pilot and field deployment status; [Development](../development/README.md) — roadmap, versions, and known issues; and [Glossary](glossary.md) — terminology used throughout the documentation.
 
 Project information, contact channels, and team responsibilities can change over time. The official Team Galene links should be treated as the current public contact entry point.

@@ -26,7 +26,7 @@ A low resistance is not automatically a fault, but an unexpected near-short shou
 
 Use a bench supply with an appropriate current limit for the design state.
 
-Initial objectives are no rapid current-limit condition; no unexpected heating; charger/system node behaves plausibly; regulated rail reaches the intended voltage; and processor rail is stable.
+The initial objectives are to avoid a rapid current-limit condition or unexpected heating, confirm plausible charger/system-node behavior, verify that the regulated rail reaches its intended voltage, and confirm that the processor rail is stable.
 
 Do not connect external sensors during the first rail test unless they are necessary for the power architecture.
 

@@ -10,7 +10,7 @@ Routine service should be **preventive** — identify degradation before failure
 
 ## Continuous remote checks
 
-Where remote telemetry is available, the following should be reviewed automatically or during normal operator monitoring device online/offline state; last successful communication time; unexpected reboot frequency; sensor health states; missing or invalid measurements; local storage state; time synchronization status; battery or power-health indicators available to software; solar or charging behavior where telemetry exists; module presence; firmware and configuration version; and persistent warnings or error counters.
+Where remote telemetry is available, the following should be reviewed automatically or during normal operator monitoring: device online/offline state; last successful communication time; unexpected reboot frequency; sensor health states; missing or invalid measurements; local storage state; time synchronization status; battery or power-health indicators available to software; solar or charging behavior where telemetry exists; module presence; firmware and configuration version; and persistent warnings or error counters.
 
 A remote health warning should create a maintenance action when it persists, repeats or affects monitoring confidence.
 
@@ -137,7 +137,7 @@ Photographs can be especially useful for tracking gradual physical changes.
 
 ## Escalation criteria
 
-Escalate from routine maintenance to diagnostics or repair if any of the following is found repeated device resets; damaged battery; internal moisture; structural cracking; loose sensor mounting that changes orientation; missing sensor communication; unstable power; persistent storage errors; repeated false detections after site changes; degraded cable insulation; damaged solar support; and unauthorized physical modification.
+Escalate from routine maintenance to diagnostics or repair if any of the following is found: repeated device resets; damaged battery; internal moisture; structural cracking; loose sensor mounting that changes orientation; missing sensor communication; unstable power; persistent storage errors; repeated false detections after site changes; degraded cable insulation; damaged solar support; and unauthorized physical modification.
 
 See [Diagnostics](diagnostics.md) and [Troubleshooting](troubleshooting.md).
 

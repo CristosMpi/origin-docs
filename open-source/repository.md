@@ -76,7 +76,7 @@ For example, a PCB dimension extracted from a released Gerber job should take pr
 
 Hardware, software, mechanical, and documentation revisions must not be treated as interchangeable.
 
-A deployment record should identify, where practical ORIGIN system revision; Rosetta hardware revision; enclosure/mechanical revision; firmware version; configuration version; Centaurus version or rules/model identifier if active; module revisions; and documentation revision or commit.
+A deployment record should identify, where practical: ORIGIN system revision; Rosetta hardware revision; enclosure/mechanical revision; firmware version; configuration version; Centaurus version or rules/model identifier if active; module revisions; and documentation revision or commit.
 
 This prevents a validation result for one build from being mistakenly applied to another.
 

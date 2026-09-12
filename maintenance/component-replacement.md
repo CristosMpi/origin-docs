@@ -39,7 +39,7 @@ Replacing Rosetta is a major service event because the PCB anchors multiple syst
 
 Before removal, record Rosetta hardware revision; firmware version; configuration version; unit identity/provisioning information; connected modules; sensor-channel mapping; storage state; and known calibration values.
 
-After installing the replacement verify mounting; verify all connectors; confirm no cable is trapped or strained; load the approved firmware; restore only compatible configuration; confirm unit identity; verify every expected sensor and module; run power, storage and communication checks; and perform commissioning checks before returning to service.
+After installing the replacement, verify mounting; verify all connectors; confirm no cable is trapped or strained; load the approved firmware; restore only compatible configuration; confirm unit identity; verify every expected sensor and module; run power, storage and communication checks; and perform commissioning checks before returning to service.
 
 See [Rosetta → Assembly & Bring-up](../rosetta/assembly-and-bring-up.md).
 

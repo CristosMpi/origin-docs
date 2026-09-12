@@ -10,7 +10,7 @@ ORIGIN is intended to have a recognisable appearance, but visual identity cannot
 
 The preferred design direction is deliberately more architectural than a conventional rectangular enclosure. Tall, tapered, faceted, and pyramid-influenced forms are being explored because they can make ORIGIN visually distinctive while also creating useful directional faces for sensors and structural transitions.
 
-However, every visual feature should justify itself through at least one of the following sensor placement; structural stiffness; cable routing; service access; weather shedding; mounting; manufacturing; and product identity that does not interfere with function.
+However, every visual feature should justify itself through at least one of the following: sensor placement; structural stiffness; cable routing; service access; weather shedding; mounting; manufacturing; and product identity that does not interfere with function.
 
 If a feature makes the device harder to build, seal, inspect, or validate without adding enough value, it should be simplified.
 

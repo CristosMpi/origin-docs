@@ -57,7 +57,7 @@ Scope is often the fastest way to distinguish a local hardware fault from a shar
 
 ## Step 3 — Preserve evidence
 
-Before rebooting or replacing anything, save available evidence where possible event logs; sensor-health logs; reboot reason; power telemetry; communication state; configuration version; firmware version; recent update history; and timestamps of first and last known-good operation.
+Before rebooting or replacing anything, save available evidence where possible: event logs; sensor-health logs; reboot reason; power telemetry; communication state; configuration version; firmware version; recent update history; and timestamps of first and last known-good operation.
 
 A reboot may temporarily hide the condition that caused the fault.
 

@@ -34,13 +34,13 @@ Different heritage environments may require different standard patterns.
 
 ### Indoor museum deployment
 
-Typical characteristics controlled indoor environment; reliable fixed power may be available; dense visitor activity; reflective surfaces and display cases; strict visual-impact requirements; controlled staff access; and potentially reliable local networking.
+Typical characteristics include a controlled indoor environment; potentially reliable fixed power; dense visitor activity; reflective surfaces and display cases; strict visual-impact requirements; controlled staff access; and potentially reliable local networking.
 
 Priorities may include discreet mounting; false-positive control; operator usability; minimal visual intrusion; and indoor environmental monitoring.
 
 ### Outdoor archaeological deployment
 
-Typical characteristics direct weather exposure; solar power may be important; changing temperature and humidity; variable communications coverage; larger monitored zones; difficult maintenance access; and stronger environmental-protection requirements.
+Typical characteristics include direct weather exposure; the possible need for solar power; changing temperature and humidity; variable communications coverage; larger monitored zones; difficult maintenance access; and stronger environmental-protection requirements.
 
 Priorities may include drainage; UV/weather durability; power autonomy; secure mounting; and robust communications recovery.
 
@@ -96,7 +96,7 @@ Pilot deployments should ideally answer a useful engineering question rather tha
 
 ## Scaling from five units
 
-If the Durrës five-unit model is successful, future multi-unit deployments can use the same principles stable unit IDs; zone mapping; per-unit health; common configuration baseline; centralized event correlation; and consistent commissioning records.
+If the Durrës five-unit model is successful, future multi-unit deployments can use the same principles: stable unit IDs; zone mapping; per-unit health; common configuration baseline; centralized event correlation; and consistent commissioning records.
 
 Scaling the number of devices increases operational complexity.
 
@@ -150,7 +150,7 @@ Future model development should maintain dataset provenance; privacy controls; c
 
 ## International deployments
 
-ORIGIN is intended as a broadly applicable heritage-protection platform, but international deployment introduces additional considerations local regulations; radio approvals; privacy law; transport restrictions; language/localization; maintenance responsibility; partner training; and climate differences.
+ORIGIN is intended as a broadly applicable heritage-protection platform, but international deployment introduces additional considerations: local regulations; radio approvals; privacy law; transport restrictions; language/localization; maintenance responsibility; partner training; and climate differences.
 
 The Durrës collaboration provides a useful first international pilot context for developing these processes.
 

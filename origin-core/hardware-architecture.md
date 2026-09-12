@@ -48,7 +48,7 @@ Higher-level reasoning belongs in the software and Centaurus layers. This separa
 
 The hardware is designed around rechargeable battery operation with managed charging and regulated power delivery. In Rosetta v2, the power design includes a BQ24074-family charging stage and a TPS63031-based buck-boost conversion stage.
 
-The exact electrical implementation is documented under [Rosetta → Power Management](../rosetta/power-management.md). At Core level, the important architectural requirements are accept an external energy source; charge the battery safely; maintain a usable regulated supply across battery conditions; expose power state to firmware where possible; prevent peripheral power demands from destabilizing the system; and support deployment-oriented energy planning.
+The exact electrical implementation is documented under [Rosetta → Power Management](../rosetta/power-management.md). At Core level, the important architectural requirements are to accept an external energy source; charge the battery safely; maintain a usable regulated supply across battery conditions; expose power state to firmware where possible; prevent peripheral power demands from destabilizing the system; and support deployment-oriented energy planning.
 
 Solar input is part of the intended field architecture, which is why solar-panel mounting and cable routing are also treated as mechanical design requirements.
 

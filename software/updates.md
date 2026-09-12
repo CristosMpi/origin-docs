@@ -130,7 +130,7 @@ However, urgency should not remove the need for artifact validation, compatibili
 
 ## Logging and audit trail
 
-Each update attempt should produce a record containing, where practical device ID; old version; target version; update start time; source/method; validation result; activation result; rollback result if any; and final active version.
+Each update attempt should produce a record containing, where practical: device ID; old version; target version; update start time; source/method; validation result; activation result; rollback result if any; and final active version.
 
 This helps distinguish software changes from unrelated hardware or environmental problems.
 
@@ -180,7 +180,7 @@ Invalid configuration is rejected safely.
 
 ## Deployment checklist
 
-Before approving an update for field use release source/tag identified; release notes written; supported hardware listed; configuration compatibility checked; upgrade tested from currently deployed version; interrupted update tested; rollback/recovery tested; post-update self-check defined; and deployment record prepared.
+Before approving an update for field use, confirm the following: release source/tag identified; release notes written; supported hardware listed; configuration compatibility checked; upgrade tested from currently deployed version; interrupted update tested; rollback/recovery tested; post-update self-check defined; and deployment record prepared.
 
 ## Related pages
 
