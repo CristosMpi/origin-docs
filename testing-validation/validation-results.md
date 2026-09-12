@@ -50,39 +50,17 @@ The package included PCB fabrication layers and Gerber job metadata, but **no Ex
 
 The reviewed package is incomplete for normal PCB fabrication and should be regenerated or supplemented before being treated as a production manufacturing release.
 
-This finding is also documented in:
-
-- [Rosetta → Manufacturing](../rosetta/manufacturing.md)
-- [Electronics Testing](electronics-testing.md)
+This finding is also documented in [Rosetta → Manufacturing](../rosetta/manufacturing.md) and [Electronics Testing](electronics-testing.md).
 
 ## Rosetta v2 export metadata
 
-The reviewed board export provides useful revision-specific metadata:
-
-- generated using KiCad Pcbnew 10.0.1;
-- generated on 18 July 2026;
-- two copper layers;
-- nominal 1.6 mm FR-4 construction in the job metadata;
-- 35 μm copper metadata;
-- exported board bounding size approximately 100.05 × 104.8 mm.
+The reviewed board export provides useful revision-specific metadata generated using KiCad Pcbnew 10.0.1; generated on 18 July 2026; two copper layers; nominal 1.6 mm FR-4 construction in the job metadata; 35 μm copper metadata; and exported board bounding size approximately 100.05 × 104.8 mm.
 
 These values describe the reviewed export. They do **not** by themselves validate electrical performance or the physical dimensions of every later Rosetta revision.
 
 ## Claims intentionally not made
 
-Until test evidence is added, ORIGIN documentation does not claim a validated value for:
-
-- complete-system battery life;
-- solar autonomy;
-- waterproof/IP rating;
-- maximum field operating temperature;
-- maximum ORIGIN presence-detection distance;
-- guaranteed 360° coverage;
-- false-positive rate;
-- false-negative rate;
-- AI accuracy;
-- communications uptime;
-- multi-year outdoor durability.
+Until test evidence is added, ORIGIN documentation does not claim a validated value for complete-system battery life; solar autonomy; waterproof/IP rating; maximum field operating temperature; maximum ORIGIN presence-detection distance; guaranteed 360° coverage; false-positive rate; false-negative rate; AI accuracy; communications uptime; and multi-year outdoor durability.
 
 The absence of these numbers is deliberate. Publishing an unsupported number would reduce the value of the documentation.
 
@@ -138,50 +116,77 @@ As evidence grows, this page should maintain separate tables for:
 
 ### Electronics
 
-- power rails;
-- startup;
-- current consumption;
-- charging/power transitions;
-- sensor buses;
-- storage;
-- restart recovery.
+power rails;.
+
+startup;.
+
+current consumption;.
+
+charging/power transitions;.
+
+sensor buses;.
+
+storage;.
+
+restart recovery.
 
 ### Sensors
 
-- environmental-sensor comparison;
-- radar coverage;
-- stationary-presence behavior;
-- false detections;
-- blind zones;
-- multi-radar behavior.
+environmental-sensor comparison;.
+
+radar coverage;.
+
+stationary-presence behavior;.
+
+false detections;.
+
+blind zones;.
+
+multi-radar behavior.
 
 ### Mechanical
 
-- critical dimensions;
-- PCB fit;
-- assembly cycles;
-- solar support;
-- base stability;
-- cable routing;
-- service access.
+critical dimensions;.
+
+PCB fit;.
+
+assembly cycles;.
+
+solar support;.
+
+base stability;.
+
+cable routing;.
+
+service access.
 
 ### Environmental
 
-- splash exposure;
-- condensation;
-- solar heating;
-- humidity;
-- dust/debris;
-- material aging.
+splash exposure;.
+
+condensation;.
+
+solar heating;.
+
+humidity;.
+
+dust/debris;.
+
+material aging.
 
 ### Software and communications
 
-- fault handling;
-- data integrity;
-- offline buffering;
-- restart recovery;
-- update rollback;
-- message ordering.
+fault handling;.
+
+data integrity;.
+
+offline buffering;.
+
+restart recovery;.
+
+update rollback;.
+
+message ordering.
 
 ### Centaurus AI
 
@@ -189,18 +194,7 @@ If quantitative AI results are later published, they should include the dataset,
 
 ### Field deployment
 
-Field results should identify:
-
-- site;
-- dates;
-- number of units;
-- actual hardware/software revision;
-- test duration;
-- coverage configuration;
-- known events;
-- false events;
-- failures;
-- maintenance interventions.
+Field results should identify site; dates; number of units; actual hardware/software revision; test duration; coverage configuration; known events; false events; failures; and maintenance interventions.
 
 ## Historical results
 
@@ -231,11 +225,4 @@ As the ORIGIN 2026 system progresses through bench testing, integration and fiel
 
 ## Related documentation
 
-See:
-
-- [Galene Lab Standards](galene-lab-standards.md)
-- [Electronics Testing](electronics-testing.md)
-- [Sensor Testing](sensor-testing.md)
-- [Mechanical Testing](mechanical-testing.md)
-- [Environmental Testing](environmental-testing.md)
-- [Field Testing](field-testing.md)
+See [Galene Lab Standards](galene-lab-standards.md); [Electronics Testing](electronics-testing.md); [Sensor Testing](sensor-testing.md); [Mechanical Testing](mechanical-testing.md); [Environmental Testing](environmental-testing.md); and [Field Testing](field-testing.md).

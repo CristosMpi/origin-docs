@@ -6,16 +6,7 @@ Bench tests are essential, but they cannot reproduce every effect of installatio
 
 ## Objectives
 
-Field testing should answer questions such as:
-
-- Does the complete ORIGIN unit remain mechanically stable after installation?
-- Do sensors cover the intended zones from the installed position?
-- Are false detections acceptable and explainable?
-- Does the power system support the intended operating cycle?
-- Does communication remain reliable enough for the deployment?
-- Are failures visible to operators?
-- Can the unit be serviced without disturbing the site?
-- Does the system recover correctly after power or network interruption?
+Field testing should answer questions such as Does the complete ORIGIN unit remain mechanically stable after installation?; Do sensors cover the intended zones from the installed position?; Are false detections acceptable and explainable?; Does the power system support the intended operating cycle?; Does communication remain reliable enough for the deployment?; Are failures visible to operators?; Can the unit be serviced without disturbing the site?; and Does the system recover correctly after power or network interruption?.
 
 ## Field-test stages
 
@@ -25,26 +16,13 @@ A useful field program progresses through several stages.
 
 Use a representative outdoor location where the team can freely reposition equipment and repeat tests.
 
-This stage is useful for:
-
-- initial radar coverage mapping;
-- solar/power observations;
-- environmental exposure;
-- network testing;
-- mechanical stability;
-- service-access evaluation.
+This stage is useful for initial radar coverage mapping; solar/power observations; environmental exposure; network testing; mechanical stability; and service-access evaluation.
 
 ### 2. Representative-site test
 
 Use geometry that resembles the final heritage environment.
 
-For example:
-
-- walls and corridors;
-- stone surfaces;
-- restricted approach paths;
-- similar mounting height;
-- similar visitor movement.
+For example walls and corridors; stone surfaces; restricted approach paths; similar mounting height; and similar visitor movement.
 
 ### 3. Pilot deployment
 
@@ -56,15 +34,7 @@ At this stage, changes to thresholds and geometry should be documented rather th
 
 Before transporting the unit, perform and record a baseline functional test.
 
-Recommended checks:
-
-- successful boot;
-- sensor health;
-- storage/logging;
-- communication;
-- known configuration;
-- battery/power state;
-- mechanical inspection.
+Recommended checks successful boot; sensor health; storage/logging; communication; known configuration; battery/power state; and mechanical inspection.
 
 This helps distinguish transport damage from site-specific problems.
 
@@ -97,28 +67,13 @@ Repeat sensor-coverage validation after installation.
 
 Do not assume that laboratory or open-area radar results transfer directly to a site with walls, stone, metal objects or constrained paths.
 
-Test routes should include:
-
-- normal approach;
-- departure;
-- slow movement;
-- stationary presence;
-- movement near zone boundaries;
-- movement outside the intended monitored zone.
+Test routes should include normal approach; departure; slow movement; stationary presence; movement near zone boundaries; and movement outside the intended monitored zone.
 
 Record which radar or sensor responds at each location.
 
 ## Baseline environmental observations
 
-Record relevant site conditions such as:
-
-- ambient temperature;
-- humidity if available;
-- sunlight/shade;
-- wind;
-- rain exposure;
-- nearby moving objects;
-- site geometry.
+Record relevant site conditions such as ambient temperature; humidity if available; sunlight/shade; wind; rain exposure; nearby moving objects; and site geometry.
 
 These observations can help explain changes in sensor or power behavior.
 
@@ -126,14 +81,7 @@ These observations can help explain changes in sensor or power behavior.
 
 Field communication tests should include more than a single successful connection.
 
-Verify:
-
-- startup connection;
-- repeated transmissions;
-- expected data arrival;
-- local buffering when unavailable;
-- recovery after network interruption;
-- timestamp/order behavior after reconnection.
+Verify startup connection; repeated transmissions; expected data arrival; local buffering when unavailable; recovery after network interruption; and timestamp/order behavior after reconnection.
 
 If multiple communications paths exist, test each path relevant to the deployed configuration.
 
@@ -141,14 +89,7 @@ If multiple communications paths exist, test each path relevant to the deployed 
 
 Observe the energy system over a representative operating period.
 
-Record where available:
-
-- battery state or voltage;
-- external/solar input;
-- operating mode;
-- significant loads;
-- reboot events;
-- brownout indicators.
+Record where available battery state or voltage; external/solar input; operating mode; significant loads; reboot events; and brownout indicators.
 
 Long-term battery-life or energy-autonomy claims should only be made from data covering representative conditions.
 
@@ -156,13 +97,7 @@ Long-term battery-life or energy-autonomy claims should only be made from data c
 
 A field deployment should record events that ORIGIN interprets as potentially relevant but that operators determine are benign.
 
-Examples may include:
-
-- visitors outside the intended area;
-- staff movement;
-- reflections;
-- environmental movement;
-- site activity.
+Examples may include visitors outside the intended area; staff movement; reflections; environmental movement; and site activity.
 
 Do not simply delete these events. Categorize them so the team can improve placement, thresholds or analysis.
 
@@ -170,13 +105,7 @@ Do not simply delete these events. Categorize them so the team can improve place
 
 Where tests intentionally create known events, record whether ORIGIN detects them.
 
-Examples:
-
-- person enters intended zone;
-- person remains still;
-- person exits;
-- unit is moved or disturbed where tamper sensing is implemented;
-- selected sensor is disconnected.
+Examples person enters intended zone; person remains still; person exits; unit is moved or disturbed where tamper sensing is implemented; and selected sensor is disconnected.
 
 Known test events should be timestamped so they can be compared with logs.
 
@@ -212,22 +141,11 @@ Examples:
 
 ### Network interruption
 
-Temporarily remove connectivity and verify:
-
-- system remains operational where designed;
-- local data is retained;
-- network state is visible;
-- queued data is handled correctly after recovery.
+Temporarily remove connectivity and verify system remains operational where designed, local data is retained, network state is visible, and queued data is handled correctly after recovery.
 
 ### Power interruption
 
-Perform a controlled restart and verify:
-
-- boot;
-- configuration persistence;
-- sensor reinitialization;
-- communication recovery;
-- logging continuity.
+Perform a controlled restart and verify boot; configuration persistence; sensor reinitialization; communication recovery; and logging continuity.
 
 ### Sensor disconnect
 
@@ -237,44 +155,19 @@ Do not perform unsafe fault injection on installed equipment or heritage infrast
 
 ## Mechanical field inspection
 
-After installation and again after a defined period, inspect:
-
-- mounting stability;
-- fastener movement;
-- enclosure cracks;
-- solar-support movement;
-- cable strain;
-- sensor orientation;
-- dirt/water accumulation;
-- service-interface accessibility.
+After installation and again after a defined period, inspect mounting stability; fastener movement; enclosure cracks; solar-support movement; cable strain; sensor orientation; dirt/water accumulation; and service-interface accessibility.
 
 ## Operator usability
 
 A technical system may work but still be impractical to operate.
 
-Field testing should therefore check whether operators can:
-
-- understand health status;
-- distinguish an event from a fault;
-- access required service points;
-- restart or isolate the unit safely;
-- identify the device and configuration;
-- understand when technical support is required.
+Field testing should therefore check whether operators can understand health status; distinguish an event from a fault; access required service points; restart or isolate the unit safely; identify the device and configuration; and understand when technical support is required.
 
 ## Long-duration observation
 
 Short demonstrations cannot validate long-term behavior.
 
-Where possible, collect data over extended periods to observe:
-
-- communication uptime;
-- power trends;
-- sensor drift;
-- false-event frequency;
-- restart frequency;
-- environmental effects;
-- mechanical loosening;
-- storage behavior.
+Where possible, collect data over extended periods to observe communication uptime; power trends; sensor drift; false-event frequency; restart frequency; environmental effects; mechanical loosening; and storage behavior.
 
 The duration should be stated explicitly in any published result.
 
@@ -306,27 +199,8 @@ Insufficient duration, evidence or site access prevents a conclusion.
 
 ## Evidence package
 
-Recommended field evidence includes:
-
-- installation photos;
-- site map;
-- sensor coverage map;
-- event log;
-- known-event timestamps;
-- false-positive log;
-- power telemetry;
-- communications log;
-- environmental observations;
-- maintenance notes;
-- configuration/revision record.
+Recommended field evidence includes installation photos; site map; sensor coverage map; event log; known-event timestamps; false-positive log; power telemetry; communications log; environmental observations; maintenance notes; and configuration/revision record.
 
 ## Related documentation
 
-See:
-
-- [Installation & Deployment](../installation-deployment/README.md)
-- [Commissioning](../installation-deployment/commissioning.md)
-- [Sensor Testing](sensor-testing.md)
-- [Environmental Testing](environmental-testing.md)
-- [Deployments](../deployments/README.md)
-- [Validation Results](validation-results.md)
+See [Installation & Deployment](../installation-deployment/README.md); [Commissioning](../installation-deployment/commissioning.md); [Sensor Testing](sensor-testing.md); [Environmental Testing](environmental-testing.md); [Deployments](../deployments/README.md); and [Validation Results](validation-results.md).

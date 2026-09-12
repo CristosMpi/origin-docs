@@ -15,15 +15,7 @@ The long-term goal is simple: a module should be able to answer four questions c
 
 Without a shared interface, every module would need custom wiring, custom firmware assumptions, and custom mounting geometry.
 
-That creates several problems:
-
-- difficult maintenance;
-- undocumented compatibility;
-- fragile prototypes;
-- repeated redesign of the Core;
-- higher risk of wiring errors;
-- unclear module identity;
-- inability to support multiple hardware revisions cleanly.
+That creates several problems difficult maintenance; undocumented compatibility; fragile prototypes; repeated redesign of the Core; higher risk of wiring errors; unclear module identity; and inability to support multiple hardware revisions cleanly.
 
 The Expansion System is intended to replace that ad-hoc approach with a versioned contract between the Core and its modules.
 
@@ -47,17 +39,7 @@ A module may use only some of these layers. For example, a purely mechanical mou
 
 The mechanical interface defines how a module physically connects to ORIGIN Core.
 
-It should eventually specify:
-
-- attachment points;
-- allowable envelope;
-- insertion/removal direction;
-- retention method;
-- fastener type;
-- load expectations;
-- cable-routing zones;
-- keep-out regions around sensors and antennas;
-- environmental sealing requirements.
+It should eventually specify attachment points; allowable envelope; insertion/removal direction; retention method; fastener type; load expectations; cable-routing zones; keep-out regions around sensors and antennas; and environmental sealing requirements.
 
 A key requirement already established during enclosure development is that module access must remain practical after installation. Expansion points should therefore not depend entirely on the bottom surface of the Core, because that region may be blocked by soil or a mounting base.
 
@@ -65,15 +47,7 @@ A key requirement already established during enclosure development is that modul
 
 The final mechanical standard should define keep-out zones for components that must remain unobstructed.
 
-These can include:
-
-- mmWave sensing faces;
-- antennas;
-- environmental-sensor openings;
-- ventilation or pressure-equalization features;
-- maintenance covers;
-- solar-support geometry;
-- primary mounting hardware.
+These can include mmWave sensing faces; antennas; environmental-sensor openings; ventilation or pressure-equalization features; maintenance covers; solar-support geometry; and primary mounting hardware.
 
 A module that fits mechanically but occupies a keep-out zone is not compatible.
 
@@ -81,11 +55,7 @@ A module that fits mechanically but occupies a keep-out zone is not compatible.
 
 Not all modules place the same loads on the enclosure.
 
-A useful future mechanical classification could distinguish between:
-
-- **light accessory** — low-mass sensor or interface;
-- **structural module** — base or support that transfers mounting loads;
-- **dynamic module** — configuration exposed to vibration or acceleration, such as Drone Mount.
+A useful future mechanical classification could distinguish between **light accessory** — low-mass sensor or interface, **structural module** — base or support that transfers mounting loads, and **dynamic module** — configuration exposed to vibration or acceleration, such as Drone Mount.
 
 The final limits must be determined from real enclosure and material testing.
 
@@ -93,18 +63,7 @@ The final limits must be determined from real enclosure and material testing.
 
 Active modules require a controlled way to receive power and, potentially, expose signals.
 
-The electrical specification should eventually define:
-
-- nominal supply rail(s);
-- acceptable voltage range;
-- maximum continuous current;
-- transient/current-limit behavior;
-- ground reference;
-- connector family;
-- pin assignment;
-- reverse-polarity protection;
-- ESD/transient expectations;
-- whether hot-plugging is supported.
+The electrical specification should eventually define nominal supply rail(s); acceptable voltage range; maximum continuous current; transient/current-limit behavior; ground reference; connector family; pin assignment; reverse-polarity protection; ESD/transient expectations; and whether hot-plugging is supported.
 
 No pinout should be treated as final until it is confirmed against the released Rosetta hardware.
 
@@ -114,15 +73,7 @@ See [Rosetta → Interfaces](../rosetta/interfaces.md).
 
 The Core must not assume unlimited expansion power.
 
-For active modules, the system should maintain a power budget that considers:
-
-- normal module current;
-- startup current;
-- multiple simultaneous modules;
-- battery state;
-- solar input conditions;
-- regulator thermal limits;
-- Core electronics demand.
+For active modules, the system should maintain a power budget that considers normal module current; startup current; multiple simultaneous modules; battery state; solar input conditions; regulator thermal limits; and Core electronics demand.
 
 A compatible connector does not guarantee that the power system can safely support every combination of modules.
 
@@ -132,15 +83,7 @@ Where modules exchange data, the common interface should define how the Core dis
 
 The final implementation may use one or more buses already available through Rosetta. The exact choice should come from confirmed hardware and firmware.
 
-Regardless of transport, the communication layer should support:
-
-- module identity;
-- initialization;
-- capability discovery or configuration;
-- health checks;
-- error detection;
-- recovery after disconnect;
-- version compatibility.
+Regardless of transport, the communication layer should support module identity; initialization; capability discovery or configuration; health checks; error detection; recovery after disconnect; and version compatibility.
 
 ## Module identity
 
@@ -208,16 +151,7 @@ Module failures should not unnecessarily take down the Core.
 
 The Expansion System should aim for fault isolation so that one bad accessory does not automatically disable all monitoring.
 
-Potential failures include:
-
-- short circuit;
-- over-current;
-- corrupted communication;
-- missing module;
-- incompatible revision;
-- invalid sensor output;
-- repeated resets;
-- damaged connector.
+Potential failures include short circuit; over-current; corrupted communication; missing module; incompatible revision; invalid sensor output; repeated resets; and damaged connector.
 
 Where hardware allows, power or communication to the affected module can be disabled while the Core continues operating in a degraded state.
 
@@ -225,14 +159,7 @@ Where hardware allows, power or communication to the affected module can be disa
 
 Hot-plug capability must not be assumed.
 
-If modules are intended to be connected while ORIGIN is powered, the interface must be designed and tested for:
-
-- contact sequencing;
-- inrush current;
-- transient suppression;
-- bus recovery;
-- firmware detection;
-- accidental partial insertion.
+If modules are intended to be connected while ORIGIN is powered, the interface must be designed and tested for contact sequencing; inrush current; transient suppression; bus recovery; firmware detection; and accidental partial insertion.
 
 Until that support is explicitly validated, maintenance instructions should assume modules are attached or removed with the affected interface safely powered down.
 
@@ -240,15 +167,7 @@ Until that support is explicitly validated, maintenance instructions should assu
 
 A module changes more than electronics.
 
-Every attachment can affect:
-
-- ingress protection;
-- thermal behavior;
-- airflow;
-- water paths;
-- UV exposure;
-- structural loads;
-- sensor geometry.
+Every attachment can affect ingress protection; thermal behavior; airflow; water paths; UV exposure; structural loads; and sensor geometry.
 
 The module standard should therefore define whether an unused interface requires a cover, cap, gasket, or other protection.
 
@@ -256,15 +175,7 @@ The module standard should therefore define whether an unused interface requires
 
 Modules can also be represented through deployment configuration.
 
-A configuration profile can describe:
-
-- expected module family;
-- revision;
-- enabled driver;
-- sensor role;
-- installation orientation;
-- calibration values;
-- data-label mapping.
+A configuration profile can describe expected module family; revision; enabled driver; sensor role; installation orientation; calibration values; and data-label mapping.
 
 This makes the deployed configuration reproducible and prevents firmware from depending on undocumented physical knowledge.
 
@@ -286,12 +197,7 @@ The values above are illustrative only; the real matrix should be generated from
 
 Once modules are used outside the development bench, unnecessary breaking changes should be avoided.
 
-If a new Core revision changes an interface, the project should either:
-
-- preserve compatibility;
-- provide an adapter;
-- clearly mark the old module unsupported;
-- document the required upgrade path.
+If a new Core revision changes an interface, the project should either preserve compatibility, provide an adapter, clearly mark the old module unsupported, and document the required upgrade path.
 
 Silent incompatibility is the worst outcome because it can make a physically connected module appear functional when it is not.
 
@@ -329,20 +235,7 @@ Only after validation should the module receive a supported hardware/interface s
 
 ## Documentation requirements
 
-Every supported module should eventually document:
-
-- purpose;
-- hardware revision;
-- compatible Core revisions;
-- mechanical installation;
-- electrical requirements;
-- communication requirements;
-- firmware requirement;
-- configuration;
-- health states;
-- maintenance;
-- known limitations;
-- validation results.
+Every supported module should eventually document purpose; hardware revision; compatible Core revisions; mechanical installation; electrical requirements; communication requirements; firmware requirement; configuration; health states; maintenance; known limitations; and validation results.
 
 This makes the module ecosystem maintainable as Team Galene develops new hardware.
 
@@ -350,13 +243,7 @@ This makes the module ecosystem maintainable as Team Galene develops new hardwar
 
 An active module expands the trusted hardware/software boundary.
 
-Module interfaces should therefore avoid allowing an untrusted or malfunctioning device to:
-
-- overwrite configuration without authorization;
-- impersonate another critical sensor without detection;
-- destabilize the main communications stack;
-- consume unlimited power;
-- bypass update or integrity checks.
+Module interfaces should therefore avoid allowing an untrusted or malfunctioning device to overwrite configuration without authorization; impersonate another critical sensor without detection; destabilize the main communications stack; consume unlimited power; and bypass update or integrity checks.
 
 Security controls should be proportional to the real interface and deployment risk, but expansion should not mean unrestricted trust.
 
@@ -364,19 +251,7 @@ Security controls should be proportional to the real interface and deployment ri
 
 The Expansion System should be validated using both normal and failure conditions.
 
-Recommended tests include:
-
-- repeated mechanical attachment;
-- connector mating cycles;
-- incorrect/absent module;
-- power overload behavior;
-- communication interruption;
-- reboot with module attached;
-- module removal;
-- multiple-module combinations;
-- Core sensor interference;
-- configuration mismatch;
-- environmental exposure.
+Recommended tests include repeated mechanical attachment; connector mating cycles; incorrect/absent module; power overload behavior; communication interruption; reboot with module attached; module removal; multiple-module combinations; Core sensor interference; configuration mismatch; and environmental exposure.
 
 ## Current status
 
@@ -386,13 +261,4 @@ That distinction should remain visible in public documentation: the **architectu
 
 ## Related documentation
 
-See:
-
-- [Modules](README.md)
-- [BITs](bits.md)
-- [Aqua Base](aqua-base.md)
-- [Drone Mount](drone-mount.md)
-- [Rosetta → Interfaces](../rosetta/interfaces.md)
-- [Software → Configuration](../software/configuration.md)
-- [Mechanical Design](../mechanical-design/README.md)
-- [Testing & Validation](../testing-validation/README.md)
+See [Modules](README.md); [BITs](bits.md); [Aqua Base](aqua-base.md); [Drone Mount](drone-mount.md); [Rosetta → Interfaces](../rosetta/interfaces.md); [Software → Configuration](../software/configuration.md); [Mechanical Design](../mechanical-design/README.md); and [Testing & Validation](../testing-validation/README.md).

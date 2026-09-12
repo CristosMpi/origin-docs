@@ -10,16 +10,7 @@ ORIGIN is intended to have a recognisable appearance, but visual identity cannot
 
 The preferred design direction is deliberately more architectural than a conventional rectangular enclosure. Tall, tapered, faceted, and pyramid-influenced forms are being explored because they can make ORIGIN visually distinctive while also creating useful directional faces for sensors and structural transitions.
 
-However, every visual feature should justify itself through at least one of the following:
-
-- sensor placement;
-- structural stiffness;
-- cable routing;
-- service access;
-- weather shedding;
-- mounting;
-- manufacturing;
-- product identity that does not interfere with function.
+However, every visual feature should justify itself through at least one of the following sensor placement; structural stiffness; cable routing; service access; weather shedding; mounting; manufacturing; and product identity that does not interfere with function.
 
 If a feature makes the device harder to build, seal, inspect, or validate without adding enough value, it should be simplified.
 
@@ -27,14 +18,7 @@ If a feature makes the device harder to build, seal, inspect, or validate withou
 
 The current design preference is for a **taller, narrower product** rather than a low and bulky one.
 
-This supports several project goals:
-
-- smaller ground footprint;
-- better separation between lower mounting hardware and upper sensing regions;
-- more useful vertical internal packaging;
-- improved access to side-mounted module interfaces;
-- a clearer visual identity;
-- easier use of multiple angled sensor faces.
+This supports several project goals smaller ground footprint; better separation between lower mounting hardware and upper sensing regions; more useful vertical internal packaging; improved access to side-mounted module interfaces; a clearer visual identity; and easier use of multiple angled sensor faces.
 
 A tall design still needs stability. The base, mounting method, mass distribution, and solar-panel loading must therefore be considered together.
 
@@ -44,14 +28,7 @@ Sensor performance is a primary mechanical constraint.
 
 The current ORIGIN design integrates three DFRobot C4001 24 GHz mmWave sensors. Their orientation should be defined by the enclosure geometry, not improvised during assembly.
 
-This means CAD must answer questions such as:
-
-- What direction does each radar face?
-- What material lies in front of it?
-- Is the opening large enough for the intended field of view?
-- Can nearby fasteners or ribs influence the sensing region?
-- Can the PCB be replaced without changing its angle?
-- Can each radar be identified consistently in software and test documentation?
+This means CAD must answer questions such as What direction does each radar face?; What material lies in front of it?; Is the opening large enough for the intended field of view?; Can nearby fasteners or ribs influence the sensing region?; Can the PCB be replaced without changing its angle?; and Can each radar be identified consistently in software and test documentation?.
 
 The sensor mounting system therefore becomes part of the calibration and validation process.
 
@@ -61,17 +38,7 @@ ORIGIN should be maintainable after deployment.
 
 A design is not considered successful merely because all components fit inside it once.
 
-The enclosure should allow technicians or team members to:
-
-- open the unit without destroying the shell;
-- inspect Rosetta;
-- reach connectors;
-- replace a radar module;
-- inspect cable strain relief;
-- access fasteners with normal tools;
-- replace a damaged external part without replacing the complete system;
-- reconnect a module correctly;
-- close the enclosure again without relying on improvised sealing.
+The enclosure should allow technicians or team members to open the unit without destroying the shell; inspect Rosetta; reach connectors; replace a radar module; inspect cable strain relief; access fasteners with normal tools; replace a damaged external part without replacing the complete system; reconnect a module correctly; and close the enclosure again without relying on improvised sealing.
 
 This is particularly important for a project intended for iterative field testing.
 
@@ -99,16 +66,7 @@ The important requirement is that the trade-off is **documented and tested**.
 
 Rosetta v2 is approximately 105 × 100 mm, so its mounting pattern, connector orientation, and cable paths strongly affect the enclosure interior.
 
-Mechanical design should be updated whenever an electrical change modifies:
-
-- board dimensions;
-- mounting-hole positions;
-- connector locations;
-- antenna clearance;
-- battery or power routing;
-- sensor headers;
-- SD/SIM access;
-- service requirements.
+Mechanical design should be updated whenever an electrical change modifies board dimensions; mounting-hole positions; connector locations; antenna clearance; battery or power routing; sensor headers; SD/SIM access; and service requirements.
 
 Likewise, mechanical constraints should feed back into PCB decisions where possible.
 
@@ -120,15 +78,7 @@ The current project constraint is that no single manufactured object should exce
 
 Rather than treating this as a limitation to hide, ORIGIN should use it to encourage a modular mechanical architecture.
 
-Large assemblies can be divided into:
-
-- central shells;
-- removable covers;
-- sensor bezels;
-- solar supports;
-- base components;
-- module adapters;
-- service panels.
+Large assemblies can be divided into central shells; removable covers; sensor bezels; solar supports; base components; module adapters; and service panels.
 
 A multi-part assembly can be superior to a one-piece print when it improves orientation, strength, repairability, or surface quality.
 
@@ -136,14 +86,7 @@ A multi-part assembly can be superior to a one-piece print when it improves orie
 
 External parts are more likely to suffer damage than protected internal electronics.
 
-Therefore, components such as:
-
-- solar supports;
-- external brackets;
-- sensor covers;
-- module latches;
-- mounting feet;
-- cable guides
+Therefore, components such as solar supports; external brackets; sensor covers; module latches; mounting feet; and cable guides.
 
 should be replaceable where practical.
 
@@ -153,16 +96,7 @@ This reduces maintenance cost and lets the system evolve without requiring a com
 
 CAD models often look valid while containing practical assembly problems.
 
-Every major revision should be checked for:
-
-- trapped screws;
-- connectors blocked after another component is installed;
-- cables that cannot be inserted after assembly;
-- fasteners requiring impossible tool angles;
-- covers that cannot be removed without disconnecting unrelated parts;
-- parts that collide only during insertion;
-- insufficient tolerance for printed parts;
-- inaccessible module latches.
+Every major revision should be checked for trapped screws; connectors blocked after another component is installed; cables that cannot be inserted after assembly; fasteners requiring impossible tool angles; covers that cannot be removed without disconnecting unrelated parts; parts that collide only during insertion; insufficient tolerance for printed parts; and inaccessible module latches.
 
 An exploded assembly and a real assembly sequence should be maintained alongside the finished model.
 
@@ -172,12 +106,7 @@ ORIGIN is an evolving system.
 
 The mechanical design should therefore make revision inexpensive.
 
-Stable elements should be separated from likely-to-change elements. For example:
-
-- the central electronics volume can remain stable while sensor bezels evolve;
-- a module interface can use an adapter rather than reshaping the entire shell;
-- the solar panel can use a replaceable support assembly;
-- internal trays can be revised independently of the exterior skin.
+Stable elements should be separated from likely-to-change elements. For example the central electronics volume can remain stable while sensor bezels evolve, a module interface can use an adapter rather than reshaping the entire shell, the solar panel can use a replaceable support assembly, and internal trays can be revised independently of the exterior skin.
 
 This approach makes iteration faster and reduces the risk that one component change invalidates the entire design.
 
@@ -185,16 +114,7 @@ This approach makes iteration faster and reduces the risk that one component cha
 
 ORIGIN is intended for cultural-heritage environments, so the physical product should avoid unnecessary visual or physical intrusion.
 
-Mechanical design should consider:
-
-- compact footprint;
-- reversible installation where possible;
-- minimal permanent intervention;
-- clear distinction between modern equipment and historic fabric;
-- low-maintenance mounting;
-- cable management;
-- safe edges and exposed hardware;
-- avoidance of unnecessary contact with protected surfaces.
+Mechanical design should consider compact footprint; reversible installation where possible; minimal permanent intervention; clear distinction between modern equipment and historic fabric; low-maintenance mounting; cable management; safe edges and exposed hardware; and avoidance of unnecessary contact with protected surfaces.
 
 Final installation methods must always be adapted to site requirements and approved procedures.
 
@@ -202,14 +122,7 @@ Final installation methods must always be adapted to site requirements and appro
 
 Mechanical claims should come from tests.
 
-Examples include:
-
-- whether a sensor opening affects water ingress;
-- whether a solar support is stiff enough;
-- whether a printed latch survives repeated use;
-- whether the enclosure resonates or vibrates;
-- whether radar coverage matches the intended geometry;
-- whether a part remains dimensionally stable after environmental exposure.
+Examples include whether a sensor opening affects water ingress; whether a solar support is stiff enough; whether a printed latch survives repeated use; whether the enclosure resonates or vibrates; whether radar coverage matches the intended geometry; and whether a part remains dimensionally stable after environmental exposure.
 
 The design process is therefore:
 

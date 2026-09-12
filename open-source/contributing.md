@@ -6,19 +6,7 @@ The project welcomes contributions in documentation, electronics, firmware, AI, 
 
 ## Before contributing
 
-Before opening a change, determine which kind of contribution you are making:
-
-- documentation correction;
-- technical clarification;
-- bug fix;
-- new feature;
-- hardware revision;
-- mechanical revision;
-- test/validation improvement;
-- deployment finding;
-- maintenance improvement;
-- security improvement;
-- proposal or research idea.
+Before opening a change, determine which kind of contribution you are making documentation correction; technical clarification; bug fix; new feature; hardware revision; mechanical revision; test/validation improvement; deployment finding; maintenance improvement; security improvement; and proposal or research idea.
 
 Different changes require different evidence.
 
@@ -48,44 +36,17 @@ A limitation should be removed only when the underlying issue has been resolved 
 
 ### 4. Protect sensitive information
 
-Never contribute:
-
-- passwords or secrets;
-- deployment credentials;
-- private keys;
-- private archaeological-site security details;
-- personal information;
-- confidential commercial information;
-- unpublished partner terms;
-- material the project is not permitted to redistribute.
+Never contribute passwords or secrets; deployment credentials; private keys; private archaeological-site security details; personal information; confidential commercial information; unpublished partner terms; and material the project is not permitted to redistribute.
 
 ### 5. Prefer reproducible evidence
 
-Useful contributions include:
-
-- test procedures;
-- measurements;
-- photos tied to a test record;
-- logs;
-- schematic references;
-- source files;
-- validated manufacturing outputs;
-- clearly described failure cases.
+Useful contributions include test procedures; measurements; photos tied to a test record; logs; schematic references; source files; validated manufacturing outputs; and clearly described failure cases.
 
 ## Documentation contributions
 
 Documentation changes should be technically useful, not just stylistic.
 
-Good documentation contributions may:
-
-- correct an inaccurate component description;
-- clarify current versus planned behavior;
-- add a missing installation step;
-- add a troubleshooting path;
-- explain a known manufacturing failure;
-- improve cross-links between related pages;
-- document a validation procedure;
-- improve terminology consistency.
+Good documentation contributions may correct an inaccurate component description; clarify current versus planned behavior; add a missing installation step; add a troubleshooting path; explain a known manufacturing failure; improve cross-links between related pages; document a validation procedure; and improve terminology consistency.
 
 When changing one technical fact, search for other places where the same fact may appear.
 
@@ -93,18 +54,7 @@ When changing one technical fact, search for other places where the same fact ma
 
 Hardware changes should include enough context for review.
 
-For an electronics change, provide where applicable:
-
-- problem statement;
-- affected revision;
-- schematic change;
-- PCB change;
-- reason for component selection;
-- power/interface implications;
-- ERC/DRC status;
-- fabrication implications;
-- validation plan;
-- compatibility impact.
+For an electronics change, provide where applicable problem statement; affected revision; schematic change; PCB change; reason for component selection; power/interface implications; ERC/DRC status; fabrication implications; validation plan; and compatibility impact.
 
 Do not submit a generated Gerber-only change when the editable PCB source should also change.
 
@@ -112,32 +62,13 @@ Do not submit a generated Gerber-only change when the editable PCB source should
 
 Mechanical changes should consider more than visual appearance.
 
-Review:
-
-- Rosetta fit;
-- mmWave sensor position and field of view;
-- screw access;
-- cable routing;
-- solar support;
-- sealing paths;
-- BIT/module access;
-- mounting to soil/site infrastructure;
-- serviceability;
-- manufacturing constraints;
-- the 250 × 250 × 250 mm maximum single-part requirement where applicable.
+Review Rosetta fit; mmWave sensor position and field of view; screw access; cable routing; solar support; sealing paths; BIT/module access; mounting to soil/site infrastructure; serviceability; manufacturing constraints; and the 250 × 250 × 250 mm maximum single-part requirement where applicable.
 
 Changes to sensor orientation require renewed coverage validation.
 
 ## Firmware contributions
 
-Firmware changes should document:
-
-- affected interfaces;
-- configuration changes;
-- compatibility impact;
-- failure behavior;
-- test method;
-- recovery/rollback considerations where relevant.
+Firmware changes should document affected interfaces; configuration changes; compatibility impact; failure behavior; test method; and recovery/rollback considerations where relevant.
 
 Do not hard-code credentials or site-specific secrets.
 
@@ -145,16 +76,7 @@ Do not hard-code credentials or site-specific secrets.
 
 AI-related contributions require special care because apparent improvements can create hidden false-positive or false-negative behavior.
 
-Contributions should explain:
-
-- input data assumptions;
-- output meaning;
-- confidence handling;
-- evaluation method;
-- failure cases;
-- changes to thresholds/rules/models;
-- privacy implications;
-- whether human review remains required.
+Contributions should explain input data assumptions; output meaning; confidence handling; evaluation method; failure cases; changes to thresholds/rules/models; privacy implications; and whether human review remains required.
 
 Do not describe a model as accurate, reliable, autonomous, or secure without evidence supporting those claims.
 
@@ -178,15 +100,7 @@ A failed test is still useful evidence and should not be hidden.
 
 Field observations are especially valuable.
 
-A deployment finding should separate:
-
-- observation;
-- suspected cause;
-- confirmed cause, if known;
-- operational impact;
-- workaround;
-- proposed design change;
-- validation needed before closing the finding.
+A deployment finding should separate observation; suspected cause; confirmed cause, if known; operational impact; workaround; proposed design change; and validation needed before closing the finding.
 
 Avoid presenting an interpretation as confirmed fact until it is verified.
 
@@ -217,19 +131,7 @@ Push the branch and open a pull request when external contribution workflows are
 
 ## Pull request checklist
 
-Before requesting review, confirm:
-
-- [ ] The change solves a clearly stated problem.
-- [ ] Current, planned, and conceptual behavior are distinguished.
-- [ ] Technical values come from a source or measurement.
-- [ ] Affected revisions are identified where needed.
-- [ ] Related documentation is updated.
-- [ ] Internal links still work.
-- [ ] No secrets or private information are included.
-- [ ] Known limitations are preserved or updated with evidence.
-- [ ] Required tests have been performed or clearly marked as pending.
-- [ ] Compatibility impact is stated.
-- [ ] The licensing status of contributed material is clear.
+Before requesting review, confirm The change solves a clearly stated problem; Current, planned, and conceptual behavior are distinguished; Technical values come from a source or measurement; Affected revisions are identified where needed; Related documentation is updated; Internal links still work; No secrets or private information are included; Known limitations are preserved or updated with evidence; Required tests have been performed or clearly marked as pending; Compatibility impact is stated; and The licensing status of contributed material is clear.
 
 ## Review criteria
 
@@ -265,17 +167,7 @@ Does the change create unnecessary complexity or undocumented coupling?
 
 ## Compatibility changes
 
-A contribution is compatibility-relevant if it changes, for example:
-
-- connector pinout;
-- power requirements;
-- PCB footprint;
-- enclosure interface;
-- sensor orientation;
-- message/schema format;
-- configuration format;
-- firmware/hardware dependency;
-- module interface.
+A contribution is compatibility-relevant if it changes, for example connector pinout; power requirements; PCB footprint; enclosure interface; sensor orientation; message/schema format; configuration format; firmware/hardware dependency; and module interface.
 
 Compatibility changes should be reflected in the version documentation and, when appropriate, the changelog.
 
@@ -291,13 +183,7 @@ For field-critical problems, successful bench testing may not be sufficient; fie
 
 ## Style
 
-Documentation should be:
-
-- professional;
-- concise where possible;
-- technically precise;
-- explicit about uncertainty;
-- understandable by a competent reader outside Team Galene.
+Documentation should be professional; concise where possible; technically precise; explicit about uncertainty; and understandable by a competent reader outside Team Galene.
 
 Avoid marketing language such as “perfect,” “fully secure,” “100% accurate,” or “maintenance-free.”
 

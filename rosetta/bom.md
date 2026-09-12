@@ -21,18 +21,7 @@ A final machine-readable Rosetta v2 BOM has not yet been added to this docs repo
 
 ## Required production-BOM fields
 
-The released BOM should include at least:
-
-- reference designator;
-- quantity;
-- value/function;
-- manufacturer;
-- manufacturer part number;
-- package/footprint;
-- assembly side;
-- DNP / fitted status;
-- approved alternate part where relevant;
-- supplier part number where useful.
+The released BOM should include at least reference designator; quantity; value/function; manufacturer; manufacturer part number; package/footprint; assembly side; DNP / fitted status; approved alternate part where relevant; and supplier part number where useful.
 
 ## Example release format
 
@@ -49,14 +38,7 @@ Do-not-populate options must be explicit. Leaving a footprint unpopulated becaus
 
 ## Alternate components
 
-Alternates should only be approved after checking:
-
-- package and pin compatibility;
-- voltage/current ratings;
-- temperature range;
-- electrical behavior;
-- firmware implications;
-- lifecycle/availability.
+Alternates should only be approved after checking package and pin compatibility; voltage/current ratings; temperature range; electrical behavior; firmware implications; and lifecycle/availability.
 
 ## BOM-to-PCB verification
 

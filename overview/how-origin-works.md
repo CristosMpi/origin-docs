@@ -50,11 +50,7 @@ Any intelligent output must be interpreted in context. ORIGIN is designed to ass
 
 The value of monitoring depends on whether the resulting information can be understood and acted upon.
 
-ORIGIN therefore aims to separate three concepts:
-
-- **measurement** — what a sensor observed;
-- **event** — a change or condition that the system considers significant enough to record or surface;
-- **decision** — what a person chooses to do with that information.
+ORIGIN therefore aims to separate three concepts **measurement** — what a sensor observed, **event** — a change or condition that the system considers significant enough to record or surface, and **decision** — what a person chooses to do with that information.
 
 This separation is important because a measurement is not automatically a problem, and an automated event is not automatically an emergency.
 

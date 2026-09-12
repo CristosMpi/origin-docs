@@ -8,18 +8,7 @@ The current project uses additive manufacturing heavily, but the architecture sh
 
 A mechanical part is not ready for release simply because it can be exported from CAD.
 
-A repeatable manufacturing release should define:
-
-- part revision;
-- source CAD revision;
-- material;
-- manufacturing process;
-- orientation;
-- relevant process settings;
-- inserts and hardware;
-- post-processing;
-- inspection criteria;
-- known limitations.
+A repeatable manufacturing release should define part revision; source CAD revision; material; manufacturing process; orientation; relevant process settings; inserts and hardware; post-processing; inspection criteria; and known limitations.
 
 ## Manufacturing envelope
 
@@ -27,15 +16,7 @@ The current ORIGIN development constraint is that no single manufactured object 
 
 This limit should be checked at CAD level before manufacturing files are released.
 
-Where an assembly exceeds the limit, it should be split intentionally into parts such as:
-
-- main shell sections;
-- service cover;
-- internal electronics tray;
-- sensor bezels;
-- solar supports;
-- base components;
-- module adapters.
+Where an assembly exceeds the limit, it should be split intentionally into parts such as main shell sections; service cover; internal electronics tray; sensor bezels; solar supports; base components; and module adapters.
 
 Part splitting should improve assembly and serviceability rather than create weak arbitrary seams.
 
@@ -43,30 +24,13 @@ Part splitting should improve assembly and serviceability rather than create wea
 
 3D printing is well suited to ORIGIN because the enclosure uses custom geometry, sensor-specific mounting features, and relatively low production quantities during development.
 
-Additive manufacturing is particularly useful for:
-
-- enclosure prototypes;
-- internal carriers;
-- radar mounts;
-- solar brackets;
-- cable guides;
-- BIT adapters;
-- assembly fixtures;
-- test coupons.
+Additive manufacturing is particularly useful for enclosure prototypes; internal carriers; radar mounts; solar brackets; cable guides; BIT adapters; assembly fixtures; and test coupons.
 
 ## Print orientation
 
 Print orientation should be specified for structural parts.
 
-Orientation affects:
-
-- layer strength;
-- dimensional accuracy;
-- surface quality;
-- support requirements;
-- insert installation;
-- sealing performance;
-- print time.
+Orientation affects layer strength; dimensional accuracy; surface quality; support requirements; insert installation; sealing performance; and print time.
 
 A mechanically loaded support should be oriented so its most important load path does not depend unnecessarily on weak inter-layer separation.
 
@@ -76,56 +40,25 @@ The chosen orientation should also allow critical mating surfaces to print accur
 
 Exact print settings depend on the selected material and machine, so these values should be stored in the manufacturing profile rather than hard-coded in this overview.
 
-Important parameters include:
-
-- layer height;
-- perimeter/wall count;
-- top/bottom thickness;
-- infill type and percentage;
-- extrusion width;
-- nozzle diameter;
-- print temperature;
-- bed temperature;
-- chamber conditions where applicable.
+Important parameters include layer height; perimeter/wall count; top/bottom thickness; infill type and percentage; extrusion width; nozzle diameter; print temperature; bed temperature; and chamber conditions where applicable.
 
 Structural parts should be designed around **walls and geometry**, not only high infill percentage.
 
 ## Test coupons
 
-Before manufacturing the full enclosure in a new material or profile, small test coupons can validate:
-
-- hole size;
-- insert fit;
-- screw clearance;
-- sliding tolerance;
-- gasket groove dimensions;
-- layer adhesion;
-- surface sealing.
+Before manufacturing the full enclosure in a new material or profile, small test coupons can validate hole size; insert fit; screw clearance; sliding tolerance; gasket groove dimensions; layer adhesion; and surface sealing.
 
 This reduces the cost of discovering process errors after a long print.
 
 ## Threaded inserts
 
-Where heat-set inserts are used, the manufacturing package should specify:
-
-- insert type;
-- target hole size;
-- installation tool;
-- installation temperature or process guidance;
-- final depth;
-- alignment check.
+Where heat-set inserts are used, the manufacturing package should specify insert type; target hole size; installation tool; installation temperature or process guidance; final depth; and alignment check.
 
 Insert bosses should be inspected for cracking or deformation after installation.
 
 ## Support removal
 
-Support material should not be placed where removal risks damaging:
-
-- sealing surfaces;
-- sensor windows;
-- cable passages;
-- threaded features;
-- tight internal channels.
+Support material should not be placed where removal risks damaging sealing surfaces; sensor windows; cable passages; threaded features; and tight internal channels.
 
 CAD should reduce unnecessary support through geometry where practical.
 
@@ -133,16 +66,7 @@ If support is unavoidable, the manufacturing instructions should identify how it
 
 ## Surface finishing
 
-Post-processing may include:
-
-- deburring;
-- sanding;
-- support removal;
-- insert installation;
-- gasket installation;
-- coating or painting;
-- sealing treatment;
-- label application.
+Post-processing may include deburring; sanding; support removal; insert installation; gasket installation; coating or painting; sealing treatment; and label application.
 
 Surface finishing should not unintentionally alter critical dimensions.
 
@@ -152,13 +76,7 @@ For example, paint or coating on a tight sliding joint or gasket surface can cha
 
 Any part or coating placed in front of the C4001 radars should be treated as a sensing-critical component.
 
-Manufacturing variation in:
-
-- wall thickness;
-- material;
-- coating;
-- moisture absorption;
-- surface geometry
+Manufacturing variation in wall thickness; material; coating; moisture absorption; and surface geometry.
 
 may affect radar performance.
 
@@ -168,13 +86,7 @@ Radar-facing parts should therefore be controlled by revision and validated afte
 
 The hollow solar support and other cable channels require special inspection because long internal passages can be partially blocked by print defects or support material.
 
-Inspection should confirm:
-
-- full passage clearance;
-- cable can be inserted without damage;
-- required bend radius is achievable;
-- no sharp internal burrs or strings remain;
-- entry and exit geometry matches the seal design.
+Inspection should confirm full passage clearance; cable can be inserted without damage; required bend radius is achievable; no sharp internal burrs or strings remain; and entry and exit geometry matches the seal design.
 
 A physical cable-pull test is more useful than visual inspection alone.
 
@@ -182,14 +94,7 @@ A physical cable-pull test is more useful than visual inspection alone.
 
 A watertight CAD model does not guarantee a watertight printed part.
 
-Process quality can affect leakage through:
-
-- under-extrusion;
-- poor layer bonding;
-- thin walls;
-- seam placement;
-- warped mating surfaces;
-- inconsistent gasket compression.
+Process quality can affect leakage through under-extrusion; poor layer bonding; thin walls; seam placement; warped mating surfaces; and inconsistent gasket compression.
 
 If a release requires water resistance, manufacturing validation should include leak or spray testing of actual printed assemblies.
 
@@ -197,14 +102,7 @@ See [Waterproofing](waterproofing.md).
 
 ## Laser-cut parts
 
-Laser cutting may be useful for:
-
-- flat panels;
-- internal plates;
-- templates;
-- gaskets from suitable sheet material;
-- alignment fixtures;
-- decorative or identification elements.
+Laser cutting may be useful for flat panels; internal plates; templates; gaskets from suitable sheet material; alignment fixtures; and decorative or identification elements.
 
 Flat-part drawings should define material thickness and tolerances.
 
@@ -212,13 +110,7 @@ If acrylic or another brittle sheet is used structurally, fastener stresses and 
 
 ## CNC or machined parts
 
-CNC machining may be appropriate for:
-
-- high-load brackets;
-- precise mounts;
-- metal base interfaces;
-- repeatable production parts;
-- components requiring better dimensional accuracy than a printed prototype provides.
+CNC machining may be appropriate for high-load brackets; precise mounts; metal base interfaces; repeatable production parts; and components requiring better dimensional accuracy than a printed prototype provides.
 
 Machined parts should be released with drawings or STEP geometry and critical tolerances.
 
@@ -226,17 +118,7 @@ Sponsor or partner fabrication should still use controlled revision files.
 
 ## Hardware kitting
 
-A mechanical build should have a hardware kit or BOM that includes:
-
-- screws;
-- nuts;
-- washers;
-- threaded inserts;
-- spacers;
-- gaskets;
-- cable glands/grommets;
-- clips and strain-relief hardware;
-- adhesives or sealants where specified.
+A mechanical build should have a hardware kit or BOM that includes screws; nuts; washers; threaded inserts; spacers; gaskets; cable glands/grommets; clips and strain-relief hardware; and adhesives or sealants where specified.
 
 Missing hardware should not be substituted informally without checking fit and material compatibility.
 
@@ -244,35 +126,13 @@ Missing hardware should not be substituted informally without checking fit and m
 
 Manufactured parts should be inspected before final assembly.
 
-Useful checks include:
-
-- correct revision marking;
-- no major warping;
-- critical dimensions within expected tolerance;
-- holes clear;
-- insert bosses intact;
-- cable passages open;
-- mating surfaces flat enough for assembly;
-- sensor openings clean;
-- no cracks around fasteners;
-- no severe layer separation.
+Useful checks include correct revision marking; no major warping; critical dimensions within expected tolerance; holes clear; insert bosses intact; cable passages open; mating surfaces flat enough for assembly; sensor openings clean; no cracks around fasteners; and no severe layer separation.
 
 ## First-article assembly
 
 The first part from a new revision or manufacturing process should receive a full assembly test before multiple copies are produced.
 
-The first-article check should verify:
-
-- Rosetta fit;
-- radar fit and screw alignment;
-- cable routing;
-- service cover closure;
-- BIT interface access;
-- solar support attachment;
-- hollow cable support usability;
-- base/mount fit;
-- fastener access;
-- no assembly collisions.
+The first-article check should verify Rosetta fit; radar fit and screw alignment; cable routing; service cover closure; BIT interface access; solar support attachment; hollow cable support usability; base/mount fit; fastener access; and no assembly collisions.
 
 ## Process changes
 
@@ -284,17 +144,7 @@ Where the change affects critical features, selected validation tests should be 
 
 ## Build records
 
-For important prototypes and deployment units, a simple manufacturing record should capture:
-
-- unit identifier;
-- mechanical revision;
-- material;
-- manufacturing date;
-- machine/profile;
-- operator;
-- notable deviations;
-- inspection result;
-- rework performed.
+For important prototypes and deployment units, a simple manufacturing record should capture unit identifier; mechanical revision; material; manufacturing date; machine/profile; operator; notable deviations; inspection result; and rework performed.
 
 This helps connect field failures to manufacturing history.
 
@@ -356,30 +206,12 @@ The complete ORIGIN system powers and passes the relevant bring-up checks.
 
 ## File release package
 
-A manufacturing release should ideally include:
-
-- source CAD revision;
-- STEP assembly;
-- STL/3MF files for printed parts;
-- drawings where useful;
-- manufacturing notes;
-- material list;
-- hardware BOM;
-- assembly instructions;
-- revision history;
-- validation status.
+A manufacturing release should ideally include source CAD revision; STEP assembly; STL/3MF files for printed parts; drawings where useful; manufacturing notes; material list; hardware BOM; assembly instructions; revision history; and validation status.
 
 This makes the mechanical design reproducible outside the original CAD workstation.
 
 ## Related documentation
 
-See:
-
-- [CAD](cad.md)
-- [Materials](materials.md)
-- [Enclosure](enclosure.md)
-- [Waterproofing](waterproofing.md)
-- [Installation & Deployment](../installation-deployment/README.md)
-- [Testing & Validation](../testing-validation/README.md)
+See [CAD](cad.md); [Materials](materials.md); [Enclosure](enclosure.md); [Waterproofing](waterproofing.md); [Installation & Deployment](../installation-deployment/README.md); and [Testing & Validation](../testing-validation/README.md).
 
 ORIGIN's manufacturing process should remain flexible enough for rapid student-led iteration while still adopting the documentation discipline needed for repeatable, field-ready hardware.

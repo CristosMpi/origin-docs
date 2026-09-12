@@ -32,15 +32,7 @@ See [Partners](partners.md).
 
 Sponsors provide material, equipment, manufacturing, design, or technical support that contributes to ORIGIN development.
 
-The current official sponsor lineup is:
-
-- **Xometry**
-- **AISLER**
-- **eSUN**
-- **SCULPFUN**
-- **EasyEDA**
-- **JLCPCB**
-- **Matter and Form**
+The current official sponsor lineup is **Xometry**; **AISLER**; **eSUN**; **SCULPFUN**; **EasyEDA**; **JLCPCB**; and **Matter and Form**.
 
 This list follows Team Galene's current official sponsor communication for ORIGIN.
 
@@ -56,19 +48,7 @@ Those contributions are recorded under [Acknowledgements](acknowledgements.md) w
 
 External support is important to ORIGIN, but engineering responsibility remains with Team Galene.
 
-Team Galene is responsible for:
-
-- system requirements;
-- architecture decisions;
-- PCB design decisions;
-- mechanical design;
-- firmware and software behavior;
-- integration;
-- testing;
-- validation;
-- deployment decisions;
-- documentation;
-- technical claims made publicly about ORIGIN.
+Team Galene is responsible for system requirements; architecture decisions; PCB design decisions; mechanical design; firmware and software behavior; integration; testing; validation; deployment decisions; documentation; and technical claims made publicly about ORIGIN.
 
 A manufacturing sponsor producing a board, for example, does not become responsible for the electrical design of that board. A materials sponsor does not certify the final enclosure. A tool sponsor does not validate the result produced with that tool.
 
@@ -84,15 +64,7 @@ An organization should not be described as a sponsor or partner until the relati
 
 ### Do not publish confidential commercial details
 
-Public documentation should not expose:
-
-- private voucher or coupon codes;
-- account identifiers;
-- private contact information;
-- unpublished contract terms;
-- private shipping details;
-- confidential pricing;
-- internal sponsor correspondence.
+Public documentation should not expose private voucher or coupon codes; account identifiers; private contact information; unpublished contract terms; private shipping details; confidential pricing; and internal sponsor correspondence.
 
 Where a sponsor provides financial or manufacturing credit, the public docs may describe the type of support without exposing credentials or codes.
 
@@ -155,8 +127,6 @@ Whenever this section is updated, maintainers should check that:
 
 ## Continue
 
-- [Partners](partners.md)
-- [Sponsors](sponsors.md)
-- [Acknowledgements](acknowledgements.md)
+[Partners](partners.md), [Sponsors](sponsors.md), and [Acknowledgements](acknowledgements.md).
 
 For the engineering work made possible by these relationships, continue with [Rosetta](../rosetta/README.md), [Mechanical Design](../mechanical-design/README.md), [Testing & Validation](../testing-validation/README.md), and [Deployments](../deployments/README.md).

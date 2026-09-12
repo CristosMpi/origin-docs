@@ -10,25 +10,13 @@ For that reason, Drone Mount should be treated as a specialized deployment confi
 
 Drone Mount is intended to support situations where an aerial perspective can provide useful context around a heritage site, for example when fixed ground placement cannot easily reach or observe a location.
 
-Potential use cases include:
-
-- temporary elevated sensing;
-- inspection of hard-to-reach structures;
-- collection of site-context data;
-- short-duration environmental observations;
-- evaluation of possible permanent sensor positions.
+Potential use cases include temporary elevated sensing; inspection of hard-to-reach structures; collection of site-context data; short-duration environmental observations; and evaluation of possible permanent sensor positions.
 
 Only capabilities that have been actually tested on the selected aircraft should be described as supported.
 
 ## System boundary
 
-The ORIGIN project must distinguish between:
-
-- the **ORIGIN payload**;
-- the **Drone Mount**;
-- the **aircraft**;
-- the **pilot/operator**;
-- flight-planning and regulatory requirements.
+The ORIGIN project must distinguish between the **ORIGIN payload**; the **Drone Mount**; the **aircraft**; the **pilot/operator**; and flight-planning and regulatory requirements.
 
 The mount does not make ORIGIN itself an autonomous aircraft system, and ORIGIN software should not be assumed to control the drone unless a future explicitly documented integration provides that function.
 
@@ -54,15 +42,7 @@ The mechanical interface should be repeatable and should avoid improvised attach
 
 Payload mass is one of the most important constraints in any aerial configuration.
 
-A valid Drone Mount design must account for:
-
-- payload mass;
-- mount mass;
-- aircraft payload rating;
-- battery endurance reduction;
-- center-of-gravity shift;
-- moment arm from the aircraft center;
-- effect on flight stability.
+A valid Drone Mount design must account for payload mass; mount mass; aircraft payload rating; battery endurance reduction; center-of-gravity shift; moment arm from the aircraft center; and effect on flight stability.
 
 The mass limit should come from the actual aircraft manufacturer and the tested configuration. No generic ORIGIN payload rating should be assumed.
 
@@ -70,15 +50,7 @@ The mass limit should come from the actual aircraft manufacturer and the tested 
 
 Flight introduces vibration from motors, propellers, airflow, and control corrections.
 
-Vibration can affect:
-
-- PCB connectors;
-- fasteners;
-- sensor readings;
-- accelerometers;
-- cable retention;
-- solder joints;
-- mechanical fatigue.
+Vibration can affect PCB connectors; fasteners; sensor readings; accelerometers; cable retention; solder joints; and mechanical fatigue.
 
 A mount should therefore provide positive retention and avoid loose cable loops or unsupported mass.
 
@@ -88,12 +60,7 @@ Where vibration isolation is used, it must not allow excessive movement of the p
 
 Unlike a fixed ORIGIN Core, an aerial payload constantly changes orientation.
 
-Software and analysis must therefore avoid assuming that:
-
-- “up” remains constant;
-- sensors remain level;
-- detection zones remain fixed relative to the ground;
-- distance readings have the same meaning as in a stationary deployment.
+Software and analysis must therefore avoid assuming that “up” remains constant, sensors remain level, detection zones remain fixed relative to the ground, and distance readings have the same meaning as in a stationary deployment.
 
 If orientation matters to interpretation, the system should record or receive sufficient attitude/context information to explain the observation.
 
@@ -101,16 +68,7 @@ If orientation matters to interpretation, the system should record or receive su
 
 Not every ORIGIN sensor is automatically useful in flight.
 
-Each sensor should be evaluated for:
-
-- motion sensitivity;
-- vibration sensitivity;
-- field of view;
-- airflow effects;
-- required stabilization time;
-- operating distance;
-- interference from the aircraft;
-- electromagnetic or mechanical interference.
+Each sensor should be evaluated for motion sensitivity; vibration sensitivity; field of view; airflow effects; required stabilization time; operating distance; interference from the aircraft; and electromagnetic or mechanical interference.
 
 For example, a sensor validated for stationary presence detection should not automatically be claimed to perform identically while the platform itself is moving.
 
@@ -118,14 +76,7 @@ For example, a sensor validated for stationary presence detection should not aut
 
 Aerial use of mmWave sensing requires specific validation because the sensor and target can both be moving relative to each other.
 
-Potential complications include:
-
-- aircraft velocity;
-- rotation;
-- changing distance to surfaces;
-- reflections from the aircraft body;
-- propeller or structural movement;
-- rapidly changing beam orientation.
+Potential complications include aircraft velocity; rotation; changing distance to surfaces; reflections from the aircraft body; propeller or structural movement; and rapidly changing beam orientation.
 
 Therefore, Drone Mount documentation should not reuse stationary ORIGIN presence-detection claims without separate flight testing.
 
@@ -133,15 +84,7 @@ Therefore, Drone Mount documentation should not reuse stationary ORIGIN presence
 
 The ORIGIN payload may use its own power source or, in a future supported design, receive power from the aircraft.
 
-The final configuration must define:
-
-- power source;
-- voltage range;
-- connector;
-- current requirement;
-- electrical isolation;
-- startup/shutdown procedure;
-- effect on aircraft endurance.
+The final configuration must define power source; voltage range; connector; current requirement; electrical isolation; startup/shutdown procedure; and effect on aircraft endurance.
 
 Using the aircraft battery introduces an additional dependency and should not be assumed safe without a validated electrical interface.
 
@@ -149,13 +92,7 @@ Using the aircraft battery introduces an additional dependency and should not be
 
 Aerial use may change communication conditions significantly.
 
-Potential factors include:
-
-- greater distance from the operator or gateway;
-- changing orientation of antennas;
-- interference from aircraft electronics;
-- temporary loss of connectivity;
-- higher mobility.
+Potential factors include greater distance from the operator or gateway; changing orientation of antennas; interference from aircraft electronics; temporary loss of connectivity; and higher mobility.
 
 The system should therefore preserve local buffering where possible and avoid treating network loss as data validity.
 
@@ -183,14 +120,7 @@ A failed attachment in flight can damage the aircraft, payload, property, herita
 
 Mechanical retention should therefore use a deliberate primary attachment and, where appropriate, a secondary retention strategy.
 
-Inspection should verify:
-
-- fastener engagement;
-- locking features;
-- cracks;
-- cable retention;
-- clearance from propellers and moving parts;
-- absence of loose components.
+Inspection should verify fastener engagement; locking features; cracks; cable retention; clearance from propellers and moving parts; and absence of loose components.
 
 ## Pre-flight procedure
 
@@ -211,15 +141,7 @@ At minimum:
 
 ## Post-flight procedure
 
-After flight:
-
-- power down safely;
-- inspect mount and payload;
-- check for loosened fasteners;
-- inspect connectors;
-- download or verify recorded data;
-- record the flight configuration;
-- note any unexpected vibration, instability, or sensor behavior.
+After flight power down safely; inspect mount and payload; check for loosened fasteners; inspect connectors; download or verify recorded data; record the flight configuration; and note any unexpected vibration, instability, or sensor behavior.
 
 ## Flight safety and regulations
 
@@ -227,17 +149,7 @@ Drone operation is regulated and location-dependent.
 
 The ORIGIN documentation must not imply that a technically successful mount authorizes flight.
 
-The operator remains responsible for:
-
-- aircraft-category requirements;
-- registration where applicable;
-- pilot competency requirements;
-- geozone restrictions;
-- maximum altitude and distance rules;
-- site permission;
-- privacy requirements;
-- heritage-site restrictions;
-- safe separation from people and property.
+The operator remains responsible for aircraft-category requirements; registration where applicable; pilot competency requirements; geozone restrictions; maximum altitude and distance rules; site permission; privacy requirements; heritage-site restrictions; and safe separation from people and property.
 
 Flight procedures should always follow the requirements applicable to the actual country, aircraft, site, and mission.
 
@@ -245,13 +157,7 @@ Flight procedures should always follow the requirements applicable to the actual
 
 Heritage sites can add restrictions beyond normal flight rules.
 
-Drone use should avoid:
-
-- contact with protected structures;
-- downwash near fragile surfaces or loose archaeological material;
-- disturbing visitors or conservation work;
-- unnecessary close approach;
-- interference with other site operations.
+Drone use should avoid contact with protected structures; downwash near fragile surfaces or loose archaeological material; disturbing visitors or conservation work; unnecessary close approach; and interference with other site operations.
 
 The module is intended to improve access to information, not increase physical risk to the asset being protected.
 
@@ -303,10 +209,4 @@ Until a specific aircraft/mount combination is validated, the documentation shou
 
 ## Related documentation
 
-See:
-
-- [Modules](README.md)
-- [Expansion System](expansion-system.md)
-- [Mechanical Design](../mechanical-design/README.md)
-- [Software → Data Pipeline](../software/data-pipeline.md)
-- [Testing & Validation](../testing-validation/README.md)
+See [Modules](README.md); [Expansion System](expansion-system.md); [Mechanical Design](../mechanical-design/README.md); [Software → Data Pipeline](../software/data-pipeline.md); and [Testing & Validation](../testing-validation/README.md).

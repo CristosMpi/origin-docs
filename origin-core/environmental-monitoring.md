@@ -6,15 +6,7 @@ Environmental monitoring is one of the ways ORIGIN can help provide context abou
 
 Environmental data can help operators understand whether changes around an object, structure or site are gradual, sudden, normal or potentially harmful.
 
-Depending on the deployment, relevant variables may include:
-
-- temperature;
-- relative humidity;
-- moisture-related conditions;
-- air-quality or gas-related indicators;
-- light exposure;
-- vibration or movement;
-- other site-specific environmental variables.
+Depending on the deployment, relevant variables may include temperature; relative humidity; moisture-related conditions; air-quality or gas-related indicators; light exposure; vibration or movement; and other site-specific environmental variables.
 
 This list describes possible sensing categories, not a fixed specification for every ORIGIN Core.
 
@@ -39,15 +31,7 @@ A deployment plan should answer:
 
 A single environmental reading rarely proves that damage is occurring.
 
-For example, a humidity value can be useful evidence, but interpretation may depend on:
-
-- how quickly it changed;
-- how long the condition persisted;
-- temperature at the same time;
-- the location of the sensor;
-- the material being protected;
-- the known normal range for the site;
-- whether the sensor itself is stable and calibrated.
+For example, a humidity value can be useful evidence, but interpretation may depend on how quickly it changed; how long the condition persisted; temperature at the same time; the location of the sensor; the material being protected; the known normal range for the site; and whether the sensor itself is stable and calibrated.
 
 ORIGIN should therefore preserve measurements in a way that allows trends and events to be examined rather than reducing every value to a simple safe/unsafe decision.
 
@@ -55,12 +39,7 @@ ORIGIN should therefore preserve measurements in a way that allows trends and ev
 
 Environmental variables often change more slowly than security-related events, so high-frequency sampling may waste power and storage without providing additional value.
 
-A configurable sampling strategy can include:
-
-- periodic measurements;
-- temporary higher-rate sampling after a significant change;
-- lower-rate sampling during energy-saving states;
-- event-driven recording when thresholds are crossed.
+A configurable sampling strategy can include periodic measurements, temporary higher-rate sampling after a significant change, lower-rate sampling during energy-saving states, and event-driven recording when thresholds are crossed.
 
 The final interval should be chosen through deployment requirements and testing.
 
@@ -94,13 +73,7 @@ A site baseline is often more useful than a generic number copied from a datashe
 
 During commissioning, ORIGIN may collect reference data to understand the normal behavior of the site under typical conditions.
 
-A baseline can help identify:
-
-- recurring daily cycles;
-- normal seasonal variation;
-- unusual spikes;
-- sensor drift;
-- changes following maintenance or relocation.
+A baseline can help identify recurring daily cycles; normal seasonal variation; unusual spikes; sensor drift; and changes following maintenance or relocation.
 
 Baseline collection should not be confused with formal conservation limits, which should come from appropriate heritage professionals or site requirements.
 
@@ -108,15 +81,7 @@ Baseline collection should not be confused with formal conservation limits, whic
 
 Environmental sensors should be placed where they measure the condition of interest rather than simply wherever space is available inside the enclosure.
 
-Placement questions include:
-
-- should the sensor measure internal enclosure conditions or the external site?
-- is airflow required?
-- will direct sunlight bias the reading?
-- can rain or condensation reach the sensing element?
-- is the sensor too close to heat-producing electronics?
-- does a protective membrane change response time?
-- can the sensor be cleaned or replaced?
+Placement questions include should the sensor measure internal enclosure conditions or the external site?; is airflow required?; will direct sunlight bias the reading?; can rain or condensation reach the sensing element?; is the sensor too close to heat-producing electronics?; does a protective membrane change response time?; and can the sensor be cleaned or replaced?.
 
 These questions create a direct link between environmental sensing and enclosure design.
 
@@ -140,15 +105,7 @@ These measurements should not be mixed under the same label because they answer 
 
 Environmental data should include enough metadata to be interpreted correctly.
 
-Useful fields include:
-
-- sensor identity;
-- timestamp;
-- value;
-- unit;
-- validity state;
-- calibration or configuration version where relevant;
-- deployment identifier.
+Useful fields include sensor identity; timestamp; value; unit; validity state; calibration or configuration version where relevant; and deployment identifier.
 
 A measurement with no unit or uncertain sensor identity is not useful long-term documentation.
 
@@ -156,28 +113,13 @@ A measurement with no unit or uncertain sensor identity is not useful long-term 
 
 Environmental sensors can drift over time.
 
-Depending on the device and required accuracy, maintenance may involve:
-
-- comparison with a reference instrument;
-- offset correction;
-- replacement after a defined interval;
-- inspection after environmental exposure;
-- re-baselining after relocation.
+Depending on the device and required accuracy, maintenance may involve comparison with a reference instrument; offset correction; replacement after a defined interval; inspection after environmental exposure; and re-baselining after relocation.
 
 Calibration procedures should be recorded in the deployment and testing documentation.
 
 ## Sensor failure
 
-Potential environmental-sensor failures include:
-
-- disconnected sensor;
-- impossible value;
-- frozen/stale value;
-- excessive noise;
-- slow response caused by contamination;
-- condensation;
-- cable damage;
-- drift outside acceptable tolerance.
+Potential environmental-sensor failures include disconnected sensor; impossible value; frozen/stale value; excessive noise; slow response caused by contamination; condensation; cable damage; and drift outside acceptable tolerance.
 
 ORIGIN should report these conditions separately from genuine environmental alerts.
 
@@ -185,27 +127,13 @@ ORIGIN should report these conditions separately from genuine environmental aler
 
 Environmental measurements become more useful when correlated with the rest of the system.
 
-Examples include:
-
-- comparing environmental changes before and after a detected presence event;
-- correlating power problems with internal temperature;
-- checking whether a vibration event coincides with human presence;
-- interpreting a moisture-related event alongside weather or deployment context.
+Examples include comparing environmental changes before and after a detected presence event, correlating power problems with internal temperature, checking whether a vibration event coincides with human presence, and interpreting a moisture-related event alongside weather or deployment context.
 
 Higher-level correlation belongs in [Centaurus AI](../centaurus-ai/README.md) or the wider software stack.
 
 ## Validation
 
-A new environmental sensor should not be considered deployment-ready until it has been tested for:
-
-- repeatability;
-- reasonable agreement with a reference where applicable;
-- response time;
-- operation in the expected temperature/humidity range;
-- enclosure effects;
-- power consumption;
-- communication reliability;
-- long-duration stability.
+A new environmental sensor should not be considered deployment-ready until it has been tested for repeatability; reasonable agreement with a reference where applicable; response time; operation in the expected temperature/humidity range; enclosure effects; power consumption; communication reliability; and long-duration stability.
 
 The test plan should record the exact sensor model and firmware configuration used.
 
@@ -217,10 +145,4 @@ As final environmental sensors are frozen, their model numbers, interfaces, cali
 
 ## Related documentation
 
-See:
-
-- [Sensor System](sensor-system.md)
-- [Testing & Validation](../testing-validation/README.md)
-- [Installation & Deployment](../installation-deployment/README.md)
-- [Maintenance](../maintenance/README.md)
-- [Centaurus AI](../centaurus-ai/README.md)
+See [Sensor System](sensor-system.md); [Testing & Validation](../testing-validation/README.md); [Installation & Deployment](../installation-deployment/README.md); [Maintenance](../maintenance/README.md); and [Centaurus AI](../centaurus-ai/README.md).

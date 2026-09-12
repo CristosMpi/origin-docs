@@ -6,31 +6,13 @@ Setup should be controlled and reversible. A device that merely boots is not yet
 
 ## Setup objectives
 
-By the end of setup, the deployment team should be able to answer:
-
-- Which ORIGIN unit is this?
-- Which hardware and firmware revisions are installed?
-- Which sensors and modules are expected?
-- Which configuration is active?
-- Is time synchronized?
-- Is local logging functioning?
-- Is the communications path operational or intentionally offline?
-- Can the device report its own health?
+By the end of setup, the deployment team should be able to answer Which ORIGIN unit is this?; Which hardware and firmware revisions are installed?; Which sensors and modules are expected?; Which configuration is active?; Is time synchronized?; Is local logging functioning?; Is the communications path operational or intentionally offline?; and Can the device report its own health?.
 
 ## Initial boot
 
 Power the unit while monitoring its startup behavior.
 
-Observe for:
-
-- normal boot indication;
-- repeated resets;
-- unexpected delays;
-- missing sensors;
-- abnormal power behavior;
-- configuration errors;
-- storage errors;
-- communication failures.
+Observe for normal boot indication; repeated resets; unexpected delays; missing sensors; abnormal power behavior; configuration errors; storage errors; and communication failures.
 
 The expected startup sequence should include hardware initialization, sensor detection, configuration loading, storage checks, and communication initialization.
 
@@ -40,14 +22,7 @@ A sensor that fails to initialize should be represented as unavailable or unheal
 
 Every deployed unit should have a stable identity.
 
-Verify:
-
-- ORIGIN unit ID;
-- Rosetta hardware revision;
-- enclosure revision if tracked separately;
-- firmware version;
-- enabled module set;
-- site/deployment profile identifier.
+Verify ORIGIN unit ID; Rosetta hardware revision; enclosure revision if tracked separately; firmware version; enabled module set; and site/deployment profile identifier.
 
 These values should appear in logs and deployment records so later data can be traced to the actual deployed configuration.
 
@@ -55,16 +30,7 @@ These values should appear in logs and deployment records so later data can be t
 
 Compare the software-detected hardware against the installation record.
 
-Expected items may include:
-
-- Rosetta v2;
-- internal sensors;
-- three C4001 radar channels where fitted;
-- storage subsystem;
-- communications hardware;
-- solar or power-management status inputs;
-- BITs or other modules;
-- optional expansion modules.
+Expected items may include Rosetta v2; internal sensors; three C4001 radar channels where fitted; storage subsystem; communications hardware; solar or power-management status inputs; BITs or other modules; and optional expansion modules.
 
 Any mismatch must be investigated before calibration.
 
@@ -72,19 +38,7 @@ Any mismatch must be investigated before calibration.
 
 Load the approved site configuration rather than editing arbitrary values directly in the field.
 
-A deployment configuration may include:
-
-- unit identity;
-- sensor enable/disable state;
-- sample intervals;
-- radar operating parameters;
-- local event thresholds;
-- logging behavior;
-- communications settings;
-- module configuration;
-- upstream destination identifiers;
-- time zone or timestamp handling;
-- maintenance/reporting intervals.
+A deployment configuration may include unit identity; sensor enable/disable state; sample intervals; radar operating parameters; local event thresholds; logging behavior; communications settings; module configuration; upstream destination identifiers; time zone or timestamp handling; and maintenance/reporting intervals.
 
 Exact parameter names depend on the final firmware implementation.
 
@@ -92,13 +46,7 @@ Exact parameter names depend on the final firmware implementation.
 
 After applying configuration, read it back from the device and compare it with the intended deployment profile.
 
-The setup record should capture:
-
-- configuration version;
-- configuration checksum or revision identifier where supported;
-- date applied;
-- person responsible;
-- any deliberate deviation from the standard profile.
+The setup record should capture configuration version; configuration checksum or revision identifier where supported; date applied; person responsible; and any deliberate deviation from the standard profile.
 
 This prevents a configuration from being considered applied merely because an upload command succeeded.
 
@@ -106,14 +54,7 @@ This prevents a configuration from being considered applied merely because an up
 
 Secrets must not be embedded in public documentation or committed to the public repository.
 
-Examples include:
-
-- Wi-Fi passwords;
-- SIM credentials;
-- API tokens;
-- private endpoint keys;
-- device certificates;
-- administrator passwords.
+Examples include Wi-Fi passwords; SIM credentials; API tokens; private endpoint keys; device certificates; and administrator passwords.
 
 Provision them using the secure mechanism supported by the final software architecture.
 
@@ -121,13 +62,7 @@ Provision them using the secure mechanism supported by the final software archit
 
 Correct timing is essential for correlating sensor events.
 
-Verify that:
-
-- the device has a valid clock;
-- time synchronization succeeds where a network source is available;
-- timestamps survive communication interruptions appropriately;
-- time zone handling is defined;
-- logs clearly distinguish local time from UTC if both are used.
+Verify that the device has a valid clock; time synchronization succeeds where a network source is available; timestamps survive communication interruptions appropriately; time zone handling is defined; and logs clearly distinguish local time from UTC if both are used.
 
 If reliable time is unavailable, the condition should be visible in device health and in recorded data.
 
@@ -135,14 +70,7 @@ If reliable time is unavailable, the condition should be visible in device healt
 
 Before enabling normal monitoring, verify local storage.
 
-Check:
-
-- storage is detected;
-- filesystem or storage area is writable;
-- a test record can be created;
-- available capacity is reasonable;
-- recovery from a restart does not corrupt recent data;
-- the firmware handles storage failure without falsely reporting normal operation.
+Check storage is detected; filesystem or storage area is writable; a test record can be created; available capacity is reasonable; recovery from a restart does not corrupt recent data; and the firmware handles storage failure without falsely reporting normal operation.
 
 Where an SD card is used, card health and seating should be verified.
 
@@ -167,44 +95,16 @@ A network connection alone does not prove that application data is reaching the 
 
 ORIGIN should remain able to distinguish healthy offline operation from failure.
 
-If the site intentionally operates without continuous connectivity:
-
-- confirm local records are stored;
-- confirm queue/buffer behavior;
-- document capacity limits;
-- verify how data will later be retrieved or synchronized;
-- ensure operators understand which functions require connectivity.
+If the site intentionally operates without continuous connectivity confirm local records are stored; confirm queue/buffer behavior; document capacity limits; verify how data will later be retrieved or synchronized; and ensure operators understand which functions require connectivity.
 
 ## Health state
 
-Before calibration, the device should provide a health summary covering at least:
+Before calibration, the device should provide a health summary covering at least power state; sensor state; storage state; communication state; time state; configuration validity; and module state.
 
-- power state;
-- sensor state;
-- storage state;
-- communication state;
-- time state;
-- configuration validity;
-- module state.
-
-Suggested health semantics are:
-
-- **Healthy** — functioning as intended;
-- **Degraded** — usable, but one or more non-critical capabilities are impaired;
-- **Fault** — required capability is unavailable;
-- **Initializing** — not ready for interpretation;
-- **Disabled** — intentionally excluded.
+Suggested health semantics are **Healthy** — functioning as intended; **Degraded** — usable, but one or more non-critical capabilities are impaired; **Fault** — required capability is unavailable; **Initializing** — not ready for interpretation; and **Disabled** — intentionally excluded.
 
 ## Setup acceptance
 
-Setup is complete only when:
-
-- unit identity is correct;
-- hardware inventory matches the physical installation;
-- the intended configuration has been applied and read back;
-- local storage is working;
-- timestamps are valid or the timing limitation is explicitly recorded;
-- communication behavior matches the deployment design;
-- no unresolved critical health fault exists.
+Setup is complete only when unit identity is correct; hardware inventory matches the physical installation; the intended configuration has been applied and read back; local storage is working; timestamps are valid or the timing limitation is explicitly recorded; communication behavior matches the deployment design; and no unresolved critical health fault exists.
 
 The unit can then proceed to [Calibration](calibration.md).

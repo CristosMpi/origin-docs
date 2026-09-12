@@ -20,18 +20,7 @@ See [Durrës Pilot](../deployments/durres-pilot.md).
 
 A deployment partner can contribute information that cannot be reproduced accurately in a workshop.
 
-Examples include:
-
-- site-access constraints;
-- conservation restrictions;
-- acceptable mounting methods;
-- areas where equipment may or may not be visible;
-- visitor and staff movement patterns;
-- maintenance-access requirements;
-- communications conditions;
-- environmental conditions;
-- operator expectations;
-- practical feedback after commissioning.
+Examples include site-access constraints; conservation restrictions; acceptable mounting methods; areas where equipment may or may not be visible; visitor and staff movement patterns; maintenance-access requirements; communications conditions; environmental conditions; operator expectations; and practical feedback after commissioning.
 
 For ORIGIN, that feedback is part of the engineering process rather than an administrative detail.
 
@@ -41,28 +30,11 @@ The responsibilities of Team Galene and the site operator should be kept clear.
 
 ### Team Galene
 
-Team Galene remains responsible for the technical system it develops, including:
-
-- hardware configuration;
-- firmware/software configuration;
-- sensor placement recommendations;
-- installation documentation;
-- commissioning procedures;
-- diagnostics;
-- maintenance instructions;
-- interpretation of technical limitations;
-- engineering changes that result from the pilot.
+Team Galene remains responsible for the technical system it develops, including hardware configuration; firmware/software configuration; sensor placement recommendations; installation documentation; commissioning procedures; diagnostics; maintenance instructions; interpretation of technical limitations; and engineering changes that result from the pilot.
 
 ### Site representatives
 
-The responsible site organization is best positioned to determine matters such as:
-
-- where equipment may be installed;
-- which mounting methods are acceptable;
-- which areas are operationally sensitive;
-- when maintenance access is possible;
-- what information is useful to staff;
-- what local restrictions must be respected.
+The responsible site organization is best positioned to determine matters such as where equipment may be installed; which mounting methods are acceptable; which areas are operationally sensitive; when maintenance access is possible; what information is useful to staff; and what local restrictions must be respected.
 
 ORIGIN should adapt to the site rather than requiring the site to adapt unnecessarily to the prototype.
 
@@ -80,17 +52,7 @@ See [Team Galene](../overview/team-galene.md).
 
 ## Future partners
 
-Future ORIGIN partnerships may include:
-
-- museums;
-- archaeological sites;
-- conservation organizations;
-- universities;
-- research laboratories;
-- municipalities;
-- cultural institutions;
-- educational organizations;
-- engineering organizations supporting field validation.
+Future ORIGIN partnerships may include museums; archaeological sites; conservation organizations; universities; research laboratories; municipalities; cultural institutions; educational organizations; and engineering organizations supporting field validation.
 
 A prospective collaboration should not be added to the public partner list merely because contact has been made. Public status should reflect an actual agreed relationship.
 
@@ -128,15 +90,7 @@ The Durrës pilot is documented as **planned** until commissioning evidence supp
 
 ## Data and privacy
 
-Deployment partnerships may expose ORIGIN to information that is not suitable for public release, including:
-
-- exact device locations;
-- security-sensitive site information;
-- private contact details;
-- internal operating procedures;
-- maintenance schedules;
-- network information;
-- photographs of restricted areas.
+Deployment partnerships may expose ORIGIN to information that is not suitable for public release, including exact device locations; security-sensitive site information; private contact details; internal operating procedures; maintenance schedules; network information; and photographs of restricted areas.
 
 Public docs should include enough information to explain the engineering work without publishing operational details that could create unnecessary risk for a cultural-heritage site.
 
@@ -144,26 +98,12 @@ Public docs should include enough information to explain the engineering work wi
 
 A well-structured ORIGIN partnership should produce more than a demonstration.
 
-Useful outputs include:
-
-- a site-assessment record;
-- installation configuration;
-- commissioning evidence;
-- field observations;
-- maintenance records;
-- operator feedback;
-- identified failure modes;
-- design changes;
-- updated validation requirements;
-- lessons for future deployments.
+Useful outputs include a site-assessment record; installation configuration; commissioning evidence; field observations; maintenance records; operator feedback; identified failure modes; design changes; updated validation requirements; and lessons for future deployments.
 
 These outputs connect directly with [Testing & Validation](../testing-validation/README.md), [Deployments](../deployments/README.md), and [Development](../development/README.md).
 
 ## Current documented partner relationships
 
-At present, ORIGIN Docs publicly identify:
-
-- **Archaeological Museum of Durrës, Albania** — planned five-unit cultural-heritage pilot collaboration;
-- **4th General Lyceum of Ioannina, Greece** — institutional home of Team Galene and Project ORIGIN.
+At present, ORIGIN Docs publicly identify **Archaeological Museum of Durrës, Albania** — planned five-unit cultural-heritage pilot collaboration and **4th General Lyceum of Ioannina, Greece** — institutional home of Team Galene and Project ORIGIN.
 
 Additional organizations should only be added here when their role and public status have been confirmed.

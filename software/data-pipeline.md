@@ -38,13 +38,7 @@ Each stage adds context but should retain enough information to trace the result
 
 The first stage retrieves information from physical sensors and subsystems.
 
-Depending on the device, acquisition may be:
-
-- periodic;
-- event-driven;
-- stream-based;
-- polled through a bus;
-- received over a serial interface.
+Depending on the device, acquisition may be periodic; event-driven; stream-based; polled through a bus; and received over a serial interface.
 
 The acquisition layer should attach source identity immediately so readings from different sensors cannot be confused later.
 
@@ -52,14 +46,7 @@ The acquisition layer should attach source identity immediately so readings from
 
 Device-specific data is translated into software values.
 
-Parsing may include:
-
-- decoding frames;
-- extracting fields;
-- converting byte order;
-- translating status bits;
-- applying documented units;
-- rejecting malformed records.
+Parsing may include decoding frames; extracting fields; converting byte order; translating status bits; applying documented units; and rejecting malformed records.
 
 Parsing does not automatically make a value trustworthy.
 
@@ -67,15 +54,7 @@ Parsing does not automatically make a value trustworthy.
 
 Validation determines whether the parsed observation is fit for use.
 
-Checks can include:
-
-- communication integrity;
-- expected response length;
-- valid status flags;
-- plausible range;
-- age/staleness;
-- known source;
-- required fields present.
+Checks can include communication integrity; expected response length; valid status flags; plausible range; age/staleness; known source; and required fields present.
 
 A failed validation should produce a health/quality state rather than a fake measurement.
 
@@ -103,12 +82,7 @@ The final serialized schema will be documented from the implementation.
 
 Some observations are useful only when interpreted in context.
 
-For example:
-
-- a radar changes from clear to occupied;
-- a value crosses a configured threshold;
-- a sensor stops reporting;
-- communication returns after an outage.
+For example a radar changes from clear to occupied, a value crosses a configured threshold, a sensor stops reporting, and communication returns after an outage.
 
 The local software can convert these state changes into structured events while preserving the underlying observation.
 
@@ -127,14 +101,7 @@ Keeping these categories separate improves explainability.
 
 ## Provenance
 
-Every meaningful record should answer:
-
-- Which ORIGIN unit produced this?
-- Which sensor/subsystem produced it?
-- When was it observed?
-- Which software/configuration version interpreted it?
-- Was it valid, degraded, or estimated?
-- Was it measured directly or derived later?
+Every meaningful record should answer Which ORIGIN unit produced this?; Which sensor/subsystem produced it?; When was it observed?; Which software/configuration version interpreted it?; Was it valid, degraded, or estimated?; and Was it measured directly or derived later?.
 
 This is especially important for testing and cultural-heritage deployments where data may be reviewed after an incident.
 
@@ -158,15 +125,7 @@ Not all are required in every record, but the design must avoid replacing the or
 
 When remote communication is unavailable, the pipeline may store pending records locally if storage allows.
 
-Buffering policy should define:
-
-- which records are retained;
-- maximum capacity;
-- prioritization;
-- overflow behavior;
-- persistence across reboot;
-- resend order;
-- expiration/staleness rules.
+Buffering policy should define which records are retained; maximum capacity; prioritization; overflow behavior; persistence across reboot; resend order; and expiration/staleness rules.
 
 Health and high-value events may require stronger retention than routine telemetry.
 
@@ -174,12 +133,7 @@ Health and high-value events may require stronger retention than routine telemet
 
 Retries can produce duplicate messages.
 
-The pipeline should support a strategy for detecting or tolerating duplicates, potentially using:
-
-- message IDs;
-- device sequence numbers;
-- source + timestamp + record identity;
-- idempotent remote ingestion.
+The pipeline should support a strategy for detecting or tolerating duplicates, potentially using message IDs, device sequence numbers, source + timestamp + record identity, and idempotent remote ingestion.
 
 The exact mechanism will depend on the final protocol.
 
@@ -189,14 +143,7 @@ Data formats evolve as ORIGIN evolves.
 
 Every persistent or transmitted structured format should have a versioning strategy.
 
-A schema change may affect:
-
-- field names;
-- units;
-- source identifiers;
-- status values;
-- nested structure;
-- event meanings.
+A schema change may affect field names; units; source identifiers; status values; nested structure; and event meanings.
 
 Remote services should reject unknown incompatible schemas rather than silently misinterpreting data.
 
@@ -212,14 +159,7 @@ Unit conversion should occur at a defined layer and be testable.
 
 Missing data is information.
 
-The pipeline should distinguish:
-
-- no event occurred;
-- value is unavailable;
-- sensor timed out;
-- sensor is disabled;
-- communication path failed;
-- record was rejected as invalid.
+The pipeline should distinguish no event occurred; value is unavailable; sensor timed out; sensor is disabled; communication path failed; and record was rejected as invalid.
 
 Using `0` for all of these would destroy meaning.
 
@@ -227,12 +167,7 @@ Using `0` for all of these would destroy meaning.
 
 Some values may be calculated from one or more observations.
 
-Derived records should identify:
-
-- inputs used;
-- algorithm/version where relevant;
-- calculation timestamp;
-- quality/uncertainty if applicable.
+Derived records should identify inputs used, algorithm/version where relevant, calculation timestamp, and quality/uncertainty if applicable.
 
 This is particularly important for AI-assisted outputs.
 
@@ -256,13 +191,7 @@ An AI result should not overwrite the underlying observation.
 
 The final stage presents information in a form useful to a person.
 
-A dashboard or notification may simplify the data, but it should still preserve access to important context such as:
-
-- source device;
-- time;
-- event type;
-- subsystem health;
-- confidence/analysis status where relevant.
+A dashboard or notification may simplify the data, but it should still preserve access to important context such as source device; time; event type; subsystem health; and confidence/analysis status where relevant.
 
 ## Data retention
 
@@ -270,13 +199,7 @@ Retention requirements depend on deployment, storage capacity, privacy, and inst
 
 The software architecture should make retention policy explicit rather than keeping data indefinitely by accident.
 
-Potential data classes may need different retention:
-
-- routine environmental telemetry;
-- system health logs;
-- security-oriented events;
-- diagnostic debug logs;
-- AI-derived results.
+Potential data classes may need different retention routine environmental telemetry; system health logs; security-oriented events; diagnostic debug logs; and AI-derived results.
 
 ## Privacy and minimization
 
@@ -305,10 +228,4 @@ Useful tests include:
 
 ## Related pages
 
-See:
-
-- [Architecture](architecture.md)
-- [Firmware](firmware.md)
-- [Communications](communications.md)
-- [Centaurus AI](../centaurus-ai/README.md)
-- [Testing & Validation](../testing-validation/README.md)
+See [Architecture](architecture.md); [Firmware](firmware.md); [Communications](communications.md); [Centaurus AI](../centaurus-ai/README.md); and [Testing & Validation](../testing-validation/README.md).

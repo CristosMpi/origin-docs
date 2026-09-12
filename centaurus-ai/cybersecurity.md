@@ -6,16 +6,7 @@ Centaurus should therefore be designed with the assumption that malformed input,
 
 ## Security goals
 
-The main security objectives are:
-
-- protect device and service identity;
-- prevent unauthorized configuration changes;
-- detect malformed or suspicious input;
-- preserve data integrity;
-- protect credentials and secrets;
-- secure update mechanisms;
-- maintain auditability;
-- limit the impact of a compromised component.
+The main security objectives are protect device and service identity; prevent unauthorized configuration changes; detect malformed or suspicious input; preserve data integrity; protect credentials and secrets; secure update mechanisms; maintain auditability; and limit the impact of a compromised component.
 
 ## Trust boundaries
 
@@ -53,14 +44,7 @@ Authentication answers:
 
 **Who or what is connecting?**
 
-Authentication may apply to:
-
-- ORIGIN devices;
-- site gateways;
-- backend services;
-- administrators;
-- operators;
-- automated update systems.
+Authentication may apply to ORIGIN devices; site gateways; backend services; administrators; operators; and automated update systems.
 
 Shared default credentials should be avoided.
 
@@ -68,14 +52,7 @@ Shared default credentials should be avoided.
 
 Authentication alone does not determine what a user or service is allowed to do.
 
-Authorization should restrict sensitive actions such as:
-
-- changing site configuration;
-- changing model/rule versions;
-- issuing device commands;
-- viewing sensitive logs;
-- managing credentials;
-- approving updates.
+Authorization should restrict sensitive actions such as changing site configuration; changing model/rule versions; issuing device commands; viewing sensitive logs; managing credentials; and approving updates.
 
 The principle of least privilege should be used: each identity receives only the access it needs.
 
@@ -83,16 +60,7 @@ The principle of least privilege should be used: each identity receives only the
 
 Centaurus receives data from hardware and networked software. Every input should therefore be considered untrusted until validated.
 
-Checks can include:
-
-- schema validation;
-- type checking;
-- size limits;
-- allowed-value validation;
-- timestamp sanity checks;
-- source identity validation;
-- duplicate/replay handling;
-- range checks.
+Checks can include schema validation; type checking; size limits; allowed-value validation; timestamp sanity checks; source identity validation; duplicate/replay handling; and range checks.
 
 Invalid input should be rejected or quarantined rather than silently coerced into valid data.
 
@@ -106,13 +74,7 @@ Depending on deployment architecture, integrity can be supported through authent
 
 A previously valid event can become misleading if replayed later.
 
-Where the threat model requires it, the system can use:
-
-- timestamps;
-- sequence identifiers;
-- message IDs;
-- nonce or session mechanisms;
-- duplicate detection.
+Where the threat model requires it, the system can use timestamps; sequence identifiers; message IDs; nonce or session mechanisms; and duplicate detection.
 
 The exact design depends on the transport protocol.
 
@@ -120,14 +82,7 @@ The exact design depends on the transport protocol.
 
 Credentials must not be committed to the public ORIGIN documentation or source repository.
 
-Secrets can include:
-
-- API tokens;
-- private keys;
-- database credentials;
-- device provisioning credentials;
-- administrator passwords;
-- signing keys.
+Secrets can include API tokens; private keys; database credentials; device provisioning credentials; administrator passwords; and signing keys.
 
 Production secrets should be injected through an appropriate secure configuration mechanism and rotated when necessary.
 
@@ -135,26 +90,13 @@ Production secrets should be injected through an appropriate secure configuratio
 
 Configuration affects how Centaurus interprets a site, so unauthorized changes can alter monitoring behavior without changing code.
 
-Sensitive configuration changes should therefore be:
-
-- authenticated;
-- authorized;
-- validated;
-- versioned;
-- logged;
-- recoverable.
+Sensitive configuration changes should therefore be authenticated; authorized; validated; versioned; logged; and recoverable.
 
 ## Update security
 
 Software and model updates are high-value security operations.
 
-A secure update process should verify that an update is:
-
-- intended for the correct component;
-- obtained from an authorized source;
-- intact;
-- compatible;
-- reversible where practical.
+A secure update process should verify that an update is intended for the correct component; obtained from an authorized source; intact; compatible; and reversible where practical.
 
 Signing or another authenticity mechanism should be used where supported by the final architecture.
 
@@ -164,27 +106,13 @@ See [Software Updates](../software/updates.md).
 
 Centaurus may depend on third-party libraries, frameworks, models, or services.
 
-Dependency management should include:
-
-- pinned or otherwise controlled versions;
-- vulnerability review;
-- removal of unused dependencies;
-- documented licenses;
-- reproducible build information where possible.
+Dependency management should include pinned or otherwise controlled versions; vulnerability review; removal of unused dependencies; documented licenses; and reproducible build information where possible.
 
 ## Logging and audit
 
 Security-relevant activity should leave a useful audit trail.
 
-Examples include:
-
-- authentication failures;
-- administrative configuration changes;
-- model/ruleset changes;
-- rejected malformed messages;
-- update attempts;
-- unusual device identity changes;
-- permission changes.
+Examples include authentication failures; administrative configuration changes; model/ruleset changes; rejected malformed messages; update attempts; unusual device identity changes; and permission changes.
 
 Logs should be protected from unauthorized modification and should avoid recording secrets.
 
@@ -192,14 +120,7 @@ Logs should be protected from unauthorized modification and should avoid recordi
 
 Cybersecurity also includes keeping the monitoring system available.
 
-Potential availability risks include:
-
-- excessive message volume;
-- repeated malformed requests;
-- resource exhaustion;
-- dependency failures;
-- network outages;
-- corrupted queues or storage.
+Potential availability risks include excessive message volume; repeated malformed requests; resource exhaustion; dependency failures; network outages; and corrupted queues or storage.
 
 Centaurus should use bounded resource consumption and degraded modes so one failing input cannot easily stop the entire system.
 
@@ -213,14 +134,7 @@ Logical separation between device ingestion, analysis, administration, and stora
 
 AI-enabled systems have additional risks beyond conventional application security.
 
-Relevant considerations may include:
-
-- manipulated sensor input intended to influence analysis;
-- adversarial or unusual data outside the validated operating distribution;
-- poisoned training or reference data;
-- unauthorized model replacement;
-- incorrect confidence interpretation;
-- excessive trust in generated summaries or classifications.
+Relevant considerations may include manipulated sensor input intended to influence analysis; adversarial or unusual data outside the validated operating distribution; poisoned training or reference data; unauthorized model replacement; incorrect confidence interpretation; and excessive trust in generated summaries or classifications.
 
 These risks reinforce the need for deterministic input validation and human review.
 
@@ -234,15 +148,7 @@ Retention periods and access controls should match deployment needs.
 
 ## Threat modeling
 
-Before field deployment, ORIGIN should document a threat model identifying:
-
-- assets to protect;
-- likely threat actors;
-- trust boundaries;
-- entry points;
-- possible failures;
-- mitigations;
-- residual risk.
+Before field deployment, ORIGIN should document a threat model identifying assets to protect; likely threat actors; trust boundaries; entry points; possible failures; mitigations; and residual risk.
 
 The threat model should be reviewed when hardware, connectivity, deployment topology, or software architecture changes.
 
@@ -250,15 +156,7 @@ The threat model should be reviewed when hardware, connectivity, deployment topo
 
 A production deployment should define what happens when compromise is suspected.
 
-Useful capabilities include:
-
-- revoking credentials;
-- disabling a device or service;
-- isolating affected components;
-- restoring known-good configuration;
-- reviewing audit logs;
-- rotating secrets;
-- documenting the incident.
+Useful capabilities include revoking credentials; disabling a device or service; isolating affected components; restoring known-good configuration; reviewing audit logs; rotating secrets; and documenting the incident.
 
 ## Public documentation boundary
 
@@ -270,9 +168,4 @@ This page defines defensive requirements. Exact authentication methods, encrypti
 
 ## Related documentation
 
-See:
-
-- [Architecture](architecture.md)
-- [Data Processing](data-processing.md)
-- [Software Communications](../software/communications.md)
-- [Software Updates](../software/updates.md)
+See [Architecture](architecture.md), [Data Processing](data-processing.md), [Software Communications](../software/communications.md), and [Software Updates](../software/updates.md).

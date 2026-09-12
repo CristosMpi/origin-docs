@@ -4,17 +4,7 @@ Rosetta v2 is built around an **ESP32-family** embedded processor. The processor
 
 ## Responsibilities
 
-The processor is expected to coordinate:
-
-- startup and self-checks;
-- sensor initialization;
-- data acquisition;
-- local filtering and validation;
-- storage operations;
-- communications;
-- configuration;
-- watchdog and recovery behavior;
-- diagnostic state reporting.
+The processor is expected to coordinate startup and self-checks; sensor initialization; data acquisition; local filtering and validation; storage operations; communications; configuration; watchdog and recovery behavior; and diagnostic state reporting.
 
 ## Hardware identity
 
@@ -71,18 +61,11 @@ PIN_STATUS_LED
 PIN_ACCEL_INT
 ```
 
-The exact names and numbers will be documented once the v2 schematic is committed to the docs source.
+The exact names and numbers will be documented once the v2 schematic is committed to the documentation source.
 
 ## Reset and watchdog behavior
 
-Field electronics must recover from temporary faults. Firmware should therefore define:
-
-- what triggers a software restart;
-- what triggers the hardware watchdog;
-- which state is retained across restart;
-- how repeated boot loops are detected;
-- how a failed peripheral is quarantined;
-- how restart reasons are logged.
+Field electronics must recover from temporary faults. Firmware should therefore define what triggers a software restart; what triggers the hardware watchdog; which state is retained across restart; how repeated boot loops are detected; how a failed peripheral is quarantined; and how restart reasons are logged.
 
 ## Development and production firmware
 
@@ -90,13 +73,6 @@ Rosetta should separate development-only behavior from production behavior. Debu
 
 ## Security considerations
 
-The processor is part of ORIGIN’s trust boundary. Firmware release procedures should include control of:
-
-- source version;
-- build configuration;
-- credentials and secrets;
-- update mechanism;
-- debug interfaces;
-- recovery method.
+The processor is part of ORIGIN’s trust boundary. Firmware release procedures should include control of source version; build configuration; credentials and secrets; update mechanism; debug interfaces; and recovery method.
 
 More detail belongs in [Software](../software/README.md) and [Centaurus AI → Cybersecurity](../centaurus-ai/cybersecurity.md).

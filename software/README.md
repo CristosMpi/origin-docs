@@ -45,20 +45,7 @@ The layers are deliberately separated so that a change in one sensor driver does
 
 The embedded side of ORIGIN is centered on the ESP32-class controller integrated into Rosetta v2.
 
-Its responsibilities include:
-
-- startup and self-checks;
-- interface initialization;
-- sensor discovery and health state;
-- periodic and event-driven acquisition;
-- time association;
-- local buffering where available;
-- event creation;
-- communication management;
-- configuration loading;
-- diagnostics;
-- watchdog/recovery behavior;
-- software-version reporting.
+Its responsibilities include startup and self-checks; interface initialization; sensor discovery and health state; periodic and event-driven acquisition; time association; local buffering where available; event creation; communication management; configuration loading; diagnostics; watchdog/recovery behavior; and software-version reporting.
 
 The exact firmware framework and source-tree organization will be documented after the firmware repository is connected.
 
@@ -90,15 +77,7 @@ This distinction keeps the system explainable. An operator should be able to und
 
 A major software rule in ORIGIN is that missing data must never silently become a normal value.
 
-For each important sensor or subsystem, software should be able to represent states such as:
-
-- healthy;
-- initializing;
-- stale;
-- communication failure;
-- invalid data;
-- disabled;
-- unavailable.
+For each important sensor or subsystem, software should be able to represent states such as healthy; initializing; stale; communication failure; invalid data; disabled; and unavailable.
 
 A failed presence sensor, for example, must not be interpreted as "no person present." A failed environmental sensor must not be represented as a zero reading.
 
@@ -106,13 +85,7 @@ A failed presence sensor, for example, must not be interpreted as "no person pre
 
 ORIGIN is intended for field environments where communication may not always be continuously available.
 
-The software architecture therefore favors local resilience:
-
-- the device should continue core monitoring when remote connectivity is interrupted where technically possible;
-- communication failure should create a health state, not crash acquisition;
-- important observations should be buffered when storage permits;
-- reconnection should not create uncontrolled duplicate events;
-- restart behavior should return the device to a known state.
+The software architecture therefore favors local resilience the device should continue core monitoring when remote connectivity is interrupted where technically possible; communication failure should create a health state, not crash acquisition; important observations should be buffered when storage permits; reconnection should not create uncontrolled duplicate events; and restart behavior should return the device to a known state.
 
 Exact buffering and retry behavior will be documented from the implemented firmware.
 
@@ -120,17 +93,7 @@ Exact buffering and retry behavior will be documented from the implemented firmw
 
 Deployment-specific settings should be configuration rather than source-code edits whenever practical.
 
-Examples include:
-
-- device identity;
-- site identity;
-- enabled sensors;
-- acquisition intervals;
-- detection parameters;
-- communication settings;
-- logging level;
-- feature flags;
-- calibration values.
+Examples include device identity; site identity; enabled sensors; acquisition intervals; detection parameters; communication settings; logging level; feature flags; and calibration values.
 
 Secrets should not be committed to the public documentation repository.
 
@@ -174,27 +137,12 @@ The higher-level security and AI design is documented under [Centaurus AI](../ce
 
 Every deployed unit should make its software version identifiable.
 
-A useful release record should associate:
-
-- firmware version;
-- hardware revision;
-- configuration revision where appropriate;
-- build or commit identifier;
-- deployment date;
-- compatibility notes.
+A useful release record should associate firmware version; hardware revision; configuration revision where appropriate; build or commit identifier; deployment date; and compatibility notes.
 
 This is necessary for diagnosing field behavior and reproducing test results.
 
 ## Chapter map
 
-Continue with:
-
-- [Architecture](architecture.md) — software layers and responsibilities;
-- [Firmware](firmware.md) — embedded runtime structure and device behavior;
-- [Installation](installation.md) — how software is prepared and loaded;
-- [Configuration](configuration.md) — deployment and device settings;
-- [Communications](communications.md) — transport principles and failure handling;
-- [Data Pipeline](data-pipeline.md) — how readings become structured information;
-- [Updates](updates.md) — safe software update and rollback principles.
+Continue with [Architecture](architecture.md) — software layers and responsibilities; [Firmware](firmware.md) — embedded runtime structure and device behavior; [Installation](installation.md) — how software is prepared and loaded; [Configuration](configuration.md) — deployment and device settings; [Communications](communications.md) — transport principles and failure handling; [Data Pipeline](data-pipeline.md) — how readings become structured information; and [Updates](updates.md) — safe software update and rollback principles.
 
 For the electronics that host this software, see [Rosetta](../rosetta/README.md).

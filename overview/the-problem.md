@@ -16,13 +16,7 @@ Even when a condition is not dangerous by itself, repeated exposure or sudden ch
 
 Professional inspections are critical for conservation, but they happen at specific times. Between inspections, a site may experience changes that are not immediately recorded.
 
-This gap is especially important when:
-
-- a site is remote or difficult to access;
-- staff cannot be physically present at all times;
-- a problem develops slowly;
-- a short event causes a significant change;
-- multiple areas need to be observed simultaneously.
+This gap is especially important when a site is remote or difficult to access; staff cannot be physically present at all times; a problem develops slowly; a short event causes a significant change; and multiple areas need to be observed simultaneously.
 
 Technology cannot replace expert inspection, but it can help fill the time between inspections by providing continuous or scheduled observations.
 
@@ -38,15 +32,7 @@ This is one of the reasons ORIGIN is modular.
 
 Some heritage environments do not have convenient access to power, networking, or protected installation areas. Other locations may have strict limits on what can be mounted, drilled, modified, or visually exposed.
 
-A practical system must therefore consider more than data collection. It must also account for:
-
-- power availability and energy consumption;
-- communication options;
-- physical size and placement;
-- weather and environmental exposure;
-- maintenance access;
-- installation constraints;
-- compatibility with the site itself.
+A practical system must therefore consider more than data collection. It must also account for power availability and energy consumption; communication options; physical size and placement; weather and environmental exposure; maintenance access; installation constraints; and compatibility with the site itself.
 
 ## Data is only useful if it can be interpreted
 

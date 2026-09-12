@@ -8,17 +8,7 @@ The exact OTA mechanism, image format, signing process, partition layout, and re
 
 ## Update objectives
 
-A controlled update process should:
-
-- identify the current version;
-- determine whether the target release is compatible;
-- obtain a trusted update artifact;
-- validate the artifact before activation;
-- preserve required configuration/calibration data;
-- restart into the new software in a controlled way;
-- verify successful operation;
-- recover or roll back if verification fails;
-- record the update result.
+A controlled update process should identify the current version; determine whether the target release is compatible; obtain a trusted update artifact; validate the artifact before activation; preserve required configuration/calibration data; restart into the new software in a controlled way; verify successful operation; recover or roll back if verification fails; and record the update result.
 
 ## Update lifecycle
 
@@ -52,14 +42,7 @@ SUCCESS ───────→ normal operation
 
 The device should always be able to report its current firmware version.
 
-A release identity should ideally include:
-
-- semantic or project version;
-- build/commit identifier;
-- supported Rosetta revision(s);
-- schema/configuration compatibility;
-- release date;
-- release notes.
+A release identity should ideally include semantic or project version; build/commit identifier; supported Rosetta revision(s); schema/configuration compatibility; release date; and release notes.
 
 Without a stable version identity, diagnosing a field unit becomes unnecessarily difficult.
 
@@ -67,15 +50,7 @@ Without a stable version identity, diagnosing a field unit becomes unnecessarily
 
 Before installation, the updater should verify that the release is appropriate for the target device.
 
-Potential compatibility dimensions include:
-
-- hardware revision;
-- flash/storage layout;
-- bootloader requirements;
-- sensor configuration;
-- configuration schema;
-- communication schema;
-- backend/Centaurus compatibility.
+Potential compatibility dimensions include hardware revision; flash/storage layout; bootloader requirements; sensor configuration; configuration schema; communication schema; and backend/Centaurus compatibility.
 
 An update that is valid software but incompatible with the installed hardware should be rejected before activation.
 
@@ -83,13 +58,7 @@ An update that is valid software but incompatible with the installed hardware sh
 
 Firmware updates should not unintentionally erase deployment identity, calibration, or approved site configuration.
 
-The update design should explicitly define which data is:
-
-- part of firmware;
-- persistent device configuration;
-- calibration data;
-- runtime cache/queue;
-- diagnostic logs.
+The update design should explicitly define which data is part of firmware; persistent device configuration; calibration data; runtime cache/queue; and diagnostic logs.
 
 If a schema migration is required, it should be controlled and testable.
 
@@ -97,12 +66,7 @@ If a schema migration is required, it should be controlled and testable.
 
 A device should not install an update merely because a file was received successfully.
 
-Depending on the final implementation, validation may include:
-
-- cryptographic hash/integrity check;
-- signed release verification;
-- authenticated transport;
-- allowed version/source checks.
+Depending on the final implementation, validation may include cryptographic hash/integrity check, signed release verification, authenticated transport, and allowed version/source checks.
 
 The exact security mechanism must be documented from the actual implementation and should not rely on hidden assumptions.
 
@@ -118,15 +82,7 @@ If the platform supports separate active and staging images, update activation s
 
 A successful boot is not enough to prove an update succeeded.
 
-After activation, verify:
-
-- firmware version matches the intended release;
-- configuration loaded;
-- required sensors initialize;
-- storage initializes;
-- communication behaves as expected;
-- watchdog/reset loop is absent;
-- critical self-tests pass.
+After activation, verify firmware version matches the intended release; configuration loaded; required sensors initialize; storage initializes; communication behaves as expected; watchdog/reset loop is absent; and critical self-tests pass.
 
 Only then should the release be marked healthy.
 
@@ -134,13 +90,7 @@ Only then should the release be marked healthy.
 
 A field-ready update strategy should include a rollback or recovery path.
 
-Rollback may be triggered when:
-
-- firmware fails to boot;
-- repeated watchdog resets occur;
-- post-update health checks fail;
-- configuration cannot be migrated;
-- critical communications fail because of incompatibility.
+Rollback may be triggered when firmware fails to boot; repeated watchdog resets occur; post-update health checks fail; configuration cannot be migrated; and critical communications fail because of incompatibility.
 
 The exact rollback mechanism depends on the firmware/partition architecture and will be documented once verified.
 
@@ -160,11 +110,7 @@ A recovery procedure should define how to:
 
 If multiple release channels are used, they should be clearly separated.
 
-For example:
-
-- **development** — rapid iteration, verbose diagnostics;
-- **testing/validation** — candidate release under controlled testing;
-- **stable/deployment** — release approved for field use.
+For example **development** — rapid iteration, verbose diagnostics, **testing/validation** — candidate release under controlled testing, and **stable/deployment** — release approved for field use.
 
 A field unit should not automatically track an unstable development branch.
 
@@ -172,14 +118,7 @@ A field unit should not automatically track an unstable development branch.
 
 Not every available update should be installed immediately.
 
-A deployment policy may consider:
-
-- severity of the fix;
-- compatibility risk;
-- site access schedule;
-- current unit stability;
-- ability to recover physically;
-- whether the update changes detection behavior.
+A deployment policy may consider severity of the fix; compatibility risk; site access schedule; current unit stability; ability to recover physically; and whether the update changes detection behavior.
 
 Changes that affect monitoring logic should receive documented validation before broad deployment.
 
@@ -191,17 +130,7 @@ However, urgency should not remove the need for artifact validation, compatibili
 
 ## Logging and audit trail
 
-Each update attempt should produce a record containing, where practical:
-
-- device ID;
-- old version;
-- target version;
-- update start time;
-- source/method;
-- validation result;
-- activation result;
-- rollback result if any;
-- final active version.
+Each update attempt should produce a record containing, where practical device ID; old version; target version; update start time; source/method; validation result; activation result; rollback result if any; and final active version.
 
 This helps distinguish software changes from unrelated hardware or environmental problems.
 
@@ -211,55 +140,48 @@ Before a release reaches field units, test at least:
 
 ### Normal update
 
-- old → new release;
-- configuration retained;
-- sensors healthy;
-- communication restored.
+old → new release;.
+
+configuration retained;.
+
+sensors healthy;.
+
+communication restored.
 
 ### Interrupted download/staging
 
-- network lost;
-- power removed before activation;
-- device remains on old known-good software.
+network lost;.
+
+power removed before activation;.
+
+device remains on old known-good software.
 
 ### Bad artifact
 
-- corrupted image;
-- wrong hardware release;
-- unsupported version;
-- validation rejects it.
+corrupted image;.
+
+wrong hardware release;.
+
+unsupported version;.
+
+validation rejects it.
 
 ### Failed activation
 
-- simulated boot failure or failed health check;
-- rollback/recovery functions correctly.
+simulated boot failure or failed health check;.
+
+rollback/recovery functions correctly.
 
 ### Migration
 
-- previous supported configuration schema upgrades correctly;
-- invalid configuration is rejected safely.
+previous supported configuration schema upgrades correctly;.
+
+invalid configuration is rejected safely.
 
 ## Deployment checklist
 
-Before approving an update for field use:
-
-- [ ] release source/tag identified;
-- [ ] release notes written;
-- [ ] supported hardware listed;
-- [ ] configuration compatibility checked;
-- [ ] upgrade tested from currently deployed version;
-- [ ] interrupted update tested;
-- [ ] rollback/recovery tested;
-- [ ] post-update self-check defined;
-- [ ] deployment record prepared.
+Before approving an update for field use release source/tag identified; release notes written; supported hardware listed; configuration compatibility checked; upgrade tested from currently deployed version; interrupted update tested; rollback/recovery tested; post-update self-check defined; and deployment record prepared.
 
 ## Related pages
 
-See:
-
-- [Firmware](firmware.md)
-- [Installation](installation.md)
-- [Configuration](configuration.md)
-- [Communications](communications.md)
-- [Development → Versions](../development/versions.md)
-- [Development → Changelog](../development/changelog.md)
+See [Firmware](firmware.md); [Installation](installation.md); [Configuration](configuration.md); [Communications](communications.md); [Development → Versions](../development/versions.md); and [Development → Changelog](../development/changelog.md).

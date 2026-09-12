@@ -47,74 +47,27 @@ The example above is a format only and does not represent a real Durrës finding
 
 ### Mechanical
 
-Potential field findings can include:
-
-- mounting movement;
-- service-access difficulty;
-- enclosure deformation;
-- fastener loosening;
-- cable strain;
-- water paths;
-- sensor-opening contamination;
-- solar-support vibration;
-- difficult assembly/disassembly.
+Potential field findings can include mounting movement; service-access difficulty; enclosure deformation; fastener loosening; cable strain; water paths; sensor-opening contamination; solar-support vibration; and difficult assembly/disassembly.
 
 ### Sensor
 
-Potential findings include:
-
-- unexpected blind zones;
-- reflections from walls or cases;
-- differences between bench and installed performance;
-- cross-zone detections;
-- environmental-sensor drift;
-- false presence events;
-- sensor startup instability;
-- sensitivity to mounting angle.
+Potential findings include unexpected blind zones; reflections from walls or cases; differences between bench and installed performance; cross-zone detections; environmental-sensor drift; false presence events; sensor startup instability; and sensitivity to mounting angle.
 
 ### Power
 
-Potential findings include:
-
-- insufficient solar exposure;
-- unexpected energy consumption;
-- charging interruptions;
-- low-energy recovery behavior;
-- power rail instability;
-- battery servicing difficulty.
+Potential findings include insufficient solar exposure; unexpected energy consumption; charging interruptions; low-energy recovery behavior; power rail instability; and battery servicing difficulty.
 
 ### Communications
 
-Potential findings include:
-
-- unstable coverage;
-- reconnect delays;
-- delayed records;
-- synchronization issues;
-- local buffering limitations;
-- confusing offline-state reporting.
+Potential findings include unstable coverage; reconnect delays; delayed records; synchronization issues; local buffering limitations; and confusing offline-state reporting.
 
 ### Software
 
-Potential findings include:
-
-- configuration errors;
-- difficult recovery procedures;
-- ambiguous operator states;
-- excessive event volume;
-- missing health information;
-- time-synchronization problems.
+Potential findings include configuration errors; difficult recovery procedures; ambiguous operator states; excessive event volume; missing health information; and time-synchronization problems.
 
 ### Centaurus AI
 
-Potential findings include:
-
-- over-prioritization;
-- under-prioritization;
-- poor handling of missing sensors;
-- weak explanation of a decision;
-- sensitivity to site-specific baseline changes;
-- false anomaly patterns.
+Potential findings include over-prioritization; under-prioritization; poor handling of missing sensors; weak explanation of a decision; sensitivity to site-specific baseline changes; and false anomaly patterns.
 
 ## Evidence quality
 
@@ -150,14 +103,7 @@ ORIGIN should prefer measured and repeated evidence when deciding whether to cha
 
 A pilot should not hide failures.
 
-Examples of useful negative findings include:
-
-- a sensor arrangement that leaves an unacceptable blind zone;
-- a mounting method that is too invasive;
-- a solar orientation that does not supply enough energy;
-- a communications path that is unreliable;
-- a maintenance operation that requires too much disassembly;
-- an AI rule that produces too many irrelevant events.
+Examples of useful negative findings include a sensor arrangement that leaves an unacceptable blind zone; a mounting method that is too invasive; a solar orientation that does not supply enough energy; a communications path that is unreliable; a maintenance operation that requires too much disassembly; and an AI rule that produces too many irrelevant events.
 
 These findings directly improve later versions.
 
@@ -167,11 +113,7 @@ Sometimes a test shows that a suspected problem is not significant.
 
 That result should also be recorded.
 
-For example:
-
-- a specific enclosure face does not measurably degrade radar behavior;
-- a mounting method remains stable after repeated service cycles;
-- a particular event rule does not increase false positives under the tested conditions.
+For example a specific enclosure face does not measurably degrade radar behavior, a mounting method remains stable after repeated service cycles, and a particular event rule does not increase false positives under the tested conditions.
 
 Recording these results prevents the same question from being investigated repeatedly without context.
 
@@ -179,8 +121,9 @@ Recording these results prevents the same question from being investigated repea
 
 Deployment findings and formal validation results serve different purposes.
 
-- **Findings** capture what was noticed in practice.
-- **Validation results** record whether a defined test met a defined acceptance criterion.
+**Findings** capture what was noticed in practice.
+
+**Validation results** record whether a defined test met a defined acceptance criterion.
 
 A field finding may later become the basis of a validation test.
 
@@ -207,14 +150,7 @@ See [Lessons Learned](lessons-learned.md).
 
 ## Publishing findings
 
-Public documentation should avoid revealing:
-
-- exact security blind spots;
-- sensitive site layouts;
-- access-control weaknesses;
-- network credentials;
-- detailed attack paths;
-- private operator information.
+Public documentation should avoid revealing exact security blind spots; sensitive site layouts; access-control weaknesses; network credentials; detailed attack paths; and private operator information.
 
 A public finding can describe the engineering lesson without publishing information that increases risk to the protected heritage site.
 
@@ -228,7 +164,4 @@ When deployment evidence becomes available, this page should be updated with rea
 
 ## Related documentation
 
-- [Durrës Pilot](durres-pilot.md)
-- [Lessons Learned](lessons-learned.md)
-- [Testing & Validation](../testing-validation/README.md)
-- [Field Testing](../testing-validation/field-testing.md)
+[Durrës Pilot](durres-pilot.md), [Lessons Learned](lessons-learned.md), [Testing & Validation](../testing-validation/README.md), and [Field Testing](../testing-validation/field-testing.md).

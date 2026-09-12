@@ -8,15 +8,7 @@ ORIGIN is being documented in public so that its engineering decisions can be in
 
 Cultural-heritage technology benefits from transparency. A monitoring system intended for archaeological and museum environments should be understandable by the people who deploy, maintain, evaluate, and improve it.
 
-The open-development goals for ORIGIN are to:
-
-- make engineering decisions inspectable;
-- make limitations and known issues visible rather than hidden;
-- allow schools, researchers, makers, museums, and heritage organizations to learn from the project;
-- make future replication possible when the necessary design sources are released;
-- support peer review of electronics, mechanics, software, testing, and deployment practices;
-- preserve project knowledge beyond a single competition season;
-- create a traceable development history for future ORIGIN revisions.
+The open-development goals for ORIGIN are to make engineering decisions inspectable; make limitations and known issues visible rather than hidden; allow schools, researchers, makers, museums, and heritage organizations to learn from the project; make future replication possible when the necessary design sources are released; support peer review of electronics, mechanics, software, testing, and deployment practices; preserve project knowledge beyond a single competition season; and create a traceable development history for future ORIGIN revisions.
 
 Open development does **not** mean publishing every internal detail immediately. Security credentials, private deployment information, personal data, unannounced partner information, and material that could weaken a real deployment should remain outside the public repository.
 
@@ -72,16 +64,7 @@ The goal is to move important ORIGIN subsystems toward **validated release**, no
 
 ## What should not be published
 
-Public engineering does not remove the need for responsible information handling. Do not commit:
-
-- passwords, API keys, tokens, Wi-Fi credentials, SIM credentials, private certificates, or secrets;
-- private museum or archaeological-site security details;
-- exact information that would unnecessarily expose a deployed unit to tampering;
-- personal data from visitors, operators, students, or partners;
-- private contact information without permission;
-- copyrighted third-party files that Team Galene is not permitted to redistribute;
-- sponsor discount codes, shipping details, invoices, or private commercial terms;
-- unannounced agreements or confidential partner material.
+Public engineering does not remove the need for responsible information handling. Do not commit passwords, API keys, tokens, Wi-Fi credentials, SIM credentials, private certificates, or secrets; private museum or archaeological-site security details; exact information that would unnecessarily expose a deployed unit to tampering; personal data from visitors, operators, students, or partners; private contact information without permission; copyrighted third-party files that Team Galene is not permitted to redistribute; sponsor discount codes, shipping details, invoices, or private commercial terms; and unannounced agreements or confidential partner material.
 
 Use sanitized examples for configuration and deployment documentation.
 
@@ -99,30 +82,11 @@ A public repository is useful only when it reflects the actual state of the proj
 
 ## Repository responsibilities
 
-The ORIGIN documentation repository should maintain:
-
-- stable chapter structure;
-- clear revision terminology;
-- traceable known issues;
-- conservative technical claims;
-- explicit status labels for planned versus implemented features;
-- working internal navigation;
-- links to authoritative source repositories when those are released;
-- a clearly stated license once licensing is selected.
+The ORIGIN documentation repository should maintain stable chapter structure; clear revision terminology; traceable known issues; conservative technical claims; explicit status labels for planned versus implemented features; working internal navigation; links to authoritative source repositories when those are released; and a clearly stated license once licensing is selected.
 
 ## Contribution philosophy
 
-Contributions should improve one or more of the following:
-
-- correctness;
-- reproducibility;
-- safety;
-- maintainability;
-- clarity;
-- test coverage;
-- deployment quality;
-- accessibility;
-- heritage-site suitability.
+Contributions should improve one or more of the following correctness; reproducibility; safety; maintainability; clarity; test coverage; deployment quality; accessibility; and heritage-site suitability.
 
 Changes that make the project look more complete while reducing technical accuracy should not be accepted.
 
@@ -141,10 +105,13 @@ The major steps toward a mature public ORIGIN release are:
 
 ## In this chapter
 
-- [Repository](repository.md) — repository purpose, organization, source-of-truth rules, and release structure.
-- [Development Setup](development-setup.md) — how to work with the documentation and future engineering repositories.
-- [Contributing](contributing.md) — contribution standards, review expectations, and change discipline.
-- [Licensing](licensing.md) — current licensing status and the requirements for a formal open-source release.
+[Repository](repository.md) — repository purpose, organization, source-of-truth rules, and release structure.
+
+[Development Setup](development-setup.md) — how to work with the documentation and future engineering repositories.
+
+[Contributing](contributing.md) — contribution standards, review expectations, and change discipline.
+
+[Licensing](licensing.md) — current licensing status and the requirements for a formal open-source release.
 
 ## Principle
 

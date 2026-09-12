@@ -48,16 +48,7 @@ See [Rosetta](../rosetta/README.md) for version-specific hardware documentation.
 
 Hardware alone cannot provide continuous monitoring.
 
-ORIGIN's embedded software is responsible for turning physical components into a coordinated system. At the device level, software can manage tasks such as:
-
-- sensor acquisition;
-- timing and measurement cycles;
-- system state;
-- local storage;
-- communications;
-- configuration;
-- diagnostics;
-- update behavior.
+ORIGIN's embedded software is responsible for turning physical components into a coordinated system. At the device level, software can manage tasks such as sensor acquisition; timing and measurement cycles; system state; local storage; communications; configuration; diagnostics; and update behavior.
 
 The software architecture is designed to keep the system maintainable as the hardware changes. This is particularly important for a project that evolves through multiple Rosetta revisions and different sensor configurations.
 
@@ -117,14 +108,7 @@ This principle influences how alerts, AI, and automation are developed: the goal
 
 ## Why this architecture is useful
 
-The modular architecture gives ORIGIN several advantages as an engineering platform:
-
-- components can be revised independently;
-- the same core ideas can support different deployment scenarios;
-- hardware and software can evolve without discarding the entire system;
-- new modules can be added over time;
-- testing can be performed at subsystem and full-system levels;
-- documentation can distinguish stable concepts from version-specific implementation details.
+The modular architecture gives ORIGIN several advantages as an engineering platform components can be revised independently; the same core ideas can support different deployment scenarios; hardware and software can evolve without discarding the entire system; new modules can be added over time; testing can be performed at subsystem and full-system levels; and documentation can distinguish stable concepts from version-specific implementation details.
 
 The result is a project that can grow from a student engineering prototype toward a more mature, testable, and deployable heritage technology platform.
 

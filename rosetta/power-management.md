@@ -4,10 +4,7 @@ Rosetta’s power subsystem converts external energy and battery energy into sta
 
 ## Confirmed design components
 
-Rosetta v2 development includes:
-
-- **BQ24074RGT** — battery charger / power-path controller;
-- **TPS63031DSK** — buck-boost regulator.
+Rosetta v2 development includes **BQ24074RGT** — battery charger / power-path controller and **TPS63031DSK** — buck-boost regulator.
 
 The exact resistor network, current limits, rail values and enable behavior must be taken from the final schematic rather than inferred from reference designs.
 
@@ -35,29 +32,13 @@ This diagram describes the intended functional relationship, not the complete sc
 
 ## Battery interface
 
-The v2 design history includes dedicated 1×02 battery connectors. Before release, the connector documentation must define:
-
-- polarity;
-- connector family;
-- allowed battery chemistry;
-- nominal and maximum voltage;
-- current rating;
-- whether both connectors are equivalent or have different roles.
+The v2 design history includes dedicated 1×02 battery connectors. Before release, the connector documentation must define polarity; connector family; allowed battery chemistry; nominal and maximum voltage; current rating; and whether both connectors are equivalent or have different roles.
 
 Never infer connector polarity from physical orientation alone.
 
 ## Charging and input power
 
-A charger IC only works safely when its surrounding design is correct. Release review should verify:
-
-- input-voltage range;
-- charge-current programming;
-- thermal design;
-- battery-temperature assumptions if applicable;
-- input-current limits;
-- system load sharing;
-- status outputs;
-- reverse-current behavior.
+A charger IC only works safely when its surrounding design is correct. Release review should verify input-voltage range; charge-current programming; thermal design; battery-temperature assumptions if applicable; input-current limits; system load sharing; status outputs; and reverse-current behavior.
 
 ## Buck-boost regulation
 
@@ -86,13 +67,6 @@ Firmware should expose useful power diagnostics where the hardware permits it. E
 
 ## Failure patterns
 
-Power faults often appear indirectly:
-
-- repeated ESP32 resets;
-- corrupted SD writes;
-- sensors disappearing under load;
-- communications failing only during transmission;
-- regulator or charger overheating;
-- board working from bench power but not from battery.
+Power faults often appear indirectly repeated ESP32 resets; corrupted SD writes; sensors disappearing under load; communications failing only during transmission; regulator or charger overheating; and board working from bench power but not from battery.
 
 For systematic diagnosis see [Troubleshooting](troubleshooting.md).

@@ -8,10 +8,7 @@ This page records those contributions without confusing acknowledgement with aut
 
 ORIGIN is developed by **Team Galene** of the **4th General Lyceum of Ioannina (4ο ΓΕΛ Ιωαννίνων), Greece**.
 
-The current ORIGIN development team is:
-
-- **Christos Mpirmpos**
-- **Evelina Tsiagkaveli**
+The current ORIGIN development team is **Christos Mpirmpos** and **Evelina Tsiagkaveli**.
 
 The team is coached by **Anastasia Giannakou**, Director of the 4th General Lyceum of Ioannina – Akademia.
 
@@ -35,15 +32,7 @@ See [Durrës Pilot](../deployments/durres-pilot.md).
 
 ## Official sponsors
 
-Team Galene acknowledges the companies that currently support ORIGIN development:
-
-- **Xometry**
-- **AISLER**
-- **eSUN**
-- **SCULPFUN**
-- **EasyEDA**
-- **JLCPCB**
-- **Matter and Form**
+Team Galene acknowledges the companies that currently support ORIGIN development **Xometry**; **AISLER**; **eSUN**; **SCULPFUN**; **EasyEDA**; **JLCPCB**; and **Matter and Form**.
 
 Their support spans manufacturing, PCB development, additive manufacturing materials, laser fabrication, electronics design workflows, and 3D scanning.
 
@@ -53,15 +42,7 @@ See [Sponsors](sponsors.md) for the documented role of each sponsor.
 
 ORIGIN also benefits from the wider engineering ecosystem around the technologies it uses.
 
-That includes the work of:
-
-- component manufacturers publishing usable datasheets;
-- open-source software maintainers;
-- electronics and PCB-design communities;
-- CAD and fabrication communities;
-- educators sharing engineering practice;
-- documentation communities;
-- field professionals whose feedback helps student teams understand real operational constraints.
+That includes the work of component manufacturers publishing usable datasheets; open-source software maintainers; electronics and PCB-design communities; CAD and fabrication communities; educators sharing engineering practice; documentation communities; and field professionals whose feedback helps student teams understand real operational constraints.
 
 Where a specific external source directly supports a technical claim, ORIGIN Docs should cite that source in the relevant technical section rather than relying on a general acknowledgement here.
 
@@ -75,13 +56,7 @@ Competition is part of ORIGIN's development history, but the project is intended
 
 A multidisciplinary project can easily blur the difference between the people who design the system and the organizations that enable the work.
 
-ORIGIN therefore uses the following distinctions:
-
-- **Team Galene** — project developer and engineering owner;
-- **institutional home** — the school environment supporting the team;
-- **deployment partner** — organization collaborating around real-world use and evaluation;
-- **sponsor** — organization providing equipment, materials, manufacturing, tools, or other project support;
-- **technical source** — manufacturer, standard, publication, or community source used to support a technical statement.
+ORIGIN therefore uses the following distinctions **Team Galene** — project developer and engineering owner; **institutional home** — the school environment supporting the team; **deployment partner** — organization collaborating around real-world use and evaluation; **sponsor** — organization providing equipment, materials, manufacturing, tools, or other project support; and **technical source** — manufacturer, standard, publication, or community source used to support a technical statement.
 
 Keeping those categories separate makes the documentation more accurate and avoids overstating any organization's role.
 
@@ -89,18 +64,7 @@ Keeping those categories separate makes the documentation more accurate and avoi
 
 When third-party materials are used in ORIGIN Docs, maintainers should respect the applicable attribution and licensing requirements.
 
-This includes:
-
-- logos;
-- photographs;
-- diagrams;
-- datasheet excerpts;
-- CAD files;
-- code;
-- libraries;
-- documentation;
-- research publications;
-- other copyrighted or licensed material.
+This includes logos; photographs; diagrams; datasheet excerpts; CAD files; code; libraries; documentation; research publications; and other copyrighted or licensed material.
 
 A sponsorship relationship does not automatically grant unrestricted rights to reuse a company's visual assets or technical content.
 
@@ -112,15 +76,7 @@ When the lineup changes, the visual asset and the written sponsor documentation 
 
 ## Keeping acknowledgements accurate
 
-Acknowledgements should be updated when:
-
-- a new partner becomes active;
-- a sponsor relationship is formally confirmed;
-- a sponsor relationship ends;
-- a deployment changes status;
-- a contributor makes a significant documented contribution;
-- a public attribution is required by a license;
-- a previous acknowledgement becomes inaccurate.
+Acknowledgements should be updated when a new partner becomes active; a sponsor relationship is formally confirmed; a sponsor relationship ends; a deployment changes status; a contributor makes a significant documented contribution; a public attribution is required by a license; and a previous acknowledgement becomes inaccurate.
 
 Historical contributions should not necessarily be erased when a relationship ends. Where useful, they can be moved into an archived or historical context so the project's development history remains understandable.
 

@@ -18,16 +18,7 @@ A useful principle is:
 
 Centaurus inherits uncertainty from ORIGIN Core.
 
-Potential sensor-related limitations include:
-
-- blind zones;
-- reflections;
-- environmental noise;
-- sensor drift;
-- temporary communication failures;
-- incomplete calibration;
-- degraded power conditions;
-- mounting changes.
+Potential sensor-related limitations include blind zones; reflections; environmental noise; sensor drift; temporary communication failures; incomplete calibration; degraded power conditions; and mounting changes.
 
 Centaurus should propagate these quality states into its outputs rather than hiding them.
 
@@ -35,15 +26,7 @@ Centaurus should propagate these quality states into its outputs rather than hid
 
 Centaurus may classify normal activity as unusual.
 
-False positives can result from:
-
-- legitimate visitor or staff activity;
-- temporary environmental changes;
-- unusual but harmless site conditions;
-- poorly tuned thresholds;
-- model overfitting;
-- incomplete context;
-- deployment conditions that differ from training/testing.
+False positives can result from legitimate visitor or staff activity; temporary environmental changes; unusual but harmless site conditions; poorly tuned thresholds; model overfitting; incomplete context; and deployment conditions that differ from training/testing.
 
 Excessive false positives can reduce operator trust and create alert fatigue.
 
@@ -51,15 +34,7 @@ Excessive false positives can reduce operator trust and create alert fatigue.
 
 Centaurus can also fail to identify a meaningful event.
 
-Possible causes include:
-
-- insufficient sensor coverage;
-- weak or ambiguous signals;
-- missing observations;
-- unfamiliar event patterns;
-- overly conservative thresholds;
-- model failure;
-- data-processing faults.
+Possible causes include insufficient sensor coverage; weak or ambiguous signals; missing observations; unfamiliar event patterns; overly conservative thresholds; model failure; and data-processing faults.
 
 The system should never be marketed as guaranteeing detection of every intrusion, environmental problem, or system fault.
 
@@ -75,15 +50,7 @@ Calibration must be measured before confidence values are interpreted operationa
 
 AI and statistical systems can behave differently when the real deployment differs from development data.
 
-Changes may include:
-
-- a different museum or archaeological site;
-- altered enclosure geometry;
-- new sensor revision;
-- new firmware;
-- changed visitor patterns;
-- seasonal conditions;
-- different mounting height or orientation.
+Changes may include a different museum or archaeological site; altered enclosure geometry; new sensor revision; new firmware; changed visitor patterns; seasonal conditions; and different mounting height or orientation.
 
 A validated model should therefore be re-evaluated after material changes to the system or deployment.
 
@@ -91,15 +58,7 @@ A validated model should therefore be re-evaluated after material changes to the
 
 A model trained or tuned for one type of site should not automatically be assumed to work equally well everywhere.
 
-Heritage environments can differ significantly in:
-
-- geometry;
-- materials;
-- public access;
-- climate;
-- typical activity;
-- available power/connectivity;
-- security requirements.
+Heritage environments can differ significantly in geometry; materials; public access; climate; typical activity; available power/connectivity; and security requirements.
 
 Site-specific calibration or configuration may be necessary.
 
@@ -107,13 +66,7 @@ Site-specific calibration or configuration may be necessary.
 
 Centaurus may not know information that a human operator knows.
 
-For example:
-
-- scheduled maintenance;
-- an authorized visitor after hours;
-- construction activity;
-- a temporary exhibition change;
-- a sensor intentionally disconnected for service.
+For example scheduled maintenance; an authorized visitor after hours; construction activity; a temporary exhibition change; and a sensor intentionally disconnected for service.
 
 Operator context can therefore be essential to correct interpretation.
 
@@ -123,24 +76,13 @@ Some events cannot be classified confidently.
 
 Centaurus should support an explicit ambiguous/unknown state instead of forcing every event into a definitive category.
 
-Ambiguity is especially likely when:
-
-- sensors disagree;
-- required data is missing;
-- multiple explanations fit the observations;
-- the input is outside the validated operating range.
+Ambiguity is especially likely when sensors disagree, required data is missing, multiple explanations fit the observations, and the input is outside the validated operating range.
 
 ## Dependence on configuration
 
 Bad configuration can produce bad analysis even when the software is functioning correctly.
 
-Examples include:
-
-- incorrect sensor-zone mapping;
-- inappropriate environmental thresholds;
-- wrong operating schedule;
-- stale site metadata;
-- mismatched model/ruleset version.
+Examples include incorrect sensor-zone mapping; inappropriate environmental thresholds; wrong operating schedule; stale site metadata; and mismatched model/ruleset version.
 
 Configuration validation and version control are therefore essential.
 
@@ -156,13 +98,7 @@ Delayed data can still be useful historically, but it may no longer support real
 
 AI processing can require more compute, memory, or storage than embedded sensing.
 
-Depending on the final architecture, this may limit:
-
-- model size;
-- processing frequency;
-- local inference capability;
-- retained history;
-- response latency.
+Depending on the final architecture, this may limit model size; processing frequency; local inference capability; retained history; and response latency.
 
 Performance requirements must be validated on the actual target hardware or service environment.
 
@@ -178,15 +114,7 @@ For important decisions, simpler and more transparent methods may be preferable 
 
 No cybersecurity architecture eliminates all risk.
 
-Residual risks can remain from:
-
-- software vulnerabilities;
-- compromised credentials;
-- supply-chain dependencies;
-- insecure operator devices;
-- physical access;
-- configuration mistakes;
-- unknown vulnerabilities.
+Residual risks can remain from software vulnerabilities; compromised credentials; supply-chain dependencies; insecure operator devices; physical access; configuration mistakes; and unknown vulnerabilities.
 
 Security controls must be maintained over time rather than treated as a one-time feature.
 
@@ -214,16 +142,7 @@ Operator review remains necessary.
 
 Every claimed capability should state the conditions under which it was tested.
 
-Useful validation metadata includes:
-
-- site/test environment;
-- hardware revision;
-- firmware version;
-- Centaurus version;
-- model/ruleset version;
-- sensor configuration;
-- sample size;
-- measured false-positive/false-negative rates where applicable.
+Useful validation metadata includes site/test environment; hardware revision; firmware version; Centaurus version; model/ruleset version; sensor configuration; sample size; and measured false-positive/false-negative rates where applicable.
 
 Without this context, performance claims are easy to misinterpret.
 
@@ -235,21 +154,10 @@ The documentation should progressively replace design intent with measured imple
 
 ## Appropriate use
 
-Centaurus is best understood as a system that can:
-
-- organize sensor evidence;
-- identify unusual patterns;
-- prioritize events;
-- support maintenance and monitoring;
-- provide context for human decisions.
+Centaurus is best understood as a system that can organize sensor evidence; identify unusual patterns; prioritize events; support maintenance and monitoring; and provide context for human decisions.
 
 It should not be treated as an autonomous authority for security, conservation, legal, or emergency decisions.
 
 ## Related documentation
 
-See:
-
-- [Detection & Analysis](detection-and-analysis.md)
-- [Decision Logic](decision-logic.md)
-- [Cybersecurity](cybersecurity.md)
-- [Testing & Validation](../testing-validation/README.md)
+See [Detection & Analysis](detection-and-analysis.md), [Decision Logic](decision-logic.md), [Cybersecurity](cybersecurity.md), and [Testing & Validation](../testing-validation/README.md).

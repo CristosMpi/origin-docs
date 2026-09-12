@@ -24,19 +24,7 @@ This sequence minimizes unnecessary disturbance.
 
 Before visiting the device, review available telemetry.
 
-Check:
-
-- last communication timestamp;
-- recent reboot history;
-- sensor health states;
-- missing-data intervals;
-- invalid readings;
-- storage warnings;
-- power-related warnings;
-- firmware version;
-- configuration version;
-- module identities;
-- repeated alerts.
+Check last communication timestamp; recent reboot history; sensor health states; missing-data intervals; invalid readings; storage warnings; power-related warnings; firmware version; configuration version; module identities; and repeated alerts.
 
 Remote status gives context for what to look for physically.
 
@@ -44,19 +32,7 @@ Remote status gives context for what to look for physically.
 
 Inspect the surrounding area before inspecting the device itself.
 
-Look for changes such as:
-
-- vegetation growth;
-- new structures;
-- temporary barriers;
-- moved objects;
-- construction activity;
-- new visitor routes;
-- new sources of vibration;
-- standing water;
-- erosion;
-- changed shading;
-- evidence of vandalism or accidental impact.
+Look for changes such as vegetation growth; new structures; temporary barriers; moved objects; construction activity; new visitor routes; new sources of vibration; standing water; erosion; changed shading; and evidence of vandalism or accidental impact.
 
 A change in the site can create apparent device problems even when the hardware is healthy.
 
@@ -66,29 +42,11 @@ Inspect every accessible face of the enclosure.
 
 ### Structural condition
 
-Check for:
-
-- cracks;
-- layer separation or delamination in printed parts;
-- deformation;
-- warping;
-- broken corners;
-- impact damage;
-- loose panels;
-- missing fasteners;
-- damaged access features.
+Check for cracks; layer separation or delamination in printed parts; deformation; warping; broken corners; impact damage; loose panels; missing fasteners; and damaged access features.
 
 ### Surface condition
 
-Check for:
-
-- UV degradation;
-- discoloration;
-- brittle surfaces;
-- abrasion;
-- chemical contamination;
-- biological growth;
-- dirt accumulation.
+Check for UV degradation; discoloration; brittle surfaces; abrasion; chemical contamination; biological growth; and dirt accumulation.
 
 Surface appearance alone is not a failure, but it may indicate material aging that should be monitored.
 
@@ -96,16 +54,7 @@ Surface appearance alone is not a failure, but it may indicate material aging th
 
 The mounted position is part of ORIGIN's sensing configuration.
 
-Verify:
-
-- the unit has not rotated;
-- the unit has not tilted;
-- the mounting base is stable;
-- fasteners remain present;
-- mounting points are not cracking;
-- no historic fabric has been damaged;
-- soil-mounted installations have not shifted because of erosion or compaction;
-- cables are not carrying mechanical load.
+Verify the unit has not rotated; the unit has not tilted; the mounting base is stable; fasteners remain present; mounting points are not cracking; no historic fabric has been damaged; soil-mounted installations have not shifted because of erosion or compaction; and cables are not carrying mechanical load.
 
 Where reference photographs or orientation marks exist, compare them with the current state.
 
@@ -113,22 +62,9 @@ Where reference photographs or orientation marks exist, compare them with the cu
 
 Each sensor should be inspected both mechanically and functionally.
 
-For the three mmWave sensors:
+For the three mmWave sensors verify mounting screws; confirm the PCB has not shifted; inspect dedicated sensor openings; remove debris; look for moisture accumulation; confirm the sensing face is unobstructed; and verify orientation against the commissioned geometry.
 
-- verify mounting screws;
-- confirm the PCB has not shifted;
-- inspect dedicated sensor openings;
-- remove debris;
-- look for moisture accumulation;
-- confirm the sensing face is unobstructed;
-- verify orientation against the commissioned geometry.
-
-For environmental sensors:
-
-- inspect exposure openings;
-- remove contamination that could alter readings;
-- check that ventilation paths are not blocked;
-- verify any protective membrane or shield is intact.
+For environmental sensors inspect exposure openings, remove contamination that could alter readings, check that ventilation paths are not blocked, and verify any protective membrane or shield is intact.
 
 A physically intact sensor can still be electrically unhealthy, so visual inspection must be followed by functional checks.
 
@@ -136,50 +72,19 @@ A physically intact sensor can still be electrically unhealthy, so visual inspec
 
 Inspect the solar assembly as a structure and as a cable path.
 
-Check:
-
-- solar panel damage;
-- contamination or shading;
-- support stiffness;
-- all support fasteners;
-- the third hollow support;
-- cable routing through the support;
-- abrasion;
-- pinch points;
-- water entry routes;
-- connector condition.
+Check solar panel damage; contamination or shading; support stiffness; all support fasteners; the third hollow support; cable routing through the support; abrasion; pinch points; water entry routes; and connector condition.
 
 Movement in the solar support may also apply force to the enclosure or cable entry and should not be treated only as a panel issue.
 
 ## 7. Cable and connector inspection
 
-External cables should be checked for:
-
-- cuts;
-- crushed insulation;
-- bending damage;
-- strain at entry points;
-- UV damage;
-- corrosion;
-- loose connectors;
-- contamination;
-- exposed conductors;
-- contact with sharp edges.
+External cables should be checked for cuts; crushed insulation; bending damage; strain at entry points; UV damage; corrosion; loose connectors; contamination; exposed conductors; and contact with sharp edges.
 
 Cable paths should also maintain drainage behavior so water is not directed into the enclosure.
 
 ## 8. BIT and expansion-module inspection
 
-For attached modules, verify:
-
-- correct module identity;
-- secure mounting;
-- connector retention;
-- no unexpected movement;
-- no contact with soil or water unless specifically designed for it;
-- no damaged housing;
-- no cable strain;
-- software reports the expected module state.
+For attached modules, verify correct module identity; secure mounting; connector retention; no unexpected movement; no contact with soil or water unless specifically designed for it; no damaged housing; no cable strain; and software reports the expected module state.
 
 A module that is physically present but not recognized by software requires diagnostics.
 
@@ -187,17 +92,7 @@ A module that is physically present but not recognized by software requires diag
 
 Inspect environmental barriers without claiming an unvalidated IP rating.
 
-Look for:
-
-- torn or displaced gaskets;
-- compressed or permanently deformed seals;
-- seal contamination;
-- cracks near screw bosses;
-- water tracks;
-- condensation marks;
-- damaged cable glands;
-- blocked drain paths;
-- debris at radar openings.
+Look for torn or displaced gaskets; compressed or permanently deformed seals; seal contamination; cracks near screw bosses; water tracks; condensation marks; damaged cable glands; blocked drain paths; and debris at radar openings.
 
 Because ORIGIN includes intentional sensor openings, the inspection should evaluate the actual water-management design rather than assuming the enclosure is fully sealed.
 
@@ -205,36 +100,13 @@ Because ORIGIN includes intentional sensor openings, the inspection should evalu
 
 Only open the unit when necessary and in suitable conditions.
 
-Inspect internally for:
-
-- condensation;
-- water marks;
-- corrosion;
-- discoloration from heat;
-- loose hardware;
-- detached connectors;
-- damaged insulation;
-- foreign debris;
-- battery swelling;
-- abnormal odor;
-- PCB contamination;
-- movement of Rosetta or sensors;
-- damage to storage or communication modules.
+Inspect internally for condensation; water marks; corrosion; discoloration from heat; loose hardware; detached connectors; damaged insulation; foreign debris; battery swelling; abnormal odor; PCB contamination; movement of Rosetta or sensors; and damage to storage or communication modules.
 
 If internal moisture is found, document its location before cleaning because the pattern may identify the entry route.
 
 ## 11. Battery inspection
 
-Where a battery is present, inspect for:
-
-- swelling;
-- puncture;
-- leakage;
-- corrosion;
-- damaged leads;
-- insulation wear;
-- connector overheating;
-- unexpected movement inside its mount.
+Where a battery is present, inspect for swelling; puncture; leakage; corrosion; damaged leads; insulation wear; connector overheating; and unexpected movement inside its mount.
 
 A suspicious battery should be isolated and handled according to the battery manufacturer's safety requirements.
 
@@ -242,17 +114,7 @@ Do not continue normal operation merely because the battery still provides volta
 
 ## 12. Rosetta inspection
 
-Inspect the Rosetta PCB for:
-
-- secure mounting;
-- connector seating;
-- contamination;
-- corrosion;
-- damaged components;
-- heat discoloration;
-- cracked solder joints visible under suitable inspection;
-- foreign conductive material;
-- cable strain.
+Inspect the Rosetta PCB for secure mounting; connector seating; contamination; corrosion; damaged components; heat discoloration; cracked solder joints visible under suitable inspection; foreign conductive material; and cable strain.
 
 Do not probe or modify the board at a heritage site unless the service procedure specifically requires it and power has been safely isolated.
 
@@ -260,18 +122,7 @@ Do not probe or modify the board at a heritage site unless the service procedure
 
 After physical checks, verify the system functionally.
 
-Confirm:
-
-- normal boot;
-- stable power state;
-- expected firmware identity;
-- expected configuration identity;
-- sensor enumeration;
-- valid readings;
-- local storage health;
-- communication;
-- correct remote unit identity;
-- absence of new persistent errors.
+Confirm normal boot; stable power state; expected firmware identity; expected configuration identity; sensor enumeration; valid readings; local storage health; communication; correct remote unit identity; and absence of new persistent errors.
 
 For presence sensing, a simple controlled movement test can verify that each radar contributes expected observations, but a full coverage test is required if the orientation has changed.
 
@@ -324,7 +175,10 @@ If the inspection uncovers a condition that may have affected monitoring accurac
 
 ## Next steps
 
-- If no meaningful defect is found, return to [Routine Maintenance](routine-maintenance.md).
-- If a fault or inconsistent behavior is found, continue with [Diagnostics](diagnostics.md).
-- If a part is confirmed defective, use [Component Replacement](component-replacement.md).
-- For symptom-based investigation, see [Troubleshooting](troubleshooting.md).
+If no meaningful defect is found, return to [Routine Maintenance](routine-maintenance.md).
+
+If a fault or inconsistent behavior is found, continue with [Diagnostics](diagnostics.md).
+
+If a part is confirmed defective, use [Component Replacement](component-replacement.md).
+
+For symptom-based investigation, see [Troubleshooting](troubleshooting.md).

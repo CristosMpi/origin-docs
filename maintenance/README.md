@@ -16,19 +16,7 @@ Maintenance has five primary objectives:
 4. maintain traceability of every service action;
 5. keep the installed system safe and reversible at heritage sites.
 
-A unit that still powers on is not automatically considered healthy. ORIGIN maintenance therefore looks at the complete system, including:
-
-- enclosure and mounting integrity;
-- seals and environmental exposure;
-- Rosetta electronics;
-- battery and solar subsystem;
-- sensor condition and alignment;
-- communications;
-- firmware and configuration state;
-- local storage;
-- timekeeping and data provenance;
-- module interfaces;
-- event generation and monitoring behavior.
+A unit that still powers on is not automatically considered healthy. ORIGIN maintenance therefore looks at the complete system, including enclosure and mounting integrity; seals and environmental exposure; Rosetta electronics; battery and solar subsystem; sensor condition and alignment; communications; firmware and configuration state; local storage; timekeeping and data provenance; module interfaces; and event generation and monitoring behavior.
 
 ## Maintenance model
 
@@ -44,18 +32,7 @@ The purpose is to reduce unexpected downtime and catch gradual degradation early
 
 Condition-based maintenance is triggered by system evidence rather than only by a calendar.
 
-Examples include:
-
-- repeated communication failures;
-- increasing sensor error rates;
-- abnormal battery behavior;
-- unstable power rails;
-- repeated reboots;
-- missing data;
-- mounting movement;
-- condensation or water evidence;
-- radar coverage changes;
-- excessive false detections.
+Examples include repeated communication failures; increasing sensor error rates; abnormal battery behavior; unstable power rails; repeated reboots; missing data; mounting movement; condensation or water evidence; radar coverage changes; and excessive false detections.
 
 Condition-based maintenance is especially important for ORIGIN because two heritage deployments with the same hardware may experience very different environmental loads.
 
@@ -63,13 +40,7 @@ Condition-based maintenance is especially important for ORIGIN because two herit
 
 Corrective maintenance begins when a fault has already been confirmed.
 
-The objective is not simply to replace parts as quickly as possible. The technician should first determine:
-
-- what failed;
-- why it failed;
-- whether the failure affected stored or transmitted data;
-- whether another subsystem caused the fault;
-- whether the replacement requires recalibration or recommissioning.
+The objective is not simply to replace parts as quickly as possible. The technician should first determine what failed; why it failed; whether the failure affected stored or transmitted data; whether another subsystem caused the fault; and whether the replacement requires recalibration or recommissioning.
 
 ## Maintenance status model
 
@@ -110,31 +81,13 @@ This table is an operational framework, **not a validated lifetime guarantee or 
 
 Maintenance work should begin with documentation rather than tools.
 
-Record:
-
-- site identifier;
-- ORIGIN unit identifier;
-- date and technician;
-- reason for service;
-- current firmware version;
-- current configuration version;
-- current module list;
-- current health state;
-- recent alerts or anomalies;
-- photographs of the installation before disturbance where appropriate.
+Record site identifier; ORIGIN unit identifier; date and technician; reason for service; current firmware version; current configuration version; current module list; current health state; recent alerts or anomalies; and photographs of the installation before disturbance where appropriate.
 
 If the unit is being removed or opened, preserve relevant logs before power is disconnected whenever possible.
 
 ## Heritage-site considerations
 
-Service work at a heritage site must respect the same principles as installation:
-
-- avoid unnecessary contact with historic fabric;
-- use reversible mounting methods where possible;
-- do not drill, cut or modify protected material without authorization;
-- prevent tools, fasteners or debris from damaging the site;
-- preserve the approved appearance and position of the installation;
-- document any physical change made during service.
+Service work at a heritage site must respect the same principles as installation avoid unnecessary contact with historic fabric; use reversible mounting methods where possible; do not drill, cut or modify protected material without authorization; prevent tools, fasteners or debris from damaging the site; preserve the approved appearance and position of the installation; and document any physical change made during service.
 
 A maintenance action that improves the device but damages the site is not acceptable.
 
@@ -154,13 +107,7 @@ Battery systems must be inspected for swelling, leakage, heat damage, damaged in
 
 Opening an enclosure temporarily removes part of its environmental protection.
 
-Service should therefore be performed in conditions that prevent:
-
-- rain entry;
-- dust contamination;
-- loose debris entering connectors;
-- moisture becoming trapped during reassembly;
-- damage to seals.
+Service should therefore be performed in conditions that prevent rain entry; dust contamination; loose debris entering connectors; moisture becoming trapped during reassembly; and damage to seals.
 
 Before closing the enclosure, inspect the sealing surfaces and confirm that cables, wires or debris are not trapped across the seal path.
 
@@ -197,30 +144,13 @@ If a component is replaced, record its previous and new identifier or revision w
 
 Maintenance can unintentionally become an undocumented redesign.
 
-Examples include:
-
-- replacing a sensor with a different model;
-- changing fastener type;
-- changing seal material;
-- rerouting wiring;
-- substituting battery chemistry;
-- changing solar-panel geometry;
-- modifying firmware during service.
+Examples include replacing a sensor with a different model; changing fastener type; changing seal material; rerouting wiring; substituting battery chemistry; changing solar-panel geometry; and modifying firmware during service.
 
 Any change that affects compatibility, performance or validation should be handled through the normal development and validation process, not treated as an invisible maintenance substitution.
 
 ## Recalibration after service
 
-Recalibration may be required after changes to:
-
-- radar position or angle;
-- environmental sensor position;
-- enclosure geometry near a sensor;
-- solar alignment;
-- mounting height or orientation;
-- sensor replacement;
-- configuration thresholds;
-- relevant firmware behavior.
+Recalibration may be required after changes to radar position or angle; environmental sensor position; enclosure geometry near a sensor; solar alignment; mounting height or orientation; sensor replacement; configuration thresholds; and relevant firmware behavior.
 
 The calibration procedure is documented under [Installation & Deployment → Calibration](../installation-deployment/calibration.md).
 
@@ -228,19 +158,7 @@ The calibration procedure is documented under [Installation & Deployment → Cal
 
 A repaired unit should not return directly from “maintenance” to “healthy” simply because it powers on.
 
-Depending on the work performed, recommissioning should confirm:
-
-- power stability;
-- sensor health;
-- communication;
-- storage;
-- timekeeping;
-- configuration correctness;
-- expected event behavior;
-- environmental sealing;
-- mechanical security;
-- module detection;
-- remote visibility.
+Depending on the work performed, recommissioning should confirm power stability; sensor health; communication; storage; timekeeping; configuration correctness; expected event behavior; environmental sealing; mechanical security; module detection; and remote visibility.
 
 For significant repairs, repeat the relevant portions of the [Commissioning](../installation-deployment/commissioning.md) process.
 
@@ -248,32 +166,14 @@ For significant repairs, repeat the relevant portions of the [Commissioning](../
 
 Maintenance procedures should evolve from field evidence.
 
-Repeated service findings can reveal systemic design issues such as:
-
-- a fastener that loosens frequently;
-- a cable route that traps water;
-- a seal that degrades too quickly;
-- a connector that is difficult to service;
-- a sensor position that shifts after handling;
-- a battery configuration that does not match real deployment conditions.
+Repeated service findings can reveal systemic design issues such as a fastener that loosens frequently; a cable route that traps water; a seal that degrades too quickly; a connector that is difficult to service; a sensor position that shifts after handling; and a battery configuration that does not match real deployment conditions.
 
 These patterns should become engineering findings and feed back into ORIGIN development rather than being repeatedly repaired without design action.
 
 ## Chapter contents
 
-- [Routine Maintenance](routine-maintenance.md) — preventive service workflow and recurring care
-- [Inspection](inspection.md) — structured physical and functional inspection
-- [Diagnostics](diagnostics.md) — systematic fault isolation and health interpretation
-- [Component Replacement](component-replacement.md) — safe and traceable replacement process
-- [Troubleshooting](troubleshooting.md) — symptom-based fault investigation and recovery
+[Routine Maintenance](routine-maintenance.md) — preventive service workflow and recurring care, [Inspection](inspection.md) — structured physical and functional inspection, [Diagnostics](diagnostics.md) — systematic fault isolation and health interpretation, [Component Replacement](component-replacement.md) — safe and traceable replacement process, and [Troubleshooting](troubleshooting.md) — symptom-based fault investigation and recovery.
 
 ## Related documentation
 
-See also:
-
-- [Installation & Deployment](../installation-deployment/README.md)
-- [Testing & Validation](../testing-validation/README.md)
-- [Mechanical Design](../mechanical-design/README.md)
-- [Rosetta](../rosetta/README.md)
-- [Software](../software/README.md)
-- [Modules](../modules/README.md)
+See also [Installation & Deployment](../installation-deployment/README.md); [Testing & Validation](../testing-validation/README.md); [Mechanical Design](../mechanical-design/README.md); [Rosetta](../rosetta/README.md); [Software](../software/README.md); and [Modules](../modules/README.md).

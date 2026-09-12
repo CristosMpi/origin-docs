@@ -6,15 +6,7 @@ This page describes the installation workflow at system level. Exact commands, U
 
 ## Installation objectives
 
-A successful installation should result in a unit that:
-
-- boots predictably;
-- reports an identifiable firmware version;
-- loads valid configuration;
-- initializes expected sensors;
-- reports subsystem health;
-- can enter the normal monitoring state;
-- can be diagnosed if any of those steps fail.
+A successful installation should result in a unit that boots predictably; reports an identifiable firmware version; loads valid configuration; initializes expected sensors; reports subsystem health; can enter the normal monitoring state; and can be diagnosed if any of those steps fail.
 
 ## Before installation
 
@@ -34,15 +26,7 @@ See [Rosetta → Assembly & Bring-up](../rosetta/assembly-and-bring-up.md).
 
 The final development environment will be documented when the firmware source is connected.
 
-The release instructions should eventually specify:
-
-- supported operating systems;
-- required compiler/toolchain;
-- firmware framework;
-- package/dependency manager;
-- supported programmer/USB interface;
-- version requirements;
-- build profiles.
+The release instructions should eventually specify supported operating systems; required compiler/toolchain; firmware framework; package/dependency manager; supported programmer/USB interface; version requirements; and build profiles.
 
 These requirements should be version-pinned wherever practical so a release can be reproduced later.
 
@@ -76,14 +60,7 @@ Run commissioning checks
 
 When building from source, record the source revision used.
 
-A deployment record should ideally include:
-
-- repository;
-- branch/tag;
-- commit SHA;
-- build profile;
-- resulting firmware version;
-- operator/date.
+A deployment record should ideally include repository; branch/tag; commit SHA; build profile; resulting firmware version; and operator/date.
 
 This prevents "latest code" from becoming an untraceable deployment artifact.
 
@@ -91,41 +68,19 @@ This prevents "latest code" from becoming an untraceable deployment artifact.
 
 For field deployment, a prebuilt and validated release image may be preferable to requiring every installer to compile the project.
 
-Release images should be associated with:
-
-- a version number;
-- supported Rosetta revision(s);
-- release notes;
-- checksum or integrity value where distributed externally;
-- configuration compatibility information.
+Release images should be associated with a version number; supported Rosetta revision(s); release notes; checksum or integrity value where distributed externally; and configuration compatibility information.
 
 ## First boot
 
 The first boot after installation should be observed rather than immediately enclosing the board.
 
-Verify:
-
-- reset cause is reasonable;
-- expected firmware version is reported;
-- storage initializes where applicable;
-- required interfaces initialize;
-- configured sensors appear;
-- missing optional sensors are handled gracefully;
-- communication state is visible;
-- no repeated reboot loop occurs.
+Verify reset cause is reasonable; expected firmware version is reported; storage initializes where applicable; required interfaces initialize; configured sensors appear; missing optional sensors are handled gracefully; communication state is visible; and no repeated reboot loop occurs.
 
 ## Initial configuration
 
 Firmware installation and site configuration are separate operations.
 
-A single software release may be used across multiple units while each unit has a unique configuration for:
-
-- device identity;
-- deployment/site identity;
-- sensor enablement;
-- calibration;
-- communication settings;
-- monitoring parameters.
+A single software release may be used across multiple units while each unit has a unique configuration for device identity; deployment/site identity; sensor enablement; calibration; communication settings; and monitoring parameters.
 
 See [Configuration](configuration.md).
 
@@ -139,30 +94,13 @@ If a deployment requires credentials, they should be provisioned through the app
 
 Before declaring installation complete, perform a short functional check.
 
-A minimum checklist is:
-
-- [ ] firmware version recorded;
-- [ ] hardware revision recorded;
-- [ ] device identity confirmed;
-- [ ] configuration loaded successfully;
-- [ ] expected sensors healthy;
-- [ ] missing sensors reported correctly;
-- [ ] local logging/diagnostics available;
-- [ ] communication tested if required;
-- [ ] restart tested;
-- [ ] no unexplained reset loop.
+A minimum checklist is firmware version recorded; hardware revision recorded; device identity confirmed; configuration loaded successfully; expected sensors healthy; missing sensors reported correctly; local logging/diagnostics available; communication tested if required; restart tested; and no unexplained reset loop.
 
 ## Recovery installation
 
 If a unit cannot boot normally, a recovery procedure should allow firmware to be restored through the physical programming interface.
 
-The final recovery guide should document:
-
-- how to force programming/recovery mode;
-- how to erase corrupted firmware/configuration safely;
-- which data is lost during recovery;
-- how to restore a known release;
-- how to re-provision configuration.
+The final recovery guide should document how to force programming/recovery mode; how to erase corrupted firmware/configuration safely; which data is lost during recovery; how to restore a known release; and how to re-provision configuration.
 
 These board-specific steps will be added only after confirmation from the firmware/hardware source.
 
@@ -193,9 +131,4 @@ For every field unit, Team Galene should maintain a software deployment record s
 
 ## Related pages
 
-See:
-
-- [Firmware](firmware.md)
-- [Configuration](configuration.md)
-- [Updates](updates.md)
-- [Installation & Deployment](../installation-deployment/README.md)
+See [Firmware](firmware.md), [Configuration](configuration.md), [Updates](updates.md), and [Installation & Deployment](../installation-deployment/README.md).

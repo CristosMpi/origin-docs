@@ -23,33 +23,13 @@ The `rev?` revision field is a release-management warning: future fabrication pa
 
 ## Exported layer set
 
-The archive contains:
-
-- front copper;
-- back copper;
-- front solder mask;
-- back solder mask;
-- front solder paste;
-- back solder paste;
-- front silkscreen;
-- back silkscreen;
-- board profile / Edge.Cuts;
-- Gerber job metadata.
+The archive contains front copper; back copper; front solder mask; back solder mask; front solder paste; back solder paste; front silkscreen; back silkscreen; board profile / Edge.Cuts; and Gerber job metadata.
 
 The archive does **not** contain an Excellon drill file. This means the package should not be considered a complete fabrication release where plated or non-plated holes are required.
 
 ## Functional design
 
-Rosetta v2 development has included the following main blocks:
-
-- an ESP32-family embedded processor;
-- battery charging and power-path management around the BQ24074RGT;
-- regulated power conversion around the TPS63031DSK;
-- an LIS3DH accelerometer;
-- removable/local storage interfaces;
-- cellular/SIM-related interface work;
-- battery and external expansion connectors;
-- status, button and supporting passive circuitry.
+Rosetta v2 development has included the following main blocks an ESP32-family embedded processor; battery charging and power-path management around the BQ24074RGT; regulated power conversion around the TPS63031DSK; an LIS3DH accelerometer; removable/local storage interfaces; cellular/SIM-related interface work; battery and external expansion connectors; and status, button and supporting passive circuitry.
 
 The exact final reference designators, pin assignments and fitted options must be verified against the latest schematic and BOM before they are published as production data.
 
@@ -61,29 +41,11 @@ Because the profile contains more than one closed contour and the contours inter
 
 ## Why v2 exists
 
-Rosetta v2 is not just a cosmetic PCB revision. It represents the move toward a board that is designed around the requirements of the full ORIGIN Core:
-
-- compact integration inside the enclosure;
-- repeatable external sensor wiring;
-- managed battery operation;
-- local processing and storage;
-- future expansion without rewiring the entire system;
-- fabrication by standard PCB manufacturers.
+Rosetta v2 is not just a cosmetic PCB revision. It represents the move toward a board that is designed around the requirements of the full ORIGIN Core compact integration inside the enclosure; repeatable external sensor wiring; managed battery operation; local processing and storage; future expansion without rewiring the entire system; and fabrication by standard PCB manufacturers.
 
 ## Release state
 
-The current v2 export is useful as an engineering snapshot, but it should be considered **pre-production** until all of the following are complete:
-
-- schematic review;
-- final PCB design-rule check;
-- drill-file export and verification;
-- BOM verification;
-- component-position / assembly-file verification where assembly is outsourced;
-- fabrication preview review;
-- first-article electrical bring-up;
-- functional firmware testing;
-- enclosure fit test;
-- versioned release archive.
+The current v2 export is useful as an engineering snapshot, but it should be considered **pre-production** until all of the following are complete schematic review; final PCB design-rule check; drill-file export and verification; BOM verification; component-position / assembly-file verification where assembly is outsourced; fabrication preview review; first-article electrical bring-up; functional firmware testing; enclosure fit test; and versioned release archive.
 
 ## Recommended release naming
 

@@ -4,12 +4,7 @@ ORIGIN uses versioning to separate project-level releases from the revisions of 
 
 ## Versioning model
 
-ORIGIN distinguishes four kinds of version information:
-
-- **Project baseline** — the overall documented system generation, such as ORIGIN 2026.
-- **Subsystem revision** — the revision of a specific hardware, software, or mechanical subsystem, such as Rosetta v2.
-- **Configuration version** — the exact combination of settings, calibration, firmware, modules, and deployment-specific choices used by a unit.
-- **Artifact revision** — the revision of a source or export file such as a CAD model, Gerber package, BOM, firmware build, or test procedure.
+ORIGIN distinguishes four kinds of version information **Project baseline** — the overall documented system generation, such as ORIGIN 2026, **Subsystem revision** — the revision of a specific hardware, software, or mechanical subsystem, such as Rosetta v2, **Configuration version** — the exact combination of settings, calibration, firmware, modules, and deployment-specific choices used by a unit, and **Artifact revision** — the revision of a source or export file such as a CAD model, Gerber package, BOM, firmware build, or test procedure.
 
 These identifiers should not be collapsed into a single number.
 
@@ -31,25 +26,11 @@ Rosetta v2 is documented as the current hardware platform for the Core electroni
 
 ## Why subsystem versions matter
 
-A system may contain combinations such as:
-
-- ORIGIN 2026 enclosure revision A;
-- Rosetta v2 PCB revision B;
-- firmware release 0.x;
-- Centaurus evaluation build C;
-- BITs module revision 2;
-- deployment configuration Durrës-Unit-03.
+A system may contain combinations such as ORIGIN 2026 enclosure revision A; Rosetta v2 PCB revision B; firmware release 0.x; Centaurus evaluation build C; BITs module revision 2; and deployment configuration Durrës-Unit-03.
 
 The exact identifiers above are examples of the versioning structure, not current assigned release numbers unless separately recorded in source control.
 
-The purpose is to make it possible to answer questions such as:
-
-- Which hardware revision was tested?
-- Which firmware was running when a field event occurred?
-- Which enclosure geometry was installed?
-- Which calibration values were active?
-- Which module revision was attached?
-- Which test evidence applies to this configuration?
+The purpose is to make it possible to answer questions such as Which hardware revision was tested?; Which firmware was running when a field event occurred?; Which enclosure geometry was installed?; Which calibration values were active?; Which module revision was attached?; and Which test evidence applies to this configuration?.
 
 ## Recommended version format
 
@@ -57,11 +38,7 @@ For software and documentation releases, semantic-style versioning can be used w
 
 `MAJOR.MINOR.PATCH`
 
-Where:
-
-- **MAJOR** indicates a breaking compatibility change;
-- **MINOR** indicates new backward-compatible functionality;
-- **PATCH** indicates fixes or documentation-only corrections that do not intentionally break compatibility.
+Where **MAJOR** indicates a breaking compatibility change, **MINOR** indicates new backward-compatible functionality, and **PATCH** indicates fixes or documentation-only corrections that do not intentionally break compatibility.
 
 For physical hardware, revision identifiers are often clearer than semantic versions, for example:
 
@@ -75,40 +52,13 @@ The exact scheme should remain stable once public releases begin.
 
 ## Breaking changes
 
-A change should be treated as potentially breaking when it changes any of the following:
-
-- PCB connector type or pin assignment;
-- voltage or power expectations;
-- mounting-hole geometry;
-- enclosure clearances;
-- sensor orientation or field of view;
-- cable routing;
-- module mechanical interface;
-- data schema;
-- configuration schema;
-- communications protocol;
-- firmware compatibility with hardware;
-- calibration interpretation;
-- update or recovery process.
+A change should be treated as potentially breaking when it changes any of the following PCB connector type or pin assignment; voltage or power expectations; mounting-hole geometry; enclosure clearances; sensor orientation or field of view; cable routing; module mechanical interface; data schema; configuration schema; communications protocol; firmware compatibility with hardware; calibration interpretation; and update or recovery process.
 
 Breaking changes should be explicitly documented in the changelog.
 
 ## Configuration identity
 
-A deployed unit should be associated with a configuration record containing, where applicable:
-
-- ORIGIN project baseline;
-- Rosetta hardware revision;
-- enclosure/CAD revision;
-- firmware version or commit;
-- module list and revisions;
-- sensor configuration;
-- calibration version;
-- configuration schema version;
-- Centaurus logic/model version;
-- deployment identifier;
-- commissioning date;
-- relevant maintenance or replacement history.
+A deployed unit should be associated with a configuration record containing, where applicable ORIGIN project baseline; Rosetta hardware revision; enclosure/CAD revision; firmware version or commit; module list and revisions; sensor configuration; calibration version; configuration schema version; Centaurus logic/model version; deployment identifier; commissioning date; and relevant maintenance or replacement history.
 
 This allows field observations to be traced back to the exact system that generated them.
 
@@ -144,12 +94,7 @@ Retained for historical reference or compatibility, but not recommended for new 
 
 Editable source files and exported manufacturing or distribution files must remain traceable to one another.
 
-For example:
-
-- a KiCad PCB source should map to a specific Gerber/drill export;
-- a CAD assembly should map to the STEP/STL files used for manufacturing;
-- a firmware source revision should map to a binary build;
-- a test procedure revision should map to the result record that used it.
+For example a KiCad PCB source should map to a specific Gerber/drill export, a CAD assembly should map to the STEP/STL files used for manufacturing, a firmware source revision should map to a binary build, and a test procedure revision should map to the result record that used it.
 
 An export with an unclear source revision should not be treated as a complete release artifact.
 
@@ -177,13 +122,7 @@ The table above reflects the documentation state, not a final production compati
 
 ## Version retirement
 
-A version can be retired when:
-
-- a replacement has been validated;
-- known safety or reliability issues make continued use inappropriate;
-- required parts are no longer available;
-- maintaining compatibility creates unreasonable technical debt;
-- deployment evidence shows that the architecture should be replaced.
+A version can be retired when a replacement has been validated; known safety or reliability issues make continued use inappropriate; required parts are no longer available; maintaining compatibility creates unreasonable technical debt; and deployment evidence shows that the architecture should be replaced.
 
 Retirement should not erase the previous documentation. Historical records remain important for interpreting older tests and deployed units.
 

@@ -46,7 +46,7 @@ The system is designed around upgradeable modules and evolving electronics. New 
 
 ### Documentation as part of the project
 
-These docs are intended to become the technical source of truth for ORIGIN. They cover not only what the system is, but how it is designed, tested, deployed, maintained, and improved.
+This documentation are intended to become the technical source of truth for ORIGIN. They cover not only what the system is, but how it is designed, tested, deployed, maintained, and improved.
 
 ## From prototype to deployment
 

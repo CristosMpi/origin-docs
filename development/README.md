@@ -24,32 +24,11 @@ The documentation currently uses **ORIGIN 2026** as the project-level baseline. 
 
 The project-level version and subsystem versions are related but not identical. For example, Rosetta can receive a hardware revision without implying that every mechanical, software, AI, or deployment subsystem has changed at the same time.
 
-The main development areas are:
-
-- ORIGIN Core architecture;
-- Rosetta electronics;
-- embedded firmware;
-- Centaurus AI and data processing;
-- mechanical enclosure and mounting;
-- sensing and presence detection;
-- solar and power integration;
-- BITs, Aqua Base, and Drone Mount extensions;
-- deployment and maintenance procedures;
-- testing and validation methods;
-- documentation and open-source release quality.
+The main development areas are ORIGIN Core architecture; Rosetta electronics; embedded firmware; Centaurus AI and data processing; mechanical enclosure and mounting; sensing and presence detection; solar and power integration; BITs, Aqua Base, and Drone Mount extensions; deployment and maintenance procedures; testing and validation methods; and documentation and open-source release quality.
 
 ## Change control
 
-A development change should identify at least:
-
-- what is changing;
-- why the change is needed;
-- which subsystem owns the change;
-- which interfaces are affected;
-- what previous behavior may be invalidated;
-- how the change will be tested;
-- whether documentation must be updated;
-- whether deployed units require migration or recommissioning.
+A development change should identify at least what is changing; why the change is needed; which subsystem owns the change; which interfaces are affected; what previous behavior may be invalidated; how the change will be tested; whether documentation must be updated; and whether deployed units require migration or recommissioning.
 
 Changes that affect physical fit, wiring, power, communications, calibration, data interpretation, or safety should never be treated as isolated cosmetic changes.
 
@@ -65,13 +44,7 @@ Where compatibility cannot be preserved, the change should be documented as a br
 
 Development status is not determined by how complete a design looks. A result becomes part of the supported system only when evidence exists for the claim being made.
 
-Examples:
-
-- a CAD enclosure render is not evidence of environmental resistance;
-- a sensor datasheet is not evidence of ORIGIN system-level detection range;
-- a successful boot is not evidence of long-term firmware reliability;
-- an AI output that appears reasonable is not evidence of accuracy;
-- an assembled PCB is not proof that the complete manufacturing package is release-ready.
+Examples a CAD enclosure render is not evidence of environmental resistance; a sensor datasheet is not evidence of ORIGIN system-level detection range; a successful boot is not evidence of long-term firmware reliability; an AI output that appears reasonable is not evidence of accuracy; and an assembled PCB is not proof that the complete manufacturing package is release-ready.
 
 This principle is reflected throughout [Testing & Validation](../testing-validation/README.md).
 
@@ -107,33 +80,13 @@ Small wording corrections and routine documentation maintenance do not need to b
 
 ## What belongs in known issues
 
-A known issue is broader than a software bug. It can include:
-
-- incomplete manufacturing files;
-- unresolved mechanical interference;
-- environmental sealing weaknesses;
-- unvalidated performance claims;
-- missing test evidence;
-- version incompatibilities;
-- deployment-specific limitations;
-- unclear service procedures;
-- data-quality risks;
-- security or privacy concerns that still require mitigation.
+A known issue is broader than a software bug. It can include incomplete manufacturing files; unresolved mechanical interference; environmental sealing weaknesses; unvalidated performance claims; missing test evidence; version incompatibilities; deployment-specific limitations; unclear service procedures; data-quality risks; and security or privacy concerns that still require mitigation.
 
 The known-issues register should be updated when an issue is discovered, materially changes, gains a workaround, or is resolved.
 
 ## Release discipline
 
-Before a subsystem is described as a release candidate, the team should confirm that:
-
-- its source files are identifiable;
-- its revision is recorded;
-- its interfaces are documented;
-- required manufacturing or build files are present;
-- known blockers are recorded;
-- relevant validation has been completed;
-- recovery or rollback is possible where applicable;
-- documentation matches the implementation.
+Before a subsystem is described as a release candidate, the team should confirm that its source files are identifiable; its revision is recorded; its interfaces are documented; required manufacturing or build files are present; known blockers are recorded; relevant validation has been completed; recovery or rollback is possible where applicable; and documentation matches the implementation.
 
 Before deployment, the additional requirements in [Installation & Deployment](../installation-deployment/README.md) apply.
 
@@ -151,16 +104,7 @@ The active baseline should always be determined from the version records, curren
 
 ## Development priorities
 
-The project currently prioritizes:
-
-- completing reproducible Rosetta v2 manufacturing outputs;
-- improving enclosure maturity and field serviceability;
-- validating sensing behavior at system level;
-- strengthening power and communications reliability;
-- turning Centaurus concepts into measurable, testable capabilities;
-- preparing repeatable deployment procedures;
-- collecting controlled pilot evidence;
-- maintaining honest public documentation as the project changes.
+The project currently prioritizes completing reproducible Rosetta v2 manufacturing outputs; improving enclosure maturity and field serviceability; validating sensing behavior at system level; strengthening power and communications reliability; turning Centaurus concepts into measurable, testable capabilities; preparing repeatable deployment procedures; collecting controlled pilot evidence; and maintaining honest public documentation as the project changes.
 
 These priorities are expanded in the [Roadmap](roadmap.md) and [Planned Improvements](planned-improvements.md).
 

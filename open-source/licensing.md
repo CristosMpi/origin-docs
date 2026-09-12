@@ -16,16 +16,7 @@ Until Team Galene explicitly publishes licensing terms, users should treat reuse
 
 Selecting a license is a project-governance and rights decision, not a documentation formatting choice.
 
-The correct license depends on questions such as:
-
-- whether Team Galene wants commercial reuse to be allowed;
-- whether modified hardware designs must remain open;
-- whether software derivatives must publish source;
-- whether documentation can be remixed;
-- whether school/institutional ownership affects copyright;
-- whether sponsor or partner agreements impose restrictions;
-- whether all contributors have the right to license their contributions;
-- whether third-party components or assets carry separate terms.
+The correct license depends on questions such as whether Team Galene wants commercial reuse to be allowed; whether modified hardware designs must remain open; whether software derivatives must publish source; whether documentation can be remixed; whether school/institutional ownership affects copyright; whether sponsor or partner agreements impose restrictions; whether all contributors have the right to license their contributions; and whether third-party components or assets carry separate terms.
 
 For those reasons, this documentation records the current status without silently choosing a license on behalf of the project.
 
@@ -33,19 +24,7 @@ For those reasons, this documentation records the current status without silentl
 
 A single license may not be ideal for every part of ORIGIN.
 
-The project includes or may include:
-
-- written documentation;
-- diagrams and illustrations;
-- PCB schematics and layouts;
-- mechanical CAD;
-- firmware;
-- application/backend software;
-- Centaurus AI code and configurations;
-- datasets and test results;
-- photos and videos;
-- logos and branding;
-- third-party datasheets and libraries.
+The project includes or may include written documentation; diagrams and illustrations; PCB schematics and layouts; mechanical CAD; firmware; application/backend software; Centaurus AI code and configurations; datasets and test results; photos and videos; logos and branding; and third-party datasheets and libraries.
 
 These categories can require different licensing treatment.
 
@@ -68,13 +47,7 @@ Team Galene should choose exact licenses only after confirming ownership and pro
 
 Documentation can be licensed separately from code and hardware.
 
-A future documentation license should answer:
-
-- Can others redistribute the documentation?
-- Can they modify and translate it?
-- Is attribution required?
-- Must derivative documentation use the same license?
-- Can it be used commercially?
+A future documentation license should answer Can others redistribute the documentation?; Can they modify and translate it?; Is attribution required?; Must derivative documentation use the same license?; and Can it be used commercially?.
 
 Creative Commons licenses are commonly used for documentation and educational content, but the exact variant must be deliberately selected.
 
@@ -82,14 +55,7 @@ Creative Commons licenses are commonly used for documentation and educational co
 
 PCB and mechanical designs raise questions that ordinary software licenses do not always address clearly.
 
-An open-hardware license can define rights related to:
-
-- design-document distribution;
-- modification;
-- manufacture of physical products;
-- distribution of modified design sources;
-- notices and attribution;
-- reciprocal sharing requirements.
+An open-hardware license can define rights related to design-document distribution; modification; manufacture of physical products; distribution of modified design sources; notices and attribution; and reciprocal sharing requirements.
 
 If Rosetta, BITs, Aqua Base, Drone Mount, or enclosure sources are released as open hardware, the chosen license should be stated directly in or alongside those source directories.
 
@@ -97,23 +63,13 @@ If Rosetta, BITs, Aqua Base, Drone Mount, or enclosure sources are released as o
 
 Software licensing should cover the authoritative source code, not just binaries or snippets in documentation.
 
-The project should decide whether it prefers, for example:
-
-- a permissive model that allows broad reuse with notice requirements; or
-- a reciprocal/copyleft model that requires certain derivatives to remain open.
+The project should decide whether it prefers, for example a permissive model that allows broad reuse with notice requirements; or and a reciprocal/copyleft model that requires certain derivatives to remain open.
 
 The exact choice should be made before public source release whenever practical.
 
 ## Centaurus AI licensing
 
-Centaurus may involve multiple separately licensed elements:
-
-- Team Galene source code;
-- external libraries;
-- model weights;
-- datasets;
-- APIs/services;
-- evaluation material.
+Centaurus may involve multiple separately licensed elements Team Galene source code; external libraries; model weights; datasets; APIs/services; and evaluation material.
 
 A source-code license does not automatically grant rights to third-party model weights or datasets.
 
@@ -125,13 +81,7 @@ ORIGIN uses third-party components and may reference external libraries, datashe
 
 Their licenses remain separate from the ORIGIN project license.
 
-Examples include:
-
-- DFRobot sensor documentation and hardware;
-- semiconductor vendor datasheets;
-- EDA libraries;
-- open-source software dependencies;
-- manufacturer CAD models.
+Examples include DFRobot sensor documentation and hardware; semiconductor vendor datasheets; EDA libraries; open-source software dependencies; and manufacturer CAD models.
 
 Do not copy third-party material into the repository unless redistribution is permitted.
 
@@ -149,10 +99,7 @@ Sponsor assets should therefore not be assumed to fall under any future ORIGIN o
 
 Even if ORIGIN source material becomes open source, that does not necessarily mean others may present modified projects as official Team Galene products.
 
-A future release should distinguish:
-
-- copyright/license permissions for source material;
-- trademark/branding permissions for names, logos, and identity.
+A future release should distinguish copyright/license permissions for source material and trademark/branding permissions for names, logos, and identity.
 
 This helps prevent forks from being confused with official ORIGIN releases.
 
@@ -160,26 +107,11 @@ This helps prevent forks from being confused with official ORIGIN releases.
 
 Before accepting externally contributed work under a future project license, Team Galene should ensure contributors have the right to submit that work.
 
-Contributors should not submit:
-
-- copied proprietary code;
-- unlicensed CAD;
-- copyrighted diagrams without permission;
-- restricted datasets;
-- confidential sponsor files;
-- assets taken from commercial products without redistribution rights.
+Contributors should not submit copied proprietary code; unlicensed CAD; copyrighted diagrams without permission; restricted datasets; confidential sponsor files; and assets taken from commercial products without redistribution rights.
 
 ## License headers and notices
 
-Once licenses are chosen, a mature release should include:
-
-- a root `LICENSE` or clearly named license files;
-- copyright notices where appropriate;
-- SPDX identifiers where useful;
-- a `NOTICE` or attribution file if required;
-- per-directory license files when different subsystems use different terms;
-- third-party license notices;
-- clear documentation of exceptions.
+Once licenses are chosen, a mature release should include a root `LICENSE` or clearly named license files; copyright notices where appropriate; SPDX identifiers where useful; a `NOTICE` or attribution file if required; per-directory license files when different subsystems use different terms; third-party license notices; and clear documentation of exceptions.
 
 ## Mixed-license repository
 
@@ -205,18 +137,7 @@ The exact layout can differ; clarity is what matters.
 
 ## Release checklist for licensing
 
-Before calling a subsystem formally open-source/open-hardware, confirm:
-
-- [ ] The copyright owner(s) are identified.
-- [ ] Team Galene has authority to license the material.
-- [ ] An explicit license has been selected.
-- [ ] The license text is included.
-- [ ] Third-party dependencies are documented.
-- [ ] Restricted/confidential material has been removed.
-- [ ] Required attribution is present.
-- [ ] Branding/trademark rights are not accidentally granted.
-- [ ] Source files needed for meaningful modification are included.
-- [ ] The documentation states which license applies to which material.
+Before calling a subsystem formally open-source/open-hardware, confirm The copyright owner(s) are identified; Team Galene has authority to license the material; An explicit license has been selected; The license text is included; Third-party dependencies are documented; Restricted/confidential material has been removed; Required attribution is present; Branding/trademark rights are not accidentally granted; Source files needed for meaningful modification are included; and The documentation states which license applies to which material.
 
 ## What users may rely on today
 

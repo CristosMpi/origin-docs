@@ -10,19 +10,7 @@ ORIGIN may be deployed in different physical environments with different sensors
 
 Hard-coding those differences into firmware would make releases difficult to maintain and audit.
 
-Configuration should therefore cover deployment-specific values such as:
-
-- device identity;
-- site identity;
-- enabled sensors and modules;
-- sampling intervals;
-- sensor-specific parameters;
-- calibration values;
-- event thresholds;
-- communications settings;
-- logging verbosity;
-- feature flags;
-- maintenance/test modes.
+Configuration should therefore cover deployment-specific values such as device identity; site identity; enabled sensors and modules; sampling intervals; sensor-specific parameters; calibration values; event thresholds; communications settings; logging verbosity; feature flags; and maintenance/test modes.
 
 ## Configuration categories
 
@@ -42,12 +30,7 @@ configuration
 
 ### Identity
 
-Identity settings may include:
-
-- device ID;
-- deployment/site ID;
-- hardware revision label;
-- logical role.
+Identity settings may include device ID, deployment/site ID, hardware revision label, and logical role.
 
 Device identity should remain stable across normal firmware updates.
 
@@ -55,26 +38,13 @@ Device identity should remain stable across normal firmware updates.
 
 Hardware configuration describes what is physically expected to be present.
 
-Examples:
-
-- radar count;
-- optional module enablement;
-- storage availability;
-- interface assignments;
-- hardware feature flags.
+Examples radar count; optional module enablement; storage availability; interface assignments; and hardware feature flags.
 
 If configured hardware is missing, the firmware should report a health error instead of silently pretending it is disabled.
 
 ### Sensing
 
-Sensing configuration may contain:
-
-- acquisition frequency;
-- averaging/filter parameters;
-- detection mode;
-- sensor operating parameters;
-- calibration coefficients;
-- enable/disable state.
+Sensing configuration may contain acquisition frequency; averaging/filter parameters; detection mode; sensor operating parameters; calibration coefficients; and enable/disable state.
 
 Values should remain within validated safe ranges.
 
@@ -82,25 +52,13 @@ Values should remain within validated safe ranges.
 
 Deterministic event rules can be configuration-driven where appropriate.
 
-Examples:
-
-- threshold crossing;
-- state-change reporting;
-- persistence duration;
-- cooldown/debounce windows;
-- alarm enablement.
+Examples threshold crossing; state-change reporting; persistence duration; cooldown/debounce windows; and alarm enablement.
 
 The exact rules must remain explainable and testable.
 
 ### Communications
 
-Communications configuration may define:
-
-- enabled transport(s);
-- network/operator settings;
-- remote service identifier;
-- retry behavior;
-- reporting cadence.
+Communications configuration may define enabled transport(s); network/operator settings; remote service identifier; retry behavior; and reporting cadence.
 
 Production credentials themselves should not appear in public documentation.
 
@@ -118,15 +76,7 @@ Undefined behavior should not be treated as a configuration strategy.
 
 Configuration must be validated before it is applied.
 
-Useful validation checks include:
-
-- schema version supported;
-- required fields present;
-- numeric ranges valid;
-- known sensor/module names only;
-- no duplicate identities;
-- incompatible options rejected;
-- communication parameters syntactically valid.
+Useful validation checks include schema version supported; required fields present; numeric ranges valid; known sensor/module names only; no duplicate identities; incompatible options rejected; and communication parameters syntactically valid.
 
 If validation fails, firmware should report the error clearly and use a safe state.
 
@@ -148,12 +98,7 @@ This makes it possible to determine which settings produced a field result.
 
 As firmware evolves, old configurations may no longer match the latest schema.
 
-The update process should therefore define whether firmware:
-
-- supports the previous schema;
-- automatically migrates it;
-- requires an explicit migration step;
-- rejects it and asks for re-provisioning.
+The update process should therefore define whether firmware supports the previous schema, automatically migrates it, requires an explicit migration step, and rejects it and asks for re-provisioning.
 
 Silent interpretation of incompatible configuration is risky.
 
@@ -177,13 +122,7 @@ The actual order should be implemented and documented once the firmware is avail
 
 Calibration values are configuration, but they deserve special handling because they affect measurement validity.
 
-Calibration records should identify:
-
-- sensor/device identity;
-- calibration date;
-- procedure/reference;
-- resulting coefficients or offsets;
-- firmware/hardware revision where relevant.
+Calibration records should identify sensor/device identity; calibration date; procedure/reference; resulting coefficients or offsets; and firmware/hardware revision where relevant.
 
 Calibration should not be overwritten accidentally by a routine firmware update.
 
@@ -191,14 +130,7 @@ Calibration should not be overwritten accidentally by a routine firmware update.
 
 Secrets are not ordinary configuration values.
 
-Do not commit the following to `origin-docs` or other public repositories:
-
-- passwords;
-- API tokens;
-- private keys;
-- SIM PIN/PUK values;
-- production certificates;
-- private backend credentials.
+Do not commit the following to `origin-docs` or other public repositories passwords; API tokens; private keys; SIM PIN/PUK values; production certificates; and private backend credentials.
 
 Public configuration examples should use obvious placeholders.
 
@@ -206,13 +138,7 @@ Public configuration examples should use obvious placeholders.
 
 At startup, firmware should log enough non-sensitive information to make configuration problems visible.
 
-Useful examples include:
-
-- configuration revision;
-- device ID;
-- enabled sensor set;
-- communication mode;
-- validation result.
+Useful examples include configuration revision; device ID; enabled sensor set; communication mode; and validation result.
 
 Secrets must be redacted.
 
@@ -220,14 +146,7 @@ Secrets must be redacted.
 
 A field configuration change should be traceable.
 
-For important deployments, record:
-
-- previous revision;
-- new revision;
-- who approved/applied it;
-- timestamp;
-- reason for change;
-- verification outcome.
+For important deployments, record previous revision; new revision; who approved/applied it; timestamp; reason for change; and verification outcome.
 
 This is especially important when configuration affects detection behavior.
 
@@ -235,13 +154,7 @@ This is especially important when configuration affects detection behavior.
 
 Development/test profiles should be clearly distinguishable from deployment profiles.
 
-A test profile may deliberately use:
-
-- faster sampling;
-- verbose logs;
-- simulated inputs;
-- disabled communications;
-- diagnostic modes.
+A test profile may deliberately use faster sampling; verbose logs; simulated inputs; disabled communications; and diagnostic modes.
 
 A device should not accidentally be deployed while still using laboratory settings.
 
@@ -271,9 +184,4 @@ It demonstrates structure only. Do not use it as firmware input unless a future 
 
 ## Related pages
 
-See:
-
-- [Firmware](firmware.md)
-- [Installation](installation.md)
-- [Communications](communications.md)
-- [Updates](updates.md)
+See [Firmware](firmware.md), [Installation](installation.md), [Communications](communications.md), and [Updates](updates.md).

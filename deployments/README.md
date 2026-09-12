@@ -136,18 +136,7 @@ ORIGIN documentation distinguishes between **pilot** and **production** use.
 
 A pilot is primarily intended to learn.
 
-It may investigate:
-
-- installation methods;
-- sensor coverage;
-- environmental robustness;
-- communications reliability;
-- maintenance burden;
-- operator workflow;
-- false-positive behavior;
-- power performance;
-- public-space constraints;
-- module usefulness.
+It may investigate installation methods; sensor coverage; environmental robustness; communications reliability; maintenance burden; operator workflow; false-positive behavior; power performance; public-space constraints; and module usefulness.
 
 Changes during a pilot are expected, but must be documented.
 
@@ -163,20 +152,7 @@ See [Testing & Validation](../testing-validation/README.md).
 
 ORIGIN deployments are unusual because the monitored environment may itself be irreplaceable.
 
-Important constraints can include:
-
-- prohibition on drilling or permanent mounting;
-- restrictions on adhesives or contact materials;
-- visual-impact requirements;
-- limits on cable routing;
-- archaeological sensitivity below ground level;
-- visitor-access requirements;
-- conservation requirements;
-- museum operating procedures;
-- protected-area permissions;
-- restrictions on radio equipment;
-- privacy obligations;
-- maintenance-access limitations.
+Important constraints can include prohibition on drilling or permanent mounting; restrictions on adhesives or contact materials; visual-impact requirements; limits on cable routing; archaeological sensitivity below ground level; visitor-access requirements; conservation requirements; museum operating procedures; protected-area permissions; restrictions on radio equipment; privacy obligations; and maintenance-access limitations.
 
 The correct deployment method therefore depends on both engineering and conservation considerations.
 
@@ -210,18 +186,7 @@ This hierarchy prevents a single successful demonstration from becoming an exagg
 
 Deployment findings should include both successful and unsuccessful outcomes.
 
-Examples include:
-
-- which sensor orientations produced useful coverage;
-- where radar reflections caused ambiguity;
-- whether mounting remained stable;
-- whether solar exposure matched the design assumption;
-- whether communications were reliable;
-- whether operators understood system states;
-- whether maintenance access was practical;
-- whether water paths appeared after rain;
-- whether thresholds required adjustment;
-- whether an optional module added enough value to justify its complexity.
+Examples include which sensor orientations produced useful coverage; where radar reflections caused ambiguity; whether mounting remained stable; whether solar exposure matched the design assumption; whether communications were reliable; whether operators understood system states; whether maintenance access was practical; whether water paths appeared after rain; whether thresholds required adjustment; and whether an optional module added enough value to justify its complexity.
 
 See [Findings](findings.md).
 
@@ -248,9 +213,4 @@ See [Future Deployments](future-deployments.md).
 
 ## Related documentation
 
-- [Installation & Deployment](../installation-deployment/README.md)
-- [Testing & Validation](../testing-validation/README.md)
-- [ORIGIN Core](../origin-core/README.md)
-- [Mechanical Design](../mechanical-design/README.md)
-- [Software](../software/README.md)
-- [Centaurus AI](../centaurus-ai/README.md)
+[Installation & Deployment](../installation-deployment/README.md), [Testing & Validation](../testing-validation/README.md), [ORIGIN Core](../origin-core/README.md), [Mechanical Design](../mechanical-design/README.md), [Software](../software/README.md), and [Centaurus AI](../centaurus-ai/README.md).

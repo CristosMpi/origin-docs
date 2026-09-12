@@ -6,31 +6,13 @@ The installation phase should leave the unit mechanically secure, electrically s
 
 ## Installation principles
 
-A good installation should be:
-
-- **reversible** where heritage constraints require it;
-- **stable** under normal handling and weather conditions;
-- **serviceable** without disturbing the protected site;
-- **documented** well enough to reproduce or remove;
-- **safe** for visitors, staff, and technicians;
-- **consistent** with the approved site assessment.
+A good installation should be **reversible** where heritage constraints require it; **stable** under normal handling and weather conditions; **serviceable** without disturbing the protected site; **documented** well enough to reproduce or remove; **safe** for visitors, staff, and technicians; and **consistent** with the approved site assessment.
 
 ## Pre-installation inspection
 
 Before mounting the unit, inspect the device and deployment kit.
 
-Confirm:
-
-- enclosure panels are intact;
-- fasteners are present and undamaged;
-- sensor openings are unobstructed;
-- radar modules are securely mounted;
-- Rosetta v2 is fixed correctly inside the enclosure;
-- internal wiring is restrained;
-- solar support components are complete where used;
-- seals and gaskets are correctly seated;
-- cable glands or feed-throughs are undamaged;
-- the correct unit identifier is visible in the deployment record.
+Confirm enclosure panels are intact; fasteners are present and undamaged; sensor openings are unobstructed; radar modules are securely mounted; Rosetta v2 is fixed correctly inside the enclosure; internal wiring is restrained; solar support components are complete where used; seals and gaskets are correctly seated; cable glands or feed-throughs are undamaged; and the correct unit identifier is visible in the deployment record.
 
 Any shipping damage should be resolved before the unit is installed.
 
@@ -38,14 +20,7 @@ Any shipping damage should be resolved before the unit is installed.
 
 Place the unit according to the approved site map.
 
-Record:
-
-- final position;
-- enclosure orientation;
-- mounting height where relevant;
-- radar-facing directions;
-- solar-panel orientation;
-- nearby reference features that make the installation position reproducible.
+Record final position; enclosure orientation; mounting height where relevant; radar-facing directions; solar-panel orientation; and nearby reference features that make the installation position reproducible.
 
 A small orientation change can significantly affect presence detection, so orientation should not be treated as cosmetic.
 
@@ -53,26 +28,11 @@ A small orientation change can significantly affect presence detection, so orien
 
 The actual mounting method depends on the site and enclosure version.
 
-Possible methods may include:
-
-- freestanding base;
-- soil or ground support;
-- clamp-based support;
-- bracket;
-- approved wall or structural fixing;
-- custom non-invasive heritage-site mounting hardware.
+Possible methods may include freestanding base; soil or ground support; clamp-based support; bracket; approved wall or structural fixing; and custom non-invasive heritage-site mounting hardware.
 
 The mounting method should be the one approved during site assessment.
 
-After fastening, check:
-
-- no visible rocking or looseness;
-- no excessive stress on the enclosure;
-- no fastener interference with service panels;
-- sufficient clearance for cables;
-- sufficient clearance for BIT access where used;
-- no obstruction of sensor openings;
-- no sharp edges or protrusions accessible to visitors.
+After fastening, check no visible rocking or looseness; no excessive stress on the enclosure; no fastener interference with service panels; sufficient clearance for cables; sufficient clearance for BIT access where used; no obstruction of sensor openings; and no sharp edges or protrusions accessible to visitors.
 
 ## Soil or ground installation
 
@@ -80,28 +40,13 @@ Where ORIGIN is mounted partly into soil or ground, the accessible interfaces mu
 
 In particular, BIT attachment points should not be placed where the user must dig around the device to access them.
 
-Ground installations should also consider:
-
-- drainage;
-- standing water;
-- soil movement;
-- corrosion or material degradation;
-- cable protection;
-- root growth or vegetation;
-- accidental impact from maintenance equipment.
+Ground installations should also consider drainage; standing water; soil movement; corrosion or material degradation; cable protection; root growth or vegetation; and accidental impact from maintenance equipment.
 
 ## Sensor installation check
 
 The current Core concept contains three C4001 mmWave radar modules.
 
-Verify each sensor:
-
-- is attached using the intended mounting holes;
-- has not rotated during transport;
-- is aligned with its assigned direction;
-- has a clear sensing face;
-- has strain-free cabling;
-- can be uniquely identified in software.
+Verify each sensor is attached using the intended mounting holes; has not rotated during transport; is aligned with its assigned direction; has a clear sensing face; has strain-free cabling; and can be uniquely identified in software.
 
 Do not perform final coverage adjustments purely by eye. Final validation occurs during calibration.
 
@@ -124,15 +69,7 @@ The solar cable route should not create a direct water path into the electronics
 
 ## Power connection
 
-Before applying power:
-
-- confirm expected supply type;
-- inspect battery polarity and connectors where applicable;
-- confirm no exposed conductors;
-- check connectors are fully seated;
-- verify cable strain relief;
-- inspect for accidental short-circuit risks;
-- confirm the enclosure is ready to be energized.
+Before applying power confirm expected supply type; inspect battery polarity and connectors where applicable; confirm no exposed conductors; check connectors are fully seated; verify cable strain relief; inspect for accidental short-circuit risks; and confirm the enclosure is ready to be energized.
 
 Initial power-up should be monitored rather than left unattended.
 
@@ -142,14 +79,7 @@ If abnormal heating, smell, current draw, repeated reset, or unstable power beha
 
 If the deployment uses cellular, Wi-Fi, wired networking, or external antennas, complete the physical installation before software setup.
 
-Check:
-
-- antenna location;
-- cable routing;
-- connector seating;
-- SIM or eSIM provisioning status where applicable;
-- waterproofing around external penetrations;
-- clearance from metal structures likely to affect radio performance.
+Check antenna location; cable routing; connector seating; SIM or eSIM provisioning status where applicable; waterproofing around external penetrations; and clearance from metal structures likely to affect radio performance.
 
 Do not publish SIM identifiers, credentials, or private network information in public documentation.
 
@@ -157,58 +87,25 @@ Do not publish SIM identifiers, credentials, or private network information in p
 
 Install only modules approved for the specific deployment.
 
-For each module, verify:
-
-- mechanical compatibility;
-- electrical compatibility;
-- connector orientation;
-- required firmware support;
-- correct module identity;
-- suitable environmental protection;
-- no interference with neighboring modules or sensor fields of view.
+For each module, verify mechanical compatibility; electrical compatibility; connector orientation; required firmware support; correct module identity; suitable environmental protection; and no interference with neighboring modules or sensor fields of view.
 
 A physically attachable module should not automatically be treated as electrically or software-compatible.
 
 ## Cable management
 
-Cables should be routed so they cannot:
-
-- touch sharp edges;
-- obstruct enclosure closure;
-- cross sensor openings;
-- pull directly on PCB connectors;
-- rub against moving or removable parts;
-- form uncontrolled water paths;
-- become visitor trip hazards.
+Cables should be routed so they cannot touch sharp edges; obstruct enclosure closure; cross sensor openings; pull directly on PCB connectors; rub against moving or removable parts; form uncontrolled water paths; and become visitor trip hazards.
 
 Use strain relief at both the enclosure and external mounting structure where necessary.
 
 ## Sealing inspection
 
-Before final closure, inspect:
-
-- gasket alignment;
-- enclosure seams;
-- cable penetrations;
-- sensor openings;
-- solar-support cable route;
-- fastener torque consistency;
-- any temporary workshop access holes.
+Before final closure, inspect gasket alignment; enclosure seams; cable penetrations; sensor openings; solar-support cable route; fastener torque consistency; and any temporary workshop access holes.
 
 ORIGIN should not be assigned a waterproof or IP claim solely from visual inspection. Protection must be supported by testing documented under [Testing & Validation](../testing-validation/README.md).
 
 ## Final physical inspection
 
-After assembly and before software setup, confirm:
-
-- unit is stable;
-- orientation is documented;
-- all panels are closed;
-- cables are restrained;
-- no tool or loose fastener remains inside;
-- service access remains possible;
-- labels and unit identification are visible;
-- the installation does not interfere with visitors or heritage assets.
+After assembly and before software setup, confirm unit is stable; orientation is documented; all panels are closed; cables are restrained; no tool or loose fastener remains inside; service access remains possible; labels and unit identification are visible; and the installation does not interfere with visitors or heritage assets.
 
 Take final installation photographs before moving to setup.
 

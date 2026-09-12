@@ -45,44 +45,19 @@ Working from lower layers upward prevents a software symptom from hiding a power
 
 Write down the actual observed problem.
 
-Good examples:
-
-- `RADAR_B has not produced valid data since 13:42`
-- `device rebooted 7 times in 30 minutes`
-- `unit is locally operational but remote data stopped`
-- `battery state decreases during daylight despite solar exposure`
-- `presence events increased after scaffolding was installed`
+Good examples `RADAR_B has not produced valid data since 13:42`; `device rebooted 7 times in 30 minutes`; `unit is locally operational but remote data stopped`; `battery state decreases during daylight despite solar exposure`; and `presence events increased after scaffolding was installed`.
 
 Avoid vague statements such as “the AI is broken” or “the sensor is bad.”
 
 ## Step 2 — Establish scope
 
-Determine whether the issue affects:
-
-- one sensor;
-- one module;
-- the Rosetta board;
-- the power subsystem;
-- one communications path;
-- one unit;
-- multiple units at the same site;
-- the entire backend or data destination.
+Determine whether the issue affects one sensor; one module; the Rosetta board; the power subsystem; one communications path; one unit; multiple units at the same site; and the entire backend or data destination.
 
 Scope is often the fastest way to distinguish a local hardware fault from a shared service failure.
 
 ## Step 3 — Preserve evidence
 
-Before rebooting or replacing anything, save available evidence where possible:
-
-- event logs;
-- sensor-health logs;
-- reboot reason;
-- power telemetry;
-- communication state;
-- configuration version;
-- firmware version;
-- recent update history;
-- timestamps of first and last known-good operation.
+Before rebooting or replacing anything, save available evidence where possible event logs; sensor-health logs; reboot reason; power telemetry; communication state; configuration version; firmware version; recent update history; and timestamps of first and last known-good operation.
 
 A reboot may temporarily hide the condition that caused the fault.
 
@@ -109,17 +84,7 @@ Recommended states include:
 
 Power faults can appear as sensor, software or network faults.
 
-Check:
-
-- battery connection;
-- battery physical condition;
-- charging-source availability;
-- solar cable continuity where appropriate;
-- abnormal connector heating;
-- unexpected voltage drop;
-- repeated brownout/reboot evidence;
-- power-management status available through firmware;
-- whether failures correlate with radio transmission, sensor activity or time of day.
+Check battery connection; battery physical condition; charging-source availability; solar cable continuity where appropriate; abnormal connector heating; unexpected voltage drop; repeated brownout/reboot evidence; power-management status available through firmware; and whether failures correlate with radio transmission, sensor activity or time of day.
 
 If electrical measurement is required, use documented test points and safe procedures from the Rosetta hardware documentation.
 
@@ -127,15 +92,7 @@ See [Rosetta → Power Management](../rosetta/power-management.md).
 
 ## Boot and reset diagnostics
 
-For unexpected reboots, determine:
-
-- reset cause if available;
-- time between resets;
-- whether the unit reaches normal operation;
-- whether one peripheral consistently fails during startup;
-- whether the issue follows a firmware/configuration change;
-- whether the issue occurs only under battery or solar operation;
-- whether storage access precedes the reset.
+For unexpected reboots, determine reset cause if available; time between resets; whether the unit reaches normal operation; whether one peripheral consistently fails during startup; whether the issue follows a firmware/configuration change; whether the issue occurs only under battery or solar operation; and whether storage access precedes the reset.
 
 Repeated rebooting should be treated as a degraded or out-of-service condition until understood.
 
@@ -159,46 +116,19 @@ For the three mmWave channels, always preserve sensor identity so a failure does
 
 An mmWave sensor can be electrically healthy but operationally misleading because of installation changes.
 
-Check:
-
-- sensor orientation;
-- sensor opening;
-- nearby new structures;
-- reflective surfaces;
-- moving vegetation;
-- objects outside the intended monitored area;
-- mounting movement;
-- configuration changes;
-- whether the event is isolated to one radar or shared by several.
+Check sensor orientation; sensor opening; nearby new structures; reflective surfaces; moving vegetation; objects outside the intended monitored area; mounting movement; configuration changes; and whether the event is isolated to one radar or shared by several.
 
 If false detections began after a site change, calibration and coverage should be reviewed before replacing hardware.
 
 ## Environmental-sensor diagnostics
 
-For implausible environmental data:
-
-- verify the sensor is physically exposed as intended;
-- inspect contamination;
-- check for condensation;
-- compare against a reference instrument where available;
-- determine whether the value is stuck, noisy, drifting or simply outside historical expectations;
-- verify units and conversion logic;
-- check time alignment.
+For implausible environmental data verify the sensor is physically exposed as intended; inspect contamination; check for condensation; compare against a reference instrument where available; determine whether the value is stuck, noisy, drifting or simply outside historical expectations; verify units and conversion logic; and check time alignment.
 
 Do not treat disagreement with expectation as proof of sensor failure without a reference measurement.
 
 ## Storage diagnostics
 
-Investigate:
-
-- storage present/absent state;
-- mount or initialization success;
-- available capacity;
-- file-system errors;
-- write failures;
-- corrupt or incomplete records;
-- repeated recovery behavior;
-- whether power interruption occurred during writes.
+Investigate storage present/absent state; mount or initialization success; available capacity; file-system errors; write failures; corrupt or incomplete records; repeated recovery behavior; and whether power interruption occurred during writes.
 
 Preserve recoverable data before reformatting or replacing storage.
 
@@ -221,43 +151,19 @@ A backend outage should not be diagnosed as a Rosetta hardware fault.
 
 ## Configuration diagnostics
 
-Verify:
-
-- configuration version;
-- expected unit identity;
-- enabled sensors;
-- thresholds;
-- communication settings;
-- module configuration;
-- calibration values;
-- compatibility with the running firmware.
+Verify configuration version; expected unit identity; enabled sensors; thresholds; communication settings; module configuration; calibration values; and compatibility with the running firmware.
 
 A unit may behave “incorrectly” while doing exactly what an unintended configuration tells it to do.
 
 ## Firmware diagnostics
 
-Determine:
-
-- firmware version;
-- update date;
-- whether the issue began after an update;
-- whether another unit on the same version shows the issue;
-- whether rollback is available and safe;
-- whether logs indicate driver or task failures.
+Determine firmware version; update date; whether the issue began after an update; whether another unit on the same version shows the issue; whether rollback is available and safe; and whether logs indicate driver or task failures.
 
 Do not use firmware rollback as a substitute for preserving evidence.
 
 ## Module diagnostics
 
-For BITs, Aqua Base, Drone Mount or future modules:
-
-- confirm physical presence;
-- verify module identity;
-- confirm electrical interface;
-- verify compatibility version;
-- check software detection;
-- inspect module-specific health;
-- isolate the module to determine whether it affects the Core.
+For BITs, Aqua Base, Drone Mount or future modules confirm physical presence; verify module identity; confirm electrical interface; verify compatibility version; check software detection; inspect module-specific health; and isolate the module to determine whether it affects the Core.
 
 A malfunctioning expansion module should not be allowed to hide the health of ORIGIN Core itself.
 
@@ -284,15 +190,7 @@ This turns a broad “data problem” into a bounded fault domain.
 
 ## Centaurus-related diagnostics
 
-If higher-level analysis appears incorrect:
-
-- confirm the raw source data first;
-- verify missing/invalid inputs are represented correctly;
-- verify model/rules version;
-- review confidence and event context;
-- determine whether the behavior is reproducible;
-- compare with the documented expected interpretation;
-- avoid changing model thresholds before confirming sensor integrity.
+If higher-level analysis appears incorrect confirm the raw source data first; verify missing/invalid inputs are represented correctly; verify model/rules version; review confidence and event context; determine whether the behavior is reproducible; compare with the documented expected interpretation; and avoid changing model thresholds before confirming sensor integrity.
 
 See [Centaurus AI → Limitations](../centaurus-ai/limitations.md).
 
@@ -300,13 +198,7 @@ See [Centaurus AI → Limitations](../centaurus-ai/limitations.md).
 
 Substituting a known-good part is useful only when controlled.
 
-Document:
-
-- original part identity;
-- original behavior;
-- replacement identity;
-- whether the fault follows the part or remains with the channel;
-- final configuration.
+Document original part identity; original behavior; replacement identity; whether the fault follows the part or remains with the channel; and final configuration.
 
 If the fault remains after substitution, return attention to cabling, interface, power, firmware or system context.
 
@@ -329,13 +221,7 @@ If the fault remains after substitution, return attention to cabling, interface,
 
 Escalate to component replacement when a fault is isolated to a replaceable component and sufficient evidence supports that diagnosis.
 
-Escalate to development when:
-
-- multiple units show the same fault;
-- failure follows a hardware or firmware revision;
-- replacement does not resolve the issue;
-- the fault represents a design weakness rather than random component failure;
-- data integrity cannot be assured.
+Escalate to development when multiple units show the same fault; failure follows a hardware or firmware revision; replacement does not resolve the issue; the fault represents a design weakness rather than random component failure; and data integrity cannot be assured.
 
 ## Diagnostic record
 
@@ -363,10 +249,6 @@ revalidation_required
 
 ## Completion criteria
 
-Diagnostics is complete when one of the following is true:
-
-- root cause is identified with sufficient confidence;
-- the problem is narrowed to a defined subsystem requiring deeper engineering analysis;
-- the symptom cannot be reproduced but evidence and monitoring actions are documented.
+Diagnostics is complete when one of the following is true root cause is identified with sufficient confidence, the problem is narrowed to a defined subsystem requiring deeper engineering analysis, and the symptom cannot be reproduced but evidence and monitoring actions are documented.
 
 Do not label an unresolved fault “fixed” only because it temporarily disappeared after a reboot.

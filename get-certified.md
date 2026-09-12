@@ -10,33 +10,13 @@ The certification consists of **25 multiple-choice questions** based on the offi
 
 To earn the certificate, candidates must score **more than 70%**. With 25 questions, this means a minimum passing score of **18/25 (72%)**.
 
-Candidates who pass receive an official **ORIGIN Expert Certificate** containing their:
-
-- full name;
-- certification score;
-- issue date;
-- unique certificate ID.
+Candidates who pass receive an official **ORIGIN Expert Certificate** containing their full name, certification score, issue date, and unique certificate ID.
 
 The certificate is generated automatically after a successful attempt and can be used as evidence that the recipient has demonstrated a strong understanding of Project ORIGIN.
 
 ## What the certification covers
 
-The assessment may include questions about:
-
-- Project ORIGIN and its system architecture;
-- ORIGIN Core;
-- Rosetta electronics;
-- sensing and mmWave presence detection;
-- software architecture and data handling;
-- Centaurus AI and human-in-the-loop decision support;
-- BITs, Aqua Base, Drone Mount, and the expansion system;
-- mechanical design and environmental protection;
-- installation, calibration, and commissioning;
-- testing and validation;
-- deployments and the Durrës pilot;
-- maintenance and diagnostics;
-- development and versioning;
-- open-source and licensing principles.
+The assessment may include questions about Project ORIGIN and its system architecture; ORIGIN Core; Rosetta electronics; sensing and mmWave presence detection; software architecture and data handling; Centaurus AI and human-in-the-loop decision support; BITs, Aqua Base, Drone Mount, and the expansion system; mechanical design and environmental protection; installation, calibration, and commissioning; testing and validation; deployments and the Durrës pilot; maintenance and diagnostics; development and versioning; and open-source and licensing principles.
 
 The certification is intended to test understanding, not just memorization. Candidates should understand why ORIGIN is designed, tested, and deployed the way it is.
 

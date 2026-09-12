@@ -6,37 +6,13 @@ The objective is not only to confirm that the board powers on, but also to verif
 
 ## Scope
 
-Electronics testing may include:
-
-- PCB visual inspection;
-- continuity and short-circuit checks;
-- power-rail validation;
-- battery and charging behavior;
-- regulator behavior;
-- ESP32 startup and reset;
-- storage interfaces;
-- sensor buses;
-- external connectors;
-- module connections;
-- current consumption;
-- communication interfaces;
-- fault recovery.
+Electronics testing may include PCB visual inspection; continuity and short-circuit checks; power-rail validation; battery and charging behavior; regulator behavior; ESP32 startup and reset; storage interfaces; sensor buses; external connectors; module connections; current consumption; communication interfaces; and fault recovery.
 
 ## Pre-power inspection
 
 Before applying power to a newly assembled Rosetta board, perform a visual inspection.
 
-Check for:
-
-- solder bridges;
-- rotated components;
-- missing components;
-- damaged pads;
-- incomplete joints;
-- connector damage;
-- debris;
-- incorrect polarity;
-- obvious footprint mismatch.
+Check for solder bridges; rotated components; missing components; damaged pads; incomplete joints; connector damage; debris; incorrect polarity; and obvious footprint mismatch.
 
 Where practical, compare the assembly against the schematic, PCB layout and BOM revision used for manufacturing.
 
@@ -73,22 +49,9 @@ Record the supply settings and observed current.
 
 ## Power-rail validation
 
-For each regulated rail, record:
+For each regulated rail, record nominal target; measured voltage; test location; load condition; instrument used; and pass/fail criterion.
 
-- nominal target;
-- measured voltage;
-- test location;
-- load condition;
-- instrument used;
-- pass/fail criterion.
-
-A rail should be tested during more than one operating state where possible, such as:
-
-- startup;
-- idle;
-- active sensing;
-- communication activity;
-- module load.
+A rail should be tested during more than one operating state where possible, such as startup; idle; active sensing; communication activity; and module load.
 
 This helps identify droop or instability that is invisible during idle measurement.
 
@@ -98,15 +61,7 @@ Rosetta v2 includes dedicated power-management circuitry, including the BQ24074 
 
 Testing should verify the functions actually implemented on the tested revision rather than relying only on datasheet behavior.
 
-Relevant tests may include:
-
-- external input detection;
-- battery operation;
-- charging state;
-- transition between input sources;
-- regulated output stability;
-- restart behavior after brownout;
-- recovery after battery reconnect.
+Relevant tests may include external input detection; battery operation; charging state; transition between input sources; regulated output stability; restart behavior after brownout; and recovery after battery reconnect.
 
 ## Current consumption
 
@@ -157,27 +112,13 @@ Fault behavior
 
 ## Sensor-bus testing
 
-For each attached sensor:
-
-- confirm electrical connection;
-- confirm device communication;
-- confirm stable repeated reads;
-- disconnect the sensor deliberately;
-- verify the firmware reports a fault;
-- reconnect and verify recovery.
+For each attached sensor confirm electrical connection; confirm device communication; confirm stable repeated reads; disconnect the sensor deliberately; verify the firmware reports a fault; and reconnect and verify recovery.
 
 The system must not convert a disconnected sensor into a valid-looking measurement.
 
 ## Storage testing
 
-If local removable or onboard storage is used on the tested revision, test:
-
-- detection;
-- read/write;
-- file or record integrity;
-- restart with storage present;
-- restart with storage absent;
-- removal or failure behavior where safe.
+If local removable or onboard storage is used on the tested revision, test detection; read/write; file or record integrity; restart with storage present; restart with storage absent; and removal or failure behavior where safe.
 
 Storage failure should be visible to the system.
 
@@ -185,12 +126,7 @@ Storage failure should be visible to the system.
 
 Where a SIM or cellular interface is present on the tested revision, electrical validation should be separated from network-service validation.
 
-Electrical validation may include:
-
-- connector/holder inspection;
-- supply behavior;
-- device detection;
-- communication with the modem/interface.
+Electrical validation may include connector/holder inspection, supply behavior, device detection, and communication with the modem/interface.
 
 Network registration and data transport belong partly under communications and field testing.
 
@@ -198,12 +134,7 @@ Network registration and data transport belong partly under communications and f
 
 During extended operation, inspect for unexpected heating.
 
-Potential methods include:
-
-- touch only where safe;
-- infrared thermometer;
-- thermal camera;
-- onboard temperature telemetry if appropriate.
+Potential methods include touch only where safe, infrared thermometer, thermal camera, and onboard temperature telemetry if appropriate.
 
 Record ambient conditions because component temperature without ambient context can be misleading.
 
@@ -211,23 +142,11 @@ Record ambient conditions because component temperature without ambient context 
 
 Where safe, test behavior under controlled power interruption.
 
-Verify that the system:
-
-- does not corrupt persistent configuration;
-- restarts predictably;
-- reinitializes sensors;
-- identifies missing devices;
-- resumes logging/communication according to design.
+Verify that the system does not corrupt persistent configuration; restarts predictably; reinitializes sensors; identifies missing devices; and resumes logging/communication according to design.
 
 ## Connector durability and serviceability
 
-Repeatedly connect and disconnect serviceable connectors during development to identify:
-
-- weak solder joints;
-- mechanical strain;
-- poor retention;
-- inaccessible connectors;
-- cable-routing problems.
+Repeatedly connect and disconnect serviceable connectors during development to identify weak solder joints; mechanical strain; poor retention; inaccessible connectors; and cable-routing problems.
 
 This is especially useful before the electronics are enclosed.
 
@@ -239,28 +158,11 @@ The Rosetta v2 Gerber export previously reviewed for the project contained coppe
 
 This is a useful example of why file-package validation is part of electronics testing and manufacturing QA.
 
-Before release, verify at minimum:
-
-- copper layers;
-- solder mask;
-- silkscreen;
-- board outline;
-- drill files;
-- fabrication notes where required;
-- correct revision identifier.
+Before release, verify at minimum copper layers; solder mask; silkscreen; board outline; drill files; fabrication notes where required; and correct revision identifier.
 
 ## Regression testing
 
-Repeat affected electronics tests after changes to:
-
-- PCB layout;
-- component footprints;
-- regulator design;
-- battery circuitry;
-- connector assignments;
-- firmware pin assignments;
-- sensor interfaces;
-- component substitutions.
+Repeat affected electronics tests after changes to PCB layout; component footprints; regulator design; battery circuitry; connector assignments; firmware pin assignments; sensor interfaces; and component substitutions.
 
 ## Example electronics test matrix
 
@@ -279,22 +181,8 @@ Repeat affected electronics tests after changes to:
 
 ## Evidence
 
-Recommended evidence includes:
-
-- photographs of board revision;
-- multimeter readings;
-- bench-supply screenshots/photos;
-- boot logs;
-- current measurements;
-- fault logs;
-- manufacturing-package manifest.
+Recommended evidence includes photographs of board revision; multimeter readings; bench-supply screenshots/photos; boot logs; current measurements; fault logs; and manufacturing-package manifest.
 
 ## Related documentation
 
-See:
-
-- [Rosetta](../rosetta/README.md)
-- [Rosetta Power Management](../rosetta/power-management.md)
-- [Assembly & Bring-up](../rosetta/assembly-and-bring-up.md)
-- [Sensor Testing](sensor-testing.md)
-- [Validation Results](validation-results.md)
+See [Rosetta](../rosetta/README.md); [Rosetta Power Management](../rosetta/power-management.md); [Assembly & Bring-up](../rosetta/assembly-and-bring-up.md); [Sensor Testing](sensor-testing.md); and [Validation Results](validation-results.md).

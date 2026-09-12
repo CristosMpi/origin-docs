@@ -6,42 +6,19 @@ The main principle is simple: **do not connect everything and hope it boots**. T
 
 ## 1. Documentation match
 
-Before powering the board, confirm that the physical PCB matches the intended release:
-
-- board revision;
-- schematic revision;
-- BOM revision;
-- component-placement file;
-- firmware target;
-- assembly notes.
+Before powering the board, confirm that the physical PCB matches the intended release board revision; schematic revision; BOM revision; component-placement file; firmware target; and assembly notes.
 
 ## 2. Visual inspection
 
 Inspect both sides under good lighting/magnification.
 
-Look for:
-
-- solder bridges;
-- tombstoned passives;
-- missing components;
-- reversed polarized parts;
-- incorrect IC orientation;
-- damaged pads;
-- unsoldered pins;
-- debris or solder balls;
-- connector damage.
+Look for solder bridges; tombstoned passives; missing components; reversed polarized parts; incorrect IC orientation; damaged pads; unsoldered pins; debris or solder balls; and connector damage.
 
 Pay particular attention to the charger, regulator and processor areas.
 
 ## 3. Unpowered electrical checks
 
-Before applying power:
-
-- measure resistance from main input to ground;
-- measure resistance from battery rail to ground;
-- measure resistance from each regulated rail to ground;
-- check that connector polarity matches documentation;
-- confirm there is no obvious short.
+Before applying power measure resistance from main input to ground; measure resistance from battery rail to ground; measure resistance from each regulated rail to ground; check that connector polarity matches documentation; and confirm there is no obvious short.
 
 A low resistance is not automatically a fault, but an unexpected near-short should be investigated before power is applied.
 
@@ -49,13 +26,7 @@ A low resistance is not automatically a fault, but an unexpected near-short shou
 
 Use a bench supply with an appropriate current limit for the design state.
 
-Initial objectives are:
-
-- no rapid current-limit condition;
-- no unexpected heating;
-- charger/system node behaves plausibly;
-- regulated rail reaches the intended voltage;
-- processor rail is stable.
+Initial objectives are no rapid current-limit condition; no unexpected heating; charger/system node behaves plausibly; regulated rail reaches the intended voltage; and processor rail is stable.
 
 Do not connect external sensors during the first rail test unless they are necessary for the power architecture.
 
@@ -102,27 +73,13 @@ This sequence reduces the chance that several simultaneous faults hide the real 
 
 ## 8. LIS3DH test
 
-Verify:
-
-- bus communication;
-- expected device identity where available;
-- plausible static acceleration;
-- axis response when the PCB is rotated;
-- interrupts if used.
+Verify bus communication; expected device identity where available; plausible static acceleration; axis response when the PCB is rotated; and interrupts if used.
 
 Document the physical axis orientation.
 
 ## 9. Storage test
 
-For the SD subsystem:
-
-- initialize the card;
-- create a test file;
-- write known data;
-- flush/close;
-- power-cycle;
-- read the data back;
-- test missing-card behavior.
+For the SD subsystem initialize the card; create a test file; write known data; flush/close; power-cycle; read the data back; and test missing-card behavior.
 
 ## 10. External-interface test
 
@@ -134,27 +91,13 @@ Then test external devices one at a time.
 
 Only after bench-power behavior is understood should battery operation be validated.
 
-Check:
-
-- connector polarity;
-- system operation from battery;
-- charging behavior from external input;
-- transition between external input and battery;
-- thermal behavior under charging/load;
-- low-battery/brownout behavior.
+Check connector polarity; system operation from battery; charging behavior from external input; transition between external input and battery; thermal behavior under charging/load; and low-battery/brownout behavior.
 
 Exact current and voltage acceptance criteria must be defined from the released power schematic.
 
 ## 12. Full-system soak test
 
-A board that passes a short bench test should run for an extended period while logging:
-
-- resets;
-- sensor failures;
-- storage errors;
-- communication interruptions;
-- power-state changes;
-- temperatures where measured.
+A board that passes a short bench test should run for an extended period while logging resets; sensor failures; storage errors; communication interruptions; power-state changes; and temperatures where measured.
 
 ## Bring-up record
 

@@ -8,14 +8,7 @@ BITs are therefore part of ORIGIN's broader modular design philosophy: the Core 
 
 A BIT should behave as a defined extension of ORIGIN rather than as an unrelated accessory.
 
-Depending on the specific BIT, it may provide:
-
-- an additional sensor;
-- a different sensing position;
-- a small external electronics function;
-- a physical interaction point;
-- deployment-specific functionality;
-- an educational or prototyping interface.
+Depending on the specific BIT, it may provide an additional sensor; a different sensing position; a small external electronics function; a physical interaction point; deployment-specific functionality; and an educational or prototyping interface.
 
 The long-term goal is to allow BITs to be developed independently while still following common ORIGIN rules for attachment, identification, power, data, health reporting, and version compatibility.
 
@@ -23,12 +16,7 @@ The long-term goal is to allow BITs to be developed independently while still fo
 
 An important design requirement identified during enclosure development is that BITs **must remain accessible after ORIGIN has been installed**.
 
-A bottom-only attachment position is unsuitable for many deployments because the lower part of the Core may be:
-
-- inserted into soil;
-- located very close to the ground;
-- attached to a base;
-- blocked by a mounting structure.
+A bottom-only attachment position is unsuitable for many deployments because the lower part of the Core may be inserted into soil, located very close to the ground, attached to a base, and blocked by a mounting structure.
 
 For that reason, the mechanical architecture should prioritize side, upper-side, or otherwise externally reachable expansion positions.
 
@@ -36,16 +24,7 @@ This requirement is not cosmetic. It directly affects whether operators can inst
 
 ## Mechanical interface goals
 
-A BIT attachment should provide:
-
-- repeatable positioning;
-- enough retention for the intended use;
-- defined orientation;
-- tool access where fasteners are used;
-- cable clearance;
-- strain relief;
-- compatibility with the Core enclosure geometry;
-- minimal interference with the main sensors.
+A BIT attachment should provide repeatable positioning; enough retention for the intended use; defined orientation; tool access where fasteners are used; cable clearance; strain relief; compatibility with the Core enclosure geometry; and minimal interference with the main sensors.
 
 The final standard should also define whether a BIT is intended for repeated hot-swapping in the field or for installation during a maintenance session.
 
@@ -53,13 +32,7 @@ The final standard should also define whether a BIT is intended for repeated hot
 
 BIT placement must account for ORIGIN's built-in sensing system.
 
-For example, an attached element should not:
-
-- block a mmWave sensor opening;
-- create a large reflective object directly in a radar field;
-- shade or obstruct another environmental sensor;
-- interfere with an antenna region;
-- cover ventilation or protected sensing openings.
+For example, an attached element should not block a mmWave sensor opening; create a large reflective object directly in a radar field; shade or obstruct another environmental sensor; interfere with an antenna region; and cover ventilation or protected sensing openings.
 
 A mechanically successful attachment can still be a system-level failure if it degrades the Core's sensing performance.
 
@@ -67,17 +40,7 @@ A mechanically successful attachment can still be a system-level failure if it d
 
 Some BITs may be passive mechanical elements, while others may require power and communication.
 
-For active BITs, the final electrical interface should define:
-
-- supply voltage;
-- current limit;
-- connector;
-- polarity;
-- communication method;
-- logic levels;
-- protection;
-- startup behavior;
-- whether connection while powered is supported.
+For active BITs, the final electrical interface should define supply voltage; current limit; connector; polarity; communication method; logic levels; protection; startup behavior; and whether connection while powered is supported.
 
 These values must come from the confirmed Rosetta/expansion hardware design. They should not be inferred from early prototype wiring.
 
@@ -206,33 +169,14 @@ If a BIT creates an enclosure opening, the maintenance procedure must also resto
 
 Each active BIT should be tested in isolation and as part of the complete system.
 
-Tests should include:
-
-- attachment repeatability;
-- connector retention;
-- power behavior;
-- communication recovery;
-- removal/reconnection;
-- Core sensor interference;
-- environmental exposure appropriate to the module;
-- firmware compatibility;
-- failure-state reporting.
+Tests should include attachment repeatability; connector retention; power behavior; communication recovery; removal/reconnection; Core sensor interference; environmental exposure appropriate to the module; firmware compatibility; and failure-state reporting.
 
 ## Development status
 
 BITs are an evolving part of ORIGIN. The concept and mechanical accessibility requirements are established, while exact standardized pinouts, connector geometry, automatic identification methods, and the supported module catalog should be treated as revision-dependent until the final expansion interface is frozen.
 
-The documentation should therefore distinguish between:
-
-- **BIT architecture** — the common design rules described here;
-- **specific BIT implementations** — individual modules with confirmed hardware and software specifications.
+The documentation should therefore distinguish between **BIT architecture** — the common design rules described here and **specific BIT implementations** — individual modules with confirmed hardware and software specifications.
 
 ## Related documentation
 
-See:
-
-- [Modules](README.md)
-- [Expansion System](expansion-system.md)
-- [Rosetta → Interfaces](../rosetta/interfaces.md)
-- [Mechanical Design](../mechanical-design/README.md)
-- [Software → Configuration](../software/configuration.md)
+See [Modules](README.md); [Expansion System](expansion-system.md); [Rosetta → Interfaces](../rosetta/interfaces.md); [Mechanical Design](../mechanical-design/README.md); and [Software → Configuration](../software/configuration.md).

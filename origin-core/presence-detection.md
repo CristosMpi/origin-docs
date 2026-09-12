@@ -6,15 +6,7 @@ Presence detection is one of ORIGIN Core's primary security-oriented sensing fun
 
 The current enclosure concept is designed around three **DFRobot C4001 24 GHz mmWave Human Presence Detection Sensors (25 m version, SEN0609)**.
 
-DFRobot specifies the 25 m version as an FMCW radar sensor with:
-
-- 24 GHz operating frequency;
-- human-presence detection up to 16 m;
-- motion and distance measurement up to 25 m;
-- distance measurement from approximately 1.2 m to 25 m;
-- velocity measurement support;
-- a wide detection beam;
-- UART-based integration on the 25 m model.
+DFRobot specifies the 25 m version as an FMCW radar sensor with 24 GHz operating frequency; human-presence detection up to 16 m; motion and distance measurement up to 25 m; distance measurement from approximately 1.2 m to 25 m; velocity measurement support; a wide detection beam; and UART-based integration on the 25 m model.
 
 Manufacturer documentation: https://wiki.dfrobot.com/sen0609
 
@@ -45,14 +37,7 @@ Sensor B  ←  ORIGIN Core  →  Sensor C
 
 The exact angles and orientation depend on the final enclosure geometry and deployment requirements.
 
-The three-sensor approach introduces additional engineering requirements:
-
-- each sensor must have a stable physical orientation;
-- the firmware must identify which sensor generated an event;
-- overlapping detection regions must be understood;
-- blind zones should be measured rather than assumed;
-- sensor outputs should be time-correlated;
-- reflections and cross-site geometry should be considered during testing.
+The three-sensor approach introduces additional engineering requirements each sensor must have a stable physical orientation; the firmware must identify which sensor generated an event; overlapping detection regions must be understood; blind zones should be measured rather than assumed; sensor outputs should be time-correlated; and reflections and cross-site geometry should be considered during testing.
 
 ## Enclosure integration
 
@@ -60,13 +45,7 @@ Radar performance is influenced by the material and geometry in front of the sen
 
 For this reason, the current ORIGIN enclosure concept intentionally includes dedicated sensor openings. This can reduce the protection provided by a completely sealed shell, but it avoids designing the sensing system around an unverified assumption that the radar will perform identically through every enclosure material and wall thickness.
 
-This creates a deliberate mechanical trade-off between:
-
-- sensing performance;
-- environmental protection;
-- structural integrity;
-- appearance;
-- manufacturing simplicity.
+This creates a deliberate mechanical trade-off between sensing performance; environmental protection; structural integrity; appearance; and manufacturing simplicity.
 
 The final solution should be validated with the sensors installed in the actual enclosure rather than only tested on a workbench.
 
@@ -74,14 +53,7 @@ The final solution should be validated with the sensors installed in the actual 
 
 The C4001 modules include mounting holes, which are intended to be integrated into the mechanical design so each radar has a defined and repeatable position.
 
-A good mount should:
-
-- prevent the board from rotating;
-- avoid mechanical stress on the PCB;
-- keep the sensing face unobstructed;
-- provide access to the connector;
-- keep fasteners clear of the sensing region where possible;
-- allow replacement without redesigning the enclosure.
+A good mount should prevent the board from rotating; avoid mechanical stress on the PCB; keep the sensing face unobstructed; provide access to the connector; keep fasteners clear of the sensing region where possible; and allow replacement without redesigning the enclosure.
 
 See [Mechanical Design → Sensor Mounting](../mechanical-design/sensor-mounting.md).
 
@@ -153,49 +125,19 @@ Logs should always identify the source radar so test results and real events can
 
 Using multiple radars does not automatically produce complete 360-degree coverage.
 
-The real coverage depends on:
-
-- the manufacturer's beam pattern;
-- mounting angle;
-- mounting height;
-- distance from the monitored area;
-- surrounding walls and objects;
-- target direction;
-- reflections;
-- enclosure geometry.
+The real coverage depends on the manufacturer's beam pattern; mounting angle; mounting height; distance from the monitored area; surrounding walls and objects; target direction; reflections; and enclosure geometry.
 
 ORIGIN should therefore maintain a tested coverage map for each standard deployment arrangement.
 
-A useful validation procedure is to divide the monitored area into test positions and record whether each radar detects:
-
-- stationary presence;
-- slow movement;
-- normal walking;
-- approach and departure;
-- targets near the edge of the expected field of view.
+A useful validation procedure is to divide the monitored area into test positions and record whether each radar detects stationary presence; slow movement; normal walking; approach and departure; and targets near the edge of the expected field of view.
 
 ## False detections and ambiguity
 
-Radar is not perfect. A presence subsystem may be affected by:
-
-- movement outside the intended monitored zone;
-- reflections from surrounding surfaces;
-- movement behind materials the radar can penetrate;
-- nearby machinery or moving objects;
-- sensor configuration;
-- unusual mounting conditions.
+Radar is not perfect. A presence subsystem may be affected by movement outside the intended monitored zone; reflections from surrounding surfaces; movement behind materials the radar can penetrate; nearby machinery or moving objects; sensor configuration; and unusual mounting conditions.
 
 For that reason, ORIGIN should not describe a single radar detection as proof of unauthorized activity.
 
-Higher-level event logic can use context such as:
-
-- which sensor detected the target;
-- duration of presence;
-- repeated observations;
-- distance trend;
-- time of day or site state;
-- related sensors;
-- operator-defined rules.
+Higher-level event logic can use context such as which sensor detected the target; duration of presence; repeated observations; distance trend; time of day or site state; related sensors; and operator-defined rules.
 
 ## Privacy-oriented design
 
@@ -241,25 +183,13 @@ Presence detection should be validated in stages.
 
 ### Bench testing
 
-Confirm:
-
-- reliable electrical communication;
-- configuration commands;
-- stable repeated readings;
-- expected event output;
-- recovery after restart or disconnect.
+Confirm reliable electrical communication; configuration commands; stable repeated readings; expected event output; and recovery after restart or disconnect.
 
 ### Enclosure testing
 
 Repeat detection tests with the sensor mounted in the real Core enclosure.
 
-This verifies:
-
-- opening geometry;
-- mounting angle;
-- fastener effects;
-- cable routing;
-- mechanical stability.
+This verifies opening geometry; mounting angle; fastener effects; cable routing; and mechanical stability.
 
 ### Coverage testing
 
@@ -267,13 +197,7 @@ Measure detection across known positions and directions.
 
 ### Multi-sensor testing
 
-Evaluate:
-
-- overlapping detection;
-- simultaneous events;
-- sensor identity in logs;
-- disagreement between radars;
-- event ordering.
+Evaluate overlapping detection; simultaneous events; sensor identity in logs; disagreement between radars; and event ordering.
 
 ### Field testing
 
@@ -297,11 +221,4 @@ Validated results will be published under [Testing & Validation](../testing-vali
 
 ## Related documentation
 
-See:
-
-- [Sensor System](sensor-system.md)
-- [Hardware Architecture](hardware-architecture.md)
-- [Mechanical Design → Sensor Mounting](../mechanical-design/sensor-mounting.md)
-- [Software](../software/README.md)
-- [Centaurus AI](../centaurus-ai/README.md)
-- [Testing & Validation](../testing-validation/README.md)
+See [Sensor System](sensor-system.md); [Hardware Architecture](hardware-architecture.md); [Mechanical Design → Sensor Mounting](../mechanical-design/sensor-mounting.md); [Software](../software/README.md); [Centaurus AI](../centaurus-ai/README.md); and [Testing & Validation](../testing-validation/README.md).

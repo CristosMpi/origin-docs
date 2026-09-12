@@ -14,16 +14,7 @@ Those values describe the uploaded manufacturing export. They do not by themselv
 
 ## What Rosetta is responsible for
 
-At system level, Rosetta provides the electrical foundation for:
-
-- embedded processing;
-- battery and input-power handling;
-- regulated power rails;
-- sensor and expansion interfaces;
-- local storage;
-- communications interfaces;
-- status and control signals;
-- connection between ORIGIN Core and the wider software stack.
+At system level, Rosetta provides the electrical foundation for embedded processing; battery and input-power handling; regulated power rails; sensor and expansion interfaces; local storage; communications interfaces; status and control signals; and connection between ORIGIN Core and the wider software stack.
 
 A useful abstraction is:
 
@@ -78,19 +69,6 @@ This distinction matters because a Gerber archive can verify physical manufactur
 
 ## Chapter map
 
-Continue with:
-
-- [Rosetta v2](rosetta-v2.md) — current revision and verified export information;
-- [Architecture](architecture.md) — subsystem organization;
-- [Microcontroller](microcontroller.md) — embedded processing layer;
-- [Power Management](power-management.md) — charging and regulation architecture;
-- [Interfaces](interfaces.md) — connectors, storage and expansion;
-- [Sensors](sensors.md) — on-board and external sensing relationships;
-- [Schematics](schematics.md) — schematic structure and verification status;
-- [PCB Design](pcb-design.md) — board geometry, layer stack and design rules;
-- [BOM](bom.md) — verified partial component inventory;
-- [Manufacturing](manufacturing.md) — fabrication outputs and release checks;
-- [Assembly & Bring-up](assembly-and-bring-up.md) — controlled first-power workflow;
-- [Troubleshooting](troubleshooting.md) — common design and manufacturing issues.
+Continue with [Rosetta v2](rosetta-v2.md) — current revision and verified export information; [Architecture](architecture.md) — subsystem organization; [Microcontroller](microcontroller.md) — embedded processing layer; [Power Management](power-management.md) — charging and regulation architecture; [Interfaces](interfaces.md) — connectors, storage and expansion; [Sensors](sensors.md) — on-board and external sensing relationships; [Schematics](schematics.md) — schematic structure and verification status; [PCB Design](pcb-design.md) — board geometry, layer stack and design rules; [BOM](bom.md) — verified partial component inventory; [Manufacturing](manufacturing.md) — fabrication outputs and release checks; [Assembly & Bring-up](assembly-and-bring-up.md) — controlled first-power workflow; and [Troubleshooting](troubleshooting.md) — common design and manufacturing issues.
 
 Rosetta should be treated as a controlled engineering artifact: every manufacturing release should be traceable to a specific schematic, PCB source, BOM, fabrication package and firmware target.

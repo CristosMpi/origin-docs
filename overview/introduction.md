@@ -12,16 +12,7 @@ The purpose of ORIGIN is to create a flexible technological platform that can he
 
 The project is not limited to a single sensor, installation type, or physical form. Instead, it is being developed as a modular system that can be adapted to different environments and expanded as new requirements appear.
 
-At a high level, ORIGIN brings together:
-
-- environmental and presence sensing;
-- custom embedded electronics;
-- power and communication systems;
-- local firmware and data processing;
-- intelligent analysis through Centaurus AI;
-- mechanical protection and field-ready mounting;
-- modular extensions such as BITs, Aqua Base, and Drone Mount;
-- testing, diagnostics, maintenance, and deployment procedures.
+At a high level, ORIGIN brings together environmental and presence sensing; custom embedded electronics; power and communication systems; local firmware and data processing; intelligent analysis through Centaurus AI; mechanical protection and field-ready mounting; modular extensions such as BITs, Aqua Base, and Drone Mount; and testing, diagnostics, maintenance, and deployment procedures.
 
 ## Why cultural heritage?
 
@@ -69,24 +60,13 @@ Modules such as **BITs**, **Aqua Base**, and **Drone Mount** extend ORIGIN beyon
 
 ORIGIN is built through iteration. Designs are prototyped, tested, revised, and documented. Components may change as the team learns from fabrication, laboratory testing, deployment preparation, and real-world feedback.
 
-The project therefore distinguishes between:
-
-- **system concepts**, which describe how ORIGIN is intended to operate;
-- **current implementations**, which describe the hardware and software available in a specific version;
-- **future development**, which records planned improvements without presenting them as completed features.
+The project therefore distinguishes between **system concepts**, which describe how ORIGIN is intended to operate, **current implementations**, which describe the hardware and software available in a specific version, and **future development**, which records planned improvements without presenting them as completed features.
 
 This distinction is important throughout these docs. Where an implementation detail is version-dependent, the relevant technical page should be treated as authoritative.
 
 ## Who these docs are for
 
-ORIGIN Docs are written for several audiences:
-
-- heritage and museum professionals evaluating the concept;
-- engineers reviewing the system architecture;
-- robotics teams and students learning from the project;
-- partners and sponsors supporting development;
-- Team Galene members maintaining and extending ORIGIN;
-- judges, educators, and researchers who need a structured technical reference.
+ORIGIN Docs are written for several audiences heritage and museum professionals evaluating the concept; engineers reviewing the system architecture; robotics teams and students learning from the project; partners and sponsors supporting development; Team Galene members maintaining and extending ORIGIN; and judges, educators, and researchers who need a structured technical reference.
 
 The documentation aims to remain understandable at the system level while providing deeper technical sections for readers who need implementation details.
 

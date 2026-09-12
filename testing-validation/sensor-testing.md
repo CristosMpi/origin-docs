@@ -6,20 +6,7 @@ The objective is not merely to confirm that a sensor returns data. The test prog
 
 ## Scope
 
-Sensor validation may include:
-
-- electrical communication;
-- startup behavior;
-- stable repeated readings;
-- calibration where relevant;
-- missing-device detection;
-- invalid-data handling;
-- enclosure effects;
-- mounting-angle effects;
-- coverage mapping;
-- false detections;
-- multi-sensor interaction;
-- field behavior.
+Sensor validation may include electrical communication; startup behavior; stable repeated readings; calibration where relevant; missing-device detection; invalid-data handling; enclosure effects; mounting-angle effects; coverage mapping; false detections; multi-sensor interaction; and field behavior.
 
 ## Test configuration
 
@@ -78,28 +65,13 @@ Manufacturer specifications describe component capabilities, but ORIGIN must val
 
 ### Bench test
 
-Verify:
-
-- startup;
-- UART/data communication as applicable;
-- presence event output;
-- motion response;
-- distance output where used;
-- repeated detection;
-- restart recovery.
+Verify startup; UART/data communication as applicable; presence event output; motion response; distance output where used; repeated detection; and restart recovery.
 
 ### Installed-enclosure test
 
 Repeat the test after installing the sensor behind the real mechanical interface.
 
-Compare the result with the bench setup to identify effects from:
-
-- sensor opening geometry;
-- wall material;
-- nearby fasteners;
-- internal structure;
-- cable routing;
-- mounting angle.
+Compare the result with the bench setup to identify effects from sensor opening geometry; wall material; nearby fasteners; internal structure; cable routing; and mounting angle.
 
 ## Coverage mapping
 
@@ -107,38 +79,15 @@ A coverage map should be measured rather than inferred from a datasheet illustra
 
 A practical method is to establish a grid or marked route around the unit.
 
-At each position record:
+At each position record distance from sensor; angle or direction; target state; sensor(s) detecting the target; detection latency if relevant; repeated-trial count; and anomalies.
 
-- distance from sensor;
-- angle or direction;
-- target state;
-- sensor(s) detecting the target;
-- detection latency if relevant;
-- repeated-trial count;
-- anomalies.
-
-Suggested target states include:
-
-- normal walking;
-- slow walking;
-- approach;
-- departure;
-- standing relatively still;
-- edge-of-zone movement.
+Suggested target states include normal walking; slow walking; approach; departure; standing relatively still; and edge-of-zone movement.
 
 ## Multi-radar testing
 
 Three radars introduce system-level behavior that cannot be tested with one sensor alone.
 
-Tests should examine:
-
-- simultaneous detections;
-- overlap regions;
-- disagreement between radars;
-- event ordering;
-- source identity;
-- blind zones;
-- detection outside the intended monitored area.
+Tests should examine simultaneous detections; overlap regions; disagreement between radars; event ordering; source identity; blind zones; and detection outside the intended monitored area.
 
 The presence of three sensors should not be described as guaranteed 360-degree coverage until measured coverage supports that claim.
 
@@ -146,15 +95,7 @@ The presence of three sensors should not be described as guaranteed 360-degree c
 
 False positives should be actively investigated.
 
-Potential sources may include:
-
-- people outside the intended zone;
-- movement behind penetrable materials;
-- reflections;
-- nearby machinery;
-- moving vegetation or objects;
-- unusual geometry;
-- configuration sensitivity.
+Potential sources may include people outside the intended zone; movement behind penetrable materials; reflections; nearby machinery; moving vegetation or objects; unusual geometry; and configuration sensitivity.
 
 Record false detections rather than tuning them away without evidence.
 
@@ -175,61 +116,27 @@ Reproducible? yes/no
 
 A false negative occurs when a relevant target or condition is present but the expected sensor observation does not occur.
 
-For presence sensing, test difficult cases such as:
-
-- low movement;
-- edge of expected field;
-- target partially obstructed;
-- approach from different directions;
-- multiple people where appropriate.
+For presence sensing, test difficult cases such as low movement; edge of expected field; target partially obstructed; approach from different directions; and multiple people where appropriate.
 
 ## Environmental sensors
 
 For environmental sensing, validation should include comparison with an appropriate reference where possible.
 
-Examples may include:
+Examples may include temperature; humidity; pressure; water-related measurements; and other installed environmental channels.
 
-- temperature;
-- humidity;
-- pressure;
-- water-related measurements;
-- other installed environmental channels.
-
-For each channel record:
-
-- reference instrument;
-- sensor reading;
-- difference;
-- ambient conditions;
-- stabilization time;
-- repeated measurements.
+For each channel record reference instrument; sensor reading; difference; ambient conditions; stabilization time; and repeated measurements.
 
 Do not publish an accuracy figure unless the method and reference are adequate to support it.
 
 ## Accelerometer / motion sensor testing
 
-Where the LIS3DH or another inertial sensor is used on the tested revision, verify:
-
-- device detection;
-- axis response;
-- orientation consistency;
-- stationary baseline;
-- repeatable movement detection;
-- restart behavior.
+Where the LIS3DH or another inertial sensor is used on the tested revision, verify device detection; axis response; orientation consistency; stationary baseline; repeatable movement detection; and restart behavior.
 
 If it is used for tamper or movement events, validate the event threshold on the installed enclosure rather than only with the bare PCB.
 
 ## Sampling and timestamps
 
-Sensor data should be checked for:
-
-- plausible timestamps;
-- expected sampling interval;
-- gaps;
-- duplicate samples;
-- stale values;
-- impossible jumps;
-- source identity.
+Sensor data should be checked for plausible timestamps; expected sampling interval; gaps; duplicate samples; stale values; impossible jumps; and source identity.
 
 Timing errors can create misleading higher-level analysis even when the sensor itself is operating correctly.
 
@@ -252,13 +159,7 @@ Tests should exercise these states where practical.
 
 Calibration procedures depend on the sensor type.
 
-Calibration must not be treated as a universal one-time step. Relevant settings may depend on:
-
-- enclosure revision;
-- mounting position;
-- site geometry;
-- firmware version;
-- sensor replacement.
+Calibration must not be treated as a universal one-time step. Relevant settings may depend on enclosure revision; mounting position; site geometry; firmware version; and sensor replacement.
 
 See [Installation & Deployment → Calibration](../installation-deployment/calibration.md).
 
@@ -266,28 +167,13 @@ See [Installation & Deployment → Calibration](../installation-deployment/calib
 
 For an important performance claim, repeat the same test under the same defined setup.
 
-Record:
-
-- number of trials;
-- number of successful observations;
-- variation;
-- failures;
-- anomalies.
+Record number of trials; number of successful observations; variation; failures; and anomalies.
 
 Avoid reporting a single best-case result as representative performance.
 
 ## Regression testing
 
-Re-test affected sensing functions after changes to:
-
-- sensor model;
-- sensor firmware/configuration;
-- physical angle;
-- mounting height;
-- enclosure openings;
-- nearby structural elements;
-- driver code;
-- event-processing logic.
+Re-test affected sensing functions after changes to sensor model; sensor firmware/configuration; physical angle; mounting height; enclosure openings; nearby structural elements; driver code; and event-processing logic.
 
 ## Example sensor-validation matrix
 
@@ -305,24 +191,8 @@ Re-test affected sensing functions after changes to:
 
 ## Evidence
 
-Useful evidence includes:
-
-- coverage maps;
-- event logs;
-- timestamped datasets;
-- test videos;
-- photographs of sensor orientation;
-- reference-distance markings;
-- configuration files;
-- environmental reference readings.
+Useful evidence includes coverage maps; event logs; timestamped datasets; test videos; photographs of sensor orientation; reference-distance markings; configuration files; and environmental reference readings.
 
 ## Related documentation
 
-See:
-
-- [ORIGIN Core → Sensor System](../origin-core/sensor-system.md)
-- [Presence Detection](../origin-core/presence-detection.md)
-- [Rosetta Sensors](../rosetta/sensors.md)
-- [Environmental Testing](environmental-testing.md)
-- [Field Testing](field-testing.md)
-- [Validation Results](validation-results.md)
+See [ORIGIN Core → Sensor System](../origin-core/sensor-system.md); [Presence Detection](../origin-core/presence-detection.md); [Rosetta Sensors](../rosetta/sensors.md); [Environmental Testing](environmental-testing.md); [Field Testing](field-testing.md); and [Validation Results](validation-results.md).

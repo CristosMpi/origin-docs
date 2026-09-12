@@ -46,52 +46,35 @@ The embedded firmware should cover at least the following areas.
 
 ### Hardware initialization
 
-- initialize buses and serial interfaces;
-- configure GPIO safely;
-- establish known power/control states;
-- initialize storage where present;
-- identify optional hardware;
-- avoid enabling subsystems in an undefined sequence.
+initialize buses and serial interfaces;.
+
+configure GPIO safely;.
+
+establish known power/control states;.
+
+initialize storage where present;.
+
+identify optional hardware;.
+
+avoid enabling subsystems in an undefined sequence.
 
 ### Sensor drivers
 
 Each sensor driver should isolate device-specific commands and timing from the rest of the application.
 
-A driver should normally expose capabilities such as:
-
-- initialization;
-- reading or polling;
-- configuration;
-- health reporting;
-- restart/recovery;
-- conversion into normalized values.
+A driver should normally expose capabilities such as initialization; reading or polling; configuration; health reporting; restart/recovery; and conversion into normalized values.
 
 ### Scheduler
 
 Not every sensor needs to run at the same rate.
 
-The firmware should support a scheduling model that distinguishes:
-
-- periodic measurements;
-- continuous or stream-oriented sensors;
-- event-driven inputs;
-- health checks;
-- communication maintenance;
-- background storage or retry tasks.
+The firmware should support a scheduling model that distinguishes periodic measurements; continuous or stream-oriented sensors; event-driven inputs; health checks; communication maintenance; and background storage or retry tasks.
 
 ### Validation
 
 Raw sensor output should be checked before being promoted to a trusted observation.
 
-Validation may include:
-
-- expected message length;
-- checksum or integrity checks where supported;
-- range validation;
-- timeout detection;
-- stale-data detection;
-- impossible-state rejection;
-- source identity.
+Validation may include expected message length; checksum or integrity checks where supported; range validation; timeout detection; stale-data detection; impossible-state rejection; and source identity.
 
 ### Health supervision
 
@@ -139,13 +122,7 @@ Tasks that can block for long periods should not prevent critical acquisition or
 
 An unattended field device should have defined recovery behavior.
 
-Useful recovery mechanisms include:
-
-- task or system watchdogs;
-- communication retry with bounded backoff;
-- driver-level sensor reset;
-- peripheral reinitialization;
-- controlled device restart after unrecoverable states.
+Useful recovery mechanisms include task or system watchdogs; communication retry with bounded backoff; driver-level sensor reset; peripheral reinitialization; and controlled device restart after unrecoverable states.
 
 Recovery should be logged so that repeated failures can be diagnosed later.
 
@@ -153,25 +130,13 @@ Recovery should be logged so that repeated failures can be diagnosed later.
 
 On every boot, firmware should record the available reset reason.
 
-Examples may include:
-
-- power-on reset;
-- software reset;
-- watchdog reset;
-- brownout;
-- update-related restart.
+Examples may include power-on reset; software reset; watchdog reset; brownout; and update-related restart.
 
 Repeated unexpected resets are an important diagnostic signal.
 
 ## Local storage
 
-Where storage is available, firmware can use it for:
-
-- buffered observations;
-- diagnostic logs;
-- configuration snapshots;
-- update metadata;
-- temporary offline queues.
+Where storage is available, firmware can use it for buffered observations; diagnostic logs; configuration snapshots; update metadata; and temporary offline queues.
 
 Storage failures must be represented separately from communication failures.
 
@@ -187,15 +152,7 @@ The final names should match the mechanical configuration once fixed.
 
 Firmware may generate deterministic local events from known conditions.
 
-Examples include:
-
-- sensor unavailable;
-- presence state changed;
-- threshold exceeded;
-- power condition changed;
-- communication lost/restored;
-- device rebooted;
-- configuration changed.
+Examples include sensor unavailable; presence state changed; threshold exceeded; power condition changed; communication lost/restored; device rebooted; and configuration changed.
 
 Higher-level AI analysis should remain separable from these deterministic events.
 
@@ -203,22 +160,13 @@ Higher-level AI analysis should remain separable from these deterministic events
 
 If configuration is missing or invalid, firmware should fail into a defined safe/default mode rather than operating with random memory or partial settings.
 
-Safe behavior may include:
-
-- disable unsupported interfaces;
-- use conservative acquisition settings;
-- refuse to enable a feature that lacks required configuration;
-- report configuration errors clearly.
+Safe behavior may include disable unsupported interfaces, use conservative acquisition settings, refuse to enable a feature that lacks required configuration, and report configuration errors clearly.
 
 ## Debug builds vs deployment builds
 
 Development firmware may expose additional logging or test commands that are inappropriate for deployment.
 
-Release documentation should distinguish:
-
-- development/debug build;
-- validation build;
-- deployment/release build.
+Release documentation should distinguish development/debug build, validation build, and deployment/release build.
 
 Diagnostic conveniences must not accidentally become permanent security weaknesses.
 
@@ -244,29 +192,29 @@ Firmware validation should include:
 
 ### Unit / driver testing
 
-- valid responses;
-- invalid responses;
-- timeouts;
-- disconnected sensor;
-- restart recovery.
+valid responses;.
+
+invalid responses;.
+
+timeouts;.
+
+disconnected sensor;.
+
+restart recovery.
 
 ### Integration testing
 
-- multiple sensors active simultaneously;
-- storage plus communications;
-- repeated reconnects;
-- long-duration acquisition.
+multiple sensors active simultaneously;.
+
+storage plus communications;.
+
+repeated reconnects;.
+
+long-duration acquisition.
 
 ### Fault injection
 
-Deliberately test:
-
-- sensor unplugged;
-- communication unavailable;
-- malformed input;
-- storage failure;
-- repeated reboot;
-- partial configuration.
+Deliberately test sensor unplugged; communication unavailable; malformed input; storage failure; repeated reboot; and partial configuration.
 
 ### Soak testing
 
@@ -274,24 +222,8 @@ Run a representative device continuously to detect memory leaks, task stalls, qu
 
 ## What still needs authoritative source material
 
-The following will be added when the firmware repository is available:
-
-- language/framework;
-- toolchain;
-- exact build commands;
-- source-tree structure;
-- task names;
-- libraries/dependencies;
-- pin definitions;
-- actual message schemas;
-- release version history.
+The following will be added when the firmware repository is available language/framework; toolchain; exact build commands; source-tree structure; task names; libraries/dependencies; pin definitions; actual message schemas; and release version history.
 
 ## Related pages
 
-See:
-
-- [Architecture](architecture.md)
-- [Installation](installation.md)
-- [Configuration](configuration.md)
-- [Communications](communications.md)
-- [Rosetta](../rosetta/README.md)
+See [Architecture](architecture.md); [Installation](installation.md); [Configuration](configuration.md); [Communications](communications.md); and [Rosetta](../rosetta/README.md).

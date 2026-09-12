@@ -22,16 +22,7 @@ Data processing / communications
 Centaurus AI and operator-facing systems
 ```
 
-The Core therefore has several responsibilities at the same time:
-
-- collect data from connected sensors;
-- detect events relevant to site monitoring;
-- provide local processing and device control;
-- manage power and energy availability;
-- communicate status and observations;
-- support modular attachments and future expansion;
-- protect the electronics in a field-ready enclosure;
-- expose enough diagnostic information for maintenance and testing.
+The Core therefore has several responsibilities at the same time collect data from connected sensors; detect events relevant to site monitoring; provide local processing and device control; manage power and energy availability; communicate status and observations; support modular attachments and future expansion; protect the electronics in a field-ready enclosure; and expose enough diagnostic information for maintenance and testing.
 
 The design intentionally separates these responsibilities into subsystems so that one part of ORIGIN can evolve without forcing a complete redesign of every other part.
 
@@ -89,11 +80,7 @@ This cycle is deliberately broader than "read a sensor and send a value." Reliab
 
 ## Designed for modularity
 
-ORIGIN Core is the base of a larger ecosystem. The project includes modular extensions such as:
-
-- **BITs**, for expandable functionality and local attachments;
-- **Aqua Base**, for deployment scenarios involving water-related monitoring or operation;
-- **Drone Mount**, for aerial or mobile use cases where compatible sensing needs to be carried by a drone platform.
+ORIGIN Core is the base of a larger ecosystem. The project includes modular extensions such as **BITs**, for expandable functionality and local attachments, **Aqua Base**, for deployment scenarios involving water-related monitoring or operation, and **Drone Mount**, for aerial or mobile use cases where compatible sensing needs to be carried by a drone platform.
 
 These modules are documented separately in [Modules](../modules/README.md). The Core architecture is designed so that extensions connect through defined mechanical, electrical and software boundaries instead of becoming permanent one-off modifications.
 
@@ -125,24 +112,12 @@ Project ORIGIN is still evolving. Hardware revisions, sensor choices and enclosu
 
 ORIGIN Core is an actively developed system. Some architectural decisions are stable while exact component choices, mechanical dimensions and deployment-specific sensor configurations continue to evolve.
 
-Throughout ORIGIN Docs:
-
-- confirmed hardware is described as the current design;
-- planned capabilities are identified as planned or under development;
-- exact electrical specifications are kept in the Rosetta chapter;
-- deployment-specific assumptions are kept out of general architecture pages unless they are universally applicable.
+Throughout ORIGIN Docs confirmed hardware is described as the current design, planned capabilities are identified as planned or under development, exact electrical specifications are kept in the Rosetta chapter, and deployment-specific assumptions are kept out of general architecture pages unless they are universally applicable.
 
 This prevents early prototypes from being presented as final specifications.
 
 ## Chapter map
 
-Continue through the Core documentation in this order:
-
-- [Hardware Architecture](hardware-architecture.md) — physical and electronic subsystem boundaries.
-- [Sensor System](sensor-system.md) — how sensing devices are organized and validated.
-- [Power System](power-system.md) — energy input, battery management and regulated power.
-- [Connectivity](connectivity.md) — data movement, offline behavior and communications responsibilities.
-- [Environmental Monitoring](environmental-monitoring.md) — environmental observations and deployment-specific sensing.
-- [Presence Detection](presence-detection.md) — the mmWave-based human-presence subsystem.
+Continue through the Core documentation in this order [Hardware Architecture](hardware-architecture.md) — physical and electronic subsystem boundaries; [Sensor System](sensor-system.md) — how sensing devices are organized and validated; [Power System](power-system.md) — energy input, battery management and regulated power; [Connectivity](connectivity.md) — data movement, offline behavior and communications responsibilities; [Environmental Monitoring](environmental-monitoring.md) — environmental observations and deployment-specific sensing; and [Presence Detection](presence-detection.md) — the mmWave-based human-presence subsystem.
 
 For board-level details, continue to [Rosetta](../rosetta/README.md).

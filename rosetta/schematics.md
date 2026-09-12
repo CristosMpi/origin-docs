@@ -32,32 +32,45 @@ Before a schematic is tagged for manufacturing, verify:
 
 ### Power
 
-- all supply pins are connected to the intended rail;
-- decoupling capacitors are present and correctly valued;
-- charger and regulator passive networks match the chosen operating point;
-- ground domains are deliberate;
-- connector polarities are unambiguous.
+all supply pins are connected to the intended rail;.
+
+decoupling capacitors are present and correctly valued;.
+
+charger and regulator passive networks match the chosen operating point;.
+
+ground domains are deliberate;.
+
+connector polarities are unambiguous.
 
 ### Processor
 
-- boot-strapping pins are in valid states;
-- programming/debug access exists;
-- reset/enable behavior is correct;
-- unused pins are intentionally handled.
+boot-strapping pins are in valid states;.
+
+programming/debug access exists;.
+
+reset/enable behavior is correct;.
+
+unused pins are intentionally handled.
 
 ### Peripherals
 
-- logic-voltage compatibility is verified;
-- pull-ups/pull-downs are present where required;
-- chip-select/address choices do not conflict;
-- interrupt lines match firmware expectations.
+logic-voltage compatibility is verified;.
+
+pull-ups/pull-downs are present where required;.
+
+chip-select/address choices do not conflict;.
+
+interrupt lines match firmware expectations.
 
 ### Connectors
 
-- pin numbering matches the footprint;
-- pin 1 is visibly identifiable;
-- external voltages cannot be accidentally applied to logic-only pins;
-- connector names describe function.
+pin numbering matches the footprint;.
+
+pin 1 is visibly identifiable;.
+
+external voltages cannot be accidentally applied to logic-only pins;.
+
+connector names describe function.
 
 ## Design-review history
 
@@ -67,14 +80,6 @@ These references are recorded here as **review-history markers**, not as proof t
 
 ## Publishing the schematic
 
-When the final schematic is added, this page should include:
-
-- source format and software version;
-- PDF export;
-- hardware revision;
-- release date;
-- sheet index;
-- net/rail glossary;
-- links to the matching PCB and BOM release.
+When the final schematic is added, this page should include source format and software version; PDF export; hardware revision; release date; sheet index; net/rail glossary; and links to the matching PCB and BOM release.
 
 The schematic, PCB, BOM and firmware compatibility record should share one release identifier.

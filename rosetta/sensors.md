@@ -6,13 +6,7 @@ Rosetta supports both sensors located on the PCB and sensors mounted elsewhere i
 
 Rosetta v2 design work includes an **LIS3DH three-axis accelerometer**.
 
-Potential ORIGIN uses include:
-
-- detecting movement of the Core;
-- detecting orientation changes;
-- recording mechanical disturbance;
-- supporting tamper-related logic;
-- adding context to other sensor events.
+Potential ORIGIN uses include detecting movement of the Core; detecting orientation changes; recording mechanical disturbance; supporting tamper-related logic; and adding context to other sensor events.
 
 These are system use cases, not automatic properties of the component. Thresholds and event logic must be defined and tested in firmware.
 
@@ -20,12 +14,7 @@ These are system use cases, not automatic properties of the component. Threshold
 
 Most environmental and presence sensors are physically placed according to the enclosure and deployment geometry rather than simply where they fit on the PCB.
 
-Rosetta therefore acts as the electrical hub for external sensing such as:
-
-- mmWave presence sensors;
-- environmental sensors;
-- modular accessories;
-- future expansion sensors.
+Rosetta therefore acts as the electrical hub for external sensing such as mmWave presence sensors, environmental sensors, modular accessories, and future expansion sensors.
 
 See [ORIGIN Core → Sensor System](../origin-core/sensor-system.md).
 
@@ -47,15 +36,7 @@ A missing sensor must not silently become a normal zero reading.
 
 ## Sensor metadata
 
-Every logged sample should carry enough metadata to be meaningful later. Where appropriate this includes:
-
-- sensor identity;
-- timestamp;
-- raw or engineering value;
-- units;
-- validity flag;
-- calibration/version information;
-- health state.
+Every logged sample should carry enough metadata to be meaningful later. Where appropriate this includes sensor identity; timestamp; raw or engineering value; units; validity flag; calibration/version information; and health state.
 
 ## Accelerometer validation
 

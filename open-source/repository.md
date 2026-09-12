@@ -76,16 +76,7 @@ For example, a PCB dimension extracted from a released Gerber job should take pr
 
 Hardware, software, mechanical, and documentation revisions must not be treated as interchangeable.
 
-A deployment record should identify, where practical:
-
-- ORIGIN system revision;
-- Rosetta hardware revision;
-- enclosure/mechanical revision;
-- firmware version;
-- configuration version;
-- Centaurus version or rules/model identifier if active;
-- module revisions;
-- documentation revision or commit.
+A deployment record should identify, where practical ORIGIN system revision; Rosetta hardware revision; enclosure/mechanical revision; firmware version; configuration version; Centaurus version or rules/model identifier if active; module revisions; and documentation revision or commit.
 
 This prevents a validation result for one build from being mistakenly applied to another.
 
@@ -115,17 +106,7 @@ The important requirement is not the exact folder layout. It is that users can i
 
 Generated outputs should be distinguished from editable source.
 
-Examples of generated files include:
-
-- Gerbers;
-- drill files;
-- pick-and-place files;
-- PDFs;
-- STEP exports;
-- STL exports;
-- compiled firmware binaries;
-- rendered diagrams;
-- packaged releases.
+Examples of generated files include Gerbers; drill files; pick-and-place files; PDFs; STEP exports; STL exports; compiled firmware binaries; rendered diagrams; and packaged releases.
 
 Generated files should ideally be reproducible from source and associated with a version or release.
 
@@ -135,27 +116,13 @@ Do not replace editable source with only generated exports unless the source can
 
 A manufacturing package should be treated as a release artifact rather than an arbitrary ZIP export.
 
-For a PCB, a release package may include:
-
-- Gerber copper and mask layers;
-- board outline;
-- Excellon drill files;
-- BOM;
-- centroid/pick-and-place data when assembly is intended;
-- assembly drawings;
-- fabrication notes;
-- revision identifier;
-- checksum or release tag.
+For a PCB, a release package may include Gerber copper and mask layers; board outline; Excellon drill files; BOM; centroid/pick-and-place data when assembly is intended; assembly drawings; fabrication notes; revision identifier; and checksum or release tag.
 
 The Rosetta v2 Gerber package inspected during documentation work was missing drill files. That package should therefore not be labeled a complete fabrication release.
 
 ## Documentation commits
 
-Documentation changes should use meaningful commit messages. Good messages describe the engineering effect, for example:
-
-- `Document Rosetta v2 manufacturing constraints`
-- `Add field calibration procedure`
-- `Record missing drill files in known issues`
+Documentation changes should use meaningful commit messages. Good messages describe the engineering effect, for example `Document Rosetta v2 manufacturing constraints`, `Add field calibration procedure`, and `Record missing drill files in known issues`.
 
 Avoid messages such as `update`, `fix`, or `stuff` when the change affects engineering traceability.
 
@@ -178,16 +145,7 @@ Direct commits to `main` may still be appropriate for controlled maintainer work
 
 ## Issues
 
-GitHub issues can be used to track:
-
-- documentation gaps;
-- bugs;
-- fabrication blockers;
-- validation failures;
-- feature proposals;
-- deployment findings;
-- compatibility problems;
-- release tasks.
+GitHub issues can be used to track documentation gaps; bugs; fabrication blockers; validation failures; feature proposals; deployment findings; compatibility problems; and release tasks.
 
 When an issue affects safety, field reliability, or a public technical claim, the relevant documentation should also be updated rather than relying only on the issue tracker.
 
@@ -195,17 +153,7 @@ When an issue affects safety, field reliability, or a public technical claim, th
 
 A future ORIGIN release should identify a coherent set of compatible artifacts rather than simply tagging the latest repository state.
 
-A release record should state:
-
-- version;
-- date;
-- release scope;
-- included hardware/software/mechanical revisions;
-- validation status;
-- known limitations;
-- required migration steps;
-- source commit or tag;
-- artifact checksums where appropriate.
+A release record should state version; date; release scope; included hardware/software/mechanical revisions; validation status; known limitations; required migration steps; source commit or tag; and artifact checksums where appropriate.
 
 ## External source repositories
 
@@ -217,38 +165,15 @@ A documentation page must never silently imply that a linked repository is autho
 
 Obsolete designs should not necessarily be deleted. Historical source can be useful for understanding decisions.
 
-When retaining old work:
-
-- mark it clearly as deprecated or archived;
-- identify the last compatible system version;
-- do not place it where new users will mistake it for the current release;
-- retain important known issues and migration notes.
+When retaining old work mark it clearly as deprecated or archived, identify the last compatible system version, do not place it where new users will mistake it for the current release, and retain important known issues and migration notes.
 
 ## Repository hygiene
 
-Before committing, check for:
-
-- credentials or secrets;
-- private deployment details;
-- personal data;
-- temporary exports;
-- editor backup files;
-- duplicated binaries;
-- proprietary third-party material;
-- unverified technical claims.
+Before committing, check for credentials or secrets; private deployment details; personal data; temporary exports; editor backup files; duplicated binaries; proprietary third-party material; and unverified technical claims.
 
 ## Documentation quality gate
 
-A page should not be considered complete merely because it contains text. Before merging a significant update, confirm that:
-
-- the title and navigation are correct;
-- the page matches the current system state;
-- current, planned, and conceptual behavior are distinguished;
-- measurements are tied to evidence;
-- links work;
-- no sensitive data is exposed;
-- known limitations are documented;
-- the change does not contradict a more authoritative source.
+A page should not be considered complete merely because it contains text. Before merging a significant update, confirm that the title and navigation are correct; the page matches the current system state; current, planned, and conceptual behavior are distinguished; measurements are tied to evidence; links work; no sensitive data is exposed; known limitations are documented; and the change does not contradict a more authoritative source.
 
 ## Repository principle
 

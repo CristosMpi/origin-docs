@@ -74,18 +74,7 @@ The detailed implementation depends on the Rosetta revision and deployment confi
 
 The software layer coordinates hardware and turns individual components into a functioning monitoring system.
 
-Its responsibilities include areas such as:
-
-- hardware initialization;
-- sensor acquisition;
-- timing and scheduling;
-- configuration;
-- local data handling;
-- storage;
-- communications;
-- diagnostics;
-- device state management;
-- update mechanisms.
+Its responsibilities include areas such as hardware initialization; sensor acquisition; timing and scheduling; configuration; local data handling; storage; communications; diagnostics; device state management; and update mechanisms.
 
 A key architectural principle is separation between low-level device behavior and higher-level analysis. The embedded system should remain understandable and diagnosable even when intelligent processing is unavailable or changed.
 
@@ -109,12 +98,7 @@ The final layer is the most important one: the people and heritage environment f
 
 ORIGIN is not designed to make conservation decisions independently. The architecture is intended to deliver observations, events, diagnostics, and analysis in a form that can support human assessment.
 
-This keeps a clear distinction between:
-
-- what the system measures;
-- what the software detects;
-- what the AI suggests;
-- what a responsible person decides.
+This keeps a clear distinction between what the system measures, what the software detects, what the AI suggests, and what a responsible person decides.
 
 ## Extension architecture
 
@@ -156,14 +140,7 @@ A field system should not be thought of only as either "working" or "broken."
 
 ORIGIN's architecture supports the idea of observable system states. A unit may be operating normally, temporarily offline, running with a sensor unavailable, experiencing reduced power, or requiring maintenance.
 
-Diagnostics are therefore cross-cutting. They are not confined to one layer:
-
-- electronics can report hardware conditions;
-- firmware can report device state;
-- communications can report connectivity;
-- data services can identify missing or unusual data;
-- Centaurus can help interpret patterns;
-- maintenance procedures can resolve the underlying issue.
+Diagnostics are therefore cross-cutting. They are not confined to one layer electronics can report hardware conditions; firmware can report device state; communications can report connectivity; data services can identify missing or unusual data; Centaurus can help interpret patterns; and maintenance procedures can resolve the underlying issue.
 
 ## Versioning
 
@@ -171,12 +148,7 @@ ORIGIN is an active development project, so the architecture is intentionally se
 
 For example, **Rosetta v2** is a specific hardware revision. The architectural role of Rosetta can remain stable even when individual components, connectors, or board layouts change in future revisions.
 
-This documentation follows the same principle:
-
-- Overview pages explain stable project concepts.
-- Technical pages document the current implementation.
-- Version pages preserve important differences between revisions.
-- Development pages record future work without presenting it as already implemented.
+This documentation follows the same principle Overview pages explain stable project concepts, Technical pages document the current implementation, Version pages preserve important differences between revisions, and Development pages record future work without presenting it as already implemented.
 
 ## Architectural goal
 

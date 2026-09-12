@@ -8,10 +8,7 @@ ORIGIN is one of Team Galene's most ambitious projects because it brings those d
 
 ## ORIGIN development team
 
-The current ORIGIN project team consists of:
-
-- **Christos Mpirmpos**
-- **Evelina Tsiagkaveli**
+The current ORIGIN project team consists of **Christos Mpirmpos** and **Evelina Tsiagkaveli**.
 
 The team is coached by **Anastasia Giannakou**, Director of the 4th General Lyceum of Ioannina – Akademia.
 
@@ -85,16 +82,7 @@ These relationships are documented separately under [Partners & Sponsors](../par
 
 Team Galene treats documentation as part of the engineering work.
 
-ORIGIN Docs are intended to record not only the final result but also:
-
-- architecture decisions;
-- hardware revisions;
-- testing procedures;
-- known limitations;
-- manufacturing information;
-- maintenance processes;
-- deployment lessons;
-- future development.
+ORIGIN Docs are intended to record not only the final result but also architecture decisions; hardware revisions; testing procedures; known limitations; manufacturing information; maintenance processes; deployment lessons; and future development.
 
 This makes the project easier to maintain inside the team and more useful to students, engineers, educators, partners, and institutions that want to understand how ORIGIN works.
 
@@ -114,14 +102,6 @@ The development of ORIGIN is guided by a few practical principles:
 
 ## Continue through the documentation
 
-The Overview section provides the high-level context for Project ORIGIN. For technical details, continue with:
-
-- [ORIGIN Core](../origin-core/README.md)
-- [Rosetta](../rosetta/README.md)
-- [Software](../software/README.md)
-- [Centaurus AI](../centaurus-ai/README.md)
-- [Modules](../modules/README.md)
-- [Testing & Validation](../testing-validation/README.md)
-- [Deployments](../deployments/README.md)
+The Overview section provides the high-level context for Project ORIGIN. For technical details, continue with [ORIGIN Core](../origin-core/README.md); [Rosetta](../rosetta/README.md); [Software](../software/README.md); [Centaurus AI](../centaurus-ai/README.md); [Modules](../modules/README.md); [Testing & Validation](../testing-validation/README.md); and [Deployments](../deployments/README.md).
 
 These sections move from the project-level concepts described here into the actual design and implementation of the system.

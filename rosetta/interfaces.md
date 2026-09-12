@@ -4,15 +4,7 @@ Rosetta connects ORIGIN Core to batteries, removable storage, sensors, communica
 
 ## Interface categories
 
-Rosetta v2 development has included the following interface groups:
-
-- battery / power connectors;
-- external sensor headers;
-- storage interface;
-- SIM-related interface;
-- programming and debug access;
-- user controls and status signals;
-- future expansion connections.
+Rosetta v2 development has included the following interface groups battery / power connectors; external sensor headers; storage interface; SIM-related interface; programming and debug access; user controls and status signals; and future expansion connections.
 
 ## Battery connectors
 
@@ -34,15 +26,7 @@ Until that table is verified, devices should not be connected based on connector
 
 ## SD storage
 
-The board design includes an SD-card interface for local data storage. The final documentation should identify:
-
-- socket type;
-- bus type;
-- chip-select pin where applicable;
-- supported voltage;
-- card-detect behavior if implemented;
-- safe removal procedure;
-- filesystem expected by firmware.
+The board design includes an SD-card interface for local data storage. The final documentation should identify socket type; bus type; chip-select pin where applicable; supported voltage; card-detect behavior if implemented; safe removal procedure; and filesystem expected by firmware.
 
 Local storage is particularly useful when ORIGIN operates without dependable network access.
 
@@ -50,22 +34,11 @@ Local storage is particularly useful when ORIGIN operates without dependable net
 
 Rosetta v2 development includes micro-SIM/eSIM-related work. This interface should be documented together with the modem architecture because a SIM socket is only one part of a cellular subsystem.
 
-The release documentation must clarify whether the fitted configuration uses:
-
-- removable micro-SIM;
-- eSIM;
-- both as alternatives;
-- neither in the current assembly.
+The release documentation must clarify whether the fitted configuration uses removable micro-SIM, eSIM, both as alternatives, and neither in the current assembly.
 
 ## Programming and debug
 
-Every released Rosetta board should have a documented way to:
-
-- flash firmware;
-- recover a non-booting board;
-- access serial diagnostics;
-- place the processor into the required boot mode;
-- identify ground and logic-voltage levels.
+Every released Rosetta board should have a documented way to flash firmware; recover a non-booting board; access serial diagnostics; place the processor into the required boot mode; and identify ground and logic-voltage levels.
 
 Debug access should be physically available during development but reviewed from a security perspective before deployment.
 

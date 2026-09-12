@@ -26,16 +26,7 @@ Individual electronic components, sensors, connectors, mechanical parts and soft
 
 ### Subsystem level
 
-Examples include:
-
-- Rosetta power and control electronics;
-- radar sensing;
-- environmental sensing;
-- communication paths;
-- enclosure and mounting systems;
-- solar support structure;
-- software data handling;
-- module interfaces.
+Examples include Rosetta power and control electronics; radar sensing; environmental sensing; communication paths; enclosure and mounting systems; solar support structure; software data handling; and module interfaces.
 
 ### Integrated-system level
 
@@ -62,24 +53,7 @@ This distinction is especially important for sensing range, environmental resist
 
 ## Test traceability
 
-Every meaningful test should identify:
-
-- test ID;
-- date;
-- ORIGIN hardware revision;
-- firmware/software version;
-- mechanical revision where relevant;
-- sensor/module configuration;
-- equipment used;
-- test environment;
-- procedure;
-- expected result;
-- observed result;
-- pass/fail/conditional status;
-- anomalies;
-- evidence files;
-- person performing the test;
-- required follow-up.
+Every meaningful test should identify test ID; date; ORIGIN hardware revision; firmware/software version; mechanical revision where relevant; sensor/module configuration; equipment used; test environment; procedure; expected result; observed result; pass/fail/conditional status; anomalies; evidence files; person performing the test; and required follow-up.
 
 Without traceability, a result becomes difficult to reproduce after the design changes.
 
@@ -149,37 +123,13 @@ This prevents results from an early prototype being presented as evidence for a 
 
 Testing should not only confirm normal operation.
 
-ORIGIN must also be exercised under failure conditions such as:
-
-- sensor disconnect;
-- communication loss;
-- restart during operation;
-- low or unstable power;
-- missing storage;
-- invalid sensor data;
-- blocked or misaligned sensing path;
-- partial module failure;
-- configuration corruption;
-- interrupted software update.
+ORIGIN must also be exercised under failure conditions such as sensor disconnect; communication loss; restart during operation; low or unstable power; missing storage; invalid sensor data; blocked or misaligned sensing path; partial module failure; configuration corruption; and interrupted software update.
 
 A robust system should distinguish failure from a valid normal state. For example, a disconnected presence sensor must not be interpreted as “no person present.”
 
 ## Test evidence
 
-Evidence may include:
-
-- measurement tables;
-- photographs;
-- videos;
-- serial logs;
-- firmware logs;
-- screenshots;
-- exported datasets;
-- CAD inspection screenshots;
-- electrical measurements;
-- environmental observations;
-- coverage maps;
-- test fixtures and diagrams.
+Evidence may include measurement tables; photographs; videos; serial logs; firmware logs; screenshots; exported datasets; CAD inspection screenshots; electrical measurements; environmental observations; coverage maps; and test fixtures and diagrams.
 
 Where possible, raw evidence should be preserved separately from the written interpretation.
 
@@ -193,13 +143,19 @@ Validated measurements will be added to [Validation Results](validation-results.
 
 ## Chapter structure
 
-- [Galene Lab Standards](galene-lab-standards.md) — common rules for test quality and evidence.
-- [Electronics Testing](electronics-testing.md) — Rosetta power, assembly and electrical verification.
-- [Sensor Testing](sensor-testing.md) — sensor communication, accuracy, presence coverage and failure handling.
-- [Mechanical Testing](mechanical-testing.md) — enclosure, mounts, interfaces, solar supports and fit.
-- [Environmental Testing](environmental-testing.md) — moisture, temperature, exposure and enclosure behavior.
-- [Field Testing](field-testing.md) — integrated testing in realistic site conditions.
-- [Validation Results](validation-results.md) — public register of completed evidence and known limitations.
+[Galene Lab Standards](galene-lab-standards.md) — common rules for test quality and evidence.
+
+[Electronics Testing](electronics-testing.md) — Rosetta power, assembly and electrical verification.
+
+[Sensor Testing](sensor-testing.md) — sensor communication, accuracy, presence coverage and failure handling.
+
+[Mechanical Testing](mechanical-testing.md) — enclosure, mounts, interfaces, solar supports and fit.
+
+[Environmental Testing](environmental-testing.md) — moisture, temperature, exposure and enclosure behavior.
+
+[Field Testing](field-testing.md) — integrated testing in realistic site conditions.
+
+[Validation Results](validation-results.md) — public register of completed evidence and known limitations.
 
 ## Principle
 

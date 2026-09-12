@@ -59,17 +59,7 @@ Because the closed contours meet or overlap around the upper area, the final boa
 
 ## Placement and routing priorities
 
-The Rosetta layout should prioritize:
-
-- short, low-impedance power paths;
-- correct regulator/charger component placement;
-- local decoupling at IC power pins;
-- uninterrupted return paths where possible;
-- separation of noisy switching nodes from sensitive signals;
-- accessible connectors;
-- mechanically sensible connector orientation;
-- clear silkscreen labeling;
-- mounting and enclosure clearances.
+The Rosetta layout should prioritize short, low-impedance power paths; correct regulator/charger component placement; local decoupling at IC power pins; uninterrupted return paths where possible; separation of noisy switching nodes from sensitive signals; accessible connectors; mechanically sensible connector orientation; clear silkscreen labeling; and mounting and enclosure clearances.
 
 ## Power-layout sensitivity
 
@@ -77,22 +67,10 @@ Switching converters are especially sensitive to layout. The TPS63031 power loop
 
 ## Silkscreen
 
-The export includes front and back silkscreen layers. Production review should verify that:
-
-- reference designators remain readable;
-- polarity markers are visible;
-- connector pin 1 is clear;
-- logos do not cover pads or manufacturing markings;
-- text remains inside the finished board outline.
+The export includes front and back silkscreen layers. Production review should verify that reference designators remain readable; polarity markers are visible; connector pin 1 is clear; logos do not cover pads or manufacturing markings; and text remains inside the finished board outline.
 
 ## DRC is necessary but not sufficient
 
-A clean design-rule check does not prove that:
-
-- a footprint matches the real component;
-- a connector pinout is correct;
-- a board outline is unambiguous;
-- drill files were exported;
-- power circuitry is electrically correct.
+A clean design-rule check does not prove that a footprint matches the real component; a connector pinout is correct; a board outline is unambiguous; drill files were exported; and power circuitry is electrically correct.
 
 PCB release therefore requires both automated checks and human review.

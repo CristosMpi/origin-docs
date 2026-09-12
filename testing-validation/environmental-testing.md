@@ -6,21 +6,7 @@ The objective is not to assign an IP rating or environmental certification witho
 
 ## Scope
 
-Environmental validation may include:
-
-- rain and splash exposure;
-- water-entry inspection;
-- drainage behavior;
-- condensation;
-- temperature variation;
-- solar heating;
-- humidity exposure;
-- dust and debris;
-- corrosion risk;
-- material aging;
-- cable-entry behavior;
-- sensor-opening behavior;
-- power-system behavior outdoors.
+Environmental validation may include rain and splash exposure; water-entry inspection; drainage behavior; condensation; temperature variation; solar heating; humidity exposure; dust and debris; corrosion risk; material aging; cable-entry behavior; sensor-opening behavior; and power-system behavior outdoors.
 
 ## Important limitation
 
@@ -49,16 +35,7 @@ Humidity where available
 
 ## Visual pre-inspection
 
-Before environmental exposure, inspect and photograph:
-
-- enclosure seams;
-- fasteners;
-- sensor openings;
-- cable entries;
-- solar cable path;
-- drain features;
-- seals/gaskets;
-- existing cracks or gaps.
+Before environmental exposure, inspect and photograph enclosure seams; fasteners; sensor openings; cable entries; solar cable path; drain features; seals/gaskets; and existing cracks or gaps.
 
 This establishes the pre-test condition.
 
@@ -66,15 +43,7 @@ This establishes the pre-test condition.
 
 A practical development splash test may be used to identify obvious water-entry paths.
 
-The test should define:
-
-- water source;
-- direction;
-- distance;
-- duration;
-- enclosure orientation;
-- whether the system is powered;
-- inspection method.
+The test should define water source; direction; distance; duration; enclosure orientation; whether the system is powered; and inspection method.
 
 Do not describe this as a formal IP test unless it actually follows the required standard and equipment.
 
@@ -91,13 +60,7 @@ After exposure:
 
 Because the radar openings are deliberate penetrations, test them independently.
 
-Observe whether water can:
-
-- enter directly;
-- run along the sensor PCB;
-- follow the cable into the enclosure;
-- collect in a pocket;
-- drain away harmlessly.
+Observe whether water can enter directly; run along the sensor PCB; follow the cable into the enclosure; collect in a pocket; and drain away harmlessly.
 
 Possible design responses may include geometry changes, shields, labyrinths, drainage or secondary internal protection, but each change must be revalidated for sensor performance.
 
@@ -105,12 +68,7 @@ Possible design responses may include geometry changes, shields, labyrinths, dra
 
 Inspect all cable paths for capillary or gravity-driven water entry.
 
-Relevant areas include:
-
-- solar cable routing;
-- external module connections;
-- service interfaces;
-- connectors.
+Relevant areas include solar cable routing, external module connections, service interfaces, and connectors.
 
 A cable should not create an uncontrolled path that guides water toward electronics.
 
@@ -118,13 +76,7 @@ A cable should not create an uncontrolled path that guides water toward electron
 
 If the design includes intentional openings or drainage paths, test the unit in realistic orientations.
 
-Verify that water does not become trapped near:
-
-- Rosetta;
-- battery/power components;
-- connectors;
-- sensor PCBs;
-- fastener inserts.
+Verify that water does not become trapped near Rosetta; battery/power components; connectors; sensor PCBs; and fastener inserts.
 
 ## Condensation testing
 
@@ -132,13 +84,7 @@ Condensation can occur even when rain does not enter the enclosure.
 
 A practical test may involve moving a safely powered-off enclosure between controlled warm/humid and cooler conditions, then observing internal moisture.
 
-Record:
-
-- starting conditions;
-- ending conditions;
-- transition time;
-- internal moisture;
-- drying time.
+Record starting conditions; ending conditions; transition time; internal moisture; and drying time.
 
 Do not create unsafe thermal shock to batteries or electronics.
 
@@ -146,16 +92,7 @@ Do not create unsafe thermal shock to batteries or electronics.
 
 Temperature testing should evaluate both electronics and mechanical behavior.
 
-Possible observations include:
-
-- boot reliability;
-- sensor initialization;
-- regulator behavior;
-- battery behavior;
-- enclosure deformation;
-- seal compression;
-- display/indicator behavior if present;
-- connector fit.
+Possible observations include boot reliability; sensor initialization; regulator behavior; battery behavior; enclosure deformation; seal compression; display/indicator behavior if present; and connector fit.
 
 Test ranges should be based on intended deployment and component limits, not arbitrary extremes.
 
@@ -163,48 +100,21 @@ Test ranges should be based on intended deployment and component limits, not arb
 
 Direct sunlight can raise internal temperature significantly above ambient.
 
-For outdoor prototypes, record:
-
-- ambient temperature;
-- enclosure surface temperature where practical;
-- internal temperature at representative location;
-- solar exposure duration;
-- system operating state.
+For outdoor prototypes, record ambient temperature; enclosure surface temperature where practical; internal temperature at representative location; solar exposure duration; and system operating state.
 
 A temperature result should always include the measurement location.
 
 ## Humidity exposure
 
-High humidity may affect:
+High humidity may affect connectors; exposed copper; fasteners; adhesives; printed materials; and sensor readings.
 
-- connectors;
-- exposed copper;
-- fasteners;
-- adhesives;
-- printed materials;
-- sensor readings.
-
-After prolonged humid exposure, inspect for:
-
-- condensation;
-- corrosion;
-- discoloration;
-- swelling;
-- loosened adhesives;
-- degraded electrical behavior.
+After prolonged humid exposure, inspect for condensation; corrosion; discoloration; swelling; loosened adhesives; and degraded electrical behavior.
 
 ## Dust and debris
 
 Outdoor and archaeological environments may include soil, fine dust and debris.
 
-Development testing should examine whether these materials accumulate in:
-
-- radar openings;
-- seams;
-- module connectors;
-- drainage channels;
-- solar-support joints;
-- service interfaces.
+Development testing should examine whether these materials accumulate in radar openings; seams; module connectors; drainage channels; solar-support joints; and service interfaces.
 
 Cleaning must also be considered. A design that works only when perfectly clean may require unrealistic maintenance.
 
@@ -214,68 +124,31 @@ Long-term sunlight can degrade some polymers and finishes.
 
 Short project tests cannot prove multi-year UV durability, so material selection should rely on manufacturer data plus long-duration observations where available.
 
-Track:
-
-- discoloration;
-- brittleness;
-- cracking;
-- warping;
-- surface degradation.
+Track discoloration; brittleness; cracking; warping; and surface degradation.
 
 ## Corrosion review
 
 Inspect metal hardware and exposed conductive surfaces after outdoor exposure.
 
-Pay attention to:
-
-- mixed metals;
-- fasteners;
-- threaded inserts;
-- connector contacts;
-- exposed PCB edges;
-- moisture-trapping interfaces.
+Pay attention to mixed metals; fasteners; threaded inserts; connector contacts; exposed PCB edges; and moisture-trapping interfaces.
 
 ## Wind and weather stability
 
 The solar panel and tall enclosure can create wind loading.
 
-Field observations should record:
-
-- visible vibration;
-- rotation;
-- mount loosening;
-- solar-support movement;
-- changes in radar alignment.
+Field observations should record visible vibration; rotation; mount loosening; solar-support movement; and changes in radar alignment.
 
 Formal wind-load claims require a defined engineering analysis or test and should not be inferred from casual outdoor use.
 
 ## Post-exposure functional test
 
-After each environmental test, repeat a basic functional verification:
-
-- boot;
-- power rails/health;
-- sensor communication;
-- radar detection;
-- connectivity;
-- storage/logging;
-- module health.
+After each environmental test, repeat a basic functional verification boot; power rails/health; sensor communication; radar detection; connectivity; storage/logging; and module health.
 
 Environmental exposure is only meaningful if its effect on system function is checked.
 
 ## Failure criteria
 
-Examples of environmental failure include:
-
-- water reaching electronics;
-- persistent condensation;
-- sensor obstruction;
-- enclosure cracking;
-- seal displacement;
-- cable-entry leakage;
-- corrosion;
-- inability to boot or communicate after exposure;
-- permanent mechanical deformation.
+Examples of environmental failure include water reaching electronics; persistent condensation; sensor obstruction; enclosure cracking; seal displacement; cable-entry leakage; corrosion; inability to boot or communicate after exposure; and permanent mechanical deformation.
 
 ## Current public status
 
@@ -285,23 +158,8 @@ Those claims require released hardware and documented evidence.
 
 ## Evidence
 
-Recommended evidence:
-
-- pre/post photographs;
-- internal inspection photos;
-- temperature logs;
-- humidity records;
-- exposure duration;
-- water-entry map;
-- post-test functional logs;
-- material observations.
+Recommended evidence pre/post photographs; internal inspection photos; temperature logs; humidity records; exposure duration; water-entry map; post-test functional logs; and material observations.
 
 ## Related documentation
 
-See:
-
-- [Mechanical Design → Waterproofing](../mechanical-design/waterproofing.md)
-- [Materials](../mechanical-design/materials.md)
-- [Mechanical Testing](mechanical-testing.md)
-- [Field Testing](field-testing.md)
-- [Validation Results](validation-results.md)
+See [Mechanical Design → Waterproofing](../mechanical-design/waterproofing.md); [Materials](../mechanical-design/materials.md); [Mechanical Testing](mechanical-testing.md); [Field Testing](field-testing.md); and [Validation Results](validation-results.md).

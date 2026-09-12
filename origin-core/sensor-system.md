@@ -6,15 +6,7 @@ A sensor only becomes part of ORIGIN when its electrical, mechanical and softwar
 
 ## Sensor-system responsibilities
 
-The sensor subsystem is responsible for:
-
-- acquiring physical measurements or detection events;
-- exposing the health and availability of connected sensors;
-- applying basic range and validity checks;
-- converting raw outputs into consistent internal data;
-- timestamping or ordering observations;
-- making data available to local logic and higher-level software;
-- supporting calibration, testing and replacement.
+The sensor subsystem is responsible for acquiring physical measurements or detection events; exposing the health and availability of connected sensors; applying basic range and validity checks; converting raw outputs into consistent internal data; timestamping or ordering observations; making data available to local logic and higher-level software; and supporting calibration, testing and replacement.
 
 The sensor layer should not silently hide uncertainty. If a device is disconnected, saturated, misconfigured or reporting implausible data, the system should treat that as a diagnostic condition rather than as a genuine environmental event.
 
@@ -42,14 +34,7 @@ See [Environmental Monitoring](environmental-monitoring.md).
 
 Some measurements exist primarily to monitor ORIGIN itself rather than the heritage site.
 
-Examples include:
-
-- supply or battery state;
-- charging condition;
-- communication status;
-- sensor availability;
-- internal fault indicators;
-- restart or watchdog information.
+Examples include supply or battery state; charging condition; communication status; sensor availability; internal fault indicators; and restart or watchdog information.
 
 These signals are important because a monitoring device that cannot report its own failure can create false confidence.
 
@@ -63,17 +48,7 @@ The current mechanical design accommodates three **DFRobot C4001 24 GHz mmWave H
 
 According to DFRobot's documentation for the 25 m version, the sensor uses 24 GHz FMCW radar, supports human-presence detection as well as motion/distance measurement, and is specified for presence detection up to 16 m and motion/distance measurement up to 25 m under the manufacturer's stated conditions.
 
-Those manufacturer specifications are useful for component selection, but they are not automatically ORIGIN system specifications. Actual performance depends on:
-
-- mounting height;
-- sensor orientation;
-- surrounding materials;
-- target direction;
-- enclosure openings;
-- site geometry;
-- interference and reflections;
-- firmware configuration;
-- the detection logic used above the sensor.
+Those manufacturer specifications are useful for component selection, but they are not automatically ORIGIN system specifications. Actual performance depends on mounting height; sensor orientation; surrounding materials; target direction; enclosure openings; site geometry; interference and reflections; firmware configuration; and the detection logic used above the sensor.
 
 ORIGIN's validated detection performance should therefore come from its own test results rather than copying the sensor's maximum datasheet values into system-level claims.
 
@@ -97,15 +72,7 @@ Normalized observation
 Local logic / storage / transmission
 ```
 
-The validation stage is essential. It can include checks such as:
-
-- communication success;
-- expected value range;
-- stale-data detection;
-- startup state;
-- impossible transitions;
-- known sensor error codes;
-- comparison against related system state.
+The validation stage is essential. It can include checks such as communication success; expected value range; stale-data detection; startup state; impossible transitions; known sensor error codes; and comparison against related system state.
 
 ## Polling and event-driven devices
 
@@ -121,12 +88,7 @@ This matters for power consumption as well. A sensor that does not need constant
 
 Sampling rate should be selected according to what the measurement is meant to detect.
 
-For example:
-
-- slowly changing environmental conditions may not need high-frequency sampling;
-- presence or movement events may require much faster response;
-- diagnostic measurements may be sampled periodically or when a fault occurs;
-- test modes may temporarily use higher rates than normal deployment.
+For example slowly changing environmental conditions may not need high-frequency sampling, presence or movement events may require much faster response, diagnostic measurements may be sampled periodically or when a fault occurs, and test modes may temporarily use higher rates than normal deployment.
 
 ORIGIN should therefore use configuration-based sampling rather than one fixed rate for every sensor.
 
@@ -134,14 +96,7 @@ ORIGIN should therefore use configuration-based sampling rather than one fixed r
 
 Calibration requirements vary by sensor.
 
-A sensor may require:
-
-- factory calibration only;
-- software offset correction;
-- deployment-specific reference measurements;
-- threshold tuning;
-- physical alignment;
-- a site-specific baseline.
+A sensor may require factory calibration only; software offset correction; deployment-specific reference measurements; threshold tuning; physical alignment; and a site-specific baseline.
 
 Calibration information should be stored with the deployment or test record so that later measurements can be interpreted correctly.
 
@@ -151,14 +106,7 @@ A sensor that has been repositioned may need to be treated as a new calibration 
 
 Sensor performance is partly a mechanical problem.
 
-When placing a sensor, the design must consider:
-
-- whether structural parts block the field of view;
-- whether the enclosure material attenuates or distorts the signal;
-- whether cables or fasteners intrude into the sensing region;
-- whether the mounting angle matches the monitored area;
-- whether vibration or movement can change alignment;
-- whether maintenance can be performed without losing the original orientation.
+When placing a sensor, the design must consider whether structural parts block the field of view; whether the enclosure material attenuates or distorts the signal; whether cables or fasteners intrude into the sensing region; whether the mounting angle matches the monitored area; whether vibration or movement can change alignment; and whether maintenance can be performed without losing the original orientation.
 
 For the mmWave subsystem, dedicated sensor openings are intentionally accepted in the current enclosure concept even though they complicate waterproofing. Sensing performance and environmental protection therefore have to be balanced through mechanical design rather than assuming the enclosure can be completely sealed with no effect on the sensors.
 
@@ -199,13 +147,7 @@ These states allow ORIGIN to report the difference between "nothing detected" an
 
 Where multiple sensors observe related phenomena, higher-level software can combine them to improve context.
 
-Sensor fusion in ORIGIN should not mean blindly averaging measurements. It can instead mean:
-
-- comparing independent observations;
-- using one sensor to confirm another;
-- correlating environmental conditions with detection events;
-- recognizing when two sensors disagree;
-- increasing or reducing confidence according to available evidence.
+Sensor fusion in ORIGIN should not mean blindly averaging measurements. It can instead mean comparing independent observations; using one sensor to confirm another; correlating environmental conditions with detection events; recognizing when two sensors disagree; and increasing or reducing confidence according to available evidence.
 
 More advanced interpretation belongs in [Centaurus AI](../centaurus-ai/README.md), while the Core remains responsible for delivering clean, well-described sensor data.
 

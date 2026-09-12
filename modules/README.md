@@ -2,12 +2,7 @@
 
 ORIGIN is designed as a modular monitoring platform rather than a single fixed device. The **Modules** layer extends ORIGIN Core for deployments that need different mounting methods, sensing positions, environmental conditions, or physical interaction with the site.
 
-The current module family includes:
-
-- **BITs** — attachable expansion elements that extend the physical and sensing capabilities of ORIGIN;
-- **Aqua Base** — a deployment base intended for water-adjacent or water-oriented use cases;
-- **Drone Mount** — an interface for temporarily integrating ORIGIN hardware with an aerial platform;
-- **Expansion System** — the common mechanical, electrical, software, and identification principles that allow modules to work with the Core.
+The current module family includes **BITs** — attachable expansion elements that extend the physical and sensing capabilities of ORIGIN, **Aqua Base** — a deployment base intended for water-adjacent or water-oriented use cases, **Drone Mount** — an interface for temporarily integrating ORIGIN hardware with an aerial platform, and **Expansion System** — the common mechanical, electrical, software, and identification principles that allow modules to work with the Core.
 
 The objective is not to create a different ORIGIN device for every scenario. Instead, the same Core architecture should be able to support different configurations around a stable central platform.
 
@@ -35,15 +30,7 @@ This architecture allows the Core to remain recognizable and maintainable while 
 
 ## What counts as a module
 
-A module is more than an accessory. To be considered part of the ORIGIN ecosystem, an extension should have a defined relationship with the Core in at least one of the following areas:
-
-- mechanical attachment;
-- electrical power;
-- data or control interface;
-- sensor placement;
-- deployment role;
-- software identification;
-- maintenance and replacement procedure.
+A module is more than an accessory. To be considered part of the ORIGIN ecosystem, an extension should have a defined relationship with the Core in at least one of the following areas mechanical attachment; electrical power; data or control interface; sensor placement; deployment role; software identification; and maintenance and replacement procedure.
 
 A decorative cover or unrelated mounting bracket is not automatically a module. The expansion system is intended for components that meaningfully extend or adapt system operation.
 
@@ -59,13 +46,7 @@ This improves maintainability because a module can be removed, replaced, or rede
 
 A module should have a repeatable installation position rather than relying on improvised cable ties, tape, or arbitrary fasteners.
 
-Mechanical interfaces should define:
-
-- where the module attaches;
-- how it is retained;
-- how loads are transferred;
-- how cables are routed;
-- how the user accesses the attachment after installation.
+Mechanical interfaces should define where the module attaches; how it is retained; how loads are transferred; how cables are routed; and how the user accesses the attachment after installation.
 
 One important mechanical requirement already identified during ORIGIN enclosure development is that **BIT attachment points should not be placed only on the bottom of the Core**. When a unit is installed into or close to the ground, a bottom-only interface may become inaccessible. Expansion interfaces therefore need to remain reachable in realistic deployments.
 
@@ -89,14 +70,7 @@ A missing or failed module must be distinguishable from a module that is operati
 
 ### Avoid hidden dependencies
 
-A module should document what it requires from the Core, such as:
-
-- power;
-- available communication interface;
-- firmware support;
-- mounting clearance;
-- configuration profile;
-- environmental constraints.
+A module should document what it requires from the Core, such as power; available communication interface; firmware support; mounting clearance; configuration profile; and environmental constraints.
 
 This prevents an apparently compatible accessory from depending on an undocumented board revision or firmware assumption.
 
@@ -124,17 +98,7 @@ The exact identification method depends on the final electrical and firmware des
 
 ## Mechanical interface
 
-Mechanical module design should consider:
-
-- fastener type and accessibility;
-- insertion/removal direction;
-- cable strain relief;
-- repeated assembly cycles;
-- weather exposure;
-- vibration and impact;
-- compatibility with the main enclosure;
-- interference with sensors;
-- interference with mounting to soil, walls, poles, structures, or aerial platforms.
+Mechanical module design should consider fastener type and accessibility; insertion/removal direction; cable strain relief; repeated assembly cycles; weather exposure; vibration and impact; compatibility with the main enclosure; interference with sensors; and interference with mounting to soil, walls, poles, structures, or aerial platforms.
 
 The module interface must also avoid creating blind zones in ORIGIN's primary sensing system.
 
@@ -142,17 +106,7 @@ For example, a module mounted directly in front of a mmWave sensor could fundame
 
 ## Electrical interface
 
-Where a module requires power or data, the final interface specification should define:
-
-- connector family;
-- voltage range;
-- maximum current;
-- polarity;
-- signal levels;
-- communication bus or protocol;
-- hot-plug support, if any;
-- protection requirements;
-- pin assignment.
+Where a module requires power or data, the final interface specification should define connector family; voltage range; maximum current; polarity; signal levels; communication bus or protocol; hot-plug support, if any; protection requirements; and pin assignment.
 
 These details are **not considered finalized in this overview**. They should be published only from the confirmed Rosetta/module hardware design rather than inferred from prototype wiring.
 
@@ -162,14 +116,7 @@ See [Rosetta → Interfaces](../rosetta/interfaces.md) for the central board int
 
 Modules can contribute to the software system in several ways.
 
-A module may provide:
-
-- additional sensor observations;
-- a new deployment mode;
-- a physical actuator or interaction;
-- configuration metadata;
-- a new device-health source;
-- contextual information for Centaurus AI.
+A module may provide additional sensor observations; a new deployment mode; a physical actuator or interaction; configuration metadata; a new device-health source; and contextual information for Centaurus AI.
 
 The Core software should treat module-originated information using the same provenance principles as built-in sensors: the source, time, validity, and health state should remain visible.
 
@@ -195,13 +142,7 @@ This does not require every module to contain complex electronics. Even passive 
 
 Modules can change the environmental exposure of the Core.
 
-For example:
-
-- a new opening may reduce sealing;
-- an elevated mount may increase wind loading;
-- a water-oriented base may introduce splash or immersion risks;
-- a drone configuration introduces vibration and acceleration;
-- an external sensor may create a cable ingress path.
+For example a new opening may reduce sealing; an elevated mount may increase wind loading; a water-oriented base may introduce splash or immersion risks; a drone configuration introduces vibration and acceleration; and an external sensor may create a cable ingress path.
 
 For that reason, a module's validation is not complete when the module itself works. The **combined Core + module configuration** must also be tested.
 
@@ -211,34 +152,49 @@ Each module should be evaluated in at least four dimensions.
 
 ### Mechanical
 
-- attachment strength;
-- repeatability;
-- interference;
-- cable routing;
-- removal and replacement.
+attachment strength;.
+
+repeatability;.
+
+interference;.
+
+cable routing;.
+
+removal and replacement.
 
 ### Electrical
 
-- correct voltage and current behavior;
-- connector integrity;
-- fault isolation;
-- startup and shutdown behavior.
+correct voltage and current behavior;.
+
+connector integrity;.
+
+fault isolation;.
+
+startup and shutdown behavior.
 
 ### Software
 
-- identification;
-- health reporting;
-- data validity;
-- recovery after disconnect;
-- compatibility with system versions.
+identification;.
+
+health reporting;.
+
+data validity;.
+
+recovery after disconnect;.
+
+compatibility with system versions.
 
 ### Deployment
 
-- usefulness in the intended environment;
-- installation time;
-- maintenance accessibility;
-- effect on Core sensing;
-- operator usability.
+usefulness in the intended environment;.
+
+installation time;.
+
+maintenance accessibility;.
+
+effect on Core sensing;.
+
+operator usability.
 
 Validated results belong under [Testing & Validation](../testing-validation/README.md).
 
@@ -270,10 +226,4 @@ See [Expansion System](expansion-system.md).
 
 ## Related documentation
 
-Continue with:
-
-- [ORIGIN Core](../origin-core/README.md)
-- [Rosetta](../rosetta/README.md)
-- [Mechanical Design](../mechanical-design/README.md)
-- [Software](../software/README.md)
-- [Testing & Validation](../testing-validation/README.md)
+Continue with [ORIGIN Core](../origin-core/README.md); [Rosetta](../rosetta/README.md); [Mechanical Design](../mechanical-design/README.md); [Software](../software/README.md); and [Testing & Validation](../testing-validation/README.md).

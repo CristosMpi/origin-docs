@@ -32,10 +32,7 @@ The processor should not be treated as the source of power integrity. It depends
 
 ## Power block
 
-Rosetta v2 design work includes two important power-management devices:
-
-- **BQ24074RGT** for battery charging / power-path functions;
-- **TPS63031DSK** for regulated power conversion.
+Rosetta v2 design work includes two important power-management devices **BQ24074RGT** for battery charging / power-path functions and **TPS63031DSK** for regulated power conversion.
 
 The final schematic determines exact rail names, current limits, resistor values and control connections. Those values should not be inferred from the IC names alone.
 

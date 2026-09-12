@@ -44,18 +44,7 @@ This separation is deliberate. AI should not be the first component that decides
 
 ## Inputs
 
-Depending on the deployed configuration, Centaurus may consume structured information such as:
-
-- human-presence observations;
-- motion, distance, or direction-related observations;
-- environmental measurements;
-- device-health information;
-- power and battery status;
-- communication status;
-- timestamp and source identity;
-- configuration/version metadata;
-- recent event history;
-- site-specific operating context.
+Depending on the deployed configuration, Centaurus may consume structured information such as human-presence observations; motion, distance, or direction-related observations; environmental measurements; device-health information; power and battery status; communication status; timestamp and source identity; configuration/version metadata; recent event history; and site-specific operating context.
 
 The architecture should preserve the identity and provenance of every input. Centaurus should know not only **what value arrived**, but also where it came from, when it was generated, what device produced it, and whether that source was healthy.
 
@@ -84,14 +73,7 @@ This structure supports traceability and makes later review easier.
 
 Any confidence value produced by Centaurus should be interpreted as a model or rule-system assessment, not as proof.
 
-For example, a high-confidence event can still be wrong because of:
-
-- unusual site geometry;
-- faulty or misconfigured sensors;
-- a distribution shift between testing and deployment;
-- incomplete context;
-- unexpected environmental conditions;
-- software or data-quality problems.
+For example, a high-confidence event can still be wrong because of unusual site geometry; faulty or misconfigured sensors; a distribution shift between testing and deployment; incomplete context; unexpected environmental conditions; and software or data-quality problems.
 
 For this reason, Centaurus should retain the underlying observations that contributed to an event.
 
@@ -143,15 +125,7 @@ Centaurus should process only the information required for the monitoring object
 
 Not every part of Centaurus needs to be machine learning.
 
-A robust architecture may combine:
-
-- deterministic validation;
-- rule-based event logic;
-- thresholds and hysteresis;
-- temporal correlation;
-- statistical methods;
-- anomaly detection;
-- trained models where they provide a measurable advantage.
+A robust architecture may combine deterministic validation; rule-based event logic; thresholds and hysteresis; temporal correlation; statistical methods; anomaly detection; and trained models where they provide a measurable advantage.
 
 Using AI only where it improves the system keeps behavior easier to test and explain.
 
@@ -159,16 +133,7 @@ Using AI only where it improves the system keeps behavior easier to test and exp
 
 Centaurus also has a cybersecurity dimension. Analysis results are only useful if the data pipeline can be trusted.
 
-Security considerations therefore include:
-
-- device identity;
-- data integrity;
-- authentication;
-- authorization;
-- secure configuration;
-- protected update paths;
-- auditability;
-- resistance to malformed or manipulated input.
+Security considerations therefore include device identity; data integrity; authentication; authorization; secure configuration; protected update paths; auditability; and resistance to malformed or manipulated input.
 
 See [Cybersecurity](cybersecurity.md).
 
@@ -176,25 +141,12 @@ See [Cybersecurity](cybersecurity.md).
 
 Centaurus should not be described as a production-grade autonomous security or conservation system until its models, decision logic, failure states, and operating limits have been validated in representative field conditions.
 
-Public ORIGIN documentation should distinguish between:
-
-- architecture goals;
-- implemented capabilities;
-- laboratory-tested behavior;
-- field-validated behavior;
-- planned features.
+Public ORIGIN documentation should distinguish between architecture goals; implemented capabilities; laboratory-tested behavior; field-validated behavior; and planned features.
 
 This distinction is especially important for AI because model capability can be easy to overstate when only demonstration data has been tested.
 
 ## Chapter contents
 
-Continue with:
-
-- [Architecture](architecture.md)
-- [Detection & Analysis](detection-and-analysis.md)
-- [Decision Logic](decision-logic.md)
-- [Cybersecurity](cybersecurity.md)
-- [Data Processing](data-processing.md)
-- [Limitations](limitations.md)
+Continue with [Architecture](architecture.md); [Detection & Analysis](detection-and-analysis.md); [Decision Logic](decision-logic.md); [Cybersecurity](cybersecurity.md); [Data Processing](data-processing.md); and [Limitations](limitations.md).
 
 For the lower-level data path that feeds Centaurus, see [Software](../software/README.md) and [ORIGIN Core](../origin-core/README.md).
