@@ -1,25 +1,40 @@
-name: ORIGIN editorial audit
+name: ORIGIN final editorial polish
 
 on:
   issues:
     types: [opened]
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 jobs:
-  audit:
-    if: github.event.issue.title == 'Run ORIGIN editorial audit'
+  polish:
+    if: github.event.issue.title == 'Run ORIGIN final polish'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Apply final editorial polish
+        run: python tools/final_polish.py
       - name: Audit documentation prose
         run: python tools/editorial_audit.py
+      - name: Commit final polish
+        run: |
+          if git diff --quiet; then
+            echo 'No further changes required.'
+          else
+            git config user.name 'Team Galene Docs Bot'
+            git config user.email 'actions@users.noreply.github.com'
+            git add -u
+            git commit -m 'Polish documentation prose and technical presentation [skip ci]'
+            git push
+          fi
       - name: Close trigger issue
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue close "${{ github.event.issue.number }}" --comment "Editorial audit completed."
+        run: gh issue close "${{ github.event.issue.number }}" --comment "Final editorial polish completed."
