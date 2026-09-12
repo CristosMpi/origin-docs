@@ -58,7 +58,7 @@ This zone should provide PCB mounting bosses or a removable tray; clearance arou
 
 Provides access to interfaces that may need to be reached without fully disassembling the product.
 
-Examples can include module connection; SD/SIM access if required by the hardware revision; programming/debug access; service disconnects; and status indicators.
+Examples include can include module connection; SD/SIM access if required by the hardware revision; programming/debug access; service disconnects; and status indicators.
 
 The exact exposed interfaces should be limited to those genuinely needed in the deployed product.
 

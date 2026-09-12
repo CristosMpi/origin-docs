@@ -78,7 +78,7 @@ Any part or coating placed in front of the C4001 radars should be treated as a s
 
 Manufacturing variation in wall thickness; material; coating; moisture absorption; and surface geometry.
 
-may affect radar performance.
+May affect radar performance.
 
 Radar-facing parts should therefore be controlled by revision and validated after manufacturing changes.
 

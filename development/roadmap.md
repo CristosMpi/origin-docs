@@ -22,23 +22,23 @@ Move Rosetta v2 from a documented board design into a reproducible fabrication a
 
 ### Current focus
 
-reconcile the authoritative schematic, PCB, and BOM sources;.
+Reconcile the authoritative schematic, PCB, and BOM sources.
 
-regenerate fabrication outputs from the current PCB revision;.
+Regenerate fabrication outputs from the current PCB revision.
 
-include complete drill data in the manufacturing package;.
+Include complete drill data in the manufacturing package.
 
-verify board outline and mounting geometry;.
+Verify board outline and mounting geometry.
 
-verify component references and footprints;.
+Verify component references and footprints.
 
-produce a revision-controlled BOM;.
+Produce a revision-controlled BOM.
 
-prepare placement data where automated assembly is used;.
+Prepare placement data where automated assembly is used.
 
-complete visual and electrical bring-up procedures;.
+Complete visual and electrical bring-up procedures.
 
-record manufacturing deviations and approved substitutions.
+Record manufacturing deviations and approved substitutions.
 
 ### Exit criteria
 
@@ -52,25 +52,25 @@ Turn the current tall, faceted ORIGIN enclosure direction into a serviceable mec
 
 ### Current focus
 
-finalize the enclosure architecture around Rosetta v2;.
+Finalize the enclosure architecture around Rosetta v2.
 
-finalize mounts for the three mmWave sensor modules;.
+Finalize mounts for the three mmWave sensor modules.
 
-preserve clear sensor fields of view;.
+Preserve clear sensor fields of view.
 
-maintain side-accessible module interfaces;.
+Maintain side-accessible module interfaces.
 
-refine the solar support system, including the hollow cable-routing support;.
+Refine the solar support system, including the hollow cable-routing support.
 
-remain within the 250 × 250 × 250 mm single-part manufacturing constraint;.
+Remain within the 250 × 250 × 250 mm single-part manufacturing constraint.
 
-define fastener strategy and service access;.
+Define fastener strategy and service access.
 
-improve sealing around penetrations;.
+Improve sealing around penetrations.
 
-define cable strain relief and internal routing;.
+Define cable strain relief and internal routing.
 
-prepare release-quality STEP/STL/CAD exports.
+Prepare release-quality STEP/STL/CAD exports.
 
 ### Exit criteria
 
@@ -84,21 +84,21 @@ Establish measured ORIGIN-level sensing behavior rather than relying only on com
 
 ### Current focus
 
-characterize the three-sensor mmWave arrangement;.
+Characterize the three-sensor mmWave arrangement.
 
-map coverage and blind regions for representative installations;.
+Map coverage and blind regions for representative installations.
 
-test static and moving presence scenarios;.
+Test static and moving presence scenarios.
 
-identify environmental and geometric false-trigger conditions;.
+Identify environmental and geometric false-trigger conditions.
 
-define calibration procedures;.
+Define calibration procedures.
 
-characterize sensor-to-sensor consistency;.
+Characterize sensor-to-sensor consistency.
 
-verify sensor health reporting;.
+Verify sensor health reporting.
 
-document environmental-monitoring channels as hardware is finalized.
+Document environmental-monitoring channels as hardware is finalized.
 
 ### Exit criteria
 
@@ -112,21 +112,21 @@ Validate the power system as an operational subsystem rather than only as a sche
 
 ### Current focus
 
-validate charging behavior;.
+Validate charging behavior.
 
-characterize regulator behavior under representative loads;.
+Characterize regulator behavior under representative loads.
 
-validate battery operation and recovery paths;.
+Validate battery operation and recovery paths.
 
-characterize power consumption by operating state;.
+Characterize power consumption by operating state.
 
-test low-power and fault behavior;.
+Test low-power and fault behavior.
 
-validate solar integration once the final panel and deployment geometry are fixed;.
+Validate solar integration once the final panel and deployment geometry are fixed.
 
-establish measurable energy-budget assumptions;.
+Establish measurable energy-budget assumptions.
 
-define power-related health telemetry.
+Define power-related health telemetry.
 
 ### Exit criteria
 
@@ -140,23 +140,23 @@ Create a reproducible embedded software baseline for Rosetta and ORIGIN Core.
 
 ### Current focus
 
-define authoritative firmware source repository and build environment;.
+Define authoritative firmware source repository and build environment.
 
-document supported hardware revisions;.
+Document supported hardware revisions.
 
-formalize sensor drivers and abstraction boundaries;.
+Formalize sensor drivers and abstraction boundaries.
 
-implement structured health states;.
+Implement structured health states.
 
-improve local buffering and fault recovery;.
+Improve local buffering and fault recovery.
 
-version configuration schemas;.
+Version configuration schemas.
 
-document logging and diagnostics;.
+Document logging and diagnostics.
 
-establish safe update and rollback procedures;.
+Establish safe update and rollback procedures.
 
-automate repeatable build outputs where practical.
+Automate repeatable build outputs where practical.
 
 ### Exit criteria
 
@@ -170,23 +170,23 @@ Make data movement observable, recoverable, and versioned across unreliable fiel
 
 ### Current focus
 
-define supported transport paths;.
+Define supported transport paths.
 
-specify message or record schemas;.
+Specify message or record schemas.
 
-assign device and deployment identities;.
+Assign device and deployment identities.
 
-preserve timestamps and provenance;.
+Preserve timestamps and provenance.
 
-buffer data during connectivity loss;.
+Buffer data during connectivity loss.
 
-detect delayed, duplicated, or malformed records;.
+Detect delayed, duplicated, or malformed records.
 
-validate reconnect behavior;.
+Validate reconnect behavior.
 
-define retention and synchronization rules;.
+Define retention and synchronization rules.
 
-document compatibility between firmware and downstream data consumers.
+Document compatibility between firmware and downstream data consumers.
 
 ### Exit criteria
 
@@ -200,23 +200,23 @@ Move Centaurus from architectural intent toward measurable and reviewable decisi
 
 ### Current focus
 
-define explicit input data requirements;.
+Define explicit input data requirements.
 
-separate deterministic rules from learned analysis;.
+Separate deterministic rules from learned analysis.
 
-define event and anomaly classes;.
+Define event and anomaly classes.
 
-record confidence and provenance;.
+Record confidence and provenance.
 
-create labeled evaluation datasets where appropriate;.
+Create labeled evaluation datasets where appropriate.
 
-define false-positive and false-negative review methods;.
+Define false-positive and false-negative review methods.
 
-establish versioned model/evaluation records;.
+Establish versioned model/evaluation records.
 
-validate human-review workflows;.
+Validate human-review workflows.
 
-document privacy and security constraints.
+Document privacy and security constraints.
 
 ### Exit criteria
 
@@ -230,19 +230,19 @@ Make BITs, Aqua Base, Drone Mount, and future modules behave as controlled exten
 
 ### Current focus
 
-define mechanical interface expectations;.
+Define mechanical interface expectations.
 
-define electrical/power boundaries where applicable;.
+Define electrical/power boundaries where applicable.
 
-define module identity and compatibility information;.
+Define module identity and compatibility information.
 
-define health/status integration;.
+Define health/status integration.
 
-define module-specific commissioning rules;.
+Define module-specific commissioning rules.
 
-keep module removal from compromising Core serviceability;.
+Keep module removal from compromising Core serviceability.
 
-document breaking interface changes.
+Document breaking interface changes.
 
 ### Exit criteria
 
@@ -256,23 +256,23 @@ Turn laboratory integration into a repeatable field process.
 
 ### Current focus
 
-standardize site assessment;.
+Standardize site assessment.
 
-standardize mounting and setup;.
+Standardize mounting and setup.
 
-verify sensor orientation and coverage;.
+Verify sensor orientation and coverage.
 
-formalize calibration;.
+Formalize calibration.
 
-verify power and communications readiness;.
+Verify power and communications readiness.
 
-perform end-to-end commissioning;.
+Perform end-to-end commissioning.
 
-establish handover and service records;.
+Establish handover and service records.
 
-define rollback/removal procedures;.
+Define rollback/removal procedures.
 
-preserve heritage-site reversibility requirements.
+Preserve heritage-site reversibility requirements.
 
 ### Exit criteria
 
@@ -286,19 +286,19 @@ Use the planned five-unit collaboration with the Archaeological Museum of Durrë
 
 ### Current focus
 
-confirm site-specific requirements;.
+Confirm site-specific requirements.
 
-match unit configuration to installation locations;.
+Match unit configuration to installation locations.
 
-establish baseline records;.
+Establish baseline records.
 
-perform deployment and commissioning using the documented workflow;.
+Perform deployment and commissioning using the documented workflow.
 
-collect reliability, sensing, maintenance, and operator observations;.
+Collect reliability, sensing, maintenance, and operator observations.
 
-distinguish failures from site-specific behavior;.
+Distinguish failures from site-specific behavior.
 
-feed evidence back into hardware, software, and procedures.
+Feed evidence back into hardware, software, and procedures.
 
 ### Exit criteria
 
@@ -312,21 +312,21 @@ Reduce the amount of expert knowledge required to keep deployed units operating.
 
 ### Current focus
 
-improve self-diagnostics;.
+Improve self-diagnostics.
 
-define service states;.
+Define service states.
 
-identify field-replaceable components;.
+Identify field-replaceable components.
 
-standardize inspection records;.
+Standardize inspection records.
 
-improve fault isolation;.
+Improve fault isolation.
 
-document recommissioning after repair;.
+Document recommissioning after repair.
 
-refine enclosure access and fastener strategy;.
+Refine enclosure access and fastener strategy.
 
-establish spare-part and compatibility records.
+Establish spare-part and compatibility records.
 
 ### Exit criteria
 
@@ -340,19 +340,19 @@ Make the public project understandable and reproducible without exposing sensiti
 
 ### Current focus
 
-maintain GitBook/GitHub synchronization;.
+Maintain GitBook/GitHub synchronization.
 
-publish source and export artifacts by revision;.
+Publish source and export artifacts by revision.
 
-maintain BOM, CAD, schematic, and manufacturing references;.
+Maintain BOM, CAD, schematic, and manufacturing references.
 
-publish contribution guidance;.
+Publish contribution guidance.
 
-define licenses clearly;.
+Define licenses clearly.
 
-separate public engineering documentation from credentials and operational secrets;.
+Separate public engineering documentation from credentials and operational secrets.
 
-keep changelog and known-issues records current.
+Keep changelog and known-issues records current.
 
 ### Exit criteria
 

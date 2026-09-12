@@ -94,7 +94,7 @@ The strongest-looking shape is not always strong when printed in the wrong orien
 
 CAD files should distinguish nominal dimensions from required clearances.
 
-Examples a 3 mm screw should not automatically use a 3.00 mm printed clearance hole, a PCB should not be trapped between walls at its exact nominal width, a service cover needs enough clearance to open after surface variation, and press fits require process-specific calibration.
+Examples include a 3 mm screw should not automatically use a 3.00 mm printed clearance hole, a PCB should not be trapped between walls at its exact nominal width, a service cover needs enough clearance to open after surface variation, and press fits require process-specific calibration.
 
 Tolerance values should come from manufacturing tests and should be recorded in drawings or design notes.
 

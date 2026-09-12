@@ -122,7 +122,7 @@ PRESENCE_LEFT
 PRESENCE_RIGHT
 ```
 
-or another orientation that matches the final enclosure geometry.
+Or another orientation that matches the final enclosure geometry.
 
 This makes logs and fault reports understandable even after wiring or PCB revisions change the exact connector number.
 

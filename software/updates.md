@@ -140,43 +140,43 @@ Before a release reaches field units, test at least:
 
 ### Normal update
 
-old → new release;.
+Old → new release.
 
-configuration retained;.
+Configuration retained.
 
-sensors healthy;.
+Sensors healthy.
 
-communication restored.
+Communication restored.
 
 ### Interrupted download/staging
 
-network lost;.
+Network lost.
 
-power removed before activation;.
+Power removed before activation.
 
-device remains on old known-good software.
+Device remains on old known-good software.
 
 ### Bad artifact
 
-corrupted image;.
+Corrupted image.
 
-wrong hardware release;.
+Wrong hardware release.
 
-unsupported version;.
+Unsupported version.
 
-validation rejects it.
+Validation rejects it.
 
 ### Failed activation
 
-simulated boot failure or failed health check;.
+Simulated boot failure or failed health check.
 
-rollback/recovery functions correctly.
+Rollback/recovery functions correctly.
 
 ### Migration
 
-previous supported configuration schema upgrades correctly;.
+Previous supported configuration schema upgrades correctly.
 
-invalid configuration is rejected safely.
+Invalid configuration is rejected safely.
 
 ## Deployment checklist
 

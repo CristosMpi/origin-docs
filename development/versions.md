@@ -44,7 +44,7 @@ For physical hardware, revision identifiers are often clearer than semantic vers
 
 `Rosetta v2 Rev A`
 
-or
+Or
 
 `Enclosure Rev B`
 

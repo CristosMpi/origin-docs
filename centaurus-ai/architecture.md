@@ -150,7 +150,7 @@ The alternative—silently treating missing data as zero—is unsafe and mislead
 
 ## Deployment boundaries
 
-Centaurus can conceptually be deployed in several ways locally near ORIGIN devices, on a site gateway, on a remote server, and as a hybrid local/remote system.
+Centaurus can conceptually be deployed in several ways: locally near ORIGIN devices, on a site gateway, on a remote server, and as a hybrid local/remote system.
 
 The exact production deployment is not fixed in this documentation because it depends on the final implementation, connectivity requirements, performance constraints, and site policies.
 
@@ -174,7 +174,7 @@ This becomes essential when comparing behavior before and after an update.
 
 Centaurus should fail in ways that remain visible.
 
-Examples invalid input should be rejected rather than guessed; unavailable models should trigger degraded mode; broken external connectivity should not delete local evidence; unsupported schema versions should produce explicit compatibility errors; and analysis failures should not be converted into normal events.
+Examples include invalid input should be rejected rather than guessed; unavailable models should trigger degraded mode; broken external connectivity should not delete local evidence; unsupported schema versions should produce explicit compatibility errors; and analysis failures should not be converted into normal events.
 
 ## Observability
 

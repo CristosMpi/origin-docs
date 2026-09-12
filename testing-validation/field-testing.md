@@ -105,7 +105,7 @@ Do not simply delete these events. Categorize them so the team can improve place
 
 Where tests intentionally create known events, record whether ORIGIN detects them.
 
-Examples person enters intended zone; person remains still; person exits; unit is moved or disturbed where tamper sensing is implemented; and selected sensor is disconnected.
+Examples include person enters intended zone; person remains still; person exits; unit is moved or disturbed where tamper sensing is implemented; and selected sensor is disconnected.
 
 Known test events should be timestamped so they can be compared with logs.
 

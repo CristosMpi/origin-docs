@@ -12,23 +12,23 @@ Make Rosetta v2 independently manufacturable from a single clearly versioned pub
 
 ### Planned work
 
-publish the authoritative schematic and PCB sources;.
+Publish the authoritative schematic and PCB sources.
 
-regenerate Gerbers from the final current PCB revision;.
+Regenerate Gerbers from the final current PCB revision.
 
-include complete drill files;.
+Include complete drill files.
 
-publish a complete BOM with manufacturer part numbers;.
+Publish a complete BOM with manufacturer part numbers.
 
-publish placement/assembly data where relevant;.
+Publish placement/assembly data where relevant.
 
-identify approved substitutions;.
+Identify approved substitutions.
 
-verify mounting-hole and board-outline geometry;.
+Verify mounting-hole and board-outline geometry.
 
-archive the exact release package by revision;.
+Archive the exact release package by revision.
 
-link fabrication outputs back to the source commit or tagged release.
+Link fabrication outputs back to the source commit or tagged release.
 
 ### Expected benefit
 
@@ -42,25 +42,25 @@ Convert the current tall, architectural enclosure direction into a mechanically 
 
 ### Planned work
 
-finalize the external geometry;.
+Finalize the external geometry.
 
-finalize internal Rosetta mounting;.
+Finalize internal Rosetta mounting.
 
-finalize all three mmWave sensor mounts;.
+Finalize all three mmWave sensor mounts.
 
-finalize service-access panels;.
+Finalize service-access panels.
 
-finalize M3 fastener locations and lengths;.
+Finalize M3 fastener locations and lengths.
 
-finalize side-accessible BITs attachment;.
+Finalize side-accessible BITs attachment.
 
-finalize solar-panel support geometry;.
+Finalize solar-panel support geometry.
 
-retain hollow cable routing through the third solar support;.
+Retain hollow cable routing through the third solar support.
 
-verify all individual manufactured parts remain within the 250 × 250 × 250 mm limit;.
+Verify all individual manufactured parts remain within the 250 × 250 × 250 mm limit.
 
-create a released STEP/STL/drawing set.
+Create a released STEP/STL/drawing set.
 
 ### Expected benefit
 
@@ -74,19 +74,19 @@ Reduce ingress and condensation risk while preserving mmWave performance.
 
 ### Planned work
 
-evaluate radar-transparent sensor-window materials;.
+Evaluate radar-transparent sensor-window materials.
 
-improve gasket and joint geometry;.
+Improve gasket and joint geometry.
 
-define cable-gland and strain-relief details;.
+Define cable-gland and strain-relief details.
 
-test drainage paths;.
+Test drainage paths.
 
-study condensation inside the enclosure;.
+Study condensation inside the enclosure.
 
-test the effect of protective covers on mmWave behavior;.
+Test the effect of protective covers on mmWave behavior.
 
-define an evidence-backed environmental target.
+Define an evidence-backed environmental target.
 
 ### Expected benefit
 
@@ -100,21 +100,21 @@ Replace assumed or datasheet-derived coverage claims with ORIGIN-level measureme
 
 ### Planned work
 
-map detection range by sensor direction;.
+Map detection range by sensor direction.
 
-identify blind spots and overlap regions;.
+Identify blind spots and overlap regions.
 
-test standing, walking, approaching, departing, and stationary-presence scenarios;.
+Test standing, walking, approaching, departing, and stationary-presence scenarios.
 
-test reflections near walls, metal, vegetation, and archaeological structures;.
+Test reflections near walls, metal, vegetation, and archaeological structures.
 
-compare indoor and outdoor behavior;.
+Compare indoor and outdoor behavior.
 
-record false positives and false negatives;.
+Record false positives and false negatives.
 
-define site calibration procedures;.
+Define site calibration procedures.
 
-quantify repeatability across multiple sensor modules.
+Quantify repeatability across multiple sensor modules.
 
 ### Expected benefit
 
@@ -128,23 +128,23 @@ Quantify real power consumption and energy autonomy.
 
 ### Planned work
 
-measure current draw by operating state;.
+Measure current draw by operating state.
 
-characterize boot, sensing, communications, storage, and low-power modes;.
+Characterize boot, sensing, communications, storage, and low-power modes.
 
-characterize charging behavior;.
+Characterize charging behavior.
 
-characterize battery discharge under representative loads;.
+Characterize battery discharge under representative loads.
 
-measure regulator efficiency on the integrated board;.
+Measure regulator efficiency on the integrated board.
 
-model and validate solar contribution;.
+Model and validate solar contribution.
 
-define low-battery behavior;.
+Define low-battery behavior.
 
-define power-health telemetry;.
+Define power-health telemetry.
 
-validate recovery after extended low-energy periods.
+Validate recovery after extended low-energy periods.
 
 ### Expected benefit
 
@@ -158,25 +158,25 @@ Turn the embedded software into a reproducible release process.
 
 ### Planned work
 
-identify the authoritative firmware repository;.
+Identify the authoritative firmware repository.
 
-pin supported toolchain/framework versions;.
+Pin supported toolchain/framework versions.
 
-document exact build targets;.
+Document exact build targets.
 
-version configuration schemas;.
+Version configuration schemas.
 
-version data/message schemas;.
+Version data/message schemas.
 
-produce tagged firmware releases;.
+Produce tagged firmware releases.
 
-attach source revision metadata to binaries;.
+Attach source revision metadata to binaries.
 
-implement structured logs and diagnostics;.
+Implement structured logs and diagnostics.
 
-improve watchdog and fault recovery;.
+Improve watchdog and fault recovery.
 
-define update and rollback procedures.
+Define update and rollback procedures.
 
 ### Expected benefit
 
@@ -190,23 +190,23 @@ Make ORIGIN better at detecting failures in itself.
 
 ### Planned work
 
-add power subsystem health checks;.
+Add power subsystem health checks.
 
-detect missing or unresponsive sensors;.
+Detect missing or unresponsive sensors.
 
-track communication failures;.
+Track communication failures.
 
-track storage utilization and write failures;.
+Track storage utilization and write failures.
 
-expose firmware reset reasons;.
+Expose firmware reset reasons.
 
-detect stale sensor data;.
+Detect stale sensor data.
 
-record configuration mismatches;.
+Record configuration mismatches.
 
-add module-presence and compatibility checks;.
+Add module-presence and compatibility checks.
 
-improve operator-facing diagnostic summaries.
+Improve operator-facing diagnostic summaries.
 
 ### Expected benefit
 
@@ -220,21 +220,21 @@ Ensure connectivity loss does not silently destroy data quality.
 
 ### Planned work
 
-define local buffer limits;.
+Define local buffer limits.
 
-preserve timestamps and sequence identity;.
+Preserve timestamps and sequence identity.
 
-detect duplicates after reconnect;.
+Detect duplicates after reconnect.
 
-define retry/backoff behavior;.
+Define retry/backoff behavior.
 
-expose synchronization state;.
+Expose synchronization state.
 
-distinguish missing data from delayed data;.
+Distinguish missing data from delayed data.
 
-test long-duration connectivity loss;.
+Test long-duration connectivity loss.
 
-verify recovery after power cycling while offline.
+Verify recovery after power cycling while offline.
 
 ### Expected benefit
 
@@ -248,25 +248,25 @@ Move from architecture-level AI documentation to versioned, measurable implement
 
 ### Planned work
 
-define exact analysis tasks;.
+Define exact analysis tasks.
 
-define labeled datasets where appropriate;.
+Define labeled datasets where appropriate.
 
-separate rules-based logic from learned models;.
+Separate rules-based logic from learned models.
 
-version model and decision-logic releases;.
+Version model and decision-logic releases.
 
-record confidence and provenance;.
+Record confidence and provenance.
 
-build evaluation scripts;.
+Build evaluation scripts.
 
-define threshold-tuning procedures;.
+Define threshold-tuning procedures.
 
-report false-positive and false-negative behavior;.
+Report false-positive and false-negative behavior.
 
-maintain human-review paths;.
+Maintain human-review paths.
 
-document failure modes and edge cases.
+Document failure modes and edge cases.
 
 ### Expected benefit
 
@@ -280,23 +280,23 @@ Verify that the actual implementation matches the documented security principles
 
 ### Planned work
 
-remove secrets from public repositories and artifacts;.
+Remove secrets from public repositories and artifacts.
 
-define credential provisioning and rotation;.
+Define credential provisioning and rotation.
 
-verify update authenticity;.
+Verify update authenticity.
 
-protect deployment configuration;.
+Protect deployment configuration.
 
-improve audit/event logging;.
+Improve audit/event logging.
 
-define least-privilege backend access;.
+Define least-privilege backend access.
 
-test recovery after credential failure;.
+Test recovery after credential failure.
 
-review exposed network services;.
+Review exposed network services.
 
-perform implementation-level security review before large-scale deployment.
+Perform implementation-level security review before large-scale deployment.
 
 ### Expected benefit
 
@@ -310,21 +310,21 @@ Create a stable module interface for BITs, Aqua Base, Drone Mount, and future ex
 
 ### Planned work
 
-freeze mechanical attachment references;.
+Freeze mechanical attachment references.
 
-define allowed power ranges;.
+Define allowed power ranges.
 
-define connector/pinout standards where applicable;.
+Define connector/pinout standards where applicable.
 
-define module identity metadata;.
+Define module identity metadata.
 
-define compatibility/version negotiation;.
+Define compatibility/version negotiation.
 
-define module health reporting;.
+Define module health reporting.
 
-define commissioning steps;.
+Define commissioning steps.
 
-publish module-interface drawings and schemas.
+Publish module-interface drawings and schemas.
 
 ### Expected benefit
 
@@ -338,17 +338,17 @@ Make BITs easier to access, program, replace, and demonstrate.
 
 ### Planned work
 
-refine the side-accessible attachment;.
+Refine the side-accessible attachment.
 
-standardize fasteners and alignment features;.
+Standardize fasteners and alignment features.
 
-improve cable or electrical interface protection;.
+Improve cable or electrical interface protection.
 
-document MakeCode workflows;.
+Document MakeCode workflows.
 
-create example educational activities;.
+Create example educational activities.
 
-define safe sandbox behavior so BITs experimentation does not compromise the Core system.
+Define safe sandbox behavior so BITs experimentation does not compromise the Core system.
 
 ### Expected benefit
 
@@ -362,19 +362,19 @@ Turn Aqua Base from a module concept into an evidence-backed deployment option.
 
 ### Planned work
 
-define intended water-adjacent operating environments;.
+Define intended water-adjacent operating environments.
 
-validate materials against corrosion and moisture;.
+Validate materials against corrosion and moisture.
 
-define anchoring or support strategy;.
+Define anchoring or support strategy.
 
-test sealing and cable routing;.
+Test sealing and cable routing.
 
-validate sensors in the intended environment;.
+Validate sensors in the intended environment.
 
-define maintenance intervals based on observed fouling/corrosion;.
+Define maintenance intervals based on observed fouling/corrosion.
 
-document safe retrieval and service procedures.
+Document safe retrieval and service procedures.
 
 ### Expected benefit
 
@@ -388,21 +388,21 @@ Create a clearly bounded aerial integration path.
 
 ### Planned work
 
-define compatible payload classes;.
+Define compatible payload classes.
 
-validate mounting security;.
+Validate mounting security.
 
-characterize center-of-gravity effects;.
+Characterize center-of-gravity effects.
 
-characterize vibration transfer;.
+Characterize vibration transfer.
 
-evaluate electromagnetic interference;.
+Evaluate electromagnetic interference.
 
-define emergency release/removal procedures;.
+Define emergency release/removal procedures.
 
-document platform-specific flight validation;.
+Document platform-specific flight validation.
 
-keep regulatory responsibility explicit.
+Keep regulatory responsibility explicit.
 
 ### Expected benefit
 
@@ -416,19 +416,19 @@ Reduce manual setup errors when deploying multiple units.
 
 ### Planned work
 
-create a configuration generator;.
+Create a configuration generator.
 
-validate configuration before flashing/applying it;.
+Validate configuration before flashing/applying it.
 
-generate deployment IDs automatically;.
+Generate deployment IDs automatically.
 
-produce unit-specific commissioning records;.
+Produce unit-specific commissioning records.
 
-detect incompatible hardware/software combinations;.
+Detect incompatible hardware/software combinations.
 
-export human-readable configuration summaries;.
+Export human-readable configuration summaries.
 
-explore MATLAB or other engineering-tool integration where it provides real value.
+Explore MATLAB or other engineering-tool integration where it provides real value.
 
 ### Expected benefit
 
@@ -442,17 +442,17 @@ Use service history to improve the product rather than only repair individual fa
 
 ### Planned work
 
-record failure categories consistently;.
+Record failure categories consistently.
 
-record replaced parts and causes;.
+Record replaced parts and causes.
 
-track recurring connector, sealing, sensor, and power issues;.
+Track recurring connector, sealing, sensor, and power issues.
 
-compare failure patterns by deployment environment;.
+Compare failure patterns by deployment environment.
 
-identify parts that should become field-replaceable;.
+Identify parts that should become field-replaceable.
 
-feed recurring faults into design revisions.
+Feed recurring faults into design revisions.
 
 ### Expected benefit
 
@@ -466,23 +466,23 @@ Use the five-unit pilot to validate the real deployment workflow.
 
 ### Planned work
 
-capture site assessments;.
+Capture site assessments.
 
-record exact unit configurations;.
+Record exact unit configurations.
 
-perform standardized calibration;.
+Perform standardized calibration.
 
-record commissioning results;.
+Record commissioning results.
 
-collect uptime and fault observations;.
+Collect uptime and fault observations.
 
-collect operator feedback;.
+Collect operator feedback.
 
-record maintenance interventions;.
+Record maintenance interventions.
 
-compare unit behavior across locations;.
+Compare unit behavior across locations.
 
-convert findings into documented design changes.
+Convert findings into documented design changes.
 
 ### Expected benefit
 
@@ -496,23 +496,23 @@ Make the public project easier for external contributors and reviewers to reprod
 
 ### Planned work
 
-finalize licensing;.
+Finalize licensing.
 
-publish contribution guidelines;.
+Publish contribution guidelines.
 
-publish hardware source releases;.
+Publish hardware source releases.
 
-publish software source releases;.
+Publish software source releases.
 
-publish CAD exports;.
+Publish CAD exports.
 
-publish BOMs and manufacturing files;.
+Publish BOMs and manufacturing files.
 
-publish non-sensitive test data where appropriate;.
+Publish non-sensitive test data where appropriate.
 
-add issue templates and contribution workflow;.
+Add issue templates and contribution workflow.
 
-keep GitBook synchronized with the authoritative repository.
+Keep GitBook synchronized with the authoritative repository.
 
 ### Expected benefit
 
@@ -526,15 +526,15 @@ Reduce confusion as ORIGIN revisions multiply.
 
 ### Planned work
 
-maintain a hardware/software compatibility matrix;.
+Maintain a hardware/software compatibility matrix.
 
-define migration notes for breaking changes;.
+Define migration notes for breaking changes.
 
-identify which deployed units require updates;.
+Identify which deployed units require updates.
 
-preserve historical documentation for older units;.
+Preserve historical documentation for older units.
 
-provide clear deprecation notices.
+Provide clear deprecation notices.
 
 ### Expected benefit
 
@@ -548,19 +548,19 @@ Catch regressions earlier.
 
 ### Planned work
 
-automate firmware build checks;.
+Automate firmware build checks.
 
-validate configuration schemas;.
+Validate configuration schemas.
 
-run static documentation link checks;.
+Run static documentation link checks.
 
-verify manufacturing package completeness;.
+Verify manufacturing package completeness.
 
-add software unit/integration tests where appropriate;.
+Add software unit/integration tests where appropriate.
 
-generate repeatable test reports;.
+Generate repeatable test reports.
 
-track validation evidence by release.
+Track validation evidence by release.
 
 ### Expected benefit
 

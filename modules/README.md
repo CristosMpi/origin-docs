@@ -152,49 +152,49 @@ Each module should be evaluated in at least four dimensions.
 
 ### Mechanical
 
-attachment strength;.
+Attachment strength.
 
-repeatability;.
+Repeatability.
 
-interference;.
+Interference.
 
-cable routing;.
+Cable routing.
 
-removal and replacement.
+Removal and replacement.
 
 ### Electrical
 
-correct voltage and current behavior;.
+Correct voltage and current behavior.
 
-connector integrity;.
+Connector integrity.
 
-fault isolation;.
+Fault isolation.
 
-startup and shutdown behavior.
+Startup and shutdown behavior.
 
 ### Software
 
-identification;.
+Identification.
 
-health reporting;.
+Health reporting.
 
-data validity;.
+Data validity.
 
-recovery after disconnect;.
+Recovery after disconnect.
 
-compatibility with system versions.
+Compatibility with system versions.
 
 ### Deployment
 
-usefulness in the intended environment;.
+Usefulness in the intended environment.
 
-installation time;.
+Installation time.
 
-maintenance accessibility;.
+Maintenance accessibility.
 
-effect on Core sensing;.
+Effect on Core sensing.
 
-operator usability.
+Operator usability.
 
 Validated results belong under [Testing & Validation](../testing-validation/README.md).
 

@@ -174,7 +174,7 @@ Human actions should be recorded for audit and can later support evaluation of f
 
 When Centaurus cannot evaluate an event reliably, it should default to visible uncertainty rather than silently claiming normal operation.
 
-Examples missing required evidence → mark analysis incomplete, invalid configuration → disable affected rule and expose error, unhealthy sensor → reduce confidence or suppress unsupported conclusion, and model unavailable → enter degraded mode.
+Examples include missing required evidence → mark analysis incomplete, invalid configuration → disable affected rule and expose error, unhealthy sensor → reduce confidence or suppress unsupported conclusion, and model unavailable → enter degraded mode.
 
 ## Auditability
 

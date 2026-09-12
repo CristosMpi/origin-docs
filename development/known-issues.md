@@ -6,7 +6,7 @@ The existence of a known issue does not automatically make the entire system unu
 
 ## Status labels
 
-Each issue should be treated as one of the following **Blocker** — prevents release, fabrication, deployment, or a required validation step; **High** — can materially affect reliability, safety, data quality, or maintainability; **Medium** — important limitation or incomplete work with a practical workaround; **Low** — minor limitation, cleanup item, or documentation gap; and **Evidence gap** — a claim cannot yet be made because sufficient test evidence is missing.
+Each issue should be treated as one of the following: **Blocker** — prevents release, fabrication, deployment, or a required validation step; **High** — can materially affect reliability, safety, data quality, or maintainability; **Medium** — important limitation or incomplete work with a practical workaround; **Low** — minor limitation, cleanup item, or documentation gap; and **Evidence gap** — a claim cannot yet be made because sufficient test evidence is missing.
 
 ## KI-001 — Incomplete Rosetta v2 fabrication export
 
@@ -21,15 +21,15 @@ The package should not be treated as a complete fabrication release. A board hou
 
 ### Required action
 
-regenerate fabrication outputs from the authoritative current PCB source;.
+Regenerate fabrication outputs from the authoritative current PCB source.
 
-include the relevant Excellon drill files;.
+Include the relevant Excellon drill files.
 
-confirm the board outline and drill locations;.
+Confirm the board outline and drill locations.
 
-verify the package before resubmission;.
+Verify the package before resubmission.
 
-archive the verified output with a clear revision identifier.
+Archive the verified output with a clear revision identifier.
 
 ### Resolution evidence
 

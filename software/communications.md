@@ -173,45 +173,45 @@ Communications testing should include:
 
 ### Normal operation
 
-successful connection;.
+Successful connection.
 
-telemetry delivery;.
+Telemetry delivery.
 
-event delivery;.
+Event delivery.
 
-reconnect after controlled restart.
+Reconnect after controlled restart.
 
 ### Network loss
 
-disconnect during monitoring;.
+Disconnect during monitoring.
 
-long outage;.
+Long outage.
 
-repeated short outages;.
+Repeated short outages.
 
-restoration with queued data.
+Restoration with queued data.
 
 ### Backend problems
 
-timeout;.
+Timeout.
 
-service unavailable;.
+Service unavailable.
 
-invalid response;.
+Invalid response.
 
-authentication failure;.
+Authentication failure.
 
-schema mismatch.
+Schema mismatch.
 
 ### Queue behavior
 
-queue grows during outage;.
+Queue grows during outage.
 
-queue survives restart if designed to persist;.
+Queue survives restart if designed to persist.
 
-full-buffer policy works as intended;.
+Full-buffer policy works as intended.
 
-resend does not generate uncontrolled duplicates.
+Resend does not generate uncontrolled duplicates.
 
 ## Communications and Centaurus
 

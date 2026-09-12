@@ -53,7 +53,7 @@ RADAR_B
 RADAR_C
 ```
 
-may be used until final direction-based names are fixed.
+May be used until final direction-based names are fixed.
 
 Logs must preserve the source identity so that coverage and false detections can be traced to a physical sensor.
 

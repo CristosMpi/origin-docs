@@ -32,45 +32,45 @@ Before a schematic is tagged for manufacturing, verify:
 
 ### Power
 
-all supply pins are connected to the intended rail;.
+All supply pins are connected to the intended rail.
 
-decoupling capacitors are present and correctly valued;.
+Decoupling capacitors are present and correctly valued.
 
-charger and regulator passive networks match the chosen operating point;.
+Charger and regulator passive networks match the chosen operating point.
 
-ground domains are deliberate;.
+Ground domains are deliberate.
 
-connector polarities are unambiguous.
+Connector polarities are unambiguous.
 
 ### Processor
 
-boot-strapping pins are in valid states;.
+Boot-strapping pins are in valid states.
 
-programming/debug access exists;.
+Programming/debug access exists.
 
-reset/enable behavior is correct;.
+Reset/enable behavior is correct.
 
-unused pins are intentionally handled.
+Unused pins are intentionally handled.
 
 ### Peripherals
 
-logic-voltage compatibility is verified;.
+Logic-voltage compatibility is verified.
 
-pull-ups/pull-downs are present where required;.
+Pull-ups/pull-downs are present where required.
 
-chip-select/address choices do not conflict;.
+Chip-select/address choices do not conflict.
 
-interrupt lines match firmware expectations.
+Interrupt lines match firmware expectations.
 
 ### Connectors
 
-pin numbering matches the footprint;.
+Pin numbering matches the footprint.
 
-pin 1 is visibly identifiable;.
+Pin 1 is visibly identifiable.
 
-external voltages cannot be accidentally applied to logic-only pins;.
+External voltages cannot be accidentally applied to logic-only pins.
 
-connector names describe function.
+Connector names describe function.
 
 ## Design-review history
 

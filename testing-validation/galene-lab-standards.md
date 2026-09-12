@@ -162,7 +162,7 @@ It can reveal details that are otherwise missed in written notes cable routing; 
 
 A pass does not mean that unusual behavior should be omitted.
 
-Examples one delayed startup among ten repetitions; temporary communication warning; unexpected temperature rise; visible enclosure flex; and one false detection outside the acceptance window.
+Examples include one delayed startup among ten repetitions; temporary communication warning; unexpected temperature rise; visible enclosure flex; and one false detection outside the acceptance window.
 
 An anomaly can become important in a later failure investigation.
 

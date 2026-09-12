@@ -84,7 +84,7 @@ A missing device should produce a degraded deployment state, not silently disapp
 
 Rather than treating a site as one undifferentiated area, ORIGIN can associate units and sensors with logical zones.
 
-Examples might include:
+Examples include might include:
 
 ```text
 ZONE_ENTRANCE

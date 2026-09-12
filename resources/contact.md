@@ -42,7 +42,7 @@ This page is used for public sponsor recognition connected with Team Galene.
 
 For questions about ORIGIN Core; Rosetta hardware; software architecture; Centaurus AI; sensors; mechanical design; testing and validation; installation or maintenance; and errors or ambiguities in ORIGIN Docs.
 
-refer first to the relevant technical chapter and include the exact page, subsystem, and revision in your message where possible.
+Refer first to the relevant technical chapter and include the exact page, subsystem, and revision in your message where possible.
 
 A useful technical inquiry should identify:
 
@@ -96,7 +96,7 @@ The public documentation intentionally avoids publishing operational secrets or 
 
 If you notice an incorrect specification; a broken link; an outdated revision; inconsistent terminology; a claim that lacks evidence; and a missing limitation.
 
-please report it through an official Team Galene channel and include the page title and the text that needs review.
+Please report it through an official Team Galene channel and include the page title and the text that needs review.
 
 ORIGIN Docs are treated as part of the engineering system, so documentation corrections should be traceable and reviewed in the same way as other project changes.
 

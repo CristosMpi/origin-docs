@@ -88,7 +88,7 @@ External parts are more likely to suffer damage than protected internal electron
 
 Therefore, components such as solar supports; external brackets; sensor covers; module latches; mounting feet; and cable guides.
 
-should be replaceable where practical.
+Should be replaceable where practical.
 
 This reduces maintenance cost and lets the system evolve without requiring a complete enclosure redesign.
 

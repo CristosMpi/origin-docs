@@ -116,77 +116,77 @@ As evidence grows, this page should maintain separate tables for:
 
 ### Electronics
 
-power rails;.
+Power rails.
 
-startup;.
+Startup.
 
-current consumption;.
+Current consumption.
 
-charging/power transitions;.
+Charging/power transitions.
 
-sensor buses;.
+Sensor buses.
 
-storage;.
+Storage.
 
-restart recovery.
+Restart recovery.
 
 ### Sensors
 
-environmental-sensor comparison;.
+Environmental-sensor comparison.
 
-radar coverage;.
+Radar coverage.
 
-stationary-presence behavior;.
+Stationary-presence behavior.
 
-false detections;.
+False detections.
 
-blind zones;.
+Blind zones.
 
-multi-radar behavior.
+Multi-radar behavior.
 
 ### Mechanical
 
-critical dimensions;.
+Critical dimensions.
 
-PCB fit;.
+PCB fit.
 
-assembly cycles;.
+Assembly cycles.
 
-solar support;.
+Solar support.
 
-base stability;.
+Base stability.
 
-cable routing;.
+Cable routing.
 
-service access.
+Service access.
 
 ### Environmental
 
-splash exposure;.
+Splash exposure.
 
-condensation;.
+Condensation.
 
-solar heating;.
+Solar heating.
 
-humidity;.
+Humidity.
 
-dust/debris;.
+Dust/debris.
 
-material aging.
+Material aging.
 
 ### Software and communications
 
-fault handling;.
+Fault handling.
 
-data integrity;.
+Data integrity.
 
-offline buffering;.
+Offline buffering.
 
-restart recovery;.
+Restart recovery.
 
-update rollback;.
+Update rollback.
 
-message ordering.
+Message ordering.
 
 ### Centaurus AI
 

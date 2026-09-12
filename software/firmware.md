@@ -46,17 +46,17 @@ The embedded firmware should cover at least the following areas.
 
 ### Hardware initialization
 
-initialize buses and serial interfaces;.
+Initialize buses and serial interfaces.
 
-configure GPIO safely;.
+Configure GPIO safely.
 
-establish known power/control states;.
+Establish known power/control states.
 
-initialize storage where present;.
+Initialize storage where present.
 
-identify optional hardware;.
+Identify optional hardware.
 
-avoid enabling subsystems in an undefined sequence.
+Avoid enabling subsystems in an undefined sequence.
 
 ### Sensor drivers
 
@@ -192,25 +192,25 @@ Firmware validation should include:
 
 ### Unit / driver testing
 
-valid responses;.
+Valid responses.
 
-invalid responses;.
+Invalid responses.
 
-timeouts;.
+Timeouts.
 
-disconnected sensor;.
+Disconnected sensor.
 
-restart recovery.
+Restart recovery.
 
 ### Integration testing
 
-multiple sensors active simultaneously;.
+Multiple sensors active simultaneously.
 
-storage plus communications;.
+Storage plus communications.
 
-repeated reconnects;.
+Repeated reconnects.
 
-long-duration acquisition.
+Long-duration acquisition.
 
 ### Fault injection
 

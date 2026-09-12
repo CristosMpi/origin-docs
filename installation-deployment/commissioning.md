@@ -94,7 +94,7 @@ After restart, verify configuration is retained; unit identity is unchanged; sen
 
 Where safe, simulate selected failures to prove that ORIGIN exposes faults rather than hiding them.
 
-Examples disconnect one sensor; disable communications; temporarily remove network access; introduce an intentionally invalid configuration in a controlled test environment; and simulate a module becoming unavailable.
+Examples include disconnect one sensor; disable communications; temporarily remove network access; introduce an intentionally invalid configuration in a controlled test environment; and simulate a module becoming unavailable.
 
 Do not perform fault tests that could damage hardware or affect the protected site.
 

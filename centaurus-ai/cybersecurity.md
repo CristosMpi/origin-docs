@@ -6,7 +6,7 @@ Centaurus should therefore be designed with the assumption that malformed input,
 
 ## Security goals
 
-The main security objectives are protect device and service identity; prevent unauthorized configuration changes; detect malformed or suspicious input; preserve data integrity; protect credentials and secrets; secure update mechanisms; maintain auditability; and limit the impact of a compromised component.
+The main security objectives are to protect device and service identity; prevent unauthorized configuration changes; detect malformed or suspicious input; preserve data integrity; protect credentials and secrets; secure update mechanisms; maintain auditability; and limit the impact of a compromised component.
 
 ## Trust boundaries
 

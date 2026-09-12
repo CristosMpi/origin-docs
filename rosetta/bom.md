@@ -27,8 +27,8 @@ The released BOM should include at least reference designator; quantity; value/f
 
 ```text
 Designator,Qty,Value,Manufacturer,MPN,Footprint,Fitted
-U?,1,MCU,...,...,...,Yes
-U?,1,LIS3DH,...,...,...,Yes
+U?,1,MCU.........,Yes
+U?,1,LIS3DH.........,Yes
 ...
 ```
 

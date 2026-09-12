@@ -117,7 +117,7 @@ RADAR_B
 RADAR_C
 ```
 
-or direction-based names once the final orientation is fixed.
+Or direction-based names once the final orientation is fixed.
 
 Logs should always identify the source radar so test results and real events can be analyzed later.
 

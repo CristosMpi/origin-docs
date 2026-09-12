@@ -38,7 +38,7 @@ Device identity should remain stable across normal firmware updates.
 
 Hardware configuration describes what is physically expected to be present.
 
-Examples radar count; optional module enablement; storage availability; interface assignments; and hardware feature flags.
+Examples include radar count; optional module enablement; storage availability; interface assignments; and hardware feature flags.
 
 If configured hardware is missing, the firmware should report a health error instead of silently pretending it is disabled.
 
@@ -52,7 +52,7 @@ Values should remain within validated safe ranges.
 
 Deterministic event rules can be configuration-driven where appropriate.
 
-Examples threshold crossing; state-change reporting; persistence duration; cooldown/debounce windows; and alarm enablement.
+Examples include threshold crossing; state-change reporting; persistence duration; cooldown/debounce windows; and alarm enablement.
 
 The exact rules must remain explainable and testable.
 

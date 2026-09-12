@@ -16,17 +16,17 @@ Avoid immediately rebooting the device unless operational safety requires it.
 
 ### Possible causes
 
-battery depleted or disconnected;.
+Battery depleted or disconnected.
 
-charging/solar input unavailable;.
+Charging/solar input unavailable.
 
-power-management fault;.
+Power-management fault.
 
-damaged cable or connector;.
+Damaged cable or connector.
 
-Rosetta not booting;.
+Rosetta not booting.
 
-severe internal moisture or physical damage.
+Severe internal moisture or physical damage.
 
 ### Checks
 
@@ -39,11 +39,11 @@ severe internal moisture or physical damage.
 
 ### Escalate when
 
-the battery is damaged;.
+The battery is damaged.
 
-power rails are unstable;.
+Power rails are unstable.
 
-there is internal moisture;.
+There is internal moisture.
 
 Rosetta does not boot with a known-good power source.
 
@@ -53,33 +53,33 @@ Rosetta does not boot with a known-good power source.
 
 ### Possible causes
 
-unstable input power;.
+Unstable input power.
 
-brownout;.
+Brownout.
 
-battery problem;.
+Battery problem.
 
-firmware fault;.
+Firmware fault.
 
-peripheral fault during startup;.
+Peripheral fault during startup.
 
-storage issue;.
+Storage issue.
 
-watchdog/reset loop.
+Watchdog/reset loop.
 
 ### Checks
 
-record reset reason if available;.
+Record reset reason if available.
 
-note reboot interval;.
+Note reboot interval.
 
-correlate resets with radio transmission, sensor initialization or storage access;.
+Correlate resets with radio transmission, sensor initialization or storage access.
 
-compare behavior on known-good power where safe;.
+Compare behavior on known-good power where safe.
 
-inspect recent firmware/update history;.
+Inspect recent firmware/update history.
 
-disconnect only a suspected expansion module if the service process permits isolation.
+Disconnect only a suspected expansion module if the service process permits isolation.
 
 A device in a reboot loop should not be considered healthy even if it periodically reconnects.
 
@@ -105,39 +105,39 @@ If the fault follows the sensor, replacement is likely appropriate. If it remain
 
 ### Possible causes
 
-changed site geometry;.
+Changed site geometry.
 
-moved sensor orientation;.
+Moved sensor orientation.
 
-vegetation movement;.
+Vegetation movement.
 
-activity outside the intended monitored area;.
+Activity outside the intended monitored area.
 
-reflective surfaces;.
+Reflective surfaces.
 
-new barriers/scaffolding;.
+New barriers/scaffolding.
 
-incorrect configuration;.
+Incorrect configuration.
 
-event-interpretation issue.
+Event-interpretation issue.
 
 ### Checks
 
-compare the current site with commissioning photographs;.
+Compare the current site with commissioning photographs.
 
-verify sensor orientation;.
+Verify sensor orientation.
 
-inspect the sensing opening;.
+Inspect the sensing opening.
 
-identify which radar is producing the events;.
+Identify which radar is producing the events.
 
-compare timing across the three radars;.
+Compare timing across the three radars.
 
-reproduce using controlled movement;.
+Reproduce using controlled movement.
 
-review configuration changes;.
+Review configuration changes.
 
-review higher-level Centaurus/rule interpretation only after raw radar behavior is understood.
+Review higher-level Centaurus/rule interpretation only after raw radar behavior is understood.
 
 Do not reduce sensitivity blindly to suppress alerts. That may create undetected areas.
 
@@ -147,17 +147,17 @@ Do not reduce sensitivity blindly to suppress alerts. That may create undetected
 
 ### Checks
 
-confirm the correct radar channel is active;.
+Confirm the correct radar channel is active.
 
-inspect orientation and obstruction;.
+Inspect orientation and obstruction.
 
-verify the target location is within the commissioned coverage map;.
+Verify the target location is within the commissioned coverage map.
 
-repeat a controlled presence test;.
+Repeat a controlled presence test.
 
-check whether enclosure parts or new objects block or alter the sensing geometry;.
+Check whether enclosure parts or new objects block or alter the sensing geometry.
 
-compare raw sensor output with the system event layer.
+Compare raw sensor output with the system event layer.
 
 Manufacturer sensor range is not the same as validated ORIGIN detection range.
 
@@ -167,19 +167,19 @@ Manufacturer sensor range is not the same as validated ORIGIN detection range.
 
 ### Checks
 
-inspect the sensor opening;.
+Inspect the sensor opening.
 
-check contamination or condensation;.
+Check contamination or condensation.
 
-verify the reading is not stale;.
+Verify the reading is not stale.
 
-verify units and conversion;.
+Verify units and conversion.
 
-compare with a suitable reference instrument;.
+Compare with a suitable reference instrument.
 
-examine whether the value is drifting, noisy or stuck;.
+Examine whether the value is drifting, noisy or stuck.
 
-check configuration/calibration state.
+Check configuration/calibration state.
 
 A surprising reading may represent a real environmental condition, so verify with evidence before declaring the sensor faulty.
 
@@ -189,27 +189,27 @@ A surprising reading may represent a real environmental condition, so verify wit
 
 ### Possible causes
 
-shared power fault;.
+Shared power fault.
 
-common interface problem;.
+Common interface problem.
 
-firmware initialization failure;.
+Firmware initialization failure.
 
-Rosetta fault;.
+Rosetta fault.
 
-configuration corruption.
+Configuration corruption.
 
 ### Checks
 
-confirm Rosetta boot state;.
+Confirm Rosetta boot state.
 
-inspect shared power/connector paths;.
+Inspect shared power/connector paths.
 
-review firmware startup logs;.
+Review firmware startup logs.
 
-verify configuration and expected sensor list;.
+Verify configuration and expected sensor list.
 
-check whether any local peripheral remains visible.
+Check whether any local peripheral remains visible.
 
 When many independent sensors fail simultaneously, investigate shared infrastructure before replacing sensors.
 
@@ -219,19 +219,19 @@ When many independent sensors fail simultaneously, investigate shared infrastruc
 
 ### Checks
 
-confirm the correct module is physically attached;.
+Confirm the correct module is physically attached.
 
-inspect connector seating;.
+Inspect connector seating.
 
-verify power availability;.
+Verify power availability.
 
-confirm compatibility revision;.
+Confirm compatibility revision.
 
-inspect the expansion interface;.
+Inspect the expansion interface.
 
-check software module enumeration;.
+Check software module enumeration.
 
-test without the module to confirm ORIGIN Core remains healthy.
+Test without the module to confirm ORIGIN Core remains healthy.
 
 For BITs, also confirm the side-accessible interface has not been physically damaged or obstructed.
 
@@ -241,21 +241,21 @@ For BITs, also confirm the side-accessible interface has not been physically dam
 
 ### Checks
 
-inspect panel cleanliness;.
+Inspect panel cleanliness.
 
-inspect new shading;.
+Inspect new shading.
 
-inspect panel orientation;.
+Inspect panel orientation.
 
-inspect all three supports;.
+Inspect all three supports.
 
-inspect the hollow third support cable path;.
+Inspect the hollow third support cable path.
 
-inspect cable continuity/connectors;.
+Inspect cable continuity/connectors.
 
-verify charging-state telemetry if available;.
+Verify charging-state telemetry if available.
 
-compare behavior across daylight conditions rather than one instant reading.
+Compare behavior across daylight conditions rather than one instant reading.
 
 If the panel or support has shifted, restore geometry before evaluating electrical performance.
 
@@ -265,35 +265,35 @@ If the panel or support has shifted, restore geometry before evaluating electric
 
 ### Possible causes
 
-reduced charging input;.
+Reduced charging input.
 
-battery degradation;.
+Battery degradation.
 
-abnormal radio activity;.
+Abnormal radio activity.
 
-repeated rebooting;.
+Repeated rebooting.
 
-peripheral staying active;.
+Peripheral staying active.
 
-increased sampling/transmission configuration;.
+Increased sampling/transmission configuration.
 
-temperature effects;.
+Temperature effects.
 
-battery damage.
+Battery damage.
 
 ### Checks
 
-inspect battery physically;.
+Inspect battery physically.
 
-review charging history;.
+Review charging history.
 
-review reboot history;.
+Review reboot history.
 
-compare firmware/configuration with the known baseline;.
+Compare firmware/configuration with the known baseline.
 
-identify unusually high activity;.
+Identify unusually high activity.
 
-evaluate actual energy behavior over a representative interval.
+Evaluate actual energy behavior over a representative interval.
 
 Do not publish a battery-life claim from one deployment unless it is supported by controlled validation.
 
@@ -322,17 +322,17 @@ This prevents unnecessary hardware replacement during a backend or network outag
 
 ### Checks
 
-confirm physical unit ID;.
+Confirm physical unit ID.
 
-confirm configuration/provisioning identity;.
+Confirm configuration/provisioning identity.
 
-confirm module identity;.
+Confirm module identity.
 
-inspect backend mapping;.
+Inspect backend mapping.
 
-inspect timestamps;.
+Inspect timestamps.
 
-compare raw transmitted identity with displayed identity.
+Compare raw transmitted identity with displayed identity.
 
 Treat identity mismatch as a data-integrity problem, not merely a cosmetic dashboard issue.
 
@@ -342,15 +342,15 @@ Treat identity mismatch as a data-integrity problem, not merely a cosmetic dashb
 
 ### Checks
 
-verify device time source;.
+Verify device time source.
 
-inspect time synchronization status;.
+Inspect time synchronization status.
 
-determine whether only remote display time is wrong;.
+Determine whether only remote display time is wrong.
 
-inspect timezone conversion outside the device where relevant;.
+Inspect timezone conversion outside the device where relevant.
 
-confirm buffered/offline records preserve original acquisition time.
+Confirm buffered/offline records preserve original acquisition time.
 
 Do not rewrite historical event time simply to match upload time.
 
@@ -360,17 +360,17 @@ Do not rewrite historical event time simply to match upload time.
 
 ### Checks
 
-inspect storage initialization;.
+Inspect storage initialization.
 
-check available space;.
+Check available space.
 
-look for write failures;.
+Look for write failures.
 
-inspect whether power loss occurred during writes;.
+Inspect whether power loss occurred during writes.
 
-preserve recoverable data;.
+Preserve recoverable data.
 
-test read/write behavior before replacing or reformatting storage.
+Test read/write behavior before replacing or reformatting storage.
 
 If records are corrupted, note the affected time range in the maintenance record.
 
@@ -382,15 +382,15 @@ A reboot is not proof of repair.
 
 ### Action
 
-record the temporary recovery;.
+Record the temporary recovery.
 
-compare time-to-failure;.
+Compare time-to-failure.
 
-preserve logs before the next reboot;.
+Preserve logs before the next reboot.
 
-identify the recurring trigger;.
+Identify the recurring trigger.
 
-treat the issue as unresolved until root cause is identified or sufficient monitoring confirms stability.
+Treat the issue as unresolved until root cause is identified or sufficient monitoring confirms stability.
 
 ---
 
@@ -425,19 +425,19 @@ Record the condition and escalate to mechanical redesign if it recurs.
 
 ### Action
 
-determine whether the crack affects structural stability;.
+Determine whether the crack affects structural stability.
 
-determine whether sensor orientation has changed;.
+Determine whether sensor orientation has changed.
 
-inspect nearby fasteners for over-compression;.
+Inspect nearby fasteners for over-compression.
 
-inspect for water pathways;.
+Inspect for water pathways.
 
-compare against the released CAD/material/process;.
+Compare against the released CAD/material/process.
 
-replace the affected part if necessary;.
+Replace the affected part if necessary.
 
-repeat relevant mechanical and sensing checks.
+Repeat relevant mechanical and sensing checks.
 
 Repeated cracks at the same feature should be treated as a design issue.
 
@@ -447,17 +447,17 @@ Repeated cracks at the same feature should be treated as a design issue.
 
 ### Action
 
-place the system in maintenance state;.
+Place the system in maintenance state.
 
-inspect all support attachment points;.
+Inspect all support attachment points.
 
-inspect the panel for secondary damage;.
+Inspect the panel for secondary damage.
 
-inspect cable routing, especially through the hollow third support;.
+Inspect cable routing, especially through the hollow third support.
 
-restore released geometry;.
+Restore released geometry.
 
-verify charging and mechanical stability.
+Verify charging and mechanical stability.
 
 Do not leave the panel supported by fewer structural elements than the released design.
 
@@ -477,17 +477,17 @@ If the installation itself makes normal access impossible, revise the deployment
 
 ### Checks
 
-verify image/version compatibility;.
+Verify image/version compatibility.
 
-verify power stability;.
+Verify power stability.
 
-verify communication stability if updating remotely;.
+Verify communication stability if updating remotely.
 
-preserve the existing known-good firmware where rollback is supported;.
+Preserve the existing known-good firmware where rollback is supported.
 
-inspect update logs;.
+Inspect update logs.
 
-do not repeatedly retry an update during unstable power.
+Do not repeatedly retry an update during unstable power.
 
 After recovery, verify the running firmware and configuration versions explicitly.
 
@@ -499,17 +499,17 @@ See [Software → Updates](../software/updates.md).
 
 ### Action
 
-record the changed configuration version;.
+Record the changed configuration version.
 
-compare with the last known-good configuration;.
+Compare with the last known-good configuration.
 
-restore the known-good configuration if safe;.
+Restore the known-good configuration if safe.
 
-verify behavior;.
+Verify behavior.
 
-identify which parameter caused the change;.
+Identify which parameter caused the change.
 
-repeat any calibration affected by thresholds, sensor mapping or orientation assumptions.
+Repeat any calibration affected by thresholds, sensor mapping or orientation assumptions.
 
 Configuration rollback should be documented just like firmware rollback.
 

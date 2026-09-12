@@ -180,7 +180,7 @@ Explicit states make logs, tests, and recovery behavior easier to understand.
 
 One subsystem failure should not automatically bring down unrelated functions.
 
-Examples a radar failure should not prevent environmental sensors from being sampled, remote connectivity loss should not erase local health state, a malformed remote message should not crash the acquisition loop, and optional modules should fail gracefully if absent.
+Examples include a radar failure should not prevent environmental sensors from being sampled, remote connectivity loss should not erase local health state, a malformed remote message should not crash the acquisition loop, and optional modules should fail gracefully if absent.
 
 ## Logging
 

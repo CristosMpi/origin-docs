@@ -134,7 +134,7 @@ config.example.*
 sample-config.*
 ```
 
-Examples should contain placeholders only.
+Examples include should contain placeholders only.
 
 Do not commit API tokens; Wi-Fi passwords; private keys; SIM PINs or credentials; production endpoints that should remain private; and deployment access credentials.
 

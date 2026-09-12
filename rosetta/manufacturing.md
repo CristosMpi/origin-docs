@@ -24,17 +24,17 @@ A complete Rosetta PCB fabrication release should contain at least:
 
 ### Gerber layers
 
-F.Cu;.
+F.Cu.
 
-B.Cu;.
+B.Cu.
 
-F.Mask;.
+F.Mask.
 
-B.Mask;.
+B.Mask.
 
-F.Silkscreen;.
+F.Silkscreen.
 
-B.Silkscreen;.
+B.Silkscreen.
 
 Edge.Cuts.
 
