@@ -24,7 +24,7 @@ Fastener type
 Test configuration
 ```
 
-A result from one prototype should not automatically be applied to a later geometry.
+A result from one geometry should not automatically be applied to a later revision.
 
 ## Dimensional inspection
 
@@ -70,7 +70,7 @@ Perform multiple complete assembly/disassembly cycles.
 
 Observe thread wear; insert movement; cracked printed features; stripped fasteners; seal damage; cable pinching; increasing gaps; and loss of alignment.
 
-A prototype that assembles successfully once may still have poor service life.
+A part that assembles successfully once still requires repeated-use evaluation to establish service life.
 
 ## Fastener retention
 

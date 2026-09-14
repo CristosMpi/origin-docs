@@ -112,7 +112,7 @@ If multiple release channels are used, they should be clearly separated.
 
 For example, **development** — rapid iteration, verbose diagnostics, **testing/validation** — candidate release under controlled testing, and **stable/deployment** — release approved for field use.
 
-A field unit should not automatically track an unstable development branch.
+A field unit should use only an approved software release channel appropriate to its hardware and deployment.
 
 ## Update policy
 

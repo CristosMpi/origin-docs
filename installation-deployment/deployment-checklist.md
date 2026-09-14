@@ -24,7 +24,7 @@ Connectivity method is defined or offline operation is intentional.
 
 Solar exposure has been assessed where applicable.
 
-Sensor directions have been planned.
+Sensor directions are documented.
 
 ## 2. Unit identification
 
@@ -206,7 +206,7 @@ Sensor failure is not represented as a normal zero/no-presence value.
 
 ## 11. Centaurus AI / decision layer
 
-If Centaurus is active Model/rule version is recorded; Input sources are known; Confidence and severity are presented separately; Supporting observations can be traced; Known limitations are documented; Operator review process is defined; and No unapproved autonomous action is enabled.
+If Centaurus is active Model/rule version is recorded; Input sources are known; Confidence and severity are presented separately; Supporting observations can be traced; Operating boundaries are documented; Operator review process is defined; and No unapproved autonomous action is enabled.
 
 ## 12. Documentation
 
@@ -222,7 +222,7 @@ Calibration results are stored.
 
 Commissioning results are stored.
 
-Known limitations are stored.
+Operating notes are stored.
 
 Maintenance owner/contact is recorded.
 

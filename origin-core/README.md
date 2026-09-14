@@ -112,7 +112,7 @@ Project ORIGIN is still evolving. Hardware revisions, sensor choices and enclosu
 
 ORIGIN Core is an actively developed system. Some architectural decisions are stable while exact component choices, mechanical dimensions and deployment-specific sensor configurations continue to evolve.
 
-Throughout ORIGIN Docs confirmed hardware is described as the current design, planned capabilities are identified as planned or under development, exact electrical specifications are kept in the Rosetta chapter, and deployment-specific assumptions are kept out of general architecture pages unless they are universally applicable.
+Throughout ORIGIN Docs, capabilities are described in the configuration where they are available, exact electrical detail is kept in the Rosetta chapter, and deployment-specific settings are kept within the relevant site and configuration documentation.
 
 This prevents early prototypes from being presented as final specifications.
 

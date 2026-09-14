@@ -56,7 +56,7 @@ Centaurus AI and the software architecture are being developed with cybersecurit
 
 ## Conservation technology should be deployable
 
-A prototype can work perfectly on a desk and still fail as a real deployment.
+A device can perform well in controlled conditions and still face challenges in a real deployment.
 
 Field use introduces constraints that are easy to overlook during early development: cable routing, condensation, mounting, orientation, sensor line of sight, heat, water exposure, maintenance, battery access, physical damage, and user interaction.
 

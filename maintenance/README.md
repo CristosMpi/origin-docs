@@ -52,7 +52,7 @@ Recommended maintenance states are:
 | --- | --- |
 | Healthy | No known maintenance issue is affecting intended operation |
 | Monitor | Minor condition detected; continued observation required |
-| Service Due | Planned maintenance should be performed |
+| Service Due | Scheduled maintenance is due |
 | Degraded | A subsystem is impaired but limited operation remains possible |
 | Out of Service | Unit should not be relied on for monitoring |
 | Maintenance | Unit is intentionally under service |

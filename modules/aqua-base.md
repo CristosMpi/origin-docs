@@ -73,7 +73,7 @@ Material selection should consider more than printability.
 
 Relevant factors include UV exposure; moisture absorption; corrosion of metallic hardware; galvanic interaction between metals; long-term creep; temperature range; brittleness; and chemical exposure from the local environment.
 
-Prototype materials can be useful for geometry testing, but prototype success does not establish long-term outdoor durability.
+Materials are selected with geometry, moisture resistance, mechanical stability, corrosion behavior, and long-term outdoor exposure in mind.
 
 ## Electrical separation
 

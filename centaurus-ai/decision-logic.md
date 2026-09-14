@@ -134,7 +134,7 @@ Centaurus must support an explicit **unknown** or **ambiguous** outcome.
 
 Forcing every input into either "safe" or "dangerous" creates false certainty.
 
-Ambiguity may occur when sensors disagree; data is incomplete; a model encounters unfamiliar input; source health is degraded; and timing is uncertain.
+Ambiguity may occur when sensors disagree; available evidence is limited; a model encounters unfamiliar input; source health is degraded; and timing is uncertain.
 
 In such cases, the appropriate action may simply be to request operator review.
 
@@ -174,7 +174,7 @@ Human actions should be recorded for audit and can later support evaluation of f
 
 When Centaurus cannot evaluate an event reliably, it should default to visible uncertainty rather than silently claiming normal operation.
 
-Failure handling should be explicit. Missing required evidence should mark an analysis incomplete; invalid configuration should disable the affected rule and expose an error; an unhealthy sensor should reduce confidence or suppress unsupported conclusions; and an unavailable model should place Centaurus in a degraded state.
+Resilience handling should be explicit. Limited evidence should mark an analysis as requiring additional context; invalid configuration should disable the affected rule and expose a clear status; an unhealthy sensor should reduce confidence or suppress unsupported conclusions; and an unavailable analysis service should place Centaurus in a reduced-capability state.
 
 ## Auditability
 

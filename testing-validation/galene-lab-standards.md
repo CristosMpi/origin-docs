@@ -30,7 +30,7 @@ This reduces the risk of changing the definition of success after seeing the out
 
 Acceptance criteria may be numerical limits; required states; repeatability requirements; maximum error; required recovery behavior; physical inspection criteria; and successful completion of a sequence.
 
-If a numerical limit has not yet been justified, the test should be exploratory rather than pretending to be a pass/fail validation.
+When a numerical limit does not have an established reference threshold, the test is recorded as characterization rather than pass/fail validation.
 
 ## 3. Record the tested configuration
 
@@ -113,7 +113,7 @@ Public documentation should label values as either manufacturer specification, d
 
 ## 10. Test failures explicitly
 
-A test program that only checks expected success paths is incomplete.
+A complete test program covers both expected operation and resilience scenarios.
 
 Where safe and practical, deliberately create faults such as unplugging a sensor; interrupting communications; rebooting the controller; disconnecting external power; presenting invalid input; moving or obstructing a sensor; removing a module; and interrupting an update.
 

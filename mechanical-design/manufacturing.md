@@ -8,7 +8,7 @@ The current project uses additive manufacturing heavily, but the architecture sh
 
 A mechanical part is not ready for release simply because it can be exported from CAD.
 
-A repeatable manufacturing release should define part revision; source CAD revision; material; manufacturing process; orientation; relevant process settings; inserts and hardware; post-processing; inspection criteria; and known limitations.
+A repeatable manufacturing release should define part revision; source CAD revision; material; manufacturing process; orientation; relevant process settings; inserts and hardware; post-processing; inspection criteria; and operating requirements.
 
 ## Manufacturing envelope
 
@@ -110,7 +110,7 @@ If acrylic or another brittle sheet is used structurally, fastener stresses and 
 
 ## CNC or machined parts
 
-CNC machining may be appropriate for high-load brackets; precise mounts; metal base interfaces; repeatable production parts; and components requiring better dimensional accuracy than a printed prototype provides.
+CNC machining may be appropriate for high-load brackets; precise mounts; metal base interfaces; repeatable production parts; and components requiring better dimensional accuracy than a printed part provides.
 
 Machined parts should be released with drawings or STEP geometry and critical tolerances.
 

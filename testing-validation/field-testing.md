@@ -175,7 +175,7 @@ The duration should be stated explicitly in any published result.
 
 ORIGIN's deployment planning includes work connected with the **Archaeological Museum of Durrës, Albania**.
 
-Any public pilot result should identify the actual deployed configuration, dates, number of units, test scope and limitations. Planned deployment activity should not be presented as a completed field-validation result until evidence exists.
+Public field results identify the deployed configuration, dates, number of units, test scope, and operating context so readers can interpret the evidence correctly.
 
 ## Acceptance categories
 
@@ -183,7 +183,7 @@ A field test can be classified as:
 
 ### Accepted for pilot use
 
-The defined pilot criteria are met, with known limitations documented.
+The defined field criteria are met, with operating boundaries documented.
 
 ### Conditional
 
@@ -193,7 +193,7 @@ The system may continue in controlled use while specific limitations are monitor
 
 A problem affects reliability, safety, serviceability or the intended monitoring function.
 
-### Test incomplete
+### Additional evidence required
 
 Insufficient duration, evidence or site access prevents a conclusion.
 

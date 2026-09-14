@@ -10,7 +10,7 @@ An ORIGIN installation begins with sensing.
 
 Sensors are selected according to the risks and conditions relevant to the monitored site. Depending on the deployment, the system can include environmental sensing, presence detection, motion-related sensing, or other specialized inputs.
 
-Sensor placement is treated as part of the measurement system. A sensor that is electrically functional but poorly positioned can produce data that is misleading or incomplete. For this reason, site assessment and mechanical design are closely connected to the sensing architecture.
+Sensor placement is treated as part of the measurement system. A sensor that is electrically functional but poorly positioned can produce data that is misleading or limited. For this reason, site assessment and mechanical design are closely connected to the sensing architecture.
 
 ## 2. Acquire and manage measurements
 
@@ -76,7 +76,7 @@ Not every deployment should use the same physical platform.
 
 BITs, Aqua Base, Drone Mount, and future modules allow ORIGIN to expand into additional monitoring and inspection scenarios while keeping a relationship with the same project architecture.
 
-This enables the project to evolve without turning every new requirement into an unrelated standalone prototype.
+This enables the project to evolve without turning every new requirement into an unrelated standalone device.
 
 ## Example information flow
 

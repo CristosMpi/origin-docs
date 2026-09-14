@@ -138,7 +138,7 @@ Possible states include:
 | Degraded | Sensor works but quality or confidence is reduced |
 | Missing | Sensor does not respond or is disconnected |
 | Invalid | Sensor responds but data fails validation |
-| Initializing | Sensor is not yet ready for normal operation |
+| Initializing | Sensor startup sequence is in progress |
 | Disabled | Sensor is intentionally inactive by configuration |
 
 These states allow ORIGIN to report the difference between "nothing detected" and "the detector is not working."

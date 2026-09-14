@@ -2,7 +2,7 @@
 
 Setup begins after the ORIGIN unit has been physically installed and inspected. This stage brings the device into its site-specific software state: identity, configuration, sensor inventory, communications, timekeeping, logging, and operator-facing status.
 
-Setup should be controlled and reversible. A device that merely boots is not yet ready for calibration or commissioning.
+Setup is controlled and reversible. It establishes the verified hardware, identity, configuration, storage, and communications baseline required for calibration and commissioning.
 
 ## Setup objectives
 

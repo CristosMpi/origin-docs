@@ -70,7 +70,7 @@ Recommended states include:
 | State | Meaning |
 | --- | --- |
 | Healthy | Expected communication and valid data |
-| Initializing | Startup not yet complete |
+| Initializing | Startup sequence in progress |
 | Degraded | Function remains but reliability is reduced |
 | Missing | Expected device or data source is absent |
 | Invalid | Data exists but fails validation |
@@ -128,7 +128,7 @@ Do not treat disagreement with expectation as proof of sensor failure without a 
 
 ## Storage diagnostics
 
-Investigate storage present/absent state; mount or initialization success; available capacity; file-system errors; write failures; corrupt or incomplete records; repeated recovery behavior; and whether power interruption occurred during writes.
+Investigate storage present/absent state; mount or initialization success; available capacity; file-system errors; write failures; corrupt or partial records; repeated recovery behavior; and whether power interruption occurred during writes.
 
 Preserve recoverable data before reformatting or replacing storage.
 

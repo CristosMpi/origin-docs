@@ -104,7 +104,7 @@ For any rule-based or Centaurus-generated event used operationally, confirm even
 
 ## Operator handover
 
-Commissioning is incomplete until the responsible site operator has enough information to operate and escalate the system.
+Commissioning concludes when the responsible site operator has enough information to operate the system and follow the appropriate escalation path.
 
 Handover should cover normal health indicators; degraded/fault states; how to identify the unit; what to do after a power loss; what to do after a communications failure; how to report a sensor fault; maintenance access restrictions; whom to contact for support; and which alerts require human verification.
 

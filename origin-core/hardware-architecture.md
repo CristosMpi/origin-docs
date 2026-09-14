@@ -22,7 +22,7 @@ Each layer has a different responsibility. The sensor layer interacts with the e
 
 ## Central electronics platform
 
-The custom Rosetta PCB is the electronic center of ORIGIN Core. Its role is to reduce the number of disconnected modules and improvised wiring paths that would otherwise be required in a field prototype.
+The custom Rosetta PCB is the electronic center of ORIGIN Core. Its role is to reduce the number of disconnected modules and improvised wiring paths that would otherwise be required in a field system.
 
 Rosetta provides the platform for embedded processing; sensor interfaces; power management; battery connection and charging; regulated supply generation; local storage-related interfaces; connectivity-related interfaces; expansion headers and peripheral connections; and system status and control signals.
 

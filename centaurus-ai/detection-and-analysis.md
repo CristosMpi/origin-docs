@@ -134,7 +134,7 @@ A useful principle is:
 
 False positives are unavoidable in real monitoring systems.
 
-Potential causes include environmental noise; reflections; nearby legitimate activity; unusual deployment geometry; temporary sensor faults; poorly tuned thresholds; model overfitting; and incomplete site context.
+Potential causes include environmental noise; reflections; nearby legitimate activity; unusual deployment geometry; temporary sensor conditions; poorly tuned thresholds; model overfitting; and limited site context.
 
 Testing should therefore measure more than raw detection rate. It should also measure event precision, false-alarm frequency, and operator burden.
 

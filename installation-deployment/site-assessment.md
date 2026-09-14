@@ -14,7 +14,7 @@ The assessment should answer five basic questions:
 4. **Can the unit be powered and connected reliably?**
 5. **Can the installation be maintained without harming the site?**
 
-If any of these questions cannot be answered, the deployment design is not yet complete.
+The answers to these questions define the deployment design and provide the basis for installation approval.
 
 ## Define the monitoring objective
 

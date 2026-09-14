@@ -2,7 +2,7 @@
 
 This page covers the physical installation of ORIGIN after the site assessment has been approved.
 
-The installation phase should leave the unit mechanically secure, electrically safe, serviceable, correctly oriented, and ready for software setup. It should not yet be considered operational until calibration and commissioning are complete.
+The installation phase leaves the unit mechanically secure, electrically safe, serviceable, correctly oriented, and ready for software setup. Calibration and commissioning complete the transition to normal operation.
 
 ## Installation principles
 

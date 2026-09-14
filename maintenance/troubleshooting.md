@@ -525,7 +525,7 @@ Configuration rollback should be documented just like firmware rollback.
 4. inspect event normalization;
 5. check model/rule version;
 6. inspect confidence and context;
-7. compare with known limitations.
+7. compare with the documented operating boundaries.
 
 Do not modify AI/rule thresholds until the source data is confirmed valid.
 

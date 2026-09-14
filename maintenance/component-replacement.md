@@ -118,7 +118,7 @@ After replacement, verify initialization, write/read behavior and local bufferin
 
 ## Firmware-related replacement state
 
-Hardware replacement can require firmware changes, but service work should avoid opportunistic software upgrades unless planned.
+Hardware replacement can require software changes, but service work should avoid unrelated software updates unless they are included in the approved service scope.
 
 Combining hardware replacement with unrelated firmware changes makes root-cause verification harder.
 

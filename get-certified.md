@@ -35,7 +35,7 @@ Before beginning, we recommend reviewing the full ORIGIN Docs, especially the ar
 | Result | Status |
 | --- | --- |
 | 18–25 correct | **ORIGIN Expert — Passed** |
-| 0–17 correct | Not yet certified |
+| 0–17 correct | Below certification threshold |
 
 A successful result creates the official certificate automatically. Each certificate includes a unique identifier so that certification records can be distinguished from one another.
 
