@@ -9,6 +9,9 @@ BANNED = {
     "unfinished_release": re.compile(r"\b(will be added|should eventually|not production-ready|not release-ready|not published|not public|current public repository|known issues|known limitations|pre-release checklist|release checklist)\b", re.I),
 }
 
+# Markdown destinations are implementation details of the wiki and are not reader-visible wording.
+LINK_DEST = re.compile(r"\]\([^)]*\)")
+
 hits = 0
 for path in sorted(ROOT.rglob("*.md")):
     rel = path.relative_to(ROOT).as_posix()
@@ -23,8 +26,9 @@ for path in sorted(ROOT.rglob("*.md")):
             continue
         if in_fence:
             continue
-        labels = [k for k, rx in BANNED.items() if rx.search(s)]
+        visible = LINK_DEST.sub("]", s)
+        labels = [k for k, rx in BANNED.items() if rx.search(visible)]
         if labels:
             hits += 1
-            print(f"{rel}:{n}\t{','.join(labels)}\t{s}")
+            print(f"{rel}:{n}\t{','.join(labels)}\t{visible}")
 print(f"PUBLIC_WIKI_FLAGGED_LINES={hits}")
