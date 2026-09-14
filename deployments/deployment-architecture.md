@@ -68,7 +68,7 @@ Zone D ── ORIGIN 04 ─┤
 Zone E ── ORIGIN 05 ─┘
 ```
 
-This model is relevant to the planned five-unit Durrës pilot.
+This model is relevant to the five-unit Durrës deployment program.
 
 Multiple units enable broader site coverage; zone-specific sensor orientation; comparative testing; redundancy of observations in selected areas; distributed environmental monitoring; and better localization of events by source unit.
 

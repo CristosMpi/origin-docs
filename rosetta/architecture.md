@@ -1,77 +1,33 @@
 # Architecture
 
-Rosetta is organized as a set of electrical subsystems connected around the embedded processor. Keeping these blocks conceptually separate makes schematic review, PCB debugging and firmware development easier.
+Rosetta is organized into clear electrical subsystems so ORIGIN Core can manage processing, power, sensors, storage, communications, and expansion as one coordinated device.
 
-## High-level block diagram
+## Processing
 
-```text
-                External / solar input
-                         │
-                         ▼
-              Charging / power path
-                         │
-                 Battery interface
-                         │
-                         ▼
-                Voltage regulation
-                         │
-          ┌──────────────┴──────────────┐
-          ▼                             ▼
-    Embedded processor            Peripheral rails
-          │                             │
-   ┌──────┼─────────┬──────────┐        │
-   ▼      ▼         ▼          ▼        ▼
-Sensors  Storage  Comms   Expansion   External sensors
-```
+The embedded processor runs the device software, initializes interfaces, collects sensor data, maintains system state, manages local storage and communications, and reports health information to higher-level ORIGIN software.
 
-## Processing block
+## Power
 
-The ESP32-family processor is the logical center of Rosetta. Firmware running on this device is responsible for coordinating peripherals, validating readings, maintaining system state and passing data to the higher ORIGIN software layers.
+The power subsystem accepts the unit's energy input, manages the battery path, and generates stable rails for the processor and peripherals. Power state is treated as part of overall device health.
 
-The processor should not be treated as the source of power integrity. It depends on the power subsystem being stable before firmware can operate correctly.
+## On-board sensing
 
-## Power block
+The LIS3DH provides motion and orientation information that can support installation context, movement awareness, and device-state interpretation.
 
-Rosetta v2 design work includes two important power-management devices **BQ24074RGT** for battery charging / power-path functions and **TPS63031DSK** for regulated power conversion.
+## External sensing
 
-The final schematic determines exact rail names, current limits, resistor values and control connections. Those values should not be inferred from the IC names alone.
+Rosetta connects ORIGIN Core to presence sensors, environmental sensors, and supported expansion modules. Each connected channel retains a stable logical identity so software and maintenance records remain understandable.
 
-## Motion / board-state sensing
+## Storage
 
-The design includes an **LIS3DH** accelerometer. At ORIGIN system level, an accelerometer can support board-orientation, movement or tamper-related observations, but the exact firmware behavior must be defined separately from the existence of the sensor.
+Local storage supports logging, buffering, configuration support, and preservation of records when remote connectivity is temporarily unavailable.
 
-## Storage and removable media
+## Communications
 
-Rosetta development includes an SD-card interface so local logs or operational data can be retained when network connectivity is unavailable or when local diagnostics are required.
+Communications interfaces connect ORIGIN Core with the wider software environment while keeping local sensing and device control separate from remote transport state.
 
-Storage should be treated as a managed subsystem with explicit mount, write, flush and error states rather than as permanently reliable memory.
+## Expansion
 
-## Cellular / SIM interface
+Expansion interfaces allow BITs and other supported modules to extend the Core without changing the fundamental Rosetta architecture.
 
-The board design has also included micro-SIM/eSIM-related interface work. The presence of a SIM interface does not by itself mean the board contains a complete cellular modem. The modem, SIM routing, power requirements and firmware stack must be documented together before cellular connectivity is considered a released capability.
-
-## External interfaces
-
-Rosetta v2 has been designed with battery and expansion headers so that ORIGIN sensors and modules can be connected without soldering directly to the processor.
-
-The final public pinout should only be published from the released schematic. Connector names that appeared during development, including several 1×03 headers and battery connectors, should be mapped to stable functional names before release.
-
-## Separation of concerns
-
-A useful design rule for Rosetta is to keep each failure domain identifiable:
-
-| Subsystem | Typical failure symptom |
-| --- | --- |
-| Input / charging | Battery does not charge or system fails on external power |
-| Regulation | Processor resets or rails are outside tolerance |
-| Processor | No firmware boot or peripheral control |
-| Storage | Logging failures or filesystem errors |
-| Sensors | Missing, invalid or implausible readings |
-| Communications | Data remains local or link cannot be established |
-| Connectors | Intermittent or absent external-device operation |
-
-This model is used in the [Assembly & Bring-up](assembly-and-bring-up.md) and [Troubleshooting](troubleshooting.md) procedures.
-
-## Architecture principle
-
-Rosetta should fail observably. A disconnected sensor, missing storage device or communication fault should become an explicit software state rather than silently becoming a normal-looking reading.
+This subsystem separation is what makes Rosetta serviceable: a user or technician can understand whether a condition belongs to power, sensing, storage, communications, or another part of the system.

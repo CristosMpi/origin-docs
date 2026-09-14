@@ -1,61 +1,29 @@
 # Interfaces
 
-Rosetta connects ORIGIN Core to batteries, removable storage, sensors, communications hardware and expansion modules. These interfaces should be documented by function rather than only by connector reference designator so that hardware and firmware remain understandable across board revisions.
+Rosetta connects ORIGIN Core to power, sensors, storage, communications hardware, controls, and expansion modules.
 
-## Interface categories
+## Power interfaces
 
-Rosetta v2 development has included the following interface groups battery / power connectors; external sensor headers; storage interface; SIM-related interface; programming and debug access; user controls and status signals; and future expansion connections.
+Battery and external-energy connections provide the electrical path between Rosetta and the ORIGIN power system. Their use is defined by the assembled unit and its deployment configuration.
 
-## Battery connectors
+## Sensor interfaces
 
-The design history includes **two 1×02 battery-related connectors**. The released schematic must define their exact role, polarity and electrical equivalence.
+External sensor headers connect presence, environmental, and expansion sensing to the embedded controller. Software identifies sensors by logical channel rather than relying on users to interpret raw connector numbering.
 
-Before field use, the board should have clear polarity marking both in documentation and on the silkscreen where possible.
+## Storage interface
 
-## Expansion headers
+Rosetta supports local/removable storage for logging, buffering, configuration support, and service records where used by the software release.
 
-Rosetta v2 development includes **multiple 1×03 headers** intended for external devices and sensor integration. Four such headers were part of the v2 design work.
+## Communications interface
 
-A final pinout table should be generated from the released schematic in this format:
+Rosetta provides the hardware foundation required by the selected communications configuration. The transport used by a particular unit is recorded in its deployment profile.
 
-| Connector | Pin 1 | Pin 2 | Pin 3 | Voltage domain | Intended use |
-| --- | --- | --- | --- | --- | --- |
-| TBD | TBD | TBD | TBD | TBD | External sensor / expansion |
+## Controls and status
 
-Until that table is verified, devices should not be connected based on connector position alone.
+Buttons and status signals support startup, service, and local interaction with the device. Their behavior is coordinated by firmware so the physical control and the reported system state remain consistent.
 
-## SD storage
+## Expansion interface
 
-The board design includes an SD-card interface for local data storage. The final documentation should identify socket type; bus type; chip-select pin where applicable; supported voltage; card-detect behavior if implemented; safe removal procedure; and filesystem expected by firmware.
+Expansion connections provide the electrical path used by supported BITs and other modules. The module identity and expected behavior are stored in the ORIGIN configuration so the system knows which capabilities belong to the installed unit.
 
-Local storage is particularly useful when ORIGIN operates without dependable network access.
-
-## SIM / cellular-related interface
-
-Rosetta v2 development includes micro-SIM/eSIM-related work. This interface should be documented together with the modem architecture because a SIM socket is only one part of a cellular subsystem.
-
-The release documentation must clarify whether the fitted configuration uses removable micro-SIM, eSIM, both as alternatives, and neither in the current assembly.
-
-## Programming and debug
-
-Every released Rosetta board should have a documented way to flash firmware; recover a non-booting board; access serial diagnostics; place the processor into the required boot mode; and identify ground and logic-voltage levels.
-
-Debug access should be physically available during development but reviewed from a security perspective before deployment.
-
-## Buttons and status signals
-
-The v2 design history includes button/status-related circuitry. The final schematic should define each control with a functional name rather than relying only on references such as BTN or generic LED labels.
-
-## Interface release rule
-
-A connector is considered documented only when all of the following are known:
-
-1. physical connector type;
-2. pin numbering orientation;
-3. electrical function of every pin;
-4. voltage/current limits;
-5. firmware relationship;
-6. expected external device;
-7. behavior when left disconnected.
-
-This prevents a mechanically compatible connector from being mistaken for an electrically compatible one.
+The interface model keeps the Core modular while protecting users from unnecessary board-level detail.

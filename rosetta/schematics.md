@@ -1,85 +1,29 @@
-# Schematics
+# Electrical Design
 
-The schematic is the authoritative electrical description of Rosetta. Gerbers show what copper and artwork were exported, but they do not replace a schematic for understanding connectivity, component values, rail intent or interface pinouts.
+Rosetta's electrical design is organized around functional blocks rather than exposed as a collection of unrelated circuits.
 
-## Current documentation status
+## Processing block
 
-A complete Rosetta v2 schematic source has **not yet been added to this public documentation repository**. The Rosetta pages therefore document only information that is confirmed from project development history or the uploaded manufacturing export.
+The processing block provides the embedded controller, boot and control signals, local decoupling, and the digital interfaces used by the rest of the system.
 
-Exact pinouts, net names, component values and reference designators should be added only after the latest schematic source is committed and reviewed.
+## Power block
 
-## Expected schematic blocks
+The power block manages external energy, battery charging, power-path behavior, and regulated rails for the controller and peripherals.
 
-The v2 schematic should be organized into recognizable blocks such as:
+## Sensor block
 
-```text
-Input / charging
-Battery connections
-Voltage regulation
-ESP32 processor
-Programming / boot control
-LIS3DH accelerometer
-SD storage
-SIM / communications interface
-External headers
-Buttons / indicators
-Protection and supporting passives
-```
+The sensing architecture includes the on-board LIS3DH and external interfaces for ORIGIN's presence, environmental, and modular sensor ecosystem.
 
-## Review checklist
+## Storage and communications
 
-Before a schematic is tagged for manufacturing, verify:
+Storage-related and communications-related interfaces connect the Core to the data and transport functions required by its software configuration.
 
-### Power
+## Expansion block
 
-All supply pins are connected to the intended rail.
+Expansion connections allow supported modules to use Rosetta power and data paths while remaining identifiable to the software stack.
 
-Decoupling capacitors are present and correctly valued.
+## Design philosophy
 
-Charger and regulator passive networks match the chosen operating point.
+Rosetta's electrical architecture is designed for clear subsystem boundaries, controlled power distribution, stable sensor identity, serviceability, and compatibility with the ORIGIN Core enclosure.
 
-Ground domains are deliberate.
-
-Connector polarities are unambiguous.
-
-### Processor
-
-Boot-strapping pins are in valid states.
-
-Programming/debug access exists.
-
-Reset/enable behavior is correct.
-
-Unused pins are intentionally handled.
-
-### Peripherals
-
-Logic-voltage compatibility is verified.
-
-Pull-ups/pull-downs are present where required.
-
-Chip-select/address choices do not conflict.
-
-Interrupt lines match firmware expectations.
-
-### Connectors
-
-Pin numbering matches the footprint.
-
-Pin 1 is visibly identifiable.
-
-External voltages cannot be accidentally applied to logic-only pins.
-
-Connector names describe function.
-
-## Design-review history
-
-During Rosetta v2 development, several schematic/footprint areas required special attention, including component footprints, rail naming, connector assignments and passives around power circuitry. Examples discussed during review included items such as U6, VDD_1V8, J9–J11, L1/L2, J4 and C18.
-
-These references are recorded here as **review-history markers**, not as proof that a current fault exists. They should be checked against the latest source before the design is released.
-
-## Publishing the schematic
-
-When the final schematic is added, this page should include source format and software version; PDF export; hardware revision; release date; sheet index; net/rail glossary; and links to the matching PCB and BOM release.
-
-The schematic, PCB, BOM and firmware compatibility record should share one release identifier.
+For users, the important point is that Rosetta acts as one coordinated electronics platform rather than a set of independent development modules.

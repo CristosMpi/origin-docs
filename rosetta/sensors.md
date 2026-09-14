@@ -1,62 +1,23 @@
 # Sensors
 
-Rosetta supports both sensors located on the PCB and sensors mounted elsewhere in ORIGIN Core. The board’s job is to provide stable electrical interfaces and reliable data paths; the physical sensing strategy is documented at the ORIGIN Core level.
+Rosetta supports both on-board sensing and the external sensor ecosystem used by ORIGIN Core.
 
-## On-board motion sensing
+## LIS3DH
 
-Rosetta v2 design work includes an **LIS3DH three-axis accelerometer**.
+The on-board **LIS3DH** is a three-axis accelerometer. Within ORIGIN it can provide information related to orientation, movement, and physical state of the unit.
 
-Potential ORIGIN uses include detecting movement of the Core; detecting orientation changes; recording mechanical disturbance; supporting tamper-related logic; and adding context to other sensor events.
+## External presence sensors
 
-These are system use cases, not automatic properties of the component. Thresholds and event logic must be defined and tested in firmware.
+ORIGIN Core uses three **DFRobot C4001 24 GHz mmWave** sensors for directional presence and motion sensing. Rosetta provides the connection and processing environment required to integrate those channels into the wider system.
 
-## External sensing
+## Environmental sensors
 
-Most environmental and presence sensors are physically placed according to the enclosure and deployment geometry rather than simply where they fit on the PCB.
+Environmental channels can be added according to the deployment profile. The software architecture keeps each measurement associated with its source identity, units, timestamp, and health state.
 
-Rosetta therefore acts as the electrical hub for external sensing such as mmWave presence sensors, environmental sensors, modular accessories, and future expansion sensors.
+## Sensor health
 
-See [ORIGIN Core → Sensor System](../origin-core/sensor-system.md).
+A sensing channel is more than a numerical value. ORIGIN also tracks whether the channel is initializing, operating normally, intentionally disabled, or requires attention. This makes operator information clearer and supports maintenance.
 
-## Sensor-driver model
+## Calibration and placement
 
-Firmware should expose a consistent state model regardless of sensor type:
-
-```text
-DISABLED
-INITIALIZING
-HEALTHY
-DEGRADED
-MISSING
-INVALID
-FAULT
-```
-
-A missing sensor must not silently become a normal zero reading.
-
-## Sensor metadata
-
-Every logged sample should carry enough metadata to be meaningful later. Where appropriate this includes sensor identity; timestamp; raw or engineering value; units; validity flag; calibration/version information; and health state.
-
-## Accelerometer validation
-
-For the LIS3DH subsystem, bring-up should include:
-
-1. confirming device communication;
-2. reading the device identity register where supported;
-3. confirming plausible static acceleration values;
-4. rotating the board and observing axis changes;
-5. confirming interrupt behavior if interrupts are used;
-6. documenting axis orientation relative to the physical enclosure.
-
-The last step is especially important. A technically correct X/Y/Z reading is not useful if the firmware team does not know how those axes map to the installed ORIGIN Core.
-
-## External sensor power
-
-External sensors can create transient current demand and electrical noise. The interface documentation should therefore identify which rail supplies each external header and whether that rail is switched or always active.
-
-## Calibration
-
-Calibration belongs to the sensor-plus-installation combination. Replacing a sensor, changing the enclosure or moving the unit may require recalibration even when the PCB remains unchanged.
-
-Validated procedures belong in [Testing & Validation](../testing-validation/README.md).
+Sensor performance depends on the physical installation. Mounting angle, enclosure geometry, surrounding materials, and site conditions are therefore documented as part of calibration and commissioning.

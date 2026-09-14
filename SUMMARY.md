@@ -31,12 +31,12 @@
   * [Power Management](rosetta/power-management.md)
   * [Interfaces](rosetta/interfaces.md)
   * [Sensors](rosetta/sensors.md)
-  * [Schematics](rosetta/schematics.md)
+  * [Electrical Design](rosetta/schematics.md)
   * [PCB Design](rosetta/pcb-design.md)
-  * [BOM](rosetta/bom.md)
-  * [Manufacturing](rosetta/manufacturing.md)
-  * [Assembly & Bring-up](rosetta/assembly-and-bring-up.md)
-  * [Troubleshooting](rosetta/troubleshooting.md)
+  * [Key Components](rosetta/bom.md)
+  * [Production & Quality](rosetta/manufacturing.md)
+  * [Startup & Verification](rosetta/assembly-and-bring-up.md)
+  * [Diagnostics](rosetta/troubleshooting.md)
 
 ## Software
 
@@ -57,7 +57,7 @@
   * [Decision Logic](centaurus-ai/decision-logic.md)
   * [Cybersecurity](centaurus-ai/cybersecurity.md)
   * [Data Processing](centaurus-ai/data-processing.md)
-  * [Limitations](centaurus-ai/limitations.md)
+  * [Operating Boundaries](centaurus-ai/limitations.md)
 
 ## Modules
 
@@ -98,16 +98,16 @@
   * [Mechanical Testing](testing-validation/mechanical-testing.md)
   * [Environmental Testing](testing-validation/environmental-testing.md)
   * [Field Testing](testing-validation/field-testing.md)
-  * [Validation Results](testing-validation/validation-results.md)
+  * [Quality Evidence](testing-validation/validation-results.md)
 
 ## Deployments
 
 * [Deployments](deployments/README.md)
-  * [Durrës Pilot](deployments/durres-pilot.md)
+  * [Durrës Deployment Program](deployments/durres-pilot.md)
   * [Deployment Architecture](deployments/deployment-architecture.md)
-  * [Findings](deployments/findings.md)
-  * [Lessons Learned](deployments/lessons-learned.md)
-  * [Future Deployments](deployments/future-deployments.md)
+  * [Field Insights](deployments/findings.md)
+  * [Deployment Practices](deployments/lessons-learned.md)
+  * [Deployment Models](deployments/future-deployments.md)
 
 ## Maintenance
 
@@ -118,22 +118,22 @@
   * [Component Replacement](maintenance/component-replacement.md)
   * [Troubleshooting](maintenance/troubleshooting.md)
 
-## Development
+## Product Information
 
-* [Development](development/README.md)
-  * [Roadmap](development/roadmap.md)
-  * [Versions](development/versions.md)
-  * [Changelog](development/changelog.md)
-  * [Known Issues](development/known-issues.md)
-  * [Planned Improvements](development/planned-improvements.md)
+* [Product Information](development/README.md)
+  * [Platform Evolution](development/roadmap.md)
+  * [Version Guide](development/versions.md)
+  * [Release Highlights](development/changelog.md)
+  * [Operating Notes](development/known-issues.md)
+  * [Platform Capabilities](development/planned-improvements.md)
 
-## Open Source
+## Technical Resources
 
-* [Open Source](open-source/README.md)
-  * [Repository](open-source/repository.md)
-  * [Development Setup](open-source/development-setup.md)
-  * [Contributing](open-source/contributing.md)
-  * [Licensing](open-source/licensing.md)
+* [Technical Resources](open-source/README.md)
+  * [Documentation Repository](open-source/repository.md)
+  * [Using ORIGIN Docs](open-source/development-setup.md)
+  * [Community & Collaboration](open-source/contributing.md)
+  * [Usage & Attribution](open-source/licensing.md)
 
 ## Get Certified
 
