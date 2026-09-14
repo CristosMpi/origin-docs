@@ -25,6 +25,8 @@ jobs:
         run: python tools/public_wiki_rewrite_rosetta.py
       - name: Rewrite user experience chapters
         run: python tools/public_wiki_rewrite_product.py
+      - name: Apply final wording cleanup
+        run: python tools/public_wiki_cleanup.py
       - name: Audit public positioning
         run: python tools/public_wiki_final_audit.py
       - name: Commit public wiki rewrite
@@ -35,7 +37,7 @@ jobs:
             git config user.name 'Team Galene Docs Bot'
             git config user.email 'actions@users.noreply.github.com'
             git add -u
-            git commit -m 'Refocus ORIGIN wiki on users and product experience [skip ci]'
+            git commit -m 'Finalize ORIGIN public wiki positioning [skip ci]'
             git push
           fi
       - name: Close trigger issue
