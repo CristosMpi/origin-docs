@@ -1,25 +1,44 @@
-name: ORIGIN public wiki audit
+name: ORIGIN public wiki rewrite
 
 on:
   issues:
     types: [opened]
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 jobs:
-  audit:
-    if: github.event.issue.title == 'Run ORIGIN public wiki audit'
+  rewrite:
+    if: github.event.issue.title == 'Run ORIGIN public wiki rewrite'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Scan public documentation positioning
-        run: python tools/public_wiki_audit.py
+      - name: Rewrite product and deployment chapters
+        run: python tools/public_wiki_rewrite_core.py
+      - name: Rewrite Rosetta and validation chapters
+        run: python tools/public_wiki_rewrite_rosetta.py
+      - name: Rewrite user experience chapters
+        run: python tools/public_wiki_rewrite_product.py
+      - name: Audit public positioning
+        run: python tools/public_wiki_final_audit.py
+      - name: Commit public wiki rewrite
+        run: |
+          if git diff --quiet; then
+            echo 'No content changes required.'
+          else
+            git config user.name 'Team Galene Docs Bot'
+            git config user.email 'actions@users.noreply.github.com'
+            git add -u
+            git commit -m 'Refocus ORIGIN wiki on users and product experience [skip ci]'
+            git push
+          fi
       - name: Close trigger issue
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue close "${{ github.event.issue.number }}" --comment "Public wiki audit completed."
+        run: gh issue close "${{ github.event.issue.number }}" --comment "Public user-facing wiki rewrite completed."
